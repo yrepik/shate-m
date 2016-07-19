@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Заголовок</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<meta property="og:image" content="path/to/image.jpg">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/fonts.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<!--[if lt IE 9]>
+<script src="libs/html5shiv/es5-shim.min.js"></script>
+<script src="libs/html5shiv/html5shiv.min.js"></script>
+<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+<script src="libs/respond/respond.min.js"></script>
+<![endif]-->
+
+
+<body>
+
+	<section>
+
+		<div class="container-fluid">
+
+			<div class="row contant_site">
+
+				<!--мобильное меню-->
+				<nav class="mob_mnu_left">
+					<ul>
+						<li class="mob_logo"><img class="mob" src="img/moblogo.png" alt="логотип"></li>
+						<li><a href="index.html"><i class="fa fa-tachometer " aria-hidden="true"></i><span>Панель управления</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_tree.html"><i class="fa fa-sitemap" aria-hidden="true"></i><span >Поиск по дереву</span></a></li>
+						<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i><span >Поиск по VIN</span></a></li>
+						<li class="active"><a href="shate-m_b2b_user_cabinet_import.html"><i class="fa fa-upload" aria-hidden="true"></i><span>Импорт заказов</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_orders_list.html"><i class="fa fa-list-alt" aria-hidden="true"></i><span>Заказы</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_returnes_list_new_return.html"><i class="fa fa-reply" aria-hidden="true"></i><span>Возвраты</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_wait_list.html"><i class="fa fa-bookmark-o" aria-hidden="true"></i><span>Лист ожидания</span></a></li>
+						<li><a href="#"><i class="fa fa-money" aria-hidden="true"></i><span>Финанс</span></a></li>
+						<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span>Персональные данные</span></a></li>
+						<li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i><span>Ваш менеджер</span></a></li>
+						<li><a href="#"><i class="fa fa-history" aria-hidden="true"></i><span>История запросов</span></a></li>
+						<li><a href="#"><i class="fa fa-cloud-upload" aria-hidden="true"></i><span>Управление остатками</span></a></li>
+						<li><a href="#"><i class="fa fa-percent" aria-hidden="true"></i><span>Акции</span></a></li>
+						<li><a href="#"><i class="fa fa-cart-arrow-down " aria-hidden="true"></i><span>Уцененные товары</span></a></li>
+						<li><a href="#"><i class="fa fa-cart-plus " aria-hidden="true"></i><span>Наценки</span></a></li>
+						<li><a href="#"><i class="fa fa-check-square-o " aria-hidden="true"></i><span>Опросы</span></a></li>
+					</ul>
+				</nav>
+
+
+
+				<!--			шапка сайта		 -->
+				<div class="white hidemenuR col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+					<div class="row top clearfix">
+
+						<div class="col-xs-1 col-sm-1 col-md-1">
+							<div class="cross">
+								<div class="line">
+									<span></span>
+								</div>
+							</div>
+						</div>
+						<!-- форма поиска-->
+						<div class="col-xs-8 col-sm-6 col-md-3">
+							<div class="top_serch">
+								<form>
+									<input class="hidden-xs serch_field" type="search" name="search" placeholder="Поиск" autocomplete="off">
+									<input class="hidden-sm hidden-md hidden-lg serch_field" type="search" name="search" placeholder="Поиск" autocomplete="off">
+									<button class="search_btn" type="submit" alt="ok"><i class="fa fa-search" aria-hidden="true"></i></button>
+								</form>
+								<div class="drop_down_search_list">
+									<ul>
+										<li>
+											<a href="#"></a>
+										</li>
+										<li>
+											<a href="#"></a>
+										</li>
+										<li>
+											<a href="#"></a>
+										</li>
+										<li>
+											<a href="#"></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!--выбор параметров поиска-->
+						<div class="hidden-xs col-sm-2 col-md-1">
+							<select name="vin" id="selectvin">
+								<option value="1">по VIN</option>
+								<option value="2">по артикулу</option>
+							</select>
+						</div>
+
+
+						<!--кабинет пользователя-->
+						<div class="col-md-push-6 col-lg-push-6 col-xs-1 col-md-1">
+							<div class="user_accaunt clearfix">
+								<div class="wrap">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								<div class="triangle"></div>
+							</div>
+						</div>
+
+
+						<!--баланс-->
+						<div class="tottal_balance col-xs-12 col-sm-6 col-md-3 col-md-pull-1 col-lg-pull-1">
+
+							<a class="balance">
+								<span class="balance-tooltip"><span>Баланс устарел</span>
+									<span class="balance-tooltip_triangle"></span>
+								</span>
+								<i class="fa fa-money" aria-hidden="true"></i>
+								<span class="balance_count">Баланс </span><span class="date">- 13.03.2016 - </span>
+								<span class="totall">198 365 489 руб.</span>
+								<i class="update_balance fa fa-undo" aria-hidden="true"></i>
+								<div class="hidden-xs vertical_line"></div>
+								<div class="hidden-xs hidden-sm hidden-md vertical_line_left"></div>
+							</a>
+
+						</div>
+
+						<!--корзина-->
+						<div class="wrap_cart col-xs-12 col-sm-6 col-md-3 col-md-pull-1 col-lg-pull-1">
+							<div class="cart">
+								<a class="totall">(0 руб.)</a>
+								<a class="quantity">0</a>
+								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+							</div>
+						</div>
+
+
+						<div class="user_name">
+							<ul>
+								<li><i class="fa fa-user" aria-hidden="true"></i>Фамилия Имя Отчество</li>
+								<li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i>Настройки пользователя</a></li>
+								<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Выход</a></li>
+							</ul>
+						</div>
+
+					</div>
+
+
+					<div class="row togglemnu">
+						<ul>
+							<li>Фамилия Имя Отчество</li>
+							<li><a href="#">Настройки пользователя</a></li>
+							<li><a href="#">Выход</a></li>
+						</ul>
+					</div>
+
+
+
+
+					<div class="import container">
+						<div class="row">
+							<!--импорт заказов-->
+							<div class="orders_import col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<i class="fa fa-download" aria-hidden="true"></i>
+								<h2>Импорт <br class="hidden-sm hidden-md hidden-lg">заказаов</h2>
+							</div>
+
+							<!--кнопка помощь по разделу-->
+							<div class="help_topics col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<button class="btn gray_btn" type="button" name="button">
+									<i class="fa fa-life-ring" aria-hidden="true"></i>
+									Помощь <span class="hidden-xs">по разделу</span>
+								</button>
+							</div>
+
+							<!--Выбор склада-->
+							<div class="stock_selection col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<h3>Выбор склада</h3>
+							</div>
+
+							<!--таблица выбора склада-->
+							<!--для телефонов-->
+							<!--первый ряд таблицы-->
+							<div class="table_stock_selection selectionMinsk row hidden-md hidden-lg">
+								<div class="thead col-xs-12 col-sm-12">Приоритет</div>
+								<div class="col-xs-12 col-sm-12 past tr_xs">
+									<img src="img/v_dot.png" alt="" />
+									<div class="number">1</div>
+								</div>
+								<div class="thead col-xs-12 col-sm-12">Склад №1</div>
+								<div class="col-xs-12 col-sm-12 tr_xs"><img src="img/v_dot.png" alt="" />Центральный склад</div>
+								<div class="thead col-xs-12 col-sm-12">Город</div>
+								<div class="col-xs-12 col-sm-12 tr_xs"><img src="img/v_dot.png" alt="" /><div class="table_stock_selection-warehause"></div><span>Минск</span></div>
+								<div class="thead col-xs-12 col-sm-12">Ожидаемый срок поставки</div>
+								<div class="col-xs-8 col-sm-8 tr_xs"><img src="img/v_dot.png" alt="" /><span>0</span> <span>Д</span></div>
+								<div class="col-xs-4 col-sm-4 tr_xs checkbox">
+									<label>
+										<input type="checkbox" class="ios-switch green	bigswitch"/><div><div></div></div>
+									</label>
+								</div>
+							</div>
+
+							<!--второй ряд таблицы Подольск-->
+							<div class="table_stock_selection selectionPodolsk row hidden-md hidden-lg">
+								<div class="thead col-xs-12 col-sm-12">Приоритет</div>
+								<div class="col-xs-12 col-sm-12 past tr_xs">
+									<img src="img/v_dot.png" alt="" />
+									<div class="number">2</div>
+								</div>
+								<div class="thead col-xs-12 col-sm-12">Склад №2</div>
+								<div class="col-xs-12 col-sm-12 tr_xs"><img src="img/v_dot.png" alt="" />Центральный склад</div>
+								<div class="thead col-xs-12 col-sm-12">Город</div>
+								<div class="col-xs-12 col-sm-12 tr_xs"><img src="img/v_dot.png" alt="" /><div class="table_stock_selection-warehause active_status-Podolsk"></div>Подольск<span></span></div>
+								<div class="thead col-xs-12 col-sm-12">Ожидаемый срок поставки</div>
+								<div class="col-xs-8 col-sm-8 tr_xs"><img src="img/v_dot.png" alt="" /><span>1</span> <span>Д</span></div>
+								<div class="col-xs-4 col-sm-4 tr_xs checkbox">
+									<label>
+										<input type="checkbox" class="ios-switch green	bigswitch"/><div><div></div></div>
+									</label>
+								</div>
+							</div>
+
+							<!--третий ряд таблицы Астана-->
+							<div class="table_stock_selection selectionAstana row hidden-md hidden-lg">
+								<div class="thead col-xs-12 col-sm-12">Приоритет</div>
+								<div class="col-xs-12 col-sm-12 past tr_xs">
+									<img src="img/v_dot.png" alt="" />
+									<div class="number">3</div>
+								</div>
+								<div class="thead col-xs-12 col-sm-12">Склад №3</div>
+								<div class="col-xs-12 col-sm-12 tr_xs"><img src="img/v_dot.png" alt="" />Центральный склад</div>
+								<div class="thead col-xs-12 col-sm-12">Город</div>
+								<div class="col-xs-12 col-sm-12 tr_xs"><img src="img/v_dot.png" alt="" /><div class="table_stock_selection-warehause active_status-Astana"></div><span>Астана</span></div>
+								<div class="thead col-xs-12 col-sm-12">Ожидаемый срок поставки</div>
+								<div class="col-xs-8 col-sm-8 tr_xs"><img src="img/v_dot.png" alt="" /><span>0</span> <span>Д</span></div>
+								<div class="col-xs-4 col-sm-4 tr_xs checkbox">
+									<label>
+										<input type="checkbox" class="ios-switch green	bigswitch"/><div><div></div></div>
+									</label>
+								</div>
+							</div>
+
+							<!--третий ряд таблицы Екатеринбург-->
+							<div class="table_stock_selection selectionEct row hidden-md hidden-lg">
+								<div class="thead col-xs-12 col-sm-12">Приоритет</div>
+								<div class="col-xs-12 col-sm-12 past tr_xs">
+									<img src="img/v_dot.png" alt="" />
+									<div class="number">3</div>
+								</div>
+								<div class="thead col-xs-12 col-sm-12">Склад №4</div>
+								<div class="col-xs-12 col-sm-12 tr_xs"><img src="img/v_dot.png" alt="" />Центральный склад</div>
+								<div class="thead col-xs-12 col-sm-12">Город</div>
+								<div class="col-xs-12 col-sm-12 tr_xs"><img src="img/v_dot.png" alt="" /><div class="table_stock_selection-warehause active_status-Ect"></div><span>Екатеринбург</span></div>
+								<div class="thead col-xs-12 col-sm-12">Ожидаемый срок поставки</div>
+								<div class="col-xs-8 col-sm-8 tr_xs"><img src="img/v_dot.png" alt="" /><span>0</span> <span>Д</span></div>
+								<div class="col-xs-4 col-sm-4 tr_xs checkbox">
+									<label>
+										<input type="checkbox" class="ios-switch green	bigswitch"/><div><div></div></div>
+									</label>
+								</div>
+							</div>
+
+
+							<!--для десктопов-->
+							<!--шапка таблицы-->
+							<div class="table_stock_selection row hidden-xs hidden-sm">
+								<div class="thead col-sm-3">Приоритет</div>
+								<div class="thead col-sm-3">Название склада</div>
+								<div class="thead col-sm-3">Город</div>
+								<div class="thead col-sm-3"><span class="hidden-md from1200">Ожидаемый срок поставки</span><span class="to_1440 hidden-xs hidden-sm">Cрок поставки</span></div>
+							</div>
+
+						<div class="sort">
+							<!--первый ряд таблицы Екатеринбург-->
+							<div class="table_stock_selection selectionEct row hidden-xs hidden-sm">
+								<div class="col-sm-3 past tr_xs">
+									<img src="img/v_dot.png" alt="" />
+									<div class="number">0</div>
+								</div>
+								<div class="col-sm-3 tr_xs"><img class="hidden-sm hidden-md hidden-lg" src="img/v_dot.png" alt="" />Склад №1</div>
+								<div class="col-sm-3 tr_xs"><img class="hidden-sm hidden-md hidden-lg" src="img/v_dot.png" alt="" /><div class="table_stock_selection-warehause active_status-Ect"></div><span>Екатеринбург</span></div>
+								<div class="col-sm-1 tr_xs"><img class="hidden-sm hidden-md hidden-lg" src="img/v_dot.png" alt="" /><span>0</span> <span>Д</span></div>
+								<div class="col-sm-2 tr_xs checkbox">
+									<label>
+										<input type="checkbox" class="ios-switch green	bigswitch"/><div><div></div></div>
+									</label>
+									<img src="img/v_dot.png" alt="" />
+								</div>
+							</div>
+
+							<!--второй ряд таблицы Минск-->
+							<div class="table_stock_selection selectionMinsk row hidden-xs hidden-sm">
+								<div class="col-sm-3 col-md-3 col-lg-3 past tr_xs">
+									<img src="img/v_dot.png" alt="" />
+									<div class="number">1</div>
+								</div>
+								<div class="col-sm-3 col-md-3 col-lg-3 tr_xs"><img class="hidden-sm hidden-md hidden-lg" src="img/v_dot.png" alt="" />Склад №2</div>
+								<div class="col-sm-3 col-md-3 col-lg-3 tr_xs"><img class="hidden-sm hidden-md hidden-lg" src="img/v_dot.png" alt="" /><div class="table_stock_selection-warehause active_status-Minsk"></div><sapn>Минск</sapn></div>
+								<div class="col-sm-1 col-md-1 col-lg-1 tr_xs"><img class="hidden-sm hidden-md hidden-lg" src="img/v_dot.png" alt="" /><span>0</span> <span>Д</span></div>
+								<div class="col-sm-2 col-md-2 col-lg-2 tr_xs checkbox">
+									<label>
+										<input type="checkbox" class="ios-switch green	bigswitch"/><div><div></div></div>
+									</label>
+									<img src="img/v_dot.png" alt="" />
+								</div>
+							</div>
+
+							<!--третий ряд таблицы Подольск-->
+							<div class="table_stock_selection selectionPodolsk row hidden-xs hidden-sm">
+								<div class="col-sm-3 col-md-3 col-lg-3 past tr_xs">
+									<img src="img/v_dot.png" alt="" />
+									<div class="number">2</div>
+								</div>
+								<div class="col-sm-3 col-md-3 col-lg-3 tr_xs"><img class="hidden-sm hidden-md hidden-lg" src="img/v_dot.png" alt="" />Склад №3</div>
+								<div class="col-sm-3 col-md-3 col-lg-3 tr_xs"><img class="hidden-sm hidden-md hidden-lg" src="img/v_dot.png" alt="" /><div class="table_stock_selection-warehause active_status-Podolsk"></div><span>Подольск</span></div>
+								<div class="col-sm-1 col-md-1 col-lg-1 tr_xs"><img class="hidden-sm hidden-md hidden-lg" src="img/v_dot.png" alt="" /><span>0</span> <span>Д</span></div>
+								<div class="col-sm-2 col-md-2 col-lg-2 tr_xs checkbox">
+									<label>
+										<input type="checkbox" class="ios-switch green	bigswitch"/><div><div></div></div>
+									</label>
+									<img src="img/v_dot.png" alt="" />
+								</div>
+							</div>
+
+							<!--четвертый ряд таблицы Астана-->
+							<div class="table_stock_selection selectionAstana row hidden-xs hidden-sm">
+								<div class="col-sm-3 col-md-3 col-lg-3 past tr_xs">
+									<img src="img/v_dot.png" alt="" />
+									<div class="number">3</div>
+								</div>
+								<div class="col-sm-3 col-md-3 col-lg-3 tr_xs"><img class="hidden-sm hidden-md hidden-lg" src="img/v_dot.png" alt="" />Склад №4</div>
+								<div class="col-sm-3 col-md-3 col-lg-3 tr_xs"><img class="hidden-sm hidden-md hidden-lg" src="img/v_dot.png" alt="" /><div class="table_stock_selection-warehause active_status-Astana"></div><span>Астана</span></div>
+								<div class="col-sm-1 col-md-1 col-lg-1 tr_xs"><img class="hidden-sm hidden-md hidden-lg" src="img/v_dot.png" alt="" /><span>0</span> <span>Д</span></div>
+								<div class="col-sm-2 col-md-2 col-lg-2 tr_xs checkbox">
+									<label>
+										<input type="checkbox" class="ios-switch green	bigswitch"/><div><div></div></div>
+									</label>
+									<img src="img/v_dot.png" alt="" />
+								</div>
+							</div>
+						</div>
+
+						<!--загрузка вайлов -->
+						<div class="add_file row hidden-xs hidden-sm">
+							<form action="post">
+							<div class="col-md-5">
+								<div class="file-input cf">
+									<a class="btn">ВЫБЕРИТЕ ФАЙЛ</a>
+									<input type="file" class="input-file-btn" name="file" size="40">
+									<div><b>Файл:</b> <span>файл не выбран</span></div>
+								</div>
+							</div>
+							<div class="add_tmpl col-md-7">
+								<span>Для оформления данных загрузки <br>воспользуйтесь шаблоном</span>
+								<button class="gray_btn btn" type="submit" name="button"><i class="fa fa-download" aria-hidden="true"></i> Загрузить шаблон в .XLS</button>
+							</div>
+							</form>
+						</div>
+
+						<!--найденные товары-->
+						<div class="row search_goods">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<h3>Найденные товары</h3>
+							<button type="button" class="importFound gray_btn btn importActiveBtn">Найденные товары</button>
+							<button type="button" class="importAbsent gray_btn btn">Отсутствующие <span class="hidden-sm">товары</span></button>
+						<div class="search_goods-rightBtn">
+							<button type="button" class="addAllImport gray_btn btn">Выбрать все</button>
+							<button type="button" class="importREmoveMarckAll gray_btn btn">Снять выделение</button>
+							<button type="button" class="green_btn btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Добавить в корзину</button>
+						</div>
+						</div>
+						</div>
+
+
+
+
+						<!--таблица с найденными товарами -->
+						<!--первый ряд таблицы-->
+						<div class="row table_search_goods_result">
+						<!--Бренд-->
+						<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
+								<div class="title">
+									<div class="checkbox"><div class="inner"></div></div>
+									<input class="checkbox_brand" type="checkbox" name="checkBrand">
+									<span>Бренд</span>
+								</div>
+								<div class="content">
+									<a href="#">Purfix</a>
+									<p>Артикул</p>
+									<span>AHC299</span>
+									<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+								</div>
+						</div>
+						<!--Описание-->
+						<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
+								<div class="title">Описание</div>
+								<div class="content">
+									<h4>Фиильтр салона</h4>
+									<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+								</div>
+						</div>
+						<!--Город-->
+						<div class="cell_wrap town col-xs-4 col-sm-4 col-md-1 col-lg-1">
+								<div class="title">Город</div>
+								<div class="content">
+									<div class="top_cell"><a href="#">Привольный</a></div>
+									<div class="bottom_cell"><a href="#">Подольск</a></div>
+								</div>
+						</div>
+						<!--Наличие-->
+						<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
+								<div class="title light_title">Наличие</div>
+								<div class="content">
+									<div class="top_cell light_top"><span>12</span></div>
+									<div class="bottom_cell light_bottom"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+								</div>
+						</div>
+						<!--Кратность продажи-->
+						<div class="cell_wrap fold col-sm-4 hidden-xs col-md-1 col-lg-1">
+							<div class="title">Кратность <br>продажи</div>
+							<div class="content">
+								<div class="top_cell"></div>
+								<div class="bottom_cell"></div>
+							</div>
+						</div>
+						<!--Ожидаемый срок доставки-->
+						<div class="cell_wrap delivery_time col-xs-4 col-sm-4 col-md-1 col-lg-1">
+							<div class="title light_title"><span class="hidden-md">Ожидаемый</span><br class="hidden-md">срок поставки</div>
+							<div class="content">
+								<div class="top_cell light_top"><span>На складе</span></div>
+								<div class="bottom_cell light_bottom"><span class="date_count">1</span> <span>день</span></div>
+							</div>
+						</div>
+						<!--Цена с НДС-->
+						<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-2">
+							<div class="title">Цена с НДС</div>
+							<div class="content">
+								<div class="top_cell"><span>84 500</span> <span>руб.</span></div>
+								<div class="bottom_cell"><span>131 112 289 900</span> <span>руб.</span></div>
+							</div>
+						</div>
+						<!--количество-->
+						<div class="cell_wrap quantity_ col-xs-7 col-sm-4 col-md-2 col-lg-2">
+							<div class="title light_title">Количество</div>
+							<div class="content">
+								<div class="top_cell light_top">
+									<span class="hidden_span">Нал</span>
+									<form action="post">
+										<input class="checkbox_result" type="checkbox">
+										<div class="checked_box"><div class="inner"><div class="green"></div></div></div>
+										<div class="input-group spinner">
+										<input type="text" class="form-control" value="10">
+										<div class="input-group-btn-vertical">
+											<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+											<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+										</div>
+										</div>
+										<button class="waitImport btn_form" type="submit btn" name="button"><i class="fa fa-hourglass-end" aria-hidden="true"></i></button>
+									</form>
+								</div>
+								<div class="bottom_cell light_bottom">
+									<span class="hidden_span">Нал</span>
+									<form action="post">
+										<input class="checkbox_result" type="checkbox">
+										<div class="checked_box"><div class="inner"><div class="green"></div></div></div>
+										<div class="input-group spinner">
+											<input type="text" class="form-control" value="120">
+											<div class="input-group-btn-vertical">
+												<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+												<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+											</div>
+										</div>
+										<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+									</form>
+								</div>
+							</div>
+						</div>
+
+						</div>
+
+						<!--Второй ряд таблицы-->
+
+						<div class="row table_search_goods_result">
+						<!--Бренд-->
+						<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
+								<div class="title">
+									<div class="checkbox"><div class="inner"></div></div>
+									<input class="checkbox_brand" type="checkbox" name="checkBrand">
+									<span>Бренд</span>
+								</div>
+								<div class="content">
+									<a href="#">Purfix</a>
+									<p>Артикул</p>
+									<span>AHC299</span>
+									<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+								</div>
+						</div>
+						<!--Описание-->
+						<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
+								<div class="title">Описание</div>
+								<div class="content">
+									<h4>Фиильтр салона</h4>
+									<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+								</div>
+						</div>
+						<!--Город-->
+						<div class="cell_wrap town col-xs-4 col-sm-4 col-md-1 col-lg-1">
+								<div class="title">Город</div>
+								<div class="content">
+									<div class="top_cell"><a href="#">Привольный</a></div>
+									<div class="bottom_cell"><a href="#">Подольск</a></div>
+								</div>
+						</div>
+						<!--Наличие-->
+						<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
+								<div class="title light_title">Наличие</div>
+								<div class="content">
+									<div class="top_cell light_top"><span>12</span></div>
+									<div class="bottom_cell light_bottom"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+								</div>
+						</div>
+						<!--Кратность продажи-->
+						<div class="cell_wrap fold col-sm-4 hidden-xs col-md-1 col-lg-1">
+							<div class="title">Кратность <br>продажи</div>
+							<div class="content">
+								<div class="top_cell"></div>
+								<div class="bottom_cell"></div>
+							</div>
+						</div>
+						<!--Ожидаемый срок доставки-->
+						<div class="cell_wrap delivery_time col-xs-4 col-sm-4 col-md-1 col-lg-1">
+							<div class="title light_title"><span class="hidden-md">Ожидаемый</span><br class="hidden-md">срок поставки</div>
+							<div class="content">
+								<div class="top_cell light_top"><span>На складе</span></div>
+								<div class="bottom_cell light_bottom"><span class="date_count">1</span> <span>день</span></div>
+							</div>
+						</div>
+						<!--цена с НДС-->
+						<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-2">
+							<div class="title">Цена с НДС</div>
+							<div class="content">
+								<div class="top_cell"><span>84 500</span> <span>руб.</span></div>
+								<div class="bottom_cell"><span>131 112 289 900</span> <span>руб.</span></div>
+							</div>
+						</div>
+						<!--Количество-->
+						<div class="cell_wrap quantity_ col-xs-7 col-sm-4 col-md-2 col-lg-2">
+							<div class="title light_title">Количество</div>
+							<div class="content">
+								<div class="top_cell light_top">
+									<span>Нал</span>
+									<form action="post">
+										<input class="checkbox_result" type="checkbox">
+										<div class="checked_box"><div class="inner"><div class="green"></div></div></div>
+										<div class="input-group spinner">
+										<input type="text" class="form-control" value="10">
+										<div class="input-group-btn-vertical">
+											<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+											<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+										</div>
+										</div>
+										<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+									</form>
+								</div>
+								<div class="bottom_cell light_bottom">
+									<span>Нал</span>
+									<form action="post">
+										<input class="checkbox_result" type="checkbox">
+										<div class="checked_box"><div class="inner"><div class="green"></div></div></div>
+										<div class="input-group spinner">
+											<input type="text" class="form-control" value="120">
+											<div class="input-group-btn-vertical">
+												<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+												<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+											</div>
+										</div>
+										<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+									</form>
+								</div>
+							</div>
+						</div>
+						</div>
+
+						<!--Третий ряд таблицы-->
+						<div class="row table_search_goods_result">
+						<!--Бренд-->
+						<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
+								<div class="title">
+									<div class="checkbox"><div class="inner"></div></div>
+									<input class="checkbox_brand" type="checkbox" name="checkBrand">
+									<span>Бренд</span>
+								</div>
+								<div class="content">
+									<a href="#">Purfix</a>
+									<p>Артикул</p>
+									<span>AHC299</span>
+									<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+								</div>
+						</div>
+						<!--Описание-->
+						<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
+								<div class="title">Описание</div>
+								<div class="content">
+									<h4>Фиильтр салона</h4>
+									<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+								</div>
+						</div>
+						<!--Город-->
+						<div class="cell_wrap town col-xs-4 col-sm-4 col-md-1 col-lg-1">
+								<div class="title">Город</div>
+								<div class="content">
+									<div class="top_cell white"><a href="#">Привольный</a></div>
+									<div class="bottom_cell lightgray"><a href="#">Подольск</a></div>
+								</div>
+						</div>
+						<!--Наличие-->
+						<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
+								<div class="title light_title">Наличие</div>
+								<div class="content">
+									<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>12</span></div>
+									<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+								</div>
+						</div>
+						<!--Кратность продажи-->
+						<div class="cell_wrap fold col-sm-4 hidden-xs col-md-1 col-lg-1">
+							<div class="title">Кратность <br>продажи</div>
+							<div class="content">
+								<div class="top_cell white"></div>
+								<div class="bottom_cell lightgray"></div>
+							</div>
+						</div>
+						<!--Ожидаемый срок доставки-->
+						<div class="cell_wrap delivery_time col-xs-4 col-sm-4 col-md-1 col-lg-1">
+							<div class="title light_title"><span class="hidden-md">Ожидаемый</span><br class="hidden-md">срок поставки</div>
+							<div class="content">
+								<div class="top_cell white"><span class="date_count">31</span> <span>день</span></div>
+								<div class="bottom_cell lightgray"><span class="date_count">1</span> <span>день</span></div>
+							</div>
+						</div>
+						<!--Цена с НДС-->
+						<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-2">
+							<div class="title">Цена с НДС</div>
+							<div class="content">
+								<div class="top_cell white"><span>84 500</span> <span>руб.</span></div>
+								<div class="bottom_cell lightgray"><span>131 112 289 900</span> <span>руб.</span></div>
+							</div>
+						</div>
+						<!--количество-->
+						<div class="cell_wrap quantity_ col-xs-7 col-sm-4 col-md-2 col-lg-2">
+							<div class="title light_title">Количество</div>
+							<div class="content">
+								<div class="top_cell white">
+									<span>Нал</span>
+									<form action="post">
+										<input class="checkbox_result" type="checkbox">
+										<div class="checked_box"><div class="inner"><div class="green"></div></div></div>
+										<div class="input-group spinner">
+										<input type="text" class="form-control" value="10">
+										<div class="input-group-btn-vertical">
+											<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+											<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+										</div>
+										</div>
+										<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+									</form>
+								</div>
+								<div class="bottom_cell lightgray">
+									<span>Нал</span>
+									<form action="post">
+										<input class="checkbox_result" type="checkbox">
+										<div class="checked_box"><div class="inner"><div class="green"></div></div></div>
+										<div class="input-group spinner">
+											<input type="text" class="form-control" value="120">
+											<div class="input-group-btn-vertical">
+												<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+												<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+											</div>
+										</div>
+										<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+									</form>
+								</div>
+							</div>
+						</div>
+						</div>
+
+						<!--Четвертый ряд таблицы-->
+						<div class="row table_search_goods_result">
+						<!--Бренд-->
+						<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
+								<div class="title">
+									<div class="checkbox"><div class="inner"></div></div>
+									<input class="checkbox_brand" type="checkbox" name="checkBrand">
+									<span>Бренд</span>
+								</div>
+								<div class="content">
+									<a href="#">Purfix</a>
+									<p>Артикул</p>
+									<span>AHC299</span>
+									<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+								</div>
+						</div>
+						<!--Описание-->
+						<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
+								<div class="title">Описание</div>
+								<div class="content">
+									<h4>Фиильтр салона</h4>
+									<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+								</div>
+						</div>
+						<!--Город-->
+						<div class="cell_wrap town col-xs-4 col-sm-4 col-md-1 col-lg-1">
+								<div class="title">Город</div>
+								<div class="content">
+									<div class="top_cell white"><a href="#">Привольный</a></div>
+									<div class="bottom_cell lightgray"><a href="#">Подольск</a></div>
+								</div>
+						</div>
+						<!--Наличие-->
+						<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
+								<div class="title light_title">Наличие</div>
+								<div class="content">
+									<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>12</span></div>
+									<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+								</div>
+						</div>
+						<!--Кратность продажи-->
+						<div class="cell_wrap fold col-sm-4 hidden-xs col-md-1 col-lg-1">
+							<div class="title">Кратность <br>продажи</div>
+							<div class="content">
+								<div class="top_cell white"></div>
+								<div class="bottom_cell lightgray"></div>
+							</div>
+						</div>
+						<!--Ожидаемый срок доставки-->
+						<div class="cell_wrap delivery_time col-xs-4 col-sm-4 col-md-1 col-lg-1">
+							<div class="title light_title"><span class="hidden-md">Ожидаемый</span><br class="hidden-md">срок поставки</div>
+							<div class="content">
+								<div class="top_cell white"><span class="date_count">31</span> <span>день</span></div>
+								<div class="bottom_cell lightgray"><span class="date_count">1</span> <span>день</span></div>
+							</div>
+						</div>
+						<!--Цена с НДС-->
+						<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-2">
+							<div class="title">Цена с НДС</div>
+							<div class="content">
+								<div class="top_cell white"><span>84 500</span> <span>руб.</span></div>
+								<div class="bottom_cell lightgray"><span>131 112 289 900</span> <span>руб.</span></div>
+							</div>
+						</div>
+						<!--количество-->
+						<div class="cell_wrap quantity_ col-xs-7 col-sm-4 col-md-2 col-lg-2">
+							<div class="title light_title">Количество</div>
+							<div class="content">
+								<div class="top_cell white">
+									<span>Нал</span>
+									<form action="post">
+										<input class="checkbox_result" type="checkbox">
+										<div class="checked_box"><div class="inner"><div class="green"></div></div></div>
+										<div class="input-group spinner">
+										<input type="text" class="form-control" value="10">
+										<div class="input-group-btn-vertical">
+											<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+											<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+										</div>
+										</div>
+										<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+									</form>
+								</div>
+								<div class="bottom_cell lightgray">
+									<span>Нал</span>
+									<form action="post">
+										<input class="checkbox_result" type="checkbox">
+										<div class="checked_box"><div class="inner"><div class="green"></div></div></div>
+										<div class="input-group spinner">
+											<input type="text" class="form-control" value="120">
+											<div class="input-group-btn-vertical">
+												<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+												<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+											</div>
+										</div>
+										<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+									</form>
+								</div>
+							</div>
+						</div>
+						</div>
+
+					<div class="not_in_stock container-fluid">
+					<div class="row">
+						<h2>Отсутствующие на вашем складе</h2>
+
+						<!--Первый ряд таблицы-->
+						<div class="row table_search_goods_result">
+						<!--Бренд-->
+						<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
+								<div class="title">
+									<span>Бренд</span>
+								</div>
+								<div class="content">
+									<a href="#">Purfix</a>
+									<p>Артикул</p>
+									<span>AHC299</span>
+									<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+								</div>
+						</div>
+						<!--Описание-->
+						<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
+								<div class="title">Описание</div>
+								<div class="content">
+									<h4>Фиильтр салона</h4>
+									<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+								</div>
+						</div>
+						<!--Город-->
+						<div class="cell_wrap town col-xs-4 col-sm-4 col-md-1 col-lg-1">
+								<div class="title">Город</div>
+								<div class="content">
+									<div class="top_cell white"><a href="#">Привольный</a></div>
+									<div class="bottom_cell lightgray"><a href="#">Подольск</a></div>
+								</div>
+						</div>
+						<!--Наличие-->
+						<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
+								<div class="title light_title">Наличие</div>
+								<div class="content">
+									<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>12</span></div>
+									<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+								</div>
+						</div>
+						<!--Кратность продажи-->
+						<div class="cell_wrap fold col-sm-4 hidden-xs col-md-1 col-lg-1">
+							<div class="title">Кратность <br>продажи</div>
+							<div class="content">
+								<div class="top_cell white"></div>
+								<div class="bottom_cell lightgray"></div>
+							</div>
+						</div>
+						<!--Ожидаемый срок доставки-->
+						<div class="cell_wrap delivery_time col-xs-4 col-sm-4 col-md-1 col-lg-1">
+							<div class="title light_title"><span class="hidden-md">Ожидаемый</span><br class="hidden-md">срок поставки</div>
+							<div class="content">
+								<div class="top_cell white"><span class="date_count">31</span> <span>день</span></div>
+								<div class="bottom_cell lightgray"><span class="date_count">1</span> <span>день</span></div>
+							</div>
+						</div>
+						<!--Цена с НДС-->
+						<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-2">
+							<div class="title">Цена с НДС</div>
+							<div class="content">
+								<div class="top_cell white"><span>84 500</span> <span>руб.</span></div>
+								<div class="bottom_cell lightgray"><span>131 112 289 900</span> <span>руб.</span></div>
+							</div>
+						</div>
+						<!--количество-->
+						<div class="cell_wrap quantity_ col-xs-7 col-sm-4 col-md-2 col-lg-2">
+							<div class="title light_title">Количество</div>
+							<div class="content">
+								<div class="top_cell white">
+									<span>Нал</span>
+									<form action="post">
+										<input class="checkbox_result" type="checkbox">
+										<div class="checked_box"><div class="inner"><div class="green"></div></div></div>
+										<div class="input-group spinner">
+										<input type="text" class="form-control" value="10">
+										<div class="input-group-btn-vertical">
+											<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+											<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+										</div>
+										</div>
+										<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+									</form>
+								</div>
+								<div class="bottom_cell lightgray">
+									<span>Нал</span>
+									<form action="post">
+										<input class="checkbox_result" type="checkbox">
+										<div class="checked_box"><div class="inner"><div class="green"></div></div></div>
+										<div class="input-group spinner">
+											<input type="text" class="form-control" value="120">
+											<div class="input-group-btn-vertical">
+												<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+												<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+											</div>
+										</div>
+										<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+									</form>
+								</div>
+							</div>
+						</div>
+						</div>
+
+						<!--Второй ряд таблицы-->
+						<div class="row table_search_goods_result">
+						<!--Бренд-->
+						<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
+								<div class="title">
+									<span>Бренд</span>
+								</div>
+								<div class="content">
+									<a href="#">Purfix</a>
+									<p>Артикул</p>
+									<span>AHC299</span>
+									<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+								</div>
+						</div>
+						<!--Описание-->
+						<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
+								<div class="title">Описание</div>
+								<div class="content">
+									<h4>Фиильтр салона</h4>
+									<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+								</div>
+						</div>
+						<!--Город-->
+						<div class="cell_wrap town col-xs-4 col-sm-4 col-md-1 col-lg-1">
+								<div class="title">Город</div>
+								<div class="content">
+									<div class="top_cell white"><a href="#">Привольный</a></div>
+									<div class="bottom_cell lightgray"><a href="#">Подольск</a></div>
+								</div>
+						</div>
+						<!--Наличие-->
+						<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
+								<div class="title light_title">Наличие</div>
+								<div class="content">
+									<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>12</span></div>
+									<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+								</div>
+						</div>
+						<!--Кратность продажи-->
+						<div class="cell_wrap fold col-sm-4 hidden-xs col-md-1 col-lg-1">
+							<div class="title">Кратность <br>продажи</div>
+							<div class="content">
+								<div class="top_cell white"></div>
+								<div class="bottom_cell lightgray"></div>
+							</div>
+						</div>
+						<!--Ожидаемый срок доставки-->
+						<div class="cell_wrap delivery_time col-xs-4 col-sm-4 col-md-1 col-lg-1">
+							<div class="title light_title"><span class="hidden-md">Ожидаемый</span><br class="hidden-md">срок поставки</div>
+							<div class="content">
+								<div class="top_cell white"><span class="date_count">31</span> <span>день</span></div>
+								<div class="bottom_cell lightgray"><span class="date_count">1</span> <span>день</span></div>
+							</div>
+						</div>
+						<!--Цена с НДС-->
+						<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-2">
+							<div class="title">Цена с НДС</div>
+							<div class="content">
+								<div class="top_cell white"><span>84 500</span> <span>руб.</span></div>
+								<div class="bottom_cell lightgray"><span>131 112 289 900</span> <span>руб.</span></div>
+							</div>
+						</div>
+						<!--количество-->
+						<div class="cell_wrap quantity_ col-xs-7 col-sm-4 col-md-2 col-lg-2">
+							<div class="title light_title">Количество</div>
+							<div class="content">
+								<div class="top_cell white">
+									<span>Нал</span>
+									<form action="post">
+										<input class="checkbox_result" type="checkbox">
+										<div class="checked_box"><div class="inner"><div class="green"></div></div></div>
+										<div class="input-group spinner">
+										<input type="text" class="form-control" value="10">
+										<div class="input-group-btn-vertical">
+											<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+											<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+										</div>
+										</div>
+										<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+									</form>
+								</div>
+								<div class="bottom_cell lightgray">
+									<span>Нал</span>
+									<form action="post">
+										<input class="checkbox_result" type="checkbox">
+										<div class="checked_box"><div class="inner"><div class="green"></div></div></div>
+										<div class="input-group spinner">
+											<input type="text" class="form-control" value="120">
+											<div class="input-group-btn-vertical">
+												<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+												<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+											</div>
+										</div>
+										<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+									</form>
+								</div>
+							</div>
+						</div>
+						</div>
+
+					</div>
+					</div>
+
+
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+			<!--footer-->
+			<!--социальнные сети и геокоординаты-->
+			<div class="row bottom_mnu hidden-xs">
+				<div class="hidden-xs hidemenuR col-md-12 col-sm-12 col-lg-12">
+					<ul>
+						<li><a href="#">Компания</a></li>
+						<li><a href="#">Автозапчасти <br>и оборудование</a></li>
+						<li><a href="#">Автозапчасти <br> патрон</a></li>
+						<li><a href="#">Розница <br>и сто</a></li>
+						<li><a href="#">Шины и <br> диски</a></li>
+						<li><a href="#">Масла <br>и автохимия</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="p0 social_pages row">
+				<div class="plr0 col-sm-12 hidemenuR col-md-12 col-lg-12 col-xs-12">
+					<div class="pr0 col-xs-12 col-sm-5 col-md-5 col-lg-6">
+						<div class="social_wrap">
+							<span class="hidden-sm hidden-md hidden-lg">Мы в соцсетях</span>
+							<span class="hidden-xs">Мы в социальных сетях</span>
+
+							<a href="#">
+								<div class="container_for_i"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+							</a>
+							<a href="#">
+								<div class="container_for_i"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+							</a>
+							<a href="#">
+								<div class="container_for_i"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+							</a>
+							<a href="#">
+								<div class="container_for_i"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-3 col-lg-3">
+						<ul class="location">
+							<li><i class="fa fa-map-marker" aria-hidden="true"></i> 223062,</li>
+							<li>Минский р-н,</li>
+							<li>пос. Привольный,</li>
+							<li>ул. Мира 2А</li>
+						</ul>
+					</div>
+
+					<div class="col-xs-12 hidden-md hidden-sm hidden-lg">
+						<ul class="phones">
+							<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
+							<li><i class="fa fa-fax" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
+							<li><i class="fa fa-envelope" aria-hidden="true"></i><a class="mail" href="mailto:info@shate-m.com">info@shate-m.com</a></li>
+						</ul>
+					</div>
+
+					<div class="hidden-xs pr0 col-sm-3 col-lg-3">
+						<ul class="phones_sm clearfix">
+							<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
+							<li><i class="fa fa-fax" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
+							<li><i class="fa fa-envelope" aria-hidden="true"></i><a class="mail" href="mailto:info@shate-m.com">info@shate-m.com</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="row copiright">
+
+				<div class="hidemenuR plr0 col-sm-12 col-md-12 col-lg-12 col-xs-12">
+					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-6">
+						<div class="licence">
+							<span>
+							Copiright &copy; 2001-2016 Частное предприятие &laquo; ШАТЕ-М ПЛЮС &raquo;
+						</span>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 bottom_logo ">
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+							<a href="#"><img src="img/groupauto.png" alt="шате-м"></a>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+							<a href="#"><img src="img/logo.png" alt="шате-м"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<!--pop-Up окно для коментария к заказу-->
+		<div class="popUp">
+			<div class="innrer_content_popUp">
+				<h2>Текст коментария</h2>
+				Далеко-далеко за словесными рыбные тексты. Вскоре до большой своего снова, путь языком рот текстами, бросил, семь то которой дороге переулка агенство силуэт сих о скатился над последний. Единственное, злых? Все буквенных, возвращайся напоивший своего вопроса ведущими деревни, рыбными последний залетают страна. Эта большого рукописи до, своих, образ имени лучше свое агенство текстов напоивший проектах журчит ты, бросил встретил! Великий пустился над, сих предложения ты, путь родного! Lorem запятых продолжил осталось даже текстов, злых рыбного возвращайся! Великий меня она парадигматическая раз, своего текстами использовало он ручеек, рукопись семь маленькая. Буквоград агенство безопасную, своего пустился последний заголовок!
+				<div class="wrap_cross">
+				</div>
+			</div>
+		</div>
+
+		<!--pop-Up окно для коментария к заказу-->
+			<div class="addComent">
+				<div class="innrer_content_popUp_addComent">
+					<h2>Добавить коментарий</h2>
+
+						<form class="textarea_wrap" action="post">
+						<textarea name="textareaForAddComent"></textarea>
+						<input class="btn" type="submit" name="name" value="Добавить коментарий">
+						</form>
+					<div class="wrap_cross">
+					</div>
+				</div>
+			</div>
+
+	<script src="js/add.js" charset="utf-8"></script>
+	<script src="js/common.js" charset="utf-8"></script>
+</body>
+
+</html>

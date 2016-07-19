@@ -1,0 +1,1504 @@
+@import "bourbon"
+$base-font-size: 13px
+@function em($px, $base: $base-font-size)
+		@return ($px / $base) * 1em
+
+/*==========	Desktop First Method	==========*/
+@media only screen and (max-width : 1842px)
+	.orders_list_changes_btn
+		span
+			display: none
+
+
+
+@media only screen and (max-width : 1200px)
+	.orders-info_popUp-inner-buttons
+		margin-top: 0
+		button
+			font-size: .8em
+	.orders-info_popUp-inner-tabItemContent
+		.inner-wrap
+			height: 170px !important
+	.orders_list
+		margin-bottom: 30px
+	.orders_container .status_order .inner_wrap a i
+		position: absolute
+		right: 10px
+		bottom: 10px
+	.orders_list-wrapControl
+		float: right
+	.orders_list
+		padding-bottom: 0
+		h2
+			margin-bottom: 20px !important
+		.wrap
+			width: 100%
+	.cross_close
+		display: none
+	.datapicker
+		height: 234px
+	.hide-1200
+		display: none
+	.licence
+		span
+			display: inline-block
+			font-size: em(11px)
+	.arrows
+		display: none
+	/**/
+
+@media only screen and (max-width : 2000px)
+	.general_mnu ul li a
+		font-size: em(11px)
+	/**/
+
+@media only screen and (max-width : 992px)
+	.orders-info_popUp-inner
+		width: 90% !important
+	.order-list_buttons
+		width: 100%
+		float: left
+		margin-top: 20px
+	.table_search_goods_result
+		height: auto
+	.bottom_mnu ul li a
+		padding: 10px 12px
+	.top_serch .search_btn
+		right: 3%
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.orders-info_popUp-inner
+		.tab_item
+			padding: 0 !important
+		.wrapper
+			.tabs
+				.tab
+					padding: 10px !important
+	.orders-info_popUp-inner-about
+		h5
+			line-height: 0
+			display: inline-block
+			width: 100%
+		strong
+			margin: 0
+			display: inline-block
+			line-height: em(14px)
+	.order-list_buttons
+		margin-bottom: 0px !important
+	.orders_container .status_order .inner_wrap a i
+		bottom: 20px
+	.inner_wrap,
+	.inner_wrap_lg .left,
+	.inner_wrap_lg .right,
+		height: 65px !important
+	.orders_container
+		.name
+			.inner_wrap
+				height: 65px !important
+				padding: 10px 15px
+				font-size: em(10px)
+		.orders_list_changes_wrap
+			float: left
+			margin-left: 15px
+		.orders_list_changes_wrap_r
+			float: right
+	.social_pages .phones li i
+		margin-right: 10px
+	.radogrup
+		#checkator_
+			height: 20px
+			width: 20px
+		.checkator_element
+			&.radio
+				border-radius: 0%
+				&:after
+					border-radius: 0%
+			&.checkbox
+				border: 1px solid #a0a0a0
+		.checkator_source
+			&:checked + .checkator_element:after
+				border-radius: 0%
+	.innrer_content_popUp
+		overflow-y: scroll
+	.large_block .title button
+		float: right
+	.percent_wrap
+		margin-right: 0
+	.button_action
+		float: right
+	.wrap_cart
+		text-align: center !important
+	.status_order
+		.inner_wrap
+			padding: 15px !important
+			font-size: em(14px) !important
+			min-height: 60px !important
+	.orders_list_changes_wrap ul li button i
+		top: 0
+	.orders_list_changes_wrap ul li.active button
+		padding: 5px
+	.orders_list_changes_wrap ul li button
+		padding: 5px
+	.wrap_cart
+		text-align: center
+	.hidemenuR
+		padding-left: 15px
+	.container_for_i
+		margin-bottom: 20px
+	.social_pages
+		padding-top: 45px
+		padding-bottom: 20px
+		.phones
+			.mail
+				text-decoration: underline
+				font-size: em(16px)
+			a
+				margin-top: 3px !important
+				display: inline-block
+			i
+				color: #fff
+	.row_for_table_lg
+		.inner_wrap
+			min-height: 100px
+			height: auto
+	.social_pages
+		.phones
+			i
+				width: auto
+	.toll
+		min-height: 300px
+		height: auto
+	.history
+		width: 100%
+		tr
+			th
+				&:last-child
+				display: none
+			td
+				&:last-child
+					display: none
+	.orders_container
+		margin-left: 15px
+		margin-right: 15px
+	.balance
+		margin-top: 19px
+	.orders_list_changes_wrap_r
+		margin-top: 25px
+	.history .tr .td
+		&:nth-child(1)
+			width: 50%
+		&:nth-child(2)
+			width: 25%
+		&:nth-child(3)
+			width: 25%
+	.history .thead
+		.th:nth-child(1)
+			width: 50%
+		.th:nth-child(2)
+			width: 25%
+		.th:nth-child(3)
+			width: 25%
+
+@media only screen and (width : 768px)
+	.orders-info_popUp-inner-close
+		right: 5% !important
+		top: 15% !important
+	.orders-info_popUp-inner
+		height: 70% !important
+	.orders-info_popUp-inner-tabItemContent
+		.inner-wrap
+			height: 420px !important
+
+
+
+@media only screen and (max-width : 767px)
+	.table_for_xs
+		box-shadow: 0 3px 3px rgba(0, 0, 0, .3)
+		margin-bottom: 15px
+		.tottal_row,
+			.inner_wrap
+				height: 83px !important
+		.regular_row
+			height: 83px
+	.orders_container .number_order .title input
+    float: left
+    position: absolute
+    left: 2px
+    top: 2px
+	.datapicker
+		height: 427px
+	.order-list_buttons
+		margin-bottom: 20px
+@media only screen and (max-width : 560px)
+	.orders_list_changes_wrap_r
+		width: 56px
+	.order-list_buttons
+		padding-right: 15px
+		button
+			width: 100%
+			padding: 10px !important
+			margin-bottom: 20px !important
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.alert
+		.alert_zone
+			padding-top: 7px
+	.toll
+		.inner_content
+			p
+				padding-left: 10px
+				font-family: 'OSR', sans-serif
+	.wrap_item_block
+		.content__item_toll
+			.wrapper_icon_and_h2
+				i
+					margin-right: 10px !important
+					margin-left: 0 !important
+	.large_block
+		.title
+			button
+				padding: 5px 10px
+				font-size: em(12px)
+			i
+				margin-right: 10px
+				left: 10px
+			span
+				margin-right: 5px
+				font-size: em(13px)
+	.percent_wrap
+		i
+			margin-right: 10px
+		h2
+			font-size: em(13px)
+	.button_action
+		font-size: em(12px)
+		width: 100px
+
+	/**/
+@media only screen and (max-width : 360px)
+	.breadcrumbs_bottom ul li a
+		padding: 6px 10px
+	.history .tr .td
+		&:nth-child(1)
+			padding-left: 5px
+		&:nth-child(2)
+			padding-left: 5px
+		&:nth-child(3)
+			padding-left: 5px
+	.history .thead
+		.th:nth-child(1)
+			padding-left: 5px
+		.th:nth-child(2)
+			padding-left: 5px
+		.th:nth-child(3)
+			padding-left: 5px
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 400px)
+	.top_serch .search_btn
+		right: -2px
+	.datapicker form .datapicker_checkbox_wrap
+		padding: 8px 1px 5px
+		#checkator_
+			margin-top: 3px
+	#checkator_
+		height: 13px
+		width: 13px
+	.history .tr .td
+		font-size: em(12px)
+
+
+
+	/**/
+@media only screen and (max-width : 339px)
+	.datapicker
+		font-size: em(13px)
+	.tottal_balance,
+	.wrap_cart
+		font-size: em(12.1px)
+/**/
+/*==========	Mobile First Method	==========*/
+
+@media only screen and (min-width : 400px)
+	.item_stock .date_sell
+		padding-top: 10px
+		height: 40px
+
+/* Small Devices, Tablets */
+@media only screen and (width : 768px)
+	.history .thead .th:last-child, .history .thead .th:nth-child(1), .history .tr .td:nth-child(1)
+			width: 25%
+	.history .tr .td:nth-child(3)
+		padding-left: 20px
+	.orders_list_changes_wrap ul li button
+		padding: 0 !important
+	.orders_list_changes_wrap ul li
+		margin-top: -1px
+		i
+			padding-left: 5px
+			padding-top: 0px
+			margin-top: 0
+			padding-bottom: 3px
+	.orders_list_changes_wrap_r
+		margin-top: 0
+	.tablets
+		padding-left: 0
+		padding-right: 0
+@media only screen and (min-width : 768px)
+	.table_for_xs
+		margin: 0 !important
+	.vertical_line
+		right: -17% !important
+	.drop_down_search_list
+		width: 97%
+	.innrer_content_popUp, .innrer_content_popUp_addComent
+		width: 500px !important
+	.large_block .title button
+		top: -8px
+	.wrap_cart
+		text-align: right
+		padding-right: 10%
+	.copiright .licence
+		text-align: left
+	.location
+		margin-left: 15px
+	.add_coment_btn
+		margin: 0
+		width: 100%
+		span
+			text-align: center
+			float: none
+		i
+			display: none
+			margin: 0
+	.breadcrumbs_bottom
+		text-align: left
+		ul
+			li
+				a
+					padding: 5px 15px
+	.inner_wrap
+		font-size: em(13px)
+		min-height: 100%
+	.border-box
+		border: none
+	.orders_list_changes_wrap ul li
+		padding-top: 2px
+		i
+			margin-top: 5px
+	.orders_list_changes_wrap
+		margin-top: 0
+	.type_person
+		margin-bottom: 0 !important
+	.container_for_i
+		height: 48px
+		width: 48px
+	.social_pages a
+		float: left
+		position: relative
+		text-align: center
+		margin: 0
+		i
+			font-size: em(28px)
+			margin-left: 10px
+	.social_pages
+		padding: 37px 0
+	.user_accaunt
+		margin-left: 73px
+		width: 60px
+	.user_accaunt .triangle
+		left: 130px
+	.top_serch
+		margin-left: -20px
+	.cross
+		margin-left: 10px
+	.top
+		min-height: 130px
+	.cart
+		margin-top: 15px
+	.bottom_logo
+		a
+			display: block
+			float: left
+			margin-top: 0 !important
+			img
+				width: 100%
+	.item_stock
+		margin: 19px 10px 0
+	.item_stock .date_sell
+		right: 10px
+		width: 49%
+		margin-top: 1px
+		font-size: em(13px)
+		span
+			font-family: 'OSB', sans-serif
+	.item_stock button
+		min-height: 33px
+	.item_stock .text h2
+		font-size: em(14px)
+	.item_stock .text p
+		font-size: em(13px)
+	.item_stock .date_sell
+		min-height: 40px
+		height: auto
+	.social_pages i
+		display: block
+		float: left
+		width: auto
+		margin-right: 12px
+		font-size: em(35px)
+		margin-top: 20px
+	.social_wrap
+		text-align: left
+		font-family: 'OSR', sans-serif
+		font-size: em(13px)
+		a
+			margin-right: 10px
+			i
+				font-size: 30px
+	.social_pages .location
+		margin-top: 0
+		text-align: left
+		font-family: 'OSR', sans-serif
+		font-size: em(13px)
+		padding-left: 0
+		i
+			margin-top: 6px
+	.social_pages span
+		display: inline-block
+		width: 100%
+	.phones_sm
+		.mail
+			color: $red
+			font-size: em(14px)
+	.social_pages
+		.phones
+			margin: 0
+			padding: 0
+			span
+				font-family: 'OSR', sans-serif
+				font-size: em(13px)
+				display: inline
+			i
+				display: inline
+				margin-right: 10px !important
+				margin-top: 5px	!important
+				float: left
+				margin: 0
+	.large_block
+		min-height: 450px
+		height: auto
+	.hidemenuR
+		left: 48px
+		padding-right: 64px
+	/*min-width 768*/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 993px)
+	.orders-info_popUp-inner-close
+		right: 15% !important
+@media only screen and (min-width : 992px)
+	.drop_down_search_list
+		width: 100%
+	.top_serch .search_btn
+		right: 3%
+	.wrap_cart
+		padding-right: 0
+		text-align: center
+	.vertical_line
+		right: -23% !important
+	.user_name
+		top: 70px
+	.phones_sm
+		.mail
+			color: $red
+			font-size: em(18px)
+	.cart i
+		margin-left: 10px
+	.user_accaunt
+		margin-left: 0
+		width: 60px
+	.user_accaunt .triangle
+		left: 40px
+	.top_serch
+		margin-left: -20px
+	.top
+		min-height: 70px
+	.date
+		display: none
+	.balance_count
+		display: none
+	#selectvin
+		margin-left: 0
+		width: auto
+	.top_serch
+		.serch_field
+			width: 90%
+	.quantity
+		display: none
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.user_accaunt
+		margin-top: 21px
+		.triangle
+			top: 31px
+	.cart
+		margin-top: 18px
+	.balance
+		margin-top: 22px
+	.markup, .tools
+		min-height: 80vh
+	.content__item_bottom
+		.cross_close
+			top: -23px !important
+	.item_stock .date_sell
+		padding-top: 0
+
+	.priceform select
+		margin-top: 8px
+	.wrapper_icon_and_h2 h2 span
+		position: relative
+		top: 8px
+	.show-1400
+		display: none
+	.show_span
+		display: none
+	.number_order
+		.date_of_order
+			.hidden_1200_s
+				display: none
+			.show_1200_s
+				display: block
+	.orders_container
+		.tottal_price
+			.inner_wrap
+				.bottom_docs
+					a
+						float: none
+						margin-right: 10px
+						margin-left: 0
+						span
+							margin-left: 0
+							i
+								font-size: em(13px)
+
+	.orders_container .tottal_price .inner_wrap .left_side
+		text-align: center
+	.orders_container .tottal_price .inner_wrap .right_side span
+		display: inline
+		word-wrap: break-word
+	.toll
+		padding: 30px 14px
+	.hide_1200
+		display: none !important
+	.mob_mnu
+		ul
+			text-align: left
+			li
+				a
+					span
+						display: inline-block
+
+	.small_block
+		font-size: em(10.95px)
+	.hidemenuR
+		padding-left: 15px
+	.orders_list_changes_btn
+		margin-left: 30px
+		width: auto
+		padding-right: 12px
+	.row_for_table_lg
+		.date_of_delivery
+			.date_of_delivery_title
+				padding-left: 5px
+				.hidden_1200
+					display: none
+			.inner_wrap
+				padding: 15px 0 0 5px
+				font-size: em(12px)
+		.number_order
+			.inner_wrap
+				word-wrap: break-word
+				a
+					font-size: em(12px)
+		.brand
+			.inner_wrap
+				word-wrap: break-word
+				font-size: em(11px)
+				line-height: 12px
+		.name
+			.name_title
+				padding-left: 15px
+			.inner_wrap
+	.exchenge
+		word-wrap: break-word
+		span
+			font-size: em(12px)
+	.add_coment_btn
+		margin: auto
+		width: 100px
+		display: inline-block
+		span
+			float: auto
+		i
+			display: block
+			margin-top: 3px
+			margin-left: 3px
+	.datapicker .datapicker_filter_wrap
+		margin-top: 25px
+		margin-left: 10px
+	.vertical_line_left
+		display: none
+	.balance .vertical_line
+		margin-right: -10px
+	.quantity
+		display: inline
+	.balance_count
+		display: inline
+	.general_mnu ul li a i
+		width: 40px
+		margin-right: 10px
+	.general_mnu ul li a
+		line-height: 40px
+	.general_mnu ul li a i span
+		display: inline-block
+	.priceform
+		margin-top: 15px
+	.priceform select
+		margin-bottom: 15px
+	.small_block .wrap
+		padding-right: 10px
+	.social_pages
+		.social_wrap
+			span
+				margin-top: 26px
+				margin-right: 20px
+				margin-top: 11px
+				display: block
+				width: auto
+				float: left
+	.item_stock .text h2
+		word-wrap: break-word
+	.large_block .title
+		padding-top: 0
+	.history .tr .description
+		line-height: em(14px)
+		position: relative
+		top: -7px
+	.history .tr .td
+		padding-top: 5px
+		text-align: center
+	.history .thead
+		.th:last-child
+			width: 30%
+		.th:nth-child(3)
+			width: 20%
+	.large_block
+		height: 450px
+
+
+@media only screen and (min-width : 1288px)
+	.history .tr .description
+		line-height: em(16px)
+		position: relative
+		top: 0px
+	.history .tr .td
+		padding-top: 5px
+		.orders_container
+			.tottal_price
+				.inner_wrap
+					.bottom_docs
+						a
+							span
+								i
+									font-size: em(18px)
+
+
+@media only screen and (min-width : 1400px)
+	.hidemenuR
+		left: 216px
+		padding-right: 228px
+	.orders_list_changes_wrap_r
+		width: 71px
+	.priceform select
+		margin-top: 13px
+	.wrap_item_block .content__item_toll .wrapper_icon_and_h2 i
+		margin-right: 23px
+		margin-left: 0
+	.show_span
+		display: block
+	.hide_span
+		display: none
+	.number_order
+		.date_of_order
+			.hidden_1200_s
+				display: block
+			.show_1200_s
+				display: none
+	.orders_container .tottal_price .inner_wrap .bottom_docs a
+		float: left
+		margin-right: 15px
+		span
+			margin-left: 10px
+	.orders_container .tottal_price .inner_wrap .left_side
+		text-align: left
+	.orders_container .tottal_price .inner_wrap .right_side span
+		display: inline
+		word-wrap: break-word
+	.hide_1200
+		display: inline !important
+	.show_1200
+		display: none !important
+	.small_block
+		font-size: em(14px)
+	.vertical_line_left
+		display: block
+		margin-left: 0
+	.cart i
+		margin-left: 0
+
+
+@media only screen and (min-width : 1440px)
+	.drop_down_search_list
+		width: 97%
+	.wrapper_icon_and_h2 h2 span
+		top: 0
+	.show-1400
+		display: inline-block
+	.hide-1200
+		display: none
+	.date_of_delivery
+		.date_of_delivery_title
+			padding-left: 5px
+	.show-1400
+		display: inline-block !important
+
+@media only screen and (min-width : 1730px)
+	.item_stock .date_sell
+		line-height: 40px
+	.dashboard_small-call
+		.content__item
+			.content__item-right
+				span
+					top: 5px
+					i
+						margin-top: 5px
+						font-size: em(20px)
+
+
+
+
+///////////////////////////////////////////////////////
+/////////медиазапросы для страницы импорта/////////////
+///////////////////////////////////////////////////////
+/*==========	Desktop First Method	==========*/
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width : 1440px)
+	.table_search_goods_result .quantity_ .content .bottom_cell span,
+	.table_search_goods_result .quantity_ .content .top_cell span
+		display: none
+
+@media only screen and (max-width : 1400px)
+	.search_goods
+		button
+			font-size: em(12px)
+		.green_btn
+			font-size: em(12px) !important
+			padding: 11px 10px
+			border: 1px solid $green
+	.file-input
+		div
+			padding: 9px 10px
+			margin-left: 0px
+		a
+			padding: 10px
+@media only screen and (max-width : 1200px)
+	.search_goods
+		button
+			font-size: em(10px)
+			padding: 11px 10px
+		.green_btn
+			font-size: em(10px) !important
+			padding: 11px 10px
+			border: 1px solid $green
+	.table_search_goods_result .price .content span
+		font-size: 1em
+	.add_file
+		.add_tmpl
+			span
+				font-size: em(13px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.search_goods
+		button
+			margin-right: 10px
+			padding: 11px 6px
+	.town
+		.content
+			.top_cell,
+			.bottom_cell
+				padding-left: 15px !important
+	.table_search_goods_result
+		margin-bottom: 25px
+		.cell_wrap
+			height: 150px
+
+	.import
+		.stock_selection
+			h3
+				font-size: em(14px)
+				margin-top: 20px
+				margin-bottom: 15px
+		.table_stock_selection
+			.status
+				height: 20px
+				line-height: 17px
+				width: 80px
+				span
+					font-size: em(10px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.search_goods-rightBtn
+		width: 100%
+	.search_goods
+		button
+			width: 32%
+			float: left
+			font-size: 1em !important
+			margin-bottom: 20px !important
+			margin-right: 0
+			padding: 20px !important
+			&:nth-last-child(3)
+				margin: 0
+				margin-bottom: 20px
+		.green_btn
+			font-size: 1em !important
+			margin-bottom: 20px !important
+			padding: 20px !important
+	.table_search_goods_result
+		.quantity_ .content
+			.bottom_cell
+				form
+					float: right
+			.top_cell
+				form
+					float: right
+	.descr
+		h4, p
+			padding-left: 15px
+	.price
+		text-align: left !important
+		.top_cell, .bottom_cell
+			padding-top: 25px !important
+			line-height: 13px
+			padding-left: 15px !important
+	.search_goods
+		button
+			width: 100%
+			font-size: em(11px)
+			padding: 15px 5px
+			margin-bottom: 15px
+		.green_btn
+			width: 100%
+			font-size: em(11px)
+			padding: 16px 5px
+
+			i
+				margin-right: 15px
+
+	/**/
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+@media only screen and (max-width : 320px)
+	/**/
+
+/*==========	Mobile First Method	==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	.import
+		.orders_import
+			i
+				font-size: em(22px)
+				margin-right: 10px
+				top: -2px
+			h2
+				font-size: em(14px)
+				line-height: em(14px)
+		.help_topics
+			font-size: em(12px)
+			text-align:
+			button
+				padding: 6px 10px
+				i
+					margin-right: 0px
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	.import
+		.orders_import
+			i
+				top: 4px
+				font-size: em(26px)
+			h2
+				font-size: em(22px)
+
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	.search_goods .green_btn
+		padding-left: 8px
+		padding-right: 8px
+		i
+			display: none
+	.search_goods
+		button
+			padding: 11px 22px
+	.import
+		.help_topics
+			button
+				padding: 11px 28px
+				font-size: em(13px)
+				font-family: 'OSB', sans-serif
+				i
+					margin-right: 20px
+
+		.table_stock_selection
+			margin-bottom: 0
+			.tr_xs
+				border: none
+				border-bottom: 1px solid #b2b2b2
+				&:last-child
+					border-right: 1px solid #b2b2b2
+			.past
+				border-left: 1px solid #b2b2b2
+			.thead
+				border: none
+			.status
+				float: left
+	input[type=checkbox].bigswitch.ios-switch+div
+		margin-right: 20px
+
+	/**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.search_goods .green_btn
+		padding: 11px 22px
+		i
+			display: inline
+
+	.from1200
+		display: none
+	.import
+		.col-lg-12
+			width: 100%
+@media only screen and (min-width : 1440px)
+	.from1200
+		display: block
+	.to_1440
+		display: none
+
+@media only screen and (min-width : 1550px)
+	.add_tmpl
+		span
+			line-height: 45px
+			br
+				display: none
+/////////////*end*/////////////////
+
+
+/*стили страницы листа ожиданий*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1500px)
+	.wait_list
+		h2
+			font-size: em(18px)
+		.top_button
+			.sort_product
+				padding: 7px 0
+			.btn_wrap
+				button
+					padding: 10px !important
+					margin-right: 15px !important
+					font-size: em(10px)
+					&:nth-last-child(2)
+						margin: 0 !important
+						margin-right: 15px !important
+					&:nth-last-child(1)
+						margin-right: 0 !important
+						padding: 14px !important
+
+
+@media only screen and (max-width : 1400px)
+	.wait_list_table .table_search_goods_result
+		.fold
+			.content
+				button
+					i
+						display: none
+
+@media only screen and (max-width : 1200px)
+	.wait_list
+		h2
+			margin-bottom: 30px
+			font-size: em(22px)
+		.top_button
+			.btn_wrap
+				width: 100%
+				.gray_btn
+					float: left
+				.green_btn
+					float: right
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.wait_list
+		.top_button
+			.btn_wrap
+				.gray_btn
+					&:nth-last-child(2)
+						margin-left: 0
+						margin-right: 0
+	.wait_list_table
+		.table_search_goods_result
+			.cell_wrap
+				height: 110px
+	.wait_list_table
+		.table_search_goods_result
+			height: auto
+			.fold
+				.content
+					text-align: center
+					button
+						width: 95px
+						float: left
+						i
+							display: inline
+							margin-right: 5px
+							margin-left: 5px
+						span
+							display: inline
+			.expected_number
+				.content
+					.block
+						width: 95px
+	/**/
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width : 768px)
+	.wait_list_table
+		.table_search_goods_result
+			.fold
+				.content
+					button
+						margin-top: 0
+						padding-left: 5px
+						padding-right: 5px
+	.wait_list
+		.for_xs
+			.sort_product
+				float: right
+				padding: 10px
+			.gray_btn, .green_btn
+				width: 100%
+				margin-bottom: 15px
+	/*Disable Animation on Mobile Devices*/
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.wait_list
+		h2
+			font-size: em(14px)
+			i
+				margin-right: 10px
+	.wait_list_table
+		.table_search_goods_result
+			.fold
+				.content
+					button
+						padding-left: 3px
+						padding-right: 3px
+						i
+							display: none
+			.quantity_
+				.content
+					.top_cell
+						form
+							.form-control
+								width: 80%
+			.fold
+				.content
+					text-align: center
+					button
+						width: 100%
+						float: left
+			.expected_number
+				.content
+					.block
+						width: 100%
+			.quantity_
+				.content
+					.top_cell
+						form
+							width: 120px
+							float: right
+							margin-right: 5px
+	/**/
+@media only screen and (max-width : 320px)
+	/**/
+/*==========	Mobile First Method	==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+@media only screen and (min-width : 1400px)
+	.wait_list
+		.row
+		h2
+			i
+		.top_button
+			.btn_wrap
+				.green_btn
+					padding: 15px 20px
+					margin-right: 5px
+					i
+						margin-right: 10px
+				button
+					float: left
+					font-size: em(12px)
+				.gray_btn
+					padding: 10px 20px
+					i
+						margin-right: 10px
+	/**/
+/////////////*end*/////////////////
+
+/*медиазапросы для страницы возвратов*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.returnes
+		.wrapper_tabs
+			.tab
+				padding: 20px 5px
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.returnes-table_content-summ
+		span
+			font-size: em(12px) !important
+	.returnes-table_content-status
+		text-align: center
+		font-size: em(12px)
+	.returnes-table_content
+		padding: 5px	!important
+		.left
+			div
+				top: -5px !important
+				left: -5px !important
+	.returnes-table_content-summ
+		.currency
+			font-size: em(13px) !important
+		.docs
+			font-size: em(13px) !important
+			margin-right: 5px !important
+		a
+			i
+				font-size: em(16px) !important
+	.returnes
+		.wrapper_tabs
+			.wrap
+				button
+					padding: 10px
+			.tab_content
+				.table_returnes
+					height: auto
+	.wrapper_tabs
+		.tab
+			font-size: em(12px) !important
+		.wrapper_tabs-wrap
+			button
+				margin-left: 10px !important
+				padding: 5px 10px
+	/**/
+
+@media only screen and (max-width : 767px)
+	.returnes
+		.wrapper_tabs
+			.returnes-table
+				.returnes-table_title-xs
+					background-color: #ccc
+					border-bottom: none
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.wrapper_tabs-wrapRemote-file
+		padding: 6px
+	.returnes-popUpgoods
+		.returnes-popUpgoods_wrap
+			width: 90%
+			padding: 10px
+			height: 190px
+			h2
+				font-size: em(14px)
+				margin-top: 20px
+			input
+				width: 53%
+			label
+				width: 25%
+			button
+				width: 20%
+				padding: 7px 5px
+				font-size: em(10px)
+
+	.returnes-table_shortcontent
+		.returnes-table_shortcontent-price
+			font-size: em(14px) !important
+	.returnes
+		.TTN
+			.data_for_returne_ttn
+				form
+					width: 400px
+					text-align: left
+					.refresh_data
+						.refresh_data-date
+							span
+								line-height: em(0px)
+								&:last-child
+									margin-left: 0
+	#ttn_form
+		input,
+		select
+			width: 100%
+	.returnes
+		.orders_list
+			padding-bottom: 20px
+			h2
+				margin-bottom: 0
+		.wrapper_tabs
+			.tab_content
+				.table_returnes
+					.content
+						padding: 5px
+			.tab
+				font-size: em(14px)
+				padding: 10px
+	.returnes
+		.TTN
+			text-align: center
+			p
+				margin-top: 20px
+				float: left
+			.pz
+				padding-left: 0
+				padding-right: 0
+			.red_btn
+				margin-bottom: 20px
+	/*Disable Animation on Mobile Devices*/
+@media only screen and (width : 768px)
+	.returnes
+		.TTN
+			p
+			.pz
+				padding-left: 15px
+				padding-right: 15px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.returnes
+		.returnesAddGoods,
+		.dataForReturnesTtn
+			width: 100%
+		.TTN
+			.data_for_returne_ttn
+				form
+					width: 300px
+					text-align: left
+					h2
+						font-size: em(16px)
+						margin-top: 0px
+						margin-bottom: 5px
+					span
+						font-size: em(14px)
+					.tablerow
+						font-size: em(12px)
+						line-height: em(14px)
+					.refresh_data
+						.refresh_data-date
+							span
+								line-height: em(15px)
+								font-size: em(16px)
+								&:last-child
+									margin-left: 0
+									position: relative
+									top: -8px
+					button
+						font-size: em(11px)
+						padding: 10px
+	.wrapper_tabs
+		.tab
+			font-size: em(12px) !important
+			padding: 8px
+			line-height: em(14px)
+			height: 45px
+	#ttn_form
+		h3
+			font-size: em(15px)
+		span, p
+			font-size: em(13px)
+	/**/
+//конец
+
+
+/*медиазапросы для страницы поиска по дереву*/
+/*==========	Desktop First Method	==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	#tree
+		.tree-tabWrap_content
+			.tree-tabWrap_content-table
+				.title
+					padding: 0 10px
+				.content
+					height: 70px
+					padding: 5px 10px
+					.tree-tabWrap_content-table-btn
+						button
+							font-size: em(10px)
+							margin-top: 7px
+					.left
+						width: 45%
+					.right
+						width: 55%
+						button
+							top: 7px
+							padding: 10px 5px
+							font-size: em(9px)
+				.plr0
+					&:nth-last-child(4),
+					&:nth-last-child(2)
+						.title
+							background-color: #666
+					&:nth-last-child(3)
+						.content
+							background-color: #fff
+
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	#tree
+		.tree-filter
+			.wrap-filter
+				width: 250px
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.alert_zone-tree
+		.alert_zone-tree__colse
+			top: 8px
+	#tree
+		.tree-tabWrap_content
+			padding-left: 0
+		.tree-h2
+			h2
+				font-size: em(18px)
+				margin-bottom: 20px
+			button
+				top: 20px !important
+
+		.tree-filter
+			.wrap-filter
+				width: 100%
+				margin-bottom: 15px
+			.tree-filter_selectBrand,
+			.tree-filter_fildForBrand,
+			.tree-filter_selectAuto
+				margin-right: 10px
+				padding: 5px
+			.wrap-selectAuto
+				margin-right: 0
+
+
+	/*Disable Animation on Mobile Devices*/
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	#tree
+		.tree-filter
+			.wrap-selectAuto
+				width: 100%
+				margin-bottom: 15px
+				.tree-filter_selectAuto
+					width: 100%
+		.tree-h2
+			.tree-selectCar
+				width: 100%
+				position: static
+				margin-bottom: 15px
+
+	/**/
+
+
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========	Mobile First Method	==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+/*конец*/
