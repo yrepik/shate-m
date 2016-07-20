@@ -48,8 +48,8 @@
 						<li><a href="shate-m_b2b_user_cabinet_import.html"><i class="fa fa-upload" aria-hidden="true"></i><span>Импорт заказов</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_orders_list.html"><i class="fa fa-list-alt" aria-hidden="true"></i><span>Заказы</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_returnes_list_new_return.html"><i class="fa fa-reply" aria-hidden="true"></i><span>Возвраты</span></a></li>
-						<li class="active"><a href="shate-m_b2b_user_cabinet_wait_list.html"><i class="fa fa-bookmark-o" aria-hidden="true"></i><span>Лист ожидания</span></a></li>
-						<li><a href="#"><i class="fa fa-money" aria-hidden="true"></i><span>Финанс</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_wait_list.html"><i class="fa fa-bookmark-o" aria-hidden="true"></i><span>Лист ожидания</span></a></li>
+						<li class="active"><a href="shate-m_b2b_user_cabinet_reconciliation.html"><i class="fa fa-money" aria-hidden="true"></i><span>Финанс</span></a></li>
 						<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span>Персональные данные</span></a></li>
 						<li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i><span>Ваш менеджер</span></a></li>
 						<li><a href="#"><i class="fa fa-history" aria-hidden="true"></i><span>История запросов</span></a></li>
@@ -218,6 +218,128 @@
 								</form>
 							</div>
 						</div>
+
+						<!--таблица для sm md lg-->
+						<!--шапка-->
+						<div class="hidden-xs row finances-table_thead">
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>Дата</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span class="hidden-xs hidden-sm">Тип документа</span><span class="hidden-md hidden-lg">Тип</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span class="hidden-xs hidden-sm">Номер док-та</span><span class="hidden-md hidden-lg">Номер</span></div>
+							<div class="plr0 hidden-sm hidden-xs col-sm-2 col-md-2 col-lg-2"><span></span>№ ТТН/Счет-фактуры</div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span class="hidden-xs hidden-sm">Сумма док-та</span><span class="hidden-md hidden-lg">Сумма</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span></span>Валюта</div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span></span>Срок оплаты</div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span></span>Суммма возврата</div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span></span>Сумма платежа</div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-2 col-lg-2"><span></span>Сальдо</div>
+						</div>
+
+						<!--ряд таблицы-->
+						<div class="hidden-xs row finances-table">
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span class="green">10.01.2016</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>Счет</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span>rspi001672345</span></div>
+							<div class="plr0 hidden-xs hidden-sm col-md-2 col-lg-2"><span>rspi001672345</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span class="hidden-xs hidden-sm hidden-md">56 155,00 руб.</span><span class="hidden-lg">56 155,00</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>RUB</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>31.01.2016</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>0 руб.</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>0 руб.</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-2 col-lg-2"><strong>503 232,10 руб.</strong></div>
+						</div>
+
+						<!--ряд таблицы-->
+						<div class="hidden-xs row finances-table">
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span class="green">10.01.2016</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>Счет</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span>rspi001672345</span></div>
+							<div class="plr0 hidden-xs hidden-sm col-md-2 col-lg-2"><span>rspi001672345</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span class="hidden-xs hidden-sm hidden-md">56 155,00 руб.</span><span class="hidden-lg">56 155,00</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>RUB</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>31.01.2016</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>0 руб.</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>0 руб.</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-2 col-lg-2"><strong>503 232,10 руб.</strong></div>
+						</div>
+
+
+						<!--ряд таблицы-->
+						<div class="hidden-xs row finances-table">
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span class="green">10.01.2016</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>Счет</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span>rspi001672345</span></div>
+							<div class="plr0 hidden-xs hidden-sm col-md-2 col-lg-2"><span>rspi001672345</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span class="hidden-xs hidden-sm hidden-md">56 155,00 руб.</span><span class="hidden-lg">56 155,00</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>RUB</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>31.01.2016</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>0 руб.</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>0 руб.</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-2 col-lg-2"><strong>503 232,10 руб.</strong></div>
+						</div>
+
+
+						<!--ряд таблицы-->
+						<div class="hidden-xs row finances-table">
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span class="green">10.01.2016</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>Счет</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span>rspi001672345</span></div>
+							<div class="plr0 hidden-xs hidden-sm col-md-2 col-lg-2"><span>rspi001672345</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span class="hidden-xs hidden-sm hidden-md">56 155,00 руб.</span><span class="hidden-lg">56 155,00</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>RUB</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>31.01.2016</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>0 руб.</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>0 руб.</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-2 col-lg-2"><strong>503 232,10 руб.</strong></div>
+						</div>
+
+
+						<!--ряд таблицы-->
+						<div class="hidden-xs row finances-table">
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span class="green">10.01.2016</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>Счет</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span>rspi001672345</span></div>
+							<div class="plr0 hidden-xs hidden-sm col-md-2 col-lg-2"><span>rspi001672345</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span class="hidden-xs hidden-sm hidden-md">56 155,00 руб.</span><span class="hidden-lg">56 155,00</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>RUB</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>31.01.2016</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>0 руб.</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>0 руб.</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-2 col-lg-2"><strong>503 232,10 руб.</strong></div>
+						</div>
+
+
+						<!--ряд таблицы-->
+						<div class="hidden-xs row finances-table">
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span class="green">10.01.2016</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>Счет</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span>rspi001672345</span></div>
+							<div class="plr0 hidden-xs hidden-sm col-md-2 col-lg-2"><span>rspi001672345</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span class="hidden-xs hidden-sm hidden-md">56 155,00 руб.</span><span class="hidden-lg">56 155,00</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>RUB</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>31.01.2016</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>0 руб.</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>0 руб.</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-2 col-lg-2"><strong>503 232,10 руб.</strong></div>
+						</div>
+
+
+						<!--ряд таблицы-->
+						<div class="hidden-xs row finances-table">
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span class="green">10.01.2016</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>Счет</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span>rspi001672345</span></div>
+							<div class="plr0 hidden-xs hidden-sm col-md-2 col-lg-2"><span>rspi001672345</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-1 col-lg-1"><span class="hidden-xs hidden-sm hidden-md">56 155,00 руб.</span><span class="hidden-lg">56 155,00</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>RUB</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>31.01.2016</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>0 руб.</span></div>
+							<div class="plr0 col-xs-12 col-sm-1 col-md-1 col-lg-1"><span>0 руб.</span></div>
+							<div class="plr0 col-xs-12 col-sm-2 col-md-2 col-lg-2"><strong>503 232,10 руб.</strong></div>
+						</div>
+
+
+							<!--Конец таблицы для sm md lg-->
+
 					</div>
 
 
