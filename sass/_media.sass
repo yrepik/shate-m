@@ -209,8 +209,6 @@ $base-font-size: 13px
 		.inner-wrap
 			height: 420px !important
 
-
-
 @media only screen and (max-width : 767px)
 	.table_for_xs
 		box-shadow: 0 3px 3px rgba(0, 0, 0, .3)
@@ -1507,8 +1505,139 @@ $base-font-size: 13px
 @media only screen and (max-width : 320px)
 	/**/
 
-
 /*==========	Mobile First Method	==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+/*конец*/
+
+
+
+
+
+
+
+//////////страница Финансов///////////// //
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1550px)
+	.finances
+		.finances-bill_balance-head
+			h3
+				float: none
+			button
+				top: -18px
+
+
+	/**/
+
+@media only screen and (max-width : 1200px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.finances
+		.finances-bill_balance-head
+			h3
+				float: left
+			h3, span
+				font-size: em(13px)
+			button
+				float: none
+				top: 0
+				margin-top: 10px
+				width: 100%
+		.finances-bill_balance-body
+			b
+				top: -10px
+				position: relative
+				font-size: em(20px)
+			strong
+				float: none
+				display: block
+			.finances-ballance
+				top: 0px
+			button
+				width: 50%
+
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.finances
+		padding: 0
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.finances
+		.finances-h2
+			h2
+				font-size: em(16px)
+		.finances-bill_balance-body
+			padding: 20px
+			b
+				top: -10px
+				font-size: em(14px)
+			strong
+				float: none
+				display: block
+				font-size: em(12px)
+			span
+				font-size: em(12px)
+		.finances-bill_balance-head
+			h3, span
+				font-size: em(11px)
+			span
+				top: -3px
+				position: relative
+		.finances-bill_history-head
+			h3
+				font-size: em(12px)
+	/**/
+
+
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
@@ -1533,4 +1662,4 @@ $base-font-size: 13px
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
 	/**/
-/*конец*/
+//////////конец страница Финансов///////////// //
