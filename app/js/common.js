@@ -44,16 +44,17 @@ $(function() {
     ///////////////////////////////////////////
     /////скрипты страницы поиска по дереву/////
     ///////////////////////////////////////////
-    function treeTollLeftNav(){
+    $('.tree-tabWrap_content-tableSpinner').find('.yellow').click(function(){
+        console.log('1243');
+    })
+
+    function treeTollLeftNav(){ //изменение размера дерева каталога в зависимомти от разрешения
         if($(window).width()>768){
             $('.tree-leftNav').height($('.tree-tabWrap_content').height()+5);
         }
-
         if($(window).width()<768){
         $('.tree-general').parent().find('ul').slideUp()
         }
-
-
     }
     $(window).on('load resize', treeTollLeftNav)
 

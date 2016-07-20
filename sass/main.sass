@@ -4827,6 +4827,74 @@ input[type=checkbox]
 					background-color: $red !important
 					color: #fff
 
+.tree-addToWaitlist
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	z-index: 100
+	background-color: rgba(0,0,0,.3)
+	.tree-addToWaitlist-wrapper
+		height: 300px
+		width: 50%
+		margin: auto
+		background-color: #fff
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		.tree-addToWaitlist_header
+			height: 23px
+			width: 100%
+			h2
+				display: inline-block
+				float: left
+				margin: 0
+				margin-left: 20px
+			.tree-addToWaitlist_header-close
+				background-color: $red
+				height: 23px
+				width: 23px
+				float: right
+				position: relative
+				cursor: pointer
+				&:hover
+					background-color: $active
+				&::before, &::after
+					height: 2px
+					width: 90%
+					background-color: #fff
+					content: ''
+					top: 0px
+					left: 0
+					right: 0
+					bottom: 0
+					position: absolute
+					margin: auto
+				&::after
+				 	transform: rotate(45deg)
+				&::before
+					transform: rotate(-45deg)
+		.tree-addToWaitlist_body
+			padding: 20px
+			.tree-addToWaitlist_body-wrap
+				margin-bottom: 10px
+				h5
+					display: inline-block
+					float: left
+					margin: 0
+					width: 90px
+				span
+					text-transform: uppercase
+				input
+					position: relative
+					top: -3px
+
+
+
+
 ///////Конец стилей для страницы поиска по дереву tree.html///////////
 
 .reloadd
