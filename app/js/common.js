@@ -54,6 +54,14 @@ $(function() {
         $('.tree-addToWaitlist-wrapper').delay(300).animate({'top':''},0)
     })
 
+    function treeAddToCart(){
+        var $vol = $(this).parents('.spinner').find('input').val();
+        $('.quantity').html($vol);
+        $('.totall').html('('+$vol*1000+'руб.)')
+
+    }
+    $('.tree-addToCart').click(treeAddToCart)
+
     function treeTollLeftNav(){ //изменение размера дерева каталога в зависимомти от разрешения
         if($(window).width()>768){
             $('.tree-leftNav').height($('.tree-tabWrap_content').height()+5);
