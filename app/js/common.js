@@ -44,8 +44,14 @@ $(function() {
     ///////////////////////////////////////////
     /////скрипты страницы поиска по дереву/////
     ///////////////////////////////////////////
-    $('.tree-tabWrap_content-tableSpinner').find('.yellow').click(function(){
-        console.log('1243');
+    $('.tree-tabWrap_content-tableSpinner').find('.yellow').click(function(){//показать попАп Добавления позиции в лист ожидания
+        $('.tree-addToWaitlist').fadeIn(300)
+    })
+
+    $('.tree-addToWaitlist_header-close, .treeCancell').click(function(){//закрыть попАп Добавления позиции в лист ожидания
+        $('.tree-addToWaitlist-wrapper').animate({'top':'-100vh'},200)
+        $('.tree-addToWaitlist').fadeOut(300);
+        $('.tree-addToWaitlist-wrapper').delay(300).animate({'top':''},0)
     })
 
     function treeTollLeftNav(){ //изменение размера дерева каталога в зависимомти от разрешения

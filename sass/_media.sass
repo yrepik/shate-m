@@ -1422,11 +1422,16 @@ $base-font-size: 13px
 		.tree-filter
 			.wrap-filter
 				width: 250px
+	.tree-addToWaitlist-wrapper
+		width: 90% !important
 	/**/
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-
+	.tree-addToWaitlist-wrapper
+		h2
+			font-size: em(16px)
+			text-transform: uppercase
 	.alert_zone-tree
 		.alert_zone-tree__colse
 			top: 8px
@@ -1479,6 +1484,18 @@ $base-font-size: 13px
 				width: 100%
 				position: static
 				margin-bottom: 15px
+	.tree-addToWaitlist-wrapper
+		h2
+			font-size: em(14px)
+			text-transform: uppercase
+		.tree-addToWaitlist_fotter
+			button, a
+				@include calc(width, "50% - 10px")
+				text-align: center
+				padding: 5px
+				float: left
+			button
+				margin-left: 0 !important
 
 	/**/
 
