@@ -652,6 +652,16 @@ $(function() {
 			$('.addAllImport').click(addAllImport)
 
 
+
+
+
+			function importPopUpOpen(){//открыть попАп на странице ипорта заказов
+				$('.orders-info_popUp').fadeIn(300);
+			}
+			$('.table_search_goods_result').find('[class*=info]').click(importPopUpOpen);
+
+
+
 			function importREmoveMarckAll() { //кнопка снять выделения на странице импорта товара
 				var $imput = $('.checkbox_brand').attr('checked', false);
 				$imput.prev().children().css({
@@ -1341,14 +1351,14 @@ $(function() {
 
 
 
-			function ordersPopUpClose(){
+			function ordersPopUpClose(){//закрыть попАп окно на странице заказов
 				$(this).parents('.orders-info_popUp').fadeOut(300);
 				$(this).parents('.orders-info_popUp-inner').animate({'top':'-130vh'},200);
 				$(this).parents('.orders-info_popUp-inner').delay(300).animate({'top':''},0)
 			}
 			$('.orders-info_popUp-inner-close').click(ordersPopUpClose);
 
-			$('.orders_container').find('[class*=fa-question-circle]').click(function(){
+			$('.orders_container').find('[class*=fa-question-circle]').click(function(){//открыть попАп окно на страние заказо
 				$('.orders-info_popUp').fadeIn(300);
 			})
 
