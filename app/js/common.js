@@ -44,6 +44,20 @@ $(function() {
     ///////////////////////////////////////////
     /////скрипты страницы поиска по дереву/////
     ///////////////////////////////////////////
+    function treeTollLeftNav(){
+        if($(window).width()>768){
+            $('.tree-leftNav').height($('.tree-tabWrap_content').height()+5);
+        }
+
+        if($(window).width()<768){
+        $('.tree-general').parent().find('ul').slideUp()
+        }
+
+
+    }
+    $(window).on('load resize', treeTollLeftNav)
+
+
     function treeToggleClassGreenStatus(){//изменить цвет ячеек таблицы
         if($(window).width() < 992&& $(window).width()>=768){
             var $price = $('.tree-tabWrap_content-table_green').find('.availability');
@@ -52,7 +66,6 @@ $(function() {
         else{
             var $price = $('.tree-tabWrap_content-table_green').find('.price, .availability');
             $price.addClass('tree-greenStatus');
-            console.log('11');
         }
 
         if($(window).width() < 768){
