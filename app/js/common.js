@@ -44,6 +44,24 @@ $(function() {
     ///////////////////////////////////////////
     /////скрипты страницы поиска по дереву/////
     ///////////////////////////////////////////
+    function treeToggleClassGreenStatus(){//изменить цвет ячеек таблицы
+        if($(window).width() < 992&& $(window).width()>=768){
+            var $price = $('.tree-tabWrap_content-table_green').find('.availability');
+            $price.removeClass('tree-greenStatus');
+        }
+        else{
+            var $price = $('.tree-tabWrap_content-table_green').find('.price, .availability');
+            $price.addClass('tree-greenStatus');
+            console.log('11');
+        }
+
+        if($(window).width() < 768){
+            var $price = $('.tree-tabWrap_content-table_green').find('.price');
+            $price.removeClass('tree-greenStatus');
+        }
+    }
+    $(window).on('load resize', treeToggleClassGreenStatus)
+
     //переключение значений в chekbox таблицы импорта заказов//
     function plus() {
         var $prev = $(this).parents('.spinner').children('input');
