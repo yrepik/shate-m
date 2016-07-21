@@ -5086,6 +5086,105 @@ input[type=checkbox]
 
 ///////////Конец стилей для страницы финанасов reconciliation.html///////////////
 
+
+
+//////////Стили для страницы Менеджера salesperson.html///////////////
+.manager
+	.manager-self, .manager-h2
+		margin: 0
+	.manager-h3
+		padding-left: 15px
+	h3
+		font-size: em(16px)
+		text-transform: uppercase
+		font-family: 'osb', sans-serif
+		margin: 35px 0 25px
+	.manager-h2
+		margin-top: 30px
+		h2
+			text-transform: uppercase
+			margin: 0
+			font-family: 'osb', sans-serif
+			font-size: em(20px)
+			i
+				font-size: em(18px)
+				margin-right: 20px
+				position: relative
+				top: 4px
+				color: #959595
+
+
+
+.manager
+	margin-bottom: 60px
+	.manager-regional, .manager-self
+		margin-bottom: 20px
+		.manager-info_header
+			background-color: #dadada
+			padding: 20px
+			strong
+				width: 100%
+				display: inline-block
+				font-family: 'osb', sans-serif
+				font-size: em(16px)
+		.manager-info_body
+			padding: 20px
+			padding: 20px 0
+			background-color: #eaeaea
+			img
+				width: 100%
+				border: 1px solid gray
+			strong, span
+				display: inline-block
+				width: 100%
+			strong
+				color: #4d4d4d
+				font-size: em(13px)
+				font-family: 'osb', sans-serif
+			span
+				font-family: 'osb', sans-serif
+				color: $green
+				font-size: em(16px)
+				display: inline-block
+				line-height: em(16px)
+			a
+				font-family: 'osb', sans-serif
+				text-decoration: underline
+				color: $blue
+				&:hover
+					text-decoration: none
+					color: $blue
+			.manager-info_body-left
+				float: left
+				padding-left: 20px
+				width: 35%
+				min-height: 120px
+			.manager-info_body-right
+				position: relative
+				@include calc(width, "65%")
+				min-height: 120px
+				float: right
+				padding: 0 20px
+				.manager-info_body-bottom
+					position: absolute
+					@include calc(width, "81%")
+					bottom: 0
+	.manager-self
+		.manager-info_header
+			background-color: $green
+			color: #fff
+		.manager-info_body
+			background-color: #dbffda
+			.manager-info_body-left
+				img
+					border-color: $green
+
+
+
+
+
+
+//////////Конец стилей  для страницы Менеджера salesperson.html///////////////
 .reloadd
 	animation: animationFrames linear .7s
 	animation-iteration-count: 1
