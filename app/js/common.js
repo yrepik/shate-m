@@ -1,6 +1,17 @@
 $(function() {
 
+///скрипты страницы финансов/////
+   function financesRemoveAnim(){
+     $(this).children('i').removeClass('finReloadd');
+    }
+  $('.finances').find('[class*=fa-refresh]').parent().on('mouseup', financesRemoveAnim)
 
+	function financesRefreshBtn(){
+		$(this).children('i').addClass('finReloadd').delay(2000);
+		$(this).delay(2000);
+	}
+	$('.finances').find('[class*=fa-refresh]').parent().click(financesRefreshBtn)
+///Конец скриптов страницы финансов/////
 			function balanceToolTip() { //отображение тултипа
 				$(this).parents('.balance').children('.balance-tooltip').fadeIn()
 			}

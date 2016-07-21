@@ -1581,34 +1581,21 @@ $base-font-size: 13px
 			font-size: em(11px)
 		.finances-table
 			font-size: em(11px)
-			
+		.finances-act_tableBody
+			button
+				padding: 6px 30px
+
 	/**/
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.finances
 		padding: 0
-	/*Disable Animation on Mobile Devices*/
-	.animated
-		/*CSS transitions*/
-		-o-transition-property: none !important
-		-moz-transition-property: none !important
-		-ms-transition-property: none !important
-		-webkit-transition-property: none !important
-		transition-property: none !important
-		/*CSS transforms*/
-		-o-transform: none !important
-		-moz-transform: none !important
-		-ms-transform: none !important
-		-webkit-transform: none !important
-		transform: none !important
-		/*CSS animations*/
-		-webkit-animation: none !important
-		-moz-animation: none !important
-		-o-animation: none !important
-		-ms-animation: none !important
-		animation: none !important
+		.finances-act_tableBody
+			button
+				margin-top: 25px
 
+	/*Disable Animation on Mobile Devices*/
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -1636,6 +1623,23 @@ $base-font-size: 13px
 		.finances-bill_history-head
 			h3
 				font-size: em(12px)
+		.finances-saldo
+			span
+				font-size: em(13px)
+				float: left
+			strong
+				font-size: em(16px)
+				float: right
+		.finances-act_tableBody
+			text-align: center
+			font-size: em(12px)
+			button
+				margin-top: 25px
+				display: inline-block
+				width: 90%
+				float: none
+				margin-left: 5%
+
 	/**/
 
 

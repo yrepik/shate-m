@@ -4996,6 +4996,7 @@ input[type=checkbox]
 		.finances-bill_history-body
 			background-color: #f0f0f0
 			padding: 40px 20px
+			margin-bottom: 20px
 			.wrap
 				width: 100%
 				span
@@ -5042,9 +5043,45 @@ input[type=checkbox]
 			color: $green
 			padding-left: 5px
 			font-family: 'osb', sans-serif
+	.finances-saldo
+		text-align: right
+		margin: 0 0 20px
+		span
+			margin-right: 20px
+			font-size: em(13px)
 		strong
-			font-weight: normal
-
+			font-size: em(20px)
+			font-family: 'osb', sans-serif
+			color: #4d4d4d
+	.finances-act
+		background-color: #e5e5e5
+		margin: 20px 0 0 0
+		padding: 20px
+		h3
+			margin: 0
+			text-transform: uppercase
+			color: #4d4d4d
+			font-family: 'osb', sans-serif
+			font-size: em(16px)
+			position: relative
+			top: 3px
+		button
+			float: right
+			padding: 6px 50px
+			i
+				margin-right: 15px
+				font-size: em(14px)
+	.finances-act_tableBody
+		margin: 0
+		text-align: center
+		padding: 30px 0
+		background-color: #e5e5e5
+		button
+			float: right
+			margin-right: 35px
+			padding: 6px 60px
+			i
+				margin-right: 20px
 
 ///////////Конец стилей для страницы финанасов reconciliation.html///////////////
 
@@ -5064,17 +5101,13 @@ input[type=checkbox]
 	-ms-animation: animationFrames linear .7s
 	-ms-animation-iteration-count: 1
 	-ms-transform-origin: 50% 50%
-
 @keyframes animationFrames
 	0%
 		-webkit-transform: rotate(360deg)
 		transform: rotate(360deg)
-
 	100%
 		-webkit-transform: rotate(0)
 		transform: rotate(0)
-
-
 @-webkit-keyframes animationFrames
 	0%
 		-webkit-transform: rotate(360deg)
@@ -5083,5 +5116,47 @@ input[type=checkbox]
 		-webkit-transform: rotate(0)
 
 
+
+.finReloadd
+  animation: finReloadd linear 0.7s
+  animation-iteration-count: 2
+  transform-origin: 50% 50%
+  -webkit-animation: finReloadd linear 0.7s
+  -webkit-animation-iteration-count: 2
+  -webkit-transform-origin: 50% 50%
+  -moz-animation: finReloadd linear 0.7s
+  -moz-animation-iteration-count: 2
+  -moz-transform-origin: 50% 50%
+  -o-animation: finReloadd linear 0.7s
+  -o-animation-iteration-count: 2
+  -o-transform-origin: 50% 50%
+  -ms-animation: finReloadd linear 0.7s
+  -ms-animation-iteration-count: 2
+  -ms-transform-origin: 50% 50%
+@keyframes finReloadd
+  0%
+    transform: rotate(-360deg)
+  100%
+    transform: rotate(0deg)
+@-moz-keyframes finReloadd
+  0%
+    -moz-transform: rotate(-360deg)
+  100%
+    -moz-transform: rotate(0deg)
+@-webkit-keyframes finReloadd
+  0%
+    -webkit-transform: rotate(-360deg)
+  100%
+    -webkit-transform: rotate(0deg)
+@-o-keyframes finReloadd
+  0%
+    -o-transform: rotate(-360deg)
+  100%
+    -o-transform: rotate(0deg)
+@-ms-keyframes finReloadd
+  0%
+    -ms-transform: rotate(-360deg)
+  100%
+    -ms-transform: rotate(0deg)
 
 @import "media"
