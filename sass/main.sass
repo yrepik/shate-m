@@ -5256,22 +5256,45 @@ input[type=checkbox]
 			top: 6px
 			&:hover
 				text-decoration: none
+
 .userinfo
+	.userinfo-overlay
+		height: 17px
+		width: 17px
+		border: 1px solid gray
+		position: absolute
+		top: 4px
+		border-radius: 999px
+		.inner
+			position: absolute
+			height: 11px
+			border-radius: 999px
+			left: 2px
+			top: 2px
+			width: 11px
+			border: 1px solid #fff
+			transition: .2s
 	.userinfo-leftSide
 		.userinfo-radioWrap
 			width: 100%
 			.first, .second
 				width: 55px
 				float: left
+				position: relative
 				margin-bottom: 30px
 				input
 					display: inline-block
-					width: 17px
+					width: 18px
+					height: 18px
+					position: relative
+					top: 4px
+					opacity: 0
 					margin: 0
 				label
 					text-transform: uppercase
 					font-family: 'osb', sans-serif
-
+.readonly
+	cursor: not-allowed !important
 
 
 

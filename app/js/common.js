@@ -1,4 +1,15 @@
 $(function() {
+///скрипты страницы c инфой о пользователе/////
+function userinfoCheckBox(){//стилизация checkbox
+	$('#working1, #working2').prev().children().css('backgroundColor', '#fff')
+	$(this).prev().children().css('backgroundColor', '#50b74e')
+
+}
+$('#working1, #working2').click(userinfoCheckBox)
+
+///конец страницы c инфой о пользователе/////
+
+
 
 ///скрипты страницы финансов/////
 var dateFormat = "mm/dd/yy",
