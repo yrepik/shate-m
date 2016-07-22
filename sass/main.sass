@@ -67,7 +67,6 @@ body
 
 
 
-
 .selectOrdersLabel
 	position: absolute
 	i
@@ -186,7 +185,7 @@ body
 	background-color: #fff
 	width: 100%
 	left: 2px
-	top: 20px
+	top: 30px
 	z-index: 100
 	box-shadow: 0 2px 2px rgba(0,0,0,.40)
 	display: none
@@ -212,6 +211,9 @@ body
 					border-bottom-color: #25ce23
 					text-decoration: none
 
+
+
+
 .wait_list-count
 	background-color: $red
 	margin-left: 10px
@@ -221,191 +223,211 @@ body
 	margin-bottom: 25px
 
 
-.cross
-	height: 20px
-	width: 18px
-	margin-top: 24px
-	position: relative
-	.line
-		position: absolute
-		left: 0
-		top: 0
-		height: 3px
-		width: 100%
-		transition: .2s
-		background-color: gray
-		&:before, &:after
-			position: absolute
-			content: ''
-			height: 3px
-			width: 100%
-			left: 0
-			top: 17px
-			transition: .2s
-			background-color: gray
-		&::after
-			top: 8px
-		&:before
-			transition: 0s
 
-	&.flag
-		.line
-			transform: rotate(45deg)
-			top: 5px
-			&::before
-				background-color: transparent
-			&::after
-				transform: rotate(-90deg)
-				top: 0px
 
-.top
+
+.topLine
+	box-shadow: 3px 0px 3px rgba(0,0,0,.6)
+	padding: 20px
+	width: 100%
 	background-color: #eaeaea
-	min-height: 138px
-	height: auto
-	box-shadow: 0 2px 3px rgba(0,0,0,.3)
-	z-index: 3
-	position: relative
-
-.top_serch
-	margin-top: 12px
-	position: relative
-	.serch_field
-		border-radius: 30px
-		border: 1px solid #b0b0b0
-		height: 25px
-		padding: 3px 17px
-		margin-top: 5px
-		text-transform: uppercase
-		font-size: em(10px)
-		width: 100%
-		z-index: 101
+.top-closeMnu,
+.top-search,
+.top-selectVin,
+.top-userCabinet,
+.top-balance,
+.top-cart
+	float: left
+	padding: 0 15px
+.top-closeMnu
+	width: 4%
+	padding: 4px 10px
+	#hamburger-icon
+  width: 25px
+  height: 20px
+  position: relative
+  display: block
+  .line
+    display: block
+    background: #757575
+    width: 100%
+    height: 4px
+    position: absolute
+    left: 0
+    transition: all 0.4s
+    &.line-1
+      top: 0
+    &.line-2
+      top: 50%
+    &.line-3
+      top: 100%
+  &:hover .line-1
+    transform: translateY(-4px)
+  &:hover .line-3
+    transform: translateY(4px)
+  &.active
+    .line-1
+      transform: translateY(10px) translateX(0) rotate(45deg)
+    .line-2
+      opacity: 0
+    .line-3
+      transform: translateY(-10px) translateX(0) rotate(-45deg)
+.top-search
+	width: 23%
+	form
 		position: relative
-		&:hover
-			border-color: #666
-		&:focus, &:active
-			border-color: #50b74e
-			box-shadow: inset 0px 0px 2px rgba(80,183,78,.5)
-	.search_btn
-		position: absolute
-		right: 0px
-		top: 5px
-		height: 32px
-		width: 35px
-		display: block
-		z-index: 101
-		border: none
-		background-color: transparent
-		padding: 7px
-		border-radius: 0 20px 20px 0
-		i
-			font-size: em(18px)
-			color: gray
+		width: 100%
+		input
+			width: 100%
+			border-radius: 999px
+			border: 1px solid lightgray
+			padding: 4px 4%
+			left: -4%
+			position: relative
+			text-transform: uppercase
+			&:hover
+				border-color: #666
+			&:focus, &:active
+				border-color: #50b74e
+				box-shadow: inset 0px 0px 2px rgba(80,183,78,.5)
+		button
+			position: absolute
+			border: none
+			background-color: transparent
+			position: absolute
+			top: 0
+			right: 0
+			font-size: em(16px)
 			&:hover
 				color: $green
+.top-selectVin
+	select
+			&:hover
+				border-color: #666
+			&:focus, &:active
+				border-color: #50b74e
+				box-shadow: inset 0px 0px 2px rgba(80,183,78,.5)
+.top-selectVin
+	width: 10%
+	select
+		width: 85%
+		padding: 4px 4%
+		border: 1px solid lightgray
+		text-transform: uppercase
 
 
-.user_accaunt
-	margin-top: 15px
-	margin-left: 6px
-	cursor: pointer
-	transition: .2s
-	&:hover
-		.wrap
-			i
-				color: #555
-		.triangle
-			border-top-color: #555
-	.wrap
-		float: left
-	i
-		font-size: em(13px)
-		display: inline-block
-		color: gray
-	.triangle
-		position: absolute
-		left: 47px
-		top: 26px
-		@include triangle(12px, gray, down)
-.triangle
-	cursor: pointer
-.reload
-	display: inline-block
-	height: 10px
-	width: 10px
-	color: #333
-	cursor: pointer
-
-.tottal_balance
-	text-align: center
-.balance
-	margin-top: 17px
-	font-size: em(13px)
-	text-align: center
-	display: inline-block
-	margin-right: 0px
-	color: #4d4d4d
-	cursor: pointer
+.top-balance
+	width: 25%
+	border-right: 1px solid gray
+	border-left: 1px solid gray
+	font-size: em(12px)
 	position: relative
-	i:last-child
-		margin-left: 1px
-	&:hover
-		color: #4d4d4d
-	.totall
-		color: #b1b1b1
-	.vertical_line, .vertical_line_left
-		width: 1px
-		background-color: gray
-		height: 14px
-		top: -17px
-		float: right
-		position: relative
-	.vertical_line_left
-		float: left
-		left: -24%
-	.reload
+	i
+		margin-right: 10px
+	.top-balance_update
+		background-color: #959595
 		margin-left: 10px
-	.date, .totall
-		font-family: 'OSB',sans-serif
-	.balance-tooltip
-		display: inline-block
-		position: absolute
-		border: 1px solid gray
-		bottom: -30px
-		left: 0
-		right: 0
-		margin: auto
-		padding: 5px
-		border-radius: 7px
-		background-color: rgba(0,0,0,.4)
-		color: #fff
-		display: none
-		.balance-tooltip_triangle
-			@include triangle(15px, gray, up)
-			position: absolute
+		text-align: center
+		border-radius: 999px
+		padding: 3px 6px
+		cursor: pointer
+		&:hover
+			background-color: #686868
+		i
 			margin: auto
-			top: -9px
-			@include calc(left, "50% - 5px")
-.cart
-	margin-top: 10px
-	font-size: em(13px)
+			display: inline-block
+			color: #fff
+	a
+		color: gray
+		text-transform: uppercase
+		padding: 4px 0
+		display: block
+		text-align: center
+		font-size: em(13px)
+		cursor: pointer
+		&:hover
+			text-decoration: none
+			color: #000
+		span
+			text-align: center
+
+
+
+.top-cart
+	width: 17%
 	text-align: center
-	display: inline-block
+	text-transform: uppercase
+	padding: 4px 0
+	border-right: 1px solid gray
+	a
+		color: gray
+		font-size: em(12px)
+		&:hover
+			text-decoration: underline
+		&:focus, &:active
+			color: gray
 	.totall
-		font-family: 'OSB',sans-serif
-		display: inline-block
-		color: #4d4d4d
-		cursor: pointer
-	.quantity
-		background-color: #dd3737
+		font-family: 'osb', sans-serif
+	.top-quantity
+		background-color: $red
 		color: #fff
-		padding: 0 7px
-		border-radius: 17px
-		margin: auto 0px auto 11px
-		display: inline-block
-		cursor: pointer
+		padding: 0 5px
+		margin: 0 10px
+		border-radius: 999px
 	i
 		font-size: em(20px)
+		color: #959595
+.top-userCabinet
+	width: 21%
+	text-align: center
+	text-transform: uppercase
+	padding: 4px 0
+	font-size: em(12px)
+	a
 		color: gray
+		display: inline-block
+		margin: 0 10px
+	i
+		font-size: em(18px)
+		color: gray
+		color: #959595
+	.triangle
+		@include triangle(12px 10px, gray, down)
+		display: inline-block
+		cursor: pointer
+
+.balance-tooltip
+	background-color: rgba(0,0,0,.5)
+	padding: 15px
+	position: absolute
+	color: #fff
+	border: 1px solid gray
+	z-index: 999
+	border-radius: 3px
+	right: 0
+	right: 15%
+	top: 110%
+	display: none
+	.balance-tooltip_triangle
+		position: absolute
+		@include triangle(12px 10px, rgba(0,0,0,.5), up)
+		top: -11px
+		right: 0
+		left: 0
+		margin: auto
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .alert
 	display: none
@@ -2584,9 +2606,9 @@ input
 	color: #333
 	min-width: 200px
 	width: auto
-	right: 15px
+	right: 30px
 	z-index: 2
-	top: 130px
+	top: 70px
 	background-color: #e9e9e9
 	display: none
 	font-size: em(14px)
@@ -5179,7 +5201,7 @@ input[type=checkbox]
 				img
 					border-color: $green
 
-//////////Конец стилей  для страницы Менеджера salesperson.html///////////////
+//////////Конец стилей	для страницы Менеджера salesperson.html///////////////
 
 
 
@@ -5343,45 +5365,45 @@ input[type=checkbox]
 
 
 .finReloadd
-  animation: finReloadd linear 0.7s
-  animation-iteration-count: 2
-  transform-origin: 50% 50%
-  -webkit-animation: finReloadd linear 0.7s
-  -webkit-animation-iteration-count: 2
-  -webkit-transform-origin: 50% 50%
-  -moz-animation: finReloadd linear 0.7s
-  -moz-animation-iteration-count: 2
-  -moz-transform-origin: 50% 50%
-  -o-animation: finReloadd linear 0.7s
-  -o-animation-iteration-count: 2
-  -o-transform-origin: 50% 50%
-  -ms-animation: finReloadd linear 0.7s
-  -ms-animation-iteration-count: 2
-  -ms-transform-origin: 50% 50%
+	animation: finReloadd linear 0.7s
+	animation-iteration-count: 2
+	transform-origin: 50% 50%
+	-webkit-animation: finReloadd linear 0.7s
+	-webkit-animation-iteration-count: 2
+	-webkit-transform-origin: 50% 50%
+	-moz-animation: finReloadd linear 0.7s
+	-moz-animation-iteration-count: 2
+	-moz-transform-origin: 50% 50%
+	-o-animation: finReloadd linear 0.7s
+	-o-animation-iteration-count: 2
+	-o-transform-origin: 50% 50%
+	-ms-animation: finReloadd linear 0.7s
+	-ms-animation-iteration-count: 2
+	-ms-transform-origin: 50% 50%
 @keyframes finReloadd
-  0%
-    transform: rotate(-360deg)
-  100%
-    transform: rotate(0deg)
+	0%
+		transform: rotate(-360deg)
+	100%
+		transform: rotate(0deg)
 @-moz-keyframes finReloadd
-  0%
-    -moz-transform: rotate(-360deg)
-  100%
-    -moz-transform: rotate(0deg)
+	0%
+		-moz-transform: rotate(-360deg)
+	100%
+		-moz-transform: rotate(0deg)
 @-webkit-keyframes finReloadd
-  0%
-    -webkit-transform: rotate(-360deg)
-  100%
-    -webkit-transform: rotate(0deg)
+	0%
+		-webkit-transform: rotate(-360deg)
+	100%
+		-webkit-transform: rotate(0deg)
 @-o-keyframes finReloadd
-  0%
-    -o-transform: rotate(-360deg)
-  100%
-    -o-transform: rotate(0deg)
+	0%
+		-o-transform: rotate(-360deg)
+	100%
+		-o-transform: rotate(0deg)
 @-ms-keyframes finReloadd
-  0%
-    -ms-transform: rotate(-360deg)
-  100%
-    -ms-transform: rotate(0deg)
+	0%
+		-ms-transform: rotate(-360deg)
+	100%
+		-ms-transform: rotate(0deg)
 
 @import "media"
