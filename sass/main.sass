@@ -5468,7 +5468,6 @@ input[type=checkbox]
 
 
 //история запросов history//
-
 .queryHistory
 	margin: 20px 0 0
 	.breadcrumbs_bottom
@@ -5522,7 +5521,91 @@ input[type=checkbox]
 //конец история запросов history
 
 
+//опросы//
+.pools
+	.pools-h2
+		margin: 0
+		text-transform: uppercase
+		margin-bottom: 30px
+		span
+			font-family: 'osb', sans-serif
+			font-size: em(14px)
+		i
+			font-size: em(18px)
+			color: #959595
+			position: relative
+			margin-right: 20px
+			top: 3px
+	.pools-newPools
+		h3
+			text-transform: uppercase
+			font-family: 'osb', sans-serif
+			font-size: em(15px)
+			margin-bottom: 25px
+		.pools-newPools_item
+			background-color: #5ecf5c
+			padding: 20px 25px
+			font-family: 'osb', sans-serif
+			color: #fff
+			font-size: em(16px)
+			box-shadow: 5px 5px 6px rgba(0,0,0,.2)
+			position: relative
+			margin-bottom: 20px
+			.wrap_btn
+				@include calc(width, "40%")
+				float: right
+			span
+				@include calc(width, "60%")
+				display: inline-block
+				padding-right: 10px
+				display: inline-block
+				line-height: em(14px)
+			button
+				float: right
+				position: relative
+				border: none
+				background-color: $green
+				padding: 5px 10px
+				text-transform: uppercase
+				font-size: em(10px)
+				transition: .1s
+				box-shadow: 1px 1px 1px 1px rgba(0,0,0,.3)
+				&:hover
+					background-color: darken($green, 3%)
+				&:active
+					background-color: darken($green, 7%)
+					box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,.3)
+	.pools-pastPools
+		h3
+			text-transform: uppercase
+			font-family: 'osb', sans-serif
+			font-size: em(15px)
+			margin-bottom: 25px
+			margin-top: 30px
+			margin-left: 15px
+		.pools-pastPools_item
+			background-color: #eaeaea
+			padding: 20px
+			margin-bottom: 25px
+			.wrap_btn
+				width: 40%
+				float: right
+				button
+					float: right
+					padding: 10px
+					text-transform: uppercase
+					display: inline-block
+					line-height: em(14px)
+			span
+				font-family: 'osb', sans-serif
+				font-size: em(16px)
+				display: inline-block
+				width: 60%
+				padding-right: 10px
+				line-height: em(14px)
 
+
+//конец опросы//
 
 
 
