@@ -94,7 +94,7 @@ $base-font-size: 13px
 	/**/
 
 
-/*==========  Mobile First Method  ==========*/
+/*==========	Mobile First Method	==========*/
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
@@ -135,7 +135,7 @@ $base-font-size: 13px
 @media only screen and (max-width : 1201px)
 	.user_name
 		top: 123px
-		
+
 @media only screen and (max-width : 1200px)
 	.orders-info_popUp-inner-buttons
 		margin-top: 0
@@ -335,6 +335,9 @@ $base-font-size: 13px
 			height: 420px !important
 
 @media only screen and (max-width : 767px)
+	#selectOrders
+		text-align: left !important
+		float: left
 	.table_for_xs
 		box-shadow: 0 3px 3px rgba(0, 0, 0, .3)
 		margin-bottom: 15px
@@ -364,6 +367,14 @@ $base-font-size: 13px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	.orders_container
+		.tottal_price
+			.inner_wrap
+				.bottom_docs
+					a
+						margin-right: 0
+						i
+							font-size: em(12px)
 	.alert
 		.alert_zone
 			padding-top: 7px
@@ -492,6 +503,7 @@ $base-font-size: 13px
 		i
 			display: none
 			margin: 0
+
 	.breadcrumbs_bottom
 		text-align: left
 		ul
@@ -1846,7 +1858,7 @@ $base-font-size: 13px
 
 
 
-
+//личный кабинет//
 @media only screen and (max-width : 992px)
 	.userinfo .userinfo-leftSide, .userinfo .userinfo-rightSide
 		width: 100%
@@ -1862,3 +1874,104 @@ $base-font-size: 13px
 @media only screen and (max-width : 340px)
 	.userinfo .userinfo-leftSide .gray_btn
 		width: 100%
+//конец личный кабинет//
+
+
+
+//управление остатками managment_rest//
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.managment
+		.managment-rest
+				.managment-rest_exports
+					.managment-rest_exports-table
+						padding: 10px 5px
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.managment
+		.managment-h2
+			h2
+				font-size: em(16px)
+			button
+				margin-right: 0
+		.managment-rest
+			h3
+				font-size: em(14px)
+			.managment-rest_warehouse-select
+				padding: 20px 5px
+				.overlay
+					float: none
+				button
+					padding: 10px
+					top: 10px
+					position: relative
+				span
+					margin-top: 10px
+					display: inline-block
+					font-size: em(11px)
+					line-height: 12px
+
+	/*Disable Animation on Mobile Devices*/
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width : 530px)
+	.managment
+		.managment-h2
+			margin-top: 40px
+			h2
+				font-size: em(14px)
+			button
+				width: 100% !important
+				margin-top: 20px
+		.managment-rest
+			h3
+				padding: 10px
+			.managment-rest_exports-table
+				font-size: em(12px)
+				line-height: em(12px)
+
+
+	/**/
+
+@media only screen and (max-width : 480px)
+	/**/
+
+
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========	Mobile First Method	==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+//конец управление остатками managment_rest//

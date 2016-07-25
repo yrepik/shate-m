@@ -50,10 +50,10 @@
 						<li><a href="shate-m_b2b_user_cabinet_returnes_list_new_return.html"><i class="fa fa-reply" aria-hidden="true"></i><span>Возвраты</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_wait_list.html"><i class="fa fa-bookmark-o" aria-hidden="true"></i><span>Лист ожидания</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_reconciliation.html"><i class="fa fa-money" aria-hidden="true"></i><span>Финанс</span></a></li>
-						<li class="active"><a href="shate-m_b2b_user_cabinet_profile.html"><i class="fa fa-user" aria-hidden="true"></i><span>Персональные данные</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_profile.html"><i class="fa fa-user" aria-hidden="true"></i><span>Персональные данные</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_salesperson.html"><i class="fa fa-phone" aria-hidden="true"></i><span>Ваш менеджер</span></a></li>
 						<li><a href="#"><i class="fa fa-history" aria-hidden="true"></i><span>История запросов</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_rest_managment.html"><i class="fa fa-cloud-upload" aria-hidden="true"></i><span>Управление остатками</span></a></li>
+						<li class="active"><a href="shate-m_b2b_user_cabinet_rest_managment.html"><i class="fa fa-cloud-upload" aria-hidden="true"></i><span>Управление остатками</span></a></li>
 						<li><a href="#"><i class="fa fa-percent" aria-hidden="true"></i><span>Акции</span></a></li>
 						<li><a href="#"><i class="fa fa-cart-arrow-down " aria-hidden="true"></i><span>Уцененные товары</span></a></li>
 						<li><a href="#"><i class="fa fa-cart-plus " aria-hidden="true"></i><span>Наценки</span></a></li>
@@ -65,6 +65,7 @@
 
 				<!--			шапка сайта		 -->
 				<div id="right_side" class="white hidemenuR col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
 
 					<div class="row ">
 						<div class="topLine col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -162,6 +163,7 @@
 						</div>
 					</div>
 
+
 					<div class="row togglemnu">
 						<ul>
 							<li>Фамилия Имя Отчество</li>
@@ -171,157 +173,127 @@
 					</div>
 
 
-					<div class="container-fluid profile">
-						<!--зона служебных сообщений-->
-						<div class="row profile-alertZone">
-							<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-							<span>* - Поля обязательные к заполнению</span>
+				<div class="container-fluid managment">
+
+					<!--заголовок-->
+					<div class="row">
+						<div class="managment-h2 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<h2><i class="fa fa-cloud-download" aria-hidden="true"></i><span>Управление остатками</span></h2>
+							<button class="red_btn">Сохранить</button>
 						</div>
 					</div>
 
-					<div class="container-fluide userinfo">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<h2>
-									<i class="fa fa-user" aria-hidden="true"></i>
-									<span>Персональные данные</span>
-								</h2>
+					<!--Настроенные экспорты и выбор склада-->
+					<div class="row managment-rest">
+						<div class="managment-rest_exports col-xs-12 col-sm-6 col-md-6 col-lg-6">
+							<h3>Настроенные экспорты:</h3>
+							<!--шапка-->
+							<div class="row managment-rest_exports-table">
+								<div class="plr0 hidden-xs col-sm-1 col-md-1 col-lg-1">№</div>
+								<div class="plr0 col-xs-4 col-sm-4 col-md-4 col-lg-4">Склад</div>
+								<div class="plr0 col-xs-2 col-sm-2 col-md-2 col-lg-2">Валюта</div>
+								<div class="plr0 col-xs-4 col-sm-3 col-md-3 col-lg-3">Email</div>
+								<div class="plr0 col-xs-2 col-sm-2 col-md-2 col-lg-2"><span>Период</span></div>
 							</div>
-						</div>
 
-						<!--форма с инфой о пользователе-->
-						<div class="row">
-						<form action="post">
-							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-								<div class="userinfo-leftSide">
-									<span>Логин:</span>
-									<input name="pass" class="readonly userinfo-leftSide_login" value="TEST23" readonly="readonly">
-									<a class="gray_btn">Изменить пароль</a>
+							<!--ряд таблицы-->
+							<div class="row managment-rest_exports-table-row managment-MinskStatus">
+								<div class="plr0 hidden-xs col-sm-1 col-md-1 col-lg-1 number">1</div>
+								<div class="plr0 col-xs-4 col-sm-4 col-md-4 col-lg-4">ШМ+ <br class="hidden-md hidden-lg"/>Минск</div>
+								<div class="plr0 col-xs-2 col-sm-2 col-md-2 col-lg-2 qurency">RUR</div>
+								<div class="plr0 col-xs-4 col-sm-3 col-md-3 col-lg-3"><a href="#">101@.com</a></div>
+								<div class="plr0 col-xs-2 col-sm-2 col-md-2 col-lg-2">Ежедневно</div>
+							</div>
 
-									<span>Email:*</span>
-									<input name="email" value="mail@yourmail.com" required="required">
+							<!--ряд таблицы-->
+							<div class="row managment-rest_exports-table-row managment-EctStatus">
+								<div class="plr0 hidden-xs col-sm-1 col-md-1 col-lg-1 number">1</div>
+								<div class="plr0 col-xs-4 col-sm-4 col-md-4 col-lg-4">ШМ+ <br class="hidden-md hidden-lg"/>Минск</div>
+								<div class="plr0 col-xs-2 col-sm-2 col-md-2 col-lg-2 qurency">RUR</div>
+								<div class="plr0 col-xs-4 col-sm-3 col-md-3 col-lg-3"><a href="#">101@.com</a></div>
+								<div class="plr0 col-xs-2 col-sm-2 col-md-2 col-lg-2">Ежедневно</div>
+							</div>
 
-									<span>ФИО:*</span>
-									<input name="fio" value="Фамилия Имя Отчество" required="required">
+							<div class="row managment-rest_exports-filter">
+								<div class="plr0 col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-									<span>Телефон:*</span>
-									<input name="phone" value="+357 33 609 92 09" required="required">
-
-									<span>Тип контакта:</span>
-									<select name="userSelectContact" id="">
-										<option value="0">Другой</option>
-										<option value="1">ICQ</option>
-										<option value="2">Skype</option>
-										<option value="3">Google Talk</option>
-										<option value="4">MSN</option>
+									<span>Выводить цены в валюте</span>
+									<select class="" name="managmentQurency">
+										<option value="0">BYN</option>
+										<option value="2">RUR</option>
+										<option value="1">EUR</option>
+										<option value="3">USD</option>
 									</select>
 
-									<span>Контакт:</span>
-									<input name="icqContact" value="icqContact">
+									<span>Шаблон для экспорта</span>
+									<select class="" name="managmentQurency">
+										<option value="0">Бренд; Какталожный номер; Описание; Остаток; Кратность отгрузки; Валюта; Цена; Штрих-код;</option>
+									</select>
+								</div>
+							</div>
 
-									<span>Работаете с нами:</span>
-									<div class="userinfo-radioWrap clearfix">
-										<div class="first">
-											<div class="userinfo-overlay"><div class="inner"></div></div>
-											<input id="working1" name="group1" type="radio">
-											<label for="working1">Да</label>
-										</div>
 
-										<div class="second">
-											<div class="userinfo-overlay"><div class="inner"></div></div>
-											<input id="working2" name="group1" type="radio">
-											<label for="working2">Нет</label>
-										</div>
 
+						</div>
+						<div class="managment-rest_warehouse col-xs-12 col-sm-6 col-md-6 col-lg-6">
+							<h3>Выбор склада</h3>
+							<div class="row managment-rest_warehouse-select  managment-MinskStatus">
+								<div class="pr0 col-xs-6 col-sm-6 col-md-6 col-lg-6">
+									<div class="overlay">
+										<input type="checkbox">
+										<div class="inner"></div>
 									</div>
-
-									<span>Тип контакта:</span>
-									<select name="userSelectField" id="">
-										<option value="0">Автомагазин</option>
-										<option value="1">Автопарк</option>
-										<option value="2">Автосалон</option>
-										<option value="3">Автосервис</option>
-										<option value="4">АЗС</option>
-										<option value="5">Автосервис в гараже</option>
-										<option value="5">Диллер</option>
-										<option value="6">Дистрибьютор</option>
-										<option value="7">Интернет магазин</option>
-										<option value="8">Консалтинговая компания</option>
-										<option value="9">Мойка</option>
-										<option value="10">Оптовая торговля</option>
-										<option value="11">Перевозчики</option>
-										<option value="12">ТВ-станция, радио или пресса</option>
-										<option value="13">Производитель</option>
-										<option value="14">Реклама</option>
-										<option value="15">Розница</option>
-										<option value="16">Сотрудники</option>
-									</select>
-
+									<span>Шате-М Плюс Минск</span>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+									<button class="green_btn">Скачать</button>
 								</div>
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-								<div class="userinfo-rightSide">
 
-
-									<span>Регион:*</span>
-									<input class="readonly userinfo-leftSide_login" name="region" value="Российская Федерация" readonly="readonly">
-
-									<span>Город:*</span>
-									<input class="readonly" name="town" value="Москва" required="required" readonly="readonly">
-
-									<span>Индекс:*</span>
-									<select name="index" id="" required="required">
-										<option value="0">--Выберите индекс--</option>
-										<option value="1">00000</option>
-										<option value="2">101000</option>
-										<option value="3">105118</option>
-										<option value="4">105120</option>
-										<option value="5">109147</option>
-										<option value="5">109337</option>
-										<option value="6">115054</option>
-										<option value="7">115407</option>
-										<option value="8">117218</option>
-										<option value="9">117393</option>
-										<option value="10">117403</option>
-										<option value="11">119049</option>
-										<option value="12">119146</option>
-										<option value="13">119280</option>
-										<option value="14">119361</option>
-										<option value="15">125047</option>
-										<option value="16">125445</option>
-										<option value="17">127410</option>
-										<option value="18">129090</option>
-										<option value="19">129344</option>
-										<option value="20">143025</option>
-									</select>
-
-									<span>Улица(Адресс юр.):*</span>
-									<input name="street" value="ул. Всех 12" required="required">
-
-									<span>Отгрузка по умолчанию:</span>
-									<select name="shipment" id="">
-										<option value="0">Самовывоз</option>
-										<option value="1">Доставка</option>
-									</select>
-
-
-
-									<span>Выберите адрес доставки:</span>
-									<select name="addresToDelivery" id="">
-										<option value="0">-Выберите адрес доставки-</option>
-										<option value="1">1</option>
-									</select>
-
-									<a href="#">Пользовательское соглашение </a>
-									<button class="red_btn" type="submit" name="save">Сохранить</button>
+							<div class="row managment-rest_warehouse-select  managment-EctStatus">
+								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+									<div class="overlay">
+										<input type="checkbox">
+										<div class="inner"></div>
+									</div>
+									<span>Шате-М Плюс Екатеринбург</span>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+									<button class="green_btn">Скачать</button>
 								</div>
 							</div>
-						</form>
+
+							<div class="row managment-rest_warehouse-select">
+								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+									<div class="overlay">
+										<input type="checkbox">
+										<div class="inner"></div>
+									</div>
+									<span>Шате-М Плюс Подольск</span>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+									<button class="green_btn">Скачать</button>
+								</div>
+							</div>
+
+							<!--рассылка-->
+
+							<div class="row managment-sender">
+								<div class="plr0 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									<h3>автоматическая рассылка</h3>
+								</div>
+								<div class="managment-sender_mail col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									<span>Получать остатки на Email</span>
+									<input type="text" value="email@email.com">
+								</div>
+							</div>
+
+
 						</div>
-
 					</div>
 
 
+				</div>
 
 
 				</div>

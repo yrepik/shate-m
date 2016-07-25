@@ -1,4 +1,30 @@
 $(function() {
+//управление остатками//
+    function restCheckBoxMouseOut(){
+        if($(this).prop('checked')){
+        }else{
+            $(this).next().css('borderColor', '');
+        }
+    }
+    $('.managment-rest_warehouse-select').find('input').mouseout(restCheckBoxMouseOut);
+
+
+    function restCheckBoxHover(){
+        $(this).next().css('borderColor', 'gray');
+    }
+    $('.managment-rest_warehouse-select').find('input').mouseover(restCheckBoxHover);
+
+    function restCheckBox(){//rest стилизация checkbox
+        if($(this).prop('checked')){
+            $(this).next().css({'backgroundColor':'#50b74e', 'borderColor':'#50b74e'});
+        }else{
+            $(this).next().css('backgroundColor', '#fff');
+        }
+    }
+    $('.managment-rest_warehouse-select').find('input').click(restCheckBox);
+//конец управление остатками//
+
+
     ///скрипты страницы c инфой о пользователе/////
     function userinfoCheckBox() { //стилизация checkbox
         $('#working1, #working2').prev().children().css('backgroundColor', '#fff')
@@ -64,6 +90,7 @@ $(function() {
 
 
     function balanceToolTip() { //отображение тултипа
+        console.log('1');
         $(this).parents('.top-balance').find('.balance-tooltip').fadeIn()
     }
 
@@ -122,7 +149,7 @@ $(function() {
 
     function treeAddToCart() { //имитация добавления товара в корзину
         var $vol = $(this).parents('.spinner').find('input').val();
-        $('.quantity').html($vol);
+        $('.top-quantity').html($vol);
         $('.totall').html('(' + $vol * 1000 + 'руб.)')
 
     }
@@ -696,7 +723,7 @@ $(function() {
 
     function addToCartWaitList() { //добавить товары в корзину на странице листа ожидания
         var $count = $('.table_search_goods_result').find('.checkbox_brand:checked');
-        $('.quantity').html($count.length);
+        $('.top-quantity').html($count.length);
 
 
         $count.parents('.table_search_goods_result').slideUp();
@@ -754,7 +781,7 @@ $(function() {
     $('.search_goods').find('.green_btn').on('click', function() { //добавить товар при клике по кнопке
             var $imput = $('.checkbox_brand:checked');
             $imput.parents('.table_search_goods_result').slideUp(200)
-            $('.cart').find('.quantity').html($imput.length)
+            $('.cart').find('.top-quantity').html($imput.length)
             $('.cart .totall').html('(' + $imput.length * 1000 + ' руб.)');
         })
         /////////////////////////////конец//////////////////////////////
@@ -1087,7 +1114,7 @@ $(function() {
 
     // переворот стреки
     $(".top-balance_update").on('click', function() {
-        $(this).children().addClass('reloadd');
+        $(this).children().addClass('finReloadd');
         $(this).children().delay(2000);
         $('.top-balance .totall').css({
             'color': '#48b746'
@@ -1102,7 +1129,7 @@ $(function() {
     })
 
     function removeAnim() {
-        $(this).children().removeClass('reloadd');
+        $(this).children().removeClass('finReloadd');
     }
     $(".top-balance_update").on('mouseup', removeAnim)
         //////////////////////////////////
@@ -1222,12 +1249,8 @@ $(function() {
         connectWith: '.connect',
         revert: 'true',
         opacity: 0.8,
-        helper: function(event, ui) {
-            var $clone = $(ui).clone();
-            $clone.css({
-                'top': '0'
-            });
-            return $clone.get(0);
+        helper: function(event, element) {
+        return element.clone().appendTo("body");
         },
         handle: '.arrows',
         refreshPositions: true,
@@ -1236,7 +1259,6 @@ $(function() {
         },
         appendTo: '#right_side',
         delay: 200,
-
         stop: function() {
             $(this).parent().find('.arrows').children().css({
                 'color': ''
