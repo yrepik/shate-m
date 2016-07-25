@@ -5467,6 +5467,64 @@ input[type=checkbox]
 //конец управление остатками rest_managment//
 
 
+//история запросов history//
+
+.queryHistory
+	margin: 20px 0 0
+	.breadcrumbs_bottom
+		margin-top: 30px
+	.queryHistory-h2
+		.selectNumber
+			float: right
+			padding: 4px 10px
+			text-align: center
+			margin-top: 20px
+		h2
+			display: inline-block
+			float: left
+			span
+				text-transform: uppercase
+				font-size: em(14px)
+				font-family: 'osb', sans-serif
+			i
+				color: #959595
+				font-size: em(18px)
+				margin-right: 20px
+				position: relative
+				top: 2px
+	.queryHistory-thead
+		margin: 0
+		background-color: #cfcfcf
+		padding: 8px 20px
+		font-family: 'osb', sans-serif
+		box-shadow: 0 2px 2px rgba(0,0,0,.3)
+		position: relative
+		z-index: 1
+	.queryHistory-row
+		margin: 0
+		padding: 10px 20px
+		&:nth-child(odd)
+			background-color: #eaeaea
+		.queryHistory-row_brand,
+		.queryHistory-row_date,
+		.queryHistory-row_descr
+			text-decoration: underline
+		.queryHistory-row_product
+			a
+				text-decoration: underline
+				color: $red
+				&:hover, &:focus, &:active
+					text-decoration: none !important
+					color: $red
+		.queryHistory-row_brand
+			font-family: 'osb', sans-serif
+			color: #7a7a7a
+//конец история запросов history
+
+
+
+
+
 
 .finReloadd
 	animation: finReloadd linear 0.7s
