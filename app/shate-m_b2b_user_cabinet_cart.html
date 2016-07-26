@@ -50,7 +50,7 @@
 						<li><a href="shate-m_b2b_user_cabinet_returnes_list_new_return.html"><i class="fa fa-reply" aria-hidden="true"></i><span>Возвраты</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_wait_list.html"><i class="fa fa-bookmark-o" aria-hidden="true"></i><span>Лист ожидания</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_reconciliation.html"><i class="fa fa-money" aria-hidden="true"></i><span>Финансы</span></a></li>
-						<li class="active"><a href="shate-m_b2b_user_cabinet_profile.html"><i class="fa fa-user" aria-hidden="true"></i><span>Персональные данные</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_profile.html"><i class="fa fa-user" aria-hidden="true"></i><span>Персональные данные</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_salesperson.html"><i class="fa fa-phone" aria-hidden="true"></i><span>Ваш менеджер</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_history.html"><i class="fa fa-history" aria-hidden="true"></i><span>История запросов</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_rest_managment.html"><i class="fa fa-cloud-upload" aria-hidden="true"></i><span>Управление остатками</span></a></li>
@@ -65,6 +65,7 @@
 
 				<!--			шапка сайта		 -->
 				<div id="right_side" class="white hidemenuR col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
 
 					<div class="row ">
 						<div class="topLine col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -112,9 +113,9 @@
 
 							<!--кабинет пользователя-->
 							<div class="top-userCabinet top-firstUserCabinet">
-									<i class="fa fa-user" aria-hidden="true"></i>
-									<a href="#">Фамилия Имяяяя</a>
-									<div class="triangle"></div>
+								<i class="fa fa-user" aria-hidden="true"></i>
+								<a href="#">Фамилия Имяяяя</a>
+								<div class="triangle"></div>
 							</div>
 
 							<!--баланс-->
@@ -123,7 +124,7 @@
 								<a class="">
 									<span class="balance-tooltip">
 											<span>Баланс устарел</span>
-											<span class="balance-tooltip_triangle"></span>
+									<span class="balance-tooltip_triangle"></span>
 									</span>
 									<i class="fa fa-money" aria-hidden="true"></i>
 									<span class="balance_count">Баланс </span><span class="hidden-xs hidden-sm hidden-md">- 13.03.2016 - </span>
@@ -138,16 +139,16 @@
 
 							<!--корзина-->
 							<div class="top-cart">
-									<a class="totall">(0 руб.)</a>
-									<a class="top-quantity">0</a>
-									<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+								<a class="totall">(0 руб.)</a>
+								<a class="top-quantity">0</a>
+								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 							</div>
 
 							<!--кабинет пользователя-->
 							<div class="top-userCabinet top-SecondUserCabinet">
-									<i class="fa fa-user" aria-hidden="true"></i>
-									<a href="#">Фамилия Имяяяя</a>
-									<div class="triangle"></div>
+								<i class="fa fa-user" aria-hidden="true"></i>
+								<a href="#">Фамилия Имяяяя</a>
+								<div class="triangle"></div>
 							</div>
 
 
@@ -160,6 +161,8 @@
 							</div>
 
 						</div>
+
+
 					</div>
 
 					<div class="row togglemnu">
@@ -171,157 +174,204 @@
 					</div>
 
 
-					<div class="container-fluid profile">
-						<!--зона служебных сообщений-->
-						<div class="row profile-alertZone">
+					<!--выбор склада-->
+					<div class="row cart-filter">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<i class="hidden-xs fa fa-filter" aria-hidden="true"></i>
+							<span class="hidden-xs">Выбор склада</span>
+							<div class="cart-filter_wrapSelect">
+								<div class="status statusMinsk"></div>
+								<select name="cartWarehouseSelect">
+									<option id="0" value="0">Центральный склад  <b>(197 354 034 руб.)</b></option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<!--зона служебных сообщений-->
+					<div class="row cart-alert">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
 							<span>* - Поля обязательные к заполнению</span>
 						</div>
 					</div>
 
-					<div class="container-fluide userinfo">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<h2>
-									<i class="fa fa-user" aria-hidden="true"></i>
-									<span>Персональные данные</span>
-								</h2>
+
+
+
+
+					<div class="container-fluid cart">
+
+
+						<div class="row cart-h2">
+							<div class="col-xs-12 col-sm-4 col-lg-6 col-md-6">
+									<h2>
+										<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+										<span>Корзина</span>
+									</h2>
+							</div>
+							<div class="cart-h2_control col-xs-12 col-sm-8 col-lg-6 col-md-6">
+								<select name="carth2control">
+									<option value="0">10</option>
+									<option value="1">20</option>
+									<option value="1">50</option>
+								</select>
+
+								<button class="gray_btn">
+									<i class="fa fa-download" aria-hidden="true"></i>
+									<span>Выгрузить в файл</span>
+								</button>
+
 							</div>
 						</div>
 
-						<!--форма с инфой о пользователе-->
-						<div class="row">
-						<form action="post">
-							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-								<div class="userinfo-leftSide">
-									<span>Логин:</span>
-									<input name="pass" class="readonly userinfo-leftSide_login" value="TEST23" readonly="readonly">
-									<a class="gray_btn">Изменить пароль</a>
+						<div class="row cart-beznal">
+							<div class="cart-beznal_remote col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<div class="left">
+									<h3>Безналичный расчет</h3>
+									<button class="hidden-md hidden-sm hidden-xs gray_btn">
+										<i class="fa fa-download" aria-hidden="true"></i>
+										<span>Выгрузить в файл</span>
+									</button>
+								</div>
+								<div class="right">
+									<button class="cart-downloadInFile hidden-lg gray_btn">
+										<i class="fa fa-download" aria-hidden="true"></i>
+										<span>Выгрузить в файл</span>
+									</button>
+									<button class="cart-dellMark gray_btn">
+										<i class="fa fa-trash" aria-hidden="true"></i>
+										<span>Удалить выбранные</span>
+									</button>
+									<button class="cart-dellAll gray_btn">Очистить все</button>
+									<button class="cart-MarkAll gray_btn">Выбрать все</button>
+								</div>
+							</div>
 
-									<span>Email:*</span>
-									<input name="email" value="mail@yourmail.com" required="required">
+							<div class="row">
+								<div class="cart-beznal_table col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-									<span>ФИО:*</span>
-									<input name="fio" value="Фамилия Имя Отчество" required="required">
 
-									<span>Телефон:*</span>
-									<input name="phone" value="+357 33 609 92 09" required="required">
-
-									<span>Тип контакта:</span>
-									<select name="userSelectContact" id="">
-										<option value="0">Другой</option>
-										<option value="1">ICQ</option>
-										<option value="2">Skype</option>
-										<option value="3">Google Talk</option>
-										<option value="4">MSN</option>
-									</select>
-
-									<span>Контакт:</span>
-									<input name="icqContact" value="icqContact">
-
-									<span>Работаете с нами:</span>
-									<div class="userinfo-radioWrap clearfix">
-										<div class="first">
-											<div class="userinfo-overlay"><div class="inner"></div></div>
-											<input id="working1" name="group1" type="radio">
-											<label for="working1">Да</label>
+									<!--первый ряд таблицы-->
+									<div class="row clearfix">
+										<!--Бренд-->
+										<div class="cell_wrap cart-beznal_brand col-xs-12 col-sm-4 col-md-1 col-lg-2">
+											<div class="title">
+												<div class="checkbox">
+													<div class="inner"></div>
+												</div>
+												<input class="checkbox_cart" type="checkbox" name="checkcart">
+												<span>Бренд</span>
+											</div>
+											<div class="content">
+												<div class="dots">
+													<div class="dots-1"></div>
+													<div class="dots-2"></div>
+													<div class="dots-3"></div>
+												</div>
+												<a href="#">Purfix</a>
+												<p>Артикул</p>
+												<a href="#">AHC299</a>
+											</div>
+										</div>
+										<!--Наименование-->
+										<div class="cell_wrap col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Наименование</div>
+											<div class="content">
+												<span>Фильтр Салона</span>
+											</div>
+										</div>
+										<!--Наличие-->
+										<div class="cell_wrap col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Наличие</div>
+											<div class="content">
+												<span>12</span>
+											</div>
 										</div>
 
-										<div class="second">
-											<div class="userinfo-overlay"><div class="inner"></div></div>
-											<input id="working2" name="group1" type="radio">
-											<label for="working2">Нет</label>
+										<!--Ожидаемый срок поставки-->
+										<div class="cell_wrap col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Ожидаемый
+												<br>срок поставки</div>
+											<div class="content">
+												<span>12.02.2016</span>
+											</div>
+										</div>
+										<!--Кратность продажи-->
+										<div class="cell_wrap fold col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Кратность</div>
+											<div class="content">
+												<span>1</span>
+											</div>
+										</div>
+
+										<!--Дата обнавления-->
+										<div class="cell_wrap col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Дата
+												<br>обнавления</div>
+											<div class="content">
+												<span>15.03.2016</span>
+											</div>
+										</div>
+
+										<!--Примечание-->
+										<div class="cell_wrap col-xs-4 col-sm-4	col-md-1 col-lg-1">
+											<div class="title">Примечание</div>
+											<div class="content">
+												<button class="gray_btn btn add_coment_btn" type="button" name="addComment">
+													<span>
+																		<i class="fa fa-plus" aria-hidden="true"></i>Добавить
+																	</span>
+												</button>
+											</div>
+										</div>
+
+										<!--Цена с НДС-->
+										<div class="cell_wrap col-xs-6 col-sm-4 col-md-2 col-lg-2">
+											<div class="title">Цена с НДС</div>
+											<div class="content">
+												<span>1 000</span> <span>руб.</span>
+											</div>
+										</div>
+										<!--количество-->
+										<div class="cell_wrap col-xs-6 col-sm-4 col-md-3 col-lg-2">
+											<div class="title">Количество</div>
+											<div class="content">
+												<div class="top_cell">
+
+													<form action="post" class="clearfix">
+														<input class="checkbox_result" type="checkbox">
+														<div class="checked_box">
+															<div class="inner">
+																<div class="green"></div>
+															</div>
+														</div>
+														<div class="input-group spinner">
+															<input type="text" class="form-control" value="10">
+															<div class="input-group-btn-vertical">
+																<button class="btn btn-default" type="submit"><i class="fa fa-caret-up"></i></button>
+																<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+															</div>
+														</div>
+														<button class="btn_form dellRowTamleWaitList wait" type="submit" name="button"><i class="fa fa-hourglass-end" aria-hidden="true"></i></button>
+														<button class="dellRowWaitList btn_form gray hidden-xs" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
+													</form>
+												</div>
+
+											</div>
 										</div>
 
 									</div>
 
-									<span>Тип контакта:</span>
-									<select name="userSelectField" id="">
-										<option value="0">Автомагазин</option>
-										<option value="1">Автопарк</option>
-										<option value="2">Автосалон</option>
-										<option value="3">Автосервис</option>
-										<option value="4">АЗС</option>
-										<option value="5">Автосервис в гараже</option>
-										<option value="5">Диллер</option>
-										<option value="6">Дистрибьютор</option>
-										<option value="7">Интернет магазин</option>
-										<option value="8">Консалтинговая компания</option>
-										<option value="9">Мойка</option>
-										<option value="10">Оптовая торговля</option>
-										<option value="11">Перевозчики</option>
-										<option value="12">ТВ-станция, радио или пресса</option>
-										<option value="13">Производитель</option>
-										<option value="14">Реклама</option>
-										<option value="15">Розница</option>
-										<option value="16">Сотрудники</option>
-									</select>
+
 
 								</div>
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-								<div class="userinfo-rightSide">
 
-
-									<span>Регион:*</span>
-									<input class="readonly userinfo-leftSide_login" name="region" value="Российская Федерация" readonly="readonly">
-
-									<span>Город:*</span>
-									<input class="readonly" name="town" value="Москва" required="required" readonly="readonly">
-
-									<span>Индекс:*</span>
-									<select name="index" id="" required="required">
-										<option value="0">--Выберите индекс--</option>
-										<option value="1">00000</option>
-										<option value="2">101000</option>
-										<option value="3">105118</option>
-										<option value="4">105120</option>
-										<option value="5">109147</option>
-										<option value="5">109337</option>
-										<option value="6">115054</option>
-										<option value="7">115407</option>
-										<option value="8">117218</option>
-										<option value="9">117393</option>
-										<option value="10">117403</option>
-										<option value="11">119049</option>
-										<option value="12">119146</option>
-										<option value="13">119280</option>
-										<option value="14">119361</option>
-										<option value="15">125047</option>
-										<option value="16">125445</option>
-										<option value="17">127410</option>
-										<option value="18">129090</option>
-										<option value="19">129344</option>
-										<option value="20">143025</option>
-									</select>
-
-									<span>Улица(Адресс юр.):*</span>
-									<input name="street" value="ул. Всех 12" required="required">
-
-									<span>Отгрузка по умолчанию:</span>
-									<select name="shipment" id="">
-										<option value="0">Самовывоз</option>
-										<option value="1">Доставка</option>
-									</select>
-
-
-
-									<span>Выберите адрес доставки:</span>
-									<select name="addresToDelivery" id="">
-										<option value="0">-Выберите адрес доставки-</option>
-										<option value="1">1</option>
-									</select>
-
-									<a href="#">Пользовательское соглашение </a>
-									<button class="red_btn" type="submit" name="save">Сохранить</button>
-								</div>
-							</div>
-						</form>
 						</div>
 
+
 					</div>
-
-
 
 
 				</div>
@@ -417,31 +467,6 @@
 		</div>
 	</section>
 
-
-	<!--pop-Up окно для коментария к заказу-->
-	<div class="popUp">
-		<div class="innrer_content_popUp">
-			<h2>Текст коментария</h2> Далеко-далеко за словесными рыбные тексты. Вскоре до большой своего снова, путь языком рот текстами, бросил, семь то которой дороге переулка агенство силуэт сих о скатился над последний. Единственное, злых? Все буквенных, возвращайся напоивший своего
-			вопроса ведущими деревни, рыбными последний залетают страна. Эта большого рукописи до, своих, образ имени лучше свое агенство текстов напоивший проектах журчит ты, бросил встретил! Великий пустился над, сих предложения ты, путь родного! Lorem запятых
-			продолжил осталось даже текстов, злых рыбного возвращайся! Великий меня она парадигматическая раз, своего текстами использовало он ручеек, рукопись семь маленькая. Буквоград агенство безопасную, своего пустился последний заголовок!
-			<div class="wrap_cross">
-			</div>
-		</div>
-	</div>
-
-	<!--pop-Up окно для коментария к заказу-->
-	<div class="addComent">
-		<div class="innrer_content_popUp_addComent">
-			<h2>Добавить коментарий</h2>
-
-			<form class="textarea_wrap" action="post">
-				<textarea name="textareaForAddComent"></textarea>
-				<input class="btn" type="submit" name="name" value="Добавить коментарий">
-			</form>
-			<div class="wrap_cross">
-			</div>
-		</div>
-	</div>
 
 	<script src="js/add.js" charset="utf-8"></script>
 	<script src="js/common.js" charset="utf-8"></script>

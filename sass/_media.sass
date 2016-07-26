@@ -1815,3 +1815,67 @@ $base-font-size: 13px
 					line-height: em(15px)
 					padding: 10px
 //конец опросы//
+
+
+
+//карзина//
+@media only screen and (max-width : 1200px)
+	.cart-beznal
+		.cart-beznal_remote
+			.left
+				width: 100%
+				margin-bottom: 20px
+				button
+					float: right
+			.right
+				width: 100%
+				button
+					padding: 7px 10px
+					margin-left: 10px
+					i
+						margin-right: 10px
+				.cart-downloadInFile
+					float: left
+					margin-left: 0
+					padding: 7px 10px
+					i
+						margin-right: 10px
+
+@media only screen and (max-width : 768px)
+	.cart-filter
+		.cart-filter_wrapSelect
+			select
+				width: 100%
+				display: block
+	.cart-h2
+		h2
+			margin-bottom: 20px
+	.cart-h2_control
+		button
+			float: left !important
+			padding-left: 10px	!important
+			padding-right: 10px	!important
+			font-size: em(12px)
+			i
+				margin-right: 5px !important
+
+@media only screen and (max-width : 722px)
+	.cart-beznal
+		.cart-beznal_remote
+			.right
+				button
+					width: 100%
+					margin-bottom: 20px
+					padding: 10px !important
+					i
+						display: none
+
+
+@media only screen and (max-width : 480px)
+	.cart-alert
+		i
+			font-size: em(16px)
+			margin-right: 5px
+		span
+			font-size: em(10px)
+//конец корзина

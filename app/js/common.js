@@ -1,28 +1,30 @@
 $(function() {
-//управление остатками//
-    function restCheckBoxMouseOut(){
-        if($(this).prop('checked')){
-        }else{
+    //управление остатками//
+    function restCheckBoxMouseOut() {
+        if ($(this).prop('checked')) {} else {
             $(this).next().css('borderColor', '');
         }
     }
     $('.managment-rest_warehouse-select').find('input').mouseout(restCheckBoxMouseOut);
 
 
-    function restCheckBoxHover(){
+    function restCheckBoxHover() {
         $(this).next().css('borderColor', 'gray');
     }
     $('.managment-rest_warehouse-select').find('input').mouseover(restCheckBoxHover);
 
-    function restCheckBox(){//rest стилизация checkbox
-        if($(this).prop('checked')){
-            $(this).next().css({'backgroundColor':'#50b74e', 'borderColor':'#50b74e'});
-        }else{
+    function restCheckBox() { //rest стилизация checkbox
+        if ($(this).prop('checked')) {
+            $(this).next().css({
+                'backgroundColor': '#50b74e',
+                'borderColor': '#50b74e'
+            });
+        } else {
             $(this).next().css('backgroundColor', '#fff');
         }
     }
     $('.managment-rest_warehouse-select').find('input').click(restCheckBox);
-//конец управление остатками//
+    //конец управление остатками//
 
 
     ///скрипты страницы c инфой о пользователе/////
@@ -832,9 +834,9 @@ $(function() {
             $price.children('.content').children('.top_cell').removeClass('light_top')
             $price.children('.content').children('.bottom_cell').removeClass('light_bottom')
 
-            $fold.children('.title').removeClass('light_title');
-            $fold.children('.content').children('.top_cell').removeClass('light_top')
-            $fold.children('.content').children('.bottom_cell').removeClass('light_bottom')
+            //	$fold.children('.title').removeClass('light_title');
+            //	$fold.children('.content').children('.top_cell').removeClass('light_top')
+            //	$fold.children('.content').children('.bottom_cell').removeClass('light_bottom')
         }
     }
     $(window).on('resize load', addClassElem)
@@ -1250,7 +1252,7 @@ $(function() {
         revert: 'true',
         opacity: 0.8,
         helper: function(event, element) {
-        return element.clone().appendTo("body");
+            return element.clone().appendTo("body");
         },
         handle: '.arrows',
         refreshPositions: true,
@@ -1505,6 +1507,9 @@ $(function() {
         };
     })
 
+
+    //
+
     function mobMnu() {
         if ($(window).width() <= 768) {
             $('.mob_logo img').attr('src', 'img/logo.png');
@@ -1601,6 +1606,8 @@ $(function() {
         }
     }
     $(window).on('resize load', mobMnu(), false);
+
+
 
     $('.mob_mnu_left').find('li').click(function() {
         $(this).addClass('active');
