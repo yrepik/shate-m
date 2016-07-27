@@ -140,7 +140,7 @@
 							<!--корзина-->
 							<div class="top-cart">
 								<a class="totall">(0 руб.)</a>
-								<a class="top-quantity">0</a>
+								<a href="shate-m_b2b_user_cabinet_cart.html" class="top-quantity">0</a>
 								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 							</div>
 
@@ -182,7 +182,7 @@
 							<div class="cart-filter_wrapSelect">
 								<div class="status statusMinsk"></div>
 								<select name="cartWarehouseSelect">
-									<option id="0" value="0">Центральный склад  <b>(197 354 034 руб.)</b></option>
+									<option id="0" value="0">Центральный склад <b>(197 354 034 руб.)</b></option>
 								</select>
 							</div>
 						</div>
@@ -205,7 +205,7 @@
 
 						<div class="row cart-h2">
 							<div class="col-xs-12 col-sm-4 col-lg-6 col-md-6">
-									<h2>
+								<h2>
 										<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 										<span>Корзина</span>
 									</h2>
@@ -225,6 +225,7 @@
 							</div>
 						</div>
 
+						<!--Безналичный расчет-->
 						<div class="row cart-beznal">
 							<div class="cart-beznal_remote col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div class="left">
@@ -251,20 +252,20 @@
 							<div class="row">
 								<div class="cart-beznal_table col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-
-									<!--первый ряд таблицы-->
+									<!-- ряд таблицы-->
 									<div class="row clearfix">
+
 										<!--Бренд-->
 										<div class="cell_wrap cart-beznal_brand col-xs-12 col-sm-4 col-md-1 col-lg-2">
 											<div class="title">
-												<div class="checkbox">
+												<div class="cart-checkbox">
+													<input type="checkbox" name="checkcart">
 													<div class="inner"></div>
 												</div>
-												<input class="checkbox_cart" type="checkbox" name="checkcart">
 												<span>Бренд</span>
 											</div>
 											<div class="content">
-												<div class="dots">
+												<div class="dots hidden-xs hidden-sm">
 													<div class="dots-1"></div>
 													<div class="dots-2"></div>
 													<div class="dots-3"></div>
@@ -274,90 +275,475 @@
 												<a href="#">AHC299</a>
 											</div>
 										</div>
+
 										<!--Наименование-->
-										<div class="cell_wrap col-xs-4 col-sm-4 col-md-1 col-lg-1">
-											<div class="title">Наименование</div>
+										<div class="cell_wrap  cart-name col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Название</div>
 											<div class="content">
 												<span>Фильтр Салона</span>
 											</div>
 										</div>
+
 										<!--Наличие-->
-										<div class="cell_wrap col-xs-4 col-sm-4 col-md-1 col-lg-1">
+										<div class="cell_wrap cart-exist col-xs-4 col-sm-4 col-md-1 col-lg-1">
 											<div class="title">Наличие</div>
 											<div class="content">
-												<span>12</span>
+												<strong>12</b>
 											</div>
 										</div>
 
 										<!--Ожидаемый срок поставки-->
-										<div class="cell_wrap col-xs-4 col-sm-4 col-md-1 col-lg-1">
-											<div class="title">Ожидаемый
-												<br>срок поставки</div>
+										<div class="cell_wrap cart-shipment col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title"><span class="hidden-md">Ожидаемый</span>
+												<br class="hidden-md">срок поставки</div>
 											<div class="content">
-												<span>12.02.2016</span>
+												<strong>12.02.2016</strong>
 											</div>
 										</div>
+
 										<!--Кратность продажи-->
-										<div class="cell_wrap fold col-xs-4 col-sm-4 col-md-1 col-lg-1">
+										<div class="cell_wrap cart-fold col-xs-4 col-sm-4 col-md-1 col-lg-1">
 											<div class="title">Кратность</div>
 											<div class="content">
-												<span>1</span>
+												<strong>1</strong>
 											</div>
 										</div>
 
 										<!--Дата обнавления-->
-										<div class="cell_wrap col-xs-4 col-sm-4 col-md-1 col-lg-1">
+										<div class="cell_wrap cart-daterefresh col-xs-4 col-sm-4 col-md-1 col-lg-1">
 											<div class="title">Дата
 												<br>обнавления</div>
 											<div class="content">
-												<span>15.03.2016</span>
+												<strong>15.03.2016</strong>
 											</div>
 										</div>
 
 										<!--Примечание-->
-										<div class="cell_wrap col-xs-4 col-sm-4	col-md-1 col-lg-1">
+										<div class="cell_wrap cart-comment col-xs-4 col-sm-4	col-md-1 col-lg-1">
 											<div class="title">Примечание</div>
 											<div class="content">
-												<button class="gray_btn btn add_coment_btn" type="button" name="addComment">
+												<button class="gray_btn btn" type="button" name="addComment">
 													<span>
-																		<i class="fa fa-plus" aria-hidden="true"></i>Добавить
-																	</span>
+														<i class="fa fa-plus" aria-hidden="true"></i>Добавить
+													</span>
 												</button>
 											</div>
 										</div>
 
 										<!--Цена с НДС-->
-										<div class="cell_wrap col-xs-6 col-sm-4 col-md-2 col-lg-2">
+										<div class="cell_wrap cart-price col-xs-6 col-sm-4 col-md-2 col-lg-2">
 											<div class="title">Цена с НДС</div>
 											<div class="content">
-												<span>1 000</span> <span>руб.</span>
+												<strong>100 000 руб.</strong>
+												<span>Сумма</span>
+												<strong>120 000 руб.</strong>
 											</div>
 										</div>
+
 										<!--количество-->
-										<div class="cell_wrap col-xs-6 col-sm-4 col-md-3 col-lg-2">
+										<div class="cell_wrap cart-quantity col-xs-6 col-sm-4 col-md-3 col-lg-2">
 											<div class="title">Количество</div>
 											<div class="content">
 												<div class="top_cell">
 
-													<form action="post" class="clearfix">
-														<input class="checkbox_result" type="checkbox">
-														<div class="checked_box">
-															<div class="inner">
-																<div class="green"></div>
+													<form action="post" class="cartForm clearfix">
+
+														<div class="cart-quantity_check">
+															<span class="cart-quantity_span">НАЛ</span>
+															<div class="overlay">
+																<input class="cartRowCheckbox" type="checkbox">
+																<div class="inner"><span></span></div>
 															</div>
 														</div>
+
 														<div class="input-group spinner">
-															<input type="text" class="form-control" value="10">
-															<div class="input-group-btn-vertical">
-																<button class="btn btn-default" type="submit"><i class="fa fa-caret-up"></i></button>
-																<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+															<div class="wrap clearfix">
+																<input type="text" class="cart-quantity" value="1">
+																<div class="cart-inputControl">
+																	<button class="counrUp" type="button"><i class="fa fa-caret-up"></i></button>
+																	<button class="counrDown" type="button"><i class="fa fa-caret-down"></i></button>
+																</div>
 															</div>
+															<button class="cart-dellRow" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
 														</div>
-														<button class="btn_form dellRowTamleWaitList wait" type="submit" name="button"><i class="fa fa-hourglass-end" aria-hidden="true"></i></button>
-														<button class="dellRowWaitList btn_form gray hidden-xs" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
 													</form>
 												</div>
+												<div class="botton_cell">
+													<span>Ед. Изм. <strong>Шт.</strong></span>
+												</div>
+											</div>
+										</div>
 
+									</div>
+
+									<!-- ряд таблицы-->
+									<div class="row clearfix">
+
+										<!--Бренд-->
+										<div class="cell_wrap cart-beznal_brand col-xs-12 col-sm-4 col-md-1 col-lg-2">
+											<div class="title">
+												<div class="cart-checkbox">
+													<input type="checkbox" name="checkcart">
+													<div class="inner"></div>
+												</div>
+												<span>Бренд</span>
+											</div>
+											<div class="content">
+												<div class="dots hidden-xs hidden-sm">
+													<div class="dots-1"></div>
+													<div class="dots-2"></div>
+													<div class="dots-3"></div>
+												</div>
+												<a href="#">Purfix</a>
+												<p>Артикул</p>
+												<a href="#">AHC299</a>
+											</div>
+										</div>
+
+										<!--Наименование-->
+										<div class="cell_wrap  cart-name col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Название</div>
+											<div class="content">
+												<span>Фильтр Салона</span>
+											</div>
+										</div>
+
+										<!--Наличие-->
+										<div class="cell_wrap cart-exist col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Наличие</div>
+											<div class="content">
+												<strong>12</b>
+											</div>
+										</div>
+
+										<!--Ожидаемый срок поставки-->
+										<div class="cell_wrap cart-shipment col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title"><span class="hidden-md">Ожидаемый</span>
+												<br class="hidden-md">срок поставки</div>
+											<div class="content">
+												<strong>12.02.2016</strong>
+											</div>
+										</div>
+
+										<!--Кратность продажи-->
+										<div class="cell_wrap cart-fold col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Кратность</div>
+											<div class="content">
+												<strong>1</strong>
+											</div>
+										</div>
+
+										<!--Дата обнавления-->
+										<div class="cell_wrap cart-daterefresh col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Дата
+												<br>обнавления</div>
+											<div class="content">
+												<strong>15.03.2016</strong>
+											</div>
+										</div>
+
+										<!--Примечание-->
+										<div class="cell_wrap cart-comment col-xs-4 col-sm-4	col-md-1 col-lg-1">
+											<div class="title">Примечание</div>
+											<div class="content">
+												<button class="gray_btn btn" type="button" name="addComment">
+													<span>
+														<i class="fa fa-plus" aria-hidden="true"></i>Добавить
+													</span>
+												</button>
+											</div>
+										</div>
+
+										<!--Цена с НДС-->
+										<div class="cell_wrap cart-price col-xs-6 col-sm-4 col-md-2 col-lg-2">
+											<div class="title">Цена с НДС</div>
+											<div class="content">
+												<strong>100 000 руб.</strong>
+												<span>Сумма</span>
+												<strong>120 000 руб.</strong>
+											</div>
+										</div>
+
+										<!--количество-->
+										<div class="cell_wrap cart-quantity col-xs-6 col-sm-4 col-md-3 col-lg-2">
+											<div class="title">Количество</div>
+											<div class="content">
+												<div class="top_cell">
+
+													<form action="post" class="cartForm clearfix">
+
+														<div class="cart-quantity_check">
+															<span class="cart-quantity_span">НАЛ</span>
+															<div class="overlay">
+																<input class="cartRowCheckbox" type="checkbox">
+																<div class="inner"><span></span></div>
+															</div>
+														</div>
+
+														<div class="input-group spinner">
+															<div class="wrap clearfix">
+																<input type="text" class="cart-quantity" value="1">
+																<div class="cart-inputControl">
+																	<button class="counrUp" type="button"><i class="fa fa-caret-up"></i></button>
+																	<button class="counrDown" type="button"><i class="fa fa-caret-down"></i></button>
+																</div>
+															</div>
+															<button class="cart-dellRow" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
+														</div>
+													</form>
+												</div>
+												<div class="botton_cell">
+													<span>Ед. Изм. <strong>Шт.</strong></span>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+									<!-- ряд таблицы-->
+									<div class="row clearfix">
+
+										<!--Бренд-->
+										<div class="cell_wrap cart-beznal_brand col-xs-12 col-sm-4 col-md-1 col-lg-2">
+											<div class="title">
+												<div class="cart-checkbox">
+													<input type="checkbox" name="checkcart">
+													<div class="inner"></div>
+												</div>
+												<span>Бренд</span>
+											</div>
+											<div class="content">
+												<div class="dots hidden-xs hidden-sm">
+													<div class="dots-1"></div>
+													<div class="dots-2"></div>
+													<div class="dots-3"></div>
+												</div>
+												<a href="#">Purfix</a>
+												<p>Артикул</p>
+												<a href="#">AHC299</a>
+											</div>
+										</div>
+
+										<!--Наименование-->
+										<div class="cell_wrap  cart-name col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Название</div>
+											<div class="content">
+												<span>Фильтр Салона</span>
+											</div>
+										</div>
+
+										<!--Наличие-->
+										<div class="cell_wrap cart-exist col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Наличие</div>
+											<div class="content">
+												<strong>12</b>
+											</div>
+										</div>
+
+										<!--Ожидаемый срок поставки-->
+										<div class="cell_wrap cart-shipment col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title"><span class="hidden-md">Ожидаемый</span>
+												<br class="hidden-md">срок поставки</div>
+											<div class="content">
+												<strong>12.02.2016</strong>
+											</div>
+										</div>
+
+										<!--Кратность продажи-->
+										<div class="cell_wrap cart-fold col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Кратность</div>
+											<div class="content">
+												<strong>1</strong>
+											</div>
+										</div>
+
+										<!--Дата обнавления-->
+										<div class="cell_wrap cart-daterefresh col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Дата
+												<br>обнавления</div>
+											<div class="content">
+												<strong>15.03.2016</strong>
+											</div>
+										</div>
+
+										<!--Примечание-->
+										<div class="cell_wrap cart-comment col-xs-4 col-sm-4	col-md-1 col-lg-1">
+											<div class="title">Примечание</div>
+											<div class="content">
+												<button class="gray_btn btn" type="button" name="addComment">
+													<span>
+														<i class="fa fa-plus" aria-hidden="true"></i>Добавить
+													</span>
+												</button>
+											</div>
+										</div>
+
+										<!--Цена с НДС-->
+										<div class="cell_wrap cart-price col-xs-6 col-sm-4 col-md-2 col-lg-2">
+											<div class="title">Цена с НДС</div>
+											<div class="content">
+												<strong>100 000 руб.</strong>
+												<span>Сумма</span>
+												<strong>120 000 руб.</strong>
+											</div>
+										</div>
+
+										<!--количество-->
+										<div class="cell_wrap cart-quantity col-xs-6 col-sm-4 col-md-3 col-lg-2">
+											<div class="title">Количество</div>
+											<div class="content">
+												<div class="top_cell">
+
+													<form action="post" class="cartForm clearfix">
+
+														<div class="cart-quantity_check">
+															<span class="cart-quantity_span">НАЛ</span>
+															<div class="overlay">
+																<input class="cartRowCheckbox" type="checkbox">
+																<div class="inner"><span></span></div>
+															</div>
+														</div>
+
+														<div class="input-group spinner">
+															<div class="wrap clearfix">
+																<input type="text" class="cart-quantity" value="1">
+																<div class="cart-inputControl">
+																	<button class="counrUp" type="button"><i class="fa fa-caret-up"></i></button>
+																	<button class="counrDown" type="button"><i class="fa fa-caret-down"></i></button>
+																</div>
+															</div>
+															<button class="cart-dellRow" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
+														</div>
+													</form>
+												</div>
+												<div class="botton_cell">
+													<span>Ед. Изм. <strong>Шт.</strong></span>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+
+									<!-- ряд таблицы-->
+									<div class="row clearfix">
+
+										<!--Бренд-->
+										<div class="cell_wrap cart-beznal_brand col-xs-12 col-sm-4 col-md-1 col-lg-2">
+											<div class="title">
+												<div class="cart-checkbox">
+													<input type="checkbox" name="checkcart">
+													<div class="inner"></div>
+												</div>
+												<span>Бренд</span>
+											</div>
+											<div class="content">
+												<div class="dots hidden-xs hidden-sm">
+													<div class="dots-1"></div>
+													<div class="dots-2"></div>
+													<div class="dots-3"></div>
+												</div>
+												<a href="#">Purfix</a>
+												<p>Артикул</p>
+												<a href="#">AHC299</a>
+											</div>
+										</div>
+
+										<!--Наименование-->
+										<div class="cell_wrap  cart-name col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Название</div>
+											<div class="content">
+												<span>Фильтр Салона</span>
+											</div>
+										</div>
+
+										<!--Наличие-->
+										<div class="cell_wrap cart-exist col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Наличие</div>
+											<div class="content">
+												<strong>12</b>
+											</div>
+										</div>
+
+										<!--Ожидаемый срок поставки-->
+										<div class="cell_wrap cart-shipment col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title"><span class="hidden-md">Ожидаемый</span>
+												<br class="hidden-md">срок поставки</div>
+											<div class="content">
+												<strong>12.02.2016</strong>
+											</div>
+										</div>
+
+										<!--Кратность продажи-->
+										<div class="cell_wrap cart-fold col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Кратность</div>
+											<div class="content">
+												<strong>1</strong>
+											</div>
+										</div>
+
+										<!--Дата обнавления-->
+										<div class="cell_wrap cart-daterefresh col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Дата
+												<br>обнавления</div>
+											<div class="content">
+												<strong>15.03.2016</strong>
+											</div>
+										</div>
+
+										<!--Примечание-->
+										<div class="cell_wrap cart-comment col-xs-4 col-sm-4	col-md-1 col-lg-1">
+											<div class="title">Примечание</div>
+											<div class="content">
+												<button class="gray_btn btn" type="button" name="addComment">
+													<span>
+														<i class="fa fa-plus" aria-hidden="true"></i>Добавить
+													</span>
+												</button>
+											</div>
+										</div>
+
+										<!--Цена с НДС-->
+										<div class="cell_wrap cart-price col-xs-6 col-sm-4 col-md-2 col-lg-2">
+											<div class="title">Цена с НДС</div>
+											<div class="content">
+												<strong>100 000 руб.</strong>
+												<span>Сумма</span>
+												<strong>120 000 руб.</strong>
+											</div>
+										</div>
+
+										<!--количество-->
+										<div class="cell_wrap cart-quantity col-xs-6 col-sm-4 col-md-3 col-lg-2">
+											<div class="title">Количество</div>
+											<div class="content">
+												<div class="top_cell">
+
+													<form action="post" class="cartForm clearfix">
+
+														<div class="cart-quantity_check">
+															<span class="cart-quantity_span">НАЛ</span>
+															<div class="overlay">
+																<input class="cartRowCheckbox" type="checkbox">
+																<div class="inner"><span></span></div>
+															</div>
+														</div>
+
+														<div class="input-group spinner">
+															<div class="wrap clearfix">
+																<input type="text" class="cart-quantity" value="1">
+																<div class="cart-inputControl">
+																	<button class="counrUp" type="button"><i class="fa fa-caret-up"></i></button>
+																	<button class="counrDown" type="button"><i class="fa fa-caret-down"></i></button>
+																</div>
+															</div>
+															<button class="cart-dellRow" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
+														</div>
+													</form>
+												</div>
+												<div class="botton_cell">
+													<span>Ед. Изм. <strong>Шт.</strong></span>
+												</div>
 											</div>
 										</div>
 
@@ -365,10 +751,360 @@
 
 
 
+
 								</div>
 							</div>
-
 						</div>
+
+						<!--Наличный расчет-->
+						<div class="row cart-beznal cart-nal">
+							<div class="cart-beznal_remote col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<div class="left">
+									<h3>Наличный расчет</h3>
+									<button class="hidden-md hidden-sm hidden-xs gray_btn">
+										<i class="fa fa-download" aria-hidden="true"></i>
+										<span>Выгрузить в файл</span>
+									</button>
+								</div>
+								<div class="right">
+									<button class="cart-downloadInFile hidden-lg gray_btn">
+										<i class="fa fa-download" aria-hidden="true"></i>
+										<span>Выгрузить в файл</span>
+									</button>
+									<button class="cart-dellMark gray_btn">
+										<i class="fa fa-trash" aria-hidden="true"></i>
+										<span>Удалить выбранные</span>
+									</button>
+									<button class="cart-dellAll gray_btn">Очистить все</button>
+									<button class="cart-MarkAll gray_btn">Выбрать все</button>
+								</div>
+							</div>
+						</div>
+						<div class="row cart-beznal cart-nalTable">
+							<div class="row">
+								<div class="cart-beznal_table col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+									<!-- ряд таблицы-->
+									<div class="row clearfix">
+
+										<!--Бренд-->
+										<div class="cell_wrap cart-beznal_brand col-xs-12 col-sm-4 col-md-1 col-lg-2">
+											<div class="title">
+												<div class="cart-checkbox">
+													<input type="checkbox" name="checkcart">
+													<div class="inner"></div>
+												</div>
+												<span>Бренд</span>
+											</div>
+											<div class="content">
+												<div class="dots hidden-xs hidden-sm">
+													<div class="dots-1"></div>
+													<div class="dots-2"></div>
+													<div class="dots-3"></div>
+												</div>
+												<a href="#">Purfix</a>
+												<p>Артикул</p>
+												<a href="#">AHC299</a>
+											</div>
+										</div>
+
+										<!--Наименование-->
+										<div class="cell_wrap  cart-name col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Название</div>
+											<div class="content">
+												<span>Фильтр Салона</span>
+											</div>
+										</div>
+
+										<!--Наличие-->
+										<div class="cell_wrap cart-exist col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Наличие</div>
+											<div class="content">
+												<strong>12</b>
+											</div>
+										</div>
+
+										<!--Ожидаемый срок поставки-->
+										<div class="cell_wrap cart-shipment col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title"><span class="hidden-md">Ожидаемый</span>
+												<br class="hidden-md">срок поставки</div>
+											<div class="content">
+												<strong>12.02.2016</strong>
+											</div>
+										</div>
+
+										<!--Кратность продажи-->
+										<div class="cell_wrap cart-fold col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Кратность</div>
+											<div class="content">
+												<strong>1</strong>
+											</div>
+										</div>
+
+										<!--Дата обнавления-->
+										<div class="cell_wrap cart-daterefresh col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Дата
+												<br>обнавления</div>
+											<div class="content">
+												<strong>15.03.2016</strong>
+											</div>
+										</div>
+
+										<!--Примечание-->
+										<div class="cell_wrap cart-comment col-xs-4 col-sm-4	col-md-1 col-lg-1">
+											<div class="title">Примечание</div>
+											<div class="content">
+												<button class="gray_btn btn" type="button" name="addComment">
+													<span>
+														<i class="fa fa-plus" aria-hidden="true"></i>Добавить
+													</span>
+												</button>
+											</div>
+										</div>
+
+										<!--Цена с НДС-->
+										<div class="cell_wrap cart-price col-xs-6 col-sm-4 col-md-2 col-lg-2">
+											<div class="title">Цена с НДС</div>
+											<div class="content">
+												<strong>100 000 руб.</strong>
+												<span>Сумма</span>
+												<strong>120 000 руб.</strong>
+											</div>
+										</div>
+
+										<!--количество-->
+										<div class="cell_wrap cart-quantity col-xs-6 col-sm-4 col-md-3 col-lg-2">
+											<div class="title">Количество</div>
+											<div class="content">
+												<div class="top_cell">
+
+													<form action="post" class="cartForm clearfix">
+
+														<div class="cart-quantity_check">
+															<span class="cart-quantity_span">НАЛ</span>
+															<div class="overlay">
+																<input class="cartRowCheckbox" type="checkbox">
+																<div class="inner"><span></span></div>
+															</div>
+														</div>
+
+														<div class="input-group spinner">
+															<div class="wrap clearfix">
+																<input type="text" class="cart-quantity" value="1">
+																<div class="cart-inputControl">
+																	<button class="counrUp" type="button"><i class="fa fa-caret-up"></i></button>
+																	<button class="counrDown" type="button"><i class="fa fa-caret-down"></i></button>
+																</div>
+															</div>
+															<button class="cart-dellRow" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
+														</div>
+													</form>
+												</div>
+												<div class="botton_cell">
+													<span>Ед. Изм. <strong>Шт.</strong></span>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+									<!-- ряд таблицы-->
+									<div class="row clearfix">
+
+										<!--Бренд-->
+										<div class="cell_wrap cart-beznal_brand col-xs-12 col-sm-4 col-md-1 col-lg-2">
+											<div class="title">
+												<div class="cart-checkbox">
+													<input type="checkbox" name="checkcart">
+													<div class="inner"></div>
+												</div>
+												<span>Бренд</span>
+											</div>
+											<div class="content">
+												<div class="dots hidden-xs hidden-sm">
+													<div class="dots-1"></div>
+													<div class="dots-2"></div>
+													<div class="dots-3"></div>
+												</div>
+												<a href="#">Purfix</a>
+												<p>Артикул</p>
+												<a href="#">AHC299</a>
+											</div>
+										</div>
+
+										<!--Наименование-->
+										<div class="cell_wrap  cart-name col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Название</div>
+											<div class="content">
+												<span>Фильтр Салона</span>
+											</div>
+										</div>
+
+										<!--Наличие-->
+										<div class="cell_wrap cart-exist col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Наличие</div>
+											<div class="content">
+												<strong>12</b>
+											</div>
+										</div>
+
+										<!--Ожидаемый срок поставки-->
+										<div class="cell_wrap cart-shipment col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title"><span class="hidden-md">Ожидаемый</span>
+												<br class="hidden-md">срок поставки</div>
+											<div class="content">
+												<strong>12.02.2016</strong>
+											</div>
+										</div>
+
+										<!--Кратность продажи-->
+										<div class="cell_wrap cart-fold col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Кратность</div>
+											<div class="content">
+												<strong>1</strong>
+											</div>
+										</div>
+
+										<!--Дата обнавления-->
+										<div class="cell_wrap cart-daterefresh col-xs-4 col-sm-4 col-md-1 col-lg-1">
+											<div class="title">Дата
+												<br>обнавления</div>
+											<div class="content">
+												<strong>15.03.2016</strong>
+											</div>
+										</div>
+
+										<!--Примечание-->
+										<div class="cell_wrap cart-comment col-xs-4 col-sm-4	col-md-1 col-lg-1">
+											<div class="title">Примечание</div>
+											<div class="content">
+												<button class="gray_btn btn" type="button" name="addComment">
+													<span>
+														<i class="fa fa-plus" aria-hidden="true"></i>Добавить
+													</span>
+												</button>
+											</div>
+										</div>
+
+										<!--Цена с НДС-->
+										<div class="cell_wrap cart-price col-xs-6 col-sm-4 col-md-2 col-lg-2">
+											<div class="title">Цена с НДС</div>
+											<div class="content">
+												<strong>100 000 руб.</strong>
+												<span>Сумма</span>
+												<strong>120 000 руб.</strong>
+											</div>
+										</div>
+
+										<!--количество-->
+										<div class="cell_wrap cart-quantity col-xs-6 col-sm-4 col-md-3 col-lg-2">
+											<div class="title">Количество</div>
+											<div class="content">
+												<div class="top_cell">
+
+													<form action="post" class="cartForm clearfix">
+
+														<div class="cart-quantity_check">
+															<span class="cart-quantity_span">НАЛ</span>
+															<div class="overlay">
+																<input class="cartRowCheckbox" type="checkbox">
+																<div class="inner"><span></span></div>
+															</div>
+														</div>
+
+														<div class="input-group spinner">
+															<div class="wrap clearfix">
+																<input type="text" class="cart-quantity" value="1">
+																<div class="cart-inputControl">
+																	<button class="counrUp" type="button"><i class="fa fa-caret-up"></i></button>
+																	<button class="counrDown" type="button"><i class="fa fa-caret-down"></i></button>
+																</div>
+															</div>
+															<button class="cart-dellRow" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
+														</div>
+													</form>
+												</div>
+												<div class="botton_cell">
+													<span>Ед. Изм. <strong>Шт.</strong></span>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<!--минимальная сумма доставки-->
+						<div class="cart-DeliveryInfo row">
+							<div class="cart-DeliveryInfo_minsum col-xs-12 col-sm-2 col-md-2 col-lg-2">
+								<div class="hidden-sm hidden-md hidden-lg">
+									<span>Минимальная <br>сумма доставки</span>
+									<span>5.00 руб.</span>
+								</div>
+								<strong class="hidden-xs">Минимальная <br> сумма доставки</strong>
+							</div>
+							<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><span class="hidden-xs">5.00 руб.</span></div>
+							<div class="hidden-xs col-sm-4 col-md-4 col-lg-4"><strong>Итого:</strong> <span>1 шт.</span></div>
+							<div class="cart-DeliveryInfo_tottal col-xs-12 col-sm-4 col-md-4 col-lg-4">
+								<span class="hidden-xs">Итого:</span><strong class="hidden-xs">2 295,40 руб.</strong><span class="hidden-xs">(Центральный склад)</span>
+								<div class="cart-DeliveryInfo_tottalXs hidden-sm hidden-md hidden-lg">
+									<span>Итого:</span> <span>1шт.</span>
+									<div class="right">
+										<b>2 295,40 руб.</b>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--сумма всех заказов ожидающих отправки-->
+						<div class="row cart-summAllOrders">
+							<div class="cart-summAllOrders_refr col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="left">
+									<span>Сумма всех заказов ожидающих отправки:</span>
+								</div>
+								<div class="right">
+									<span>0 руб.</span>
+									<button class="gray_btn"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+								</div>
+							</div>
+							<div class="cart-summAllOrders_last col-xs-12 col-sm-6 col-md-8 col-lg-8">
+								<span class="hidden-sm hidden-md hidden-lg">Обнавлено:</span>
+								<span class="hidden-xs">Последнее обнавление:</span> <span class="date">28.06.2016</span>
+							</div>
+						</div>
+
+						<div class="row cart-deliveryOptions">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<div class="wrap-radio">
+									<label>
+										<span>Самовывоз</span>
+										<input type="radio" name="radiogroup" checked/>
+										<div>
+											<span class="on"><i class="fa fa-check" aria-hidden="true"></i></span>
+											<span class="off"><i class="fa fa-times" aria-hidden="true"></i></span>
+										</div>
+									<i></i>
+									</label>
+								</div>
+
+								<div class="wrap-radio">
+									<label>
+										<span>Доставка</span>
+										<input type="radio" name="radiogroup"/>
+										<div>
+											<span class="on"><i class="fa fa-check" aria-hidden="true"></i></span>
+											<span class="off"><i class="fa fa-times" aria-hidden="true"></i></span>
+										</div>
+									<i></i>
+									</label>
+								</div>
+							</div>
+						</div>
+
+
+
 
 
 					</div>

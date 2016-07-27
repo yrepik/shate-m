@@ -1,4 +1,55 @@
 $(function() {
+    //корзина//
+    function cartMouseoverCheckbox(){//ховер эффект
+        $(this).parents('.cartForm').find('.overlay').css('backgroundColor','#3bc1f3')
+    }
+    $('.cartRowCheckbox').mouseover(cartMouseoverCheckbox);
+
+    function cartMouseoutCheckbox(){//отмена ховер эффекта
+        if($(this).prop('checked')){
+        }else{
+            $(this).parents('.cartForm').find('.overlay').css('backgroundColor','')
+        }
+    }
+    $('.cartRowCheckbox').mouseout(cartMouseoutCheckbox);
+
+
+    function cartRowCheckbox(){//стилизация чекбоксов в таблице
+        if($(this).prop('checked')){
+            var x = $(this).parents('.cartForm').find('.inner').children().css('backgroundColor','#50b74e')
+            $(this).parents('.cartForm').find('.overlay').css('backgroundColor','#3bc1f3')
+        }else{
+            $(this).parents('.cartForm').find('.inner').children().css('backgroundColor','#fff')
+            $(this).parents('.cartForm').find('.overlay').css('backgroundColor','')
+        }
+    }
+    $('.cartRowCheckbox').click(cartRowCheckbox);
+
+
+    function counrUp(){//увеличение количества товара биндим кнопки в поле
+        var $prev = $(this).parents('.wrap').find('.cart-quantity');
+        $prev.val(parseInt($prev.val(), 10) + 1);
+    }
+    $('.counrUp').click(counrUp)
+    function countDown(){//уменьшение количества товара
+        var $prev = $(this).parents('.wrap').find('.cart-quantity');
+        $prev.val(parseInt($prev.val(), 10) - 1);
+    }
+    $('.counrDown').click(countDown)
+
+
+    function cartCheckBox(){//стилизация checkBox в корзине
+        if($(this).prop('checked')){
+            $(this).next().css('backgroundColor','#50b74e')
+        }else{
+            $(this).next().css('backgroundColor','#fff')
+        }
+    }
+    $('.cart-checkbox').children('input').click(cartCheckBox)
+    //конец корзина//
+
+
+
     //управление остатками//
     function restCheckBoxMouseOut() {
         if ($(this).prop('checked')) {} else {

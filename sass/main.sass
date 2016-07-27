@@ -385,6 +385,9 @@ body
 		padding: 0 5px
 		margin: 0 10px
 		border-radius: 999px
+		&:hover
+			text-decoration: none
+			color: #fff
 	i
 		font-size: em(20px)
 		color: #959595
@@ -5654,7 +5657,6 @@ input[type=checkbox]
 	color: #ff9696
 	padding: 15px 20px
 	font-family: 'osb', sans-serif
-
 	i
 		font-size: em(20px)
 		margin-right: 20px
@@ -5718,13 +5720,53 @@ input[type=checkbox]
 				float: right
 				margin-left: 25px
 	.cart-beznal_table
-		padding-top: 30px
+		padding-top: 20px
 		.row
 			margin-left: 15px
 			margin-right: 15px
 			border: 1px solid gray
+			margin-bottom: 15px
+			span
+				font-weight: normal
+			.cart-comment
+				text-align: center
+				button
+					width: auto
+					font-size: em(8px)
+					padding: 7px 5px
+					display: inline-block
+					i
+						margin-right: 3px
+						position: relative
+			.cart-exist,
+			.cart-shipment,
+			.cart-fold,
+			.cart-daterefresh,
+			.cart-price
+				.content
+					font-weight: normal
+					text-align: center
+					strong
+						font-family: 'osb', sans-serif
+						color: #333
+						font-weight: normal
+					a
+						font-weight: normal
+			.cart-price
+				strong
+					width: 100%
+					display: inline-block
+					line-height: em(12px)
+
+				span
+					text-transform: uppercase
+					font-family: 'osr', sans-serif
+					font-size: em(10px)
+					font-weight: normal
+					line-height: em(12px)
+					display: inline-block
 			.cell_wrap
-				height: 120px
+				height: 115px
 				padding: 0
 				.title
 					height: 27px
@@ -5736,24 +5778,43 @@ input[type=checkbox]
 					line-height: em(14px)
 					padding-top: 8px
 					color: #fff
+					font-weight: normal
 					background-color: #666
-				&:nth-last-child(4),
-				&:nth-last-child(6)
-					.title
-						padding-top: 4px
-				&:nth-child(even)
-					.title
-						background-color: #8d8d8d
 				.content
 					@include calc(height, "100% - 27px")
 					background-color: #eaeaea
 					padding: 5px
 					padding-top: 10px
-
-				&:nth-last-child(9)
-					.content
-						background-color: #fff
+			.cart-shipment,
+			.cart-daterefresh,
+			.cart-price
+				.title
+					padding: 0
+					padding-top: 4px
+					background-color: #8d8d8d
 			.cart-beznal_brand
+				.title
+					.cart-checkbox
+						height: 16px
+						width: 16px
+						border: 1px solid gray
+						position: absolute
+						left: 5px
+						top: 5px
+						background-color: #fff
+						input
+							position: absolute
+							left: 0
+							height: 15px
+							width: 15px
+							z-index: 1
+						.inner
+							height: 10px
+							width: 10px
+							background-color: #fff
+							position: absolute
+							top: 2px
+							left: 2px
 				a
 					text-transform: uppercase
 					font-family: 'osb', sans-serif
@@ -5773,7 +5834,6 @@ input[type=checkbox]
 					font-size: em(10px)
 					font-family: 'osb', sans-serif
 					margin-top: 7px
-
 				.dots
 					width: 5px
 					height: 100%
@@ -5786,6 +5846,248 @@ input[type=checkbox]
 						height: 5px
 						background-color: #999999
 						margin-bottom: 5px
+				.content
+					background-color: #fff
+			.cart-quantity
+				.top_cell
+					.cart-quantity_check
+						height: 38px
+						width: 75px
+						position: relative
+						float: left
+						input
+							opacity: 0
+							top: 0
+							height: 100%
+							left: 0
+							bottom: 0
+							width: 100%
+							z-index: 1
+							position: absolute
+						span
+							display: inline-block
+							float: left
+							position: relative
+							top: 7px
+						.overlay
+							height: 35px
+							width: 35px
+							border: 1px solid lightgray
+							padding: 7px
+							background-color: #cfcfcf
+							position: relative
+							float: right
+							.inner
+								width: 20px
+								height: 20px
+								background-color: #fff
+								position: relative
+								span
+									display: block
+									height: 14px
+									width: 14px
+									position: relative
+									left: 3px
+									top: 3px
+					.input-group
+						position: relative
+						float: left
+						@include calc(width, "100% - 75px")
+						input
+							border: 1px solid lightgray
+							text-align: center
+							width: 100%
+						.wrap
+							width: 55%
+							float: left
+							position: relative
+							.cart-inputControl
+								position: absolute
+								width: 15px
+								right: 0
+								height: 36px
+								button
+									height: 50%
+									width: 100%
+									padding-left: 0
+									padding-top: 0
+									border: none
+									background-color: transparent
+									i
+										position: relative
+										bottom: 2px
+										font-size: em(14px)
+										color: #b9bcbd
+									&:hover
+										i
+											color: gray
+									&:last-child
+										position: absolute
+										left: 0
+										bottom: 0
+									i
+										margin: 0
+										padding: 0
+						.cart-add,
+						.cart-dellRow
+							height: 35px
+							width: 35px
+							border: 1px solid lightgray
+							transition: .2s
+							i
+								margin: 0
+							&:hover
+								background-color: $red
+								i
+									color: #fff
+				.botton_cell
+					span
+						font-family: 'osr', sans-serif
+						font-weight: normal
+						text-transform: uppercase
+						font-size: em(10px)
+						margin-top: 5px
+						display: inline-block
+						strong
+							font-family: 'osb', sans-serif
+							color: #333
+			.cart-name
+				.title
+					background-color: #8d8d8d
+				.content
+					span
+						display: inline-block
+						line-height: em(14px)
+
+.cart-DeliveryInfo
+	background-color: #f0f0f0
+	padding: 20px
+	color: #4d4d4d
+	font-size: em(13px)
+	strong
+		font-weight: 100
+		font-family: 'osb', sans-serif
+	span
+		font-family: 'osr', sans-serif
+		font-weight: normal
+	.cart-DeliveryInfo_minsum
+		display: inline-block
+		line-height: 1.2em
+	.cart-DeliveryInfo_tottal
+		strong
+			margin: 0 5px
+			display: inline-block
+		span
+			display: inline-block
+.cart-nal
+	border: none
+	border-top: 1px solid #666
+	padding-top: 35px
+	margin-top: 35px
+.cart-nalTable
+	padding-top: 10px
+	margin-top: 10px
+
+.cart-summAllOrders
+	padding: 20px
+	background-color: #e5e5e5
+	font-weight: normal
+	color: #333
+.cart-summAllOrders_refr
+	.left, .right
+		width: 50%
+		float: left
+		display: inline-block
+		line-height: em(16px)
+	.right
+		span, button
+			float: right
+			display: block
+		span
+			margin-left: 20px
+			margin-top: 8px
+		button
+			height: 35px
+			width: 35px
+			padding: 0
+			i
+				margin: 0
+.cart-summAllOrders_last
+	span
+		font-family: 'osb', sans-serif
+		font-size: em(13px)
+		position: relative
+		top: 4px
+		&:nth-last-child(1)
+			color: $green
+			font-size: em(15px)
+			margin-left: 10px
+
+.cart-deliveryOptions
+	background-color: #f0f0f0
+	font-weight: normal
+	padding: 30px 20px
+	.wrap-radio
+		float: left
+		label
+			height: 25px
+			display: block
+			input
+				float: left
+				opacity: 0
+			span
+				float: right
+				padding-left: 10px
+				margin-right: 10px
+				font-family: 'osb', sans-serif
+			div
+				height: 23px
+				width: 50px
+				border: 1px solid gray
+				border-radius: 999px
+				background-color: $red
+				position: relative
+				box-shadow:  inset  0px 3px 2px rgba(0,0,0,.4)
+				overflow: hidden
+				&::after
+					position: absolute
+					content: ''
+					height: 20px
+					width: 20px
+					background-color: #fff
+					left: 0
+					border-radius: 999px
+					transition: .3s
+					box-shadow:  inset  0px 1px 2px rgba(0,0,0,.4)
+
+
+				.on, .off
+					position: relative
+					color: #fff
+					i
+						text-shadow: 0 0 2px #000
+						top: 3px
+						position: absolute
+				.on
+					i
+						right: 18px !important
+				.off
+					i
+						right: 0
+			input:checked
+				+ div
+						background-color: $green
+						&::after
+							left: 27px
+						.on
+							right: 0
+
+
+
+
+
+
+
 
 //конец корзина//
 
