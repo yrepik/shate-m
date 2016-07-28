@@ -254,35 +254,35 @@ body
 	width: 4%
 	padding: 4px 10px
 	#hamburger-icon
-  width: 25px
-  height: 20px
-  position: relative
-  display: block
-  .line
-    display: block
-    background: #757575
-    width: 100%
-    height: 4px
-    position: absolute
-    left: 0
-    transition: all 0.4s
-    &.line-1
-      top: 0
-    &.line-2
-      top: 50%
-    &.line-3
-      top: 100%
-  &:hover .line-1
-    transform: translateY(-4px)
-  &:hover .line-3
-    transform: translateY(4px)
-  &.active
-    .line-1
-      transform: translateY(10px) translateX(0) rotate(45deg)
-    .line-2
-      opacity: 0
-    .line-3
-      transform: translateY(-10px) translateX(0) rotate(-45deg)
+	width: 25px
+	height: 20px
+	position: relative
+	display: block
+	.line
+		display: block
+		background: #757575
+		width: 100%
+		height: 4px
+		position: absolute
+		left: 0
+		transition: all 0.4s
+		&.line-1
+			top: 0
+		&.line-2
+			top: 50%
+		&.line-3
+			top: 100%
+	&:hover .line-1
+		transform: translateY(-4px)
+	&:hover .line-3
+		transform: translateY(4px)
+	&.active
+		.line-1
+			transform: translateY(10px) translateX(0) rotate(45deg)
+		.line-2
+			opacity: 0
+		.line-3
+			transform: translateY(-10px) translateX(0) rotate(-45deg)
 .top-search
 	width: 23%
 	form
@@ -1297,48 +1297,6 @@ body
 	&:focus, &:active
 		border-color: #50b74e
 		box-shadow: inset 0 0 2px rgba(80,183,78,.50)
-.hasDatepicker
-	&:hover
-		border-color: #666
-	&:focus, &:active
-		border-color: #50b74e
-		box-shadow: inset 0 0 2px rgba(80,183,78,.50)
-#ui-datepicker-div
-.ui-datepicker
-	.ui-datepicker-title
-		text-align: center
-		margin-bottom: 5px
-	position: relative
-	width: 300px
-	font-family: 'OSR', sans-serif
-	background-color: #fff
-	margin-right: 15px
-	float: left
-	box-shadow: 0px 3px 3px rgba(0,0,0,.3)
-	.ui-state-default
-		color: #333
-	.ui-state-active
-		color: #fff
-		background-color: $red
-		padding: 2px 5px
-	.ui-datepicker-header
-		margin: 15px
-		a
-			color: #333
-			text-transform: uppercase
-		.ui-datepicker-prev
-			display: inline-block
-			float: left
-			cursor: pointer
-		.ui-datepicker-next
-			display: inline-block
-			float: right
-			cursor: pointer
-.ui-datepicker-calendar
-	margin: 15px
-	tr
-		td
-			padding: 5px 10px
 
 .btn_submit
 	text-transform: uppercase
@@ -6047,7 +6005,7 @@ input[type=checkbox]
 				border-radius: 999px
 				background-color: $red
 				position: relative
-				box-shadow:  inset  0px 3px 2px rgba(0,0,0,.4)
+				box-shadow:	inset	0px 3px 2px rgba(0,0,0,.4)
 				overflow: hidden
 				&::after
 					position: absolute
@@ -6058,7 +6016,7 @@ input[type=checkbox]
 					left: 0
 					border-radius: 999px
 					transition: .3s
-					box-shadow:  inset  0px 1px 2px rgba(0,0,0,.4)
+					box-shadow:	inset	0px 1px 2px rgba(0,0,0,.4)
 
 
 				.on, .off
@@ -6109,11 +6067,104 @@ input[type=checkbox]
 			border-color: $green
 			box-shadow: inset 0 0 2px $green
 
+.cart-availableDelivery
+	h2
+		text-transform: uppercase
+		color: #4d4d4d
+		font-size: em(18px)
+		font-family: 'osb', sans-serif
+		margin-left: 20px
+		margin-top: 30px
+		margin-bottom: 30px
+
+.cart-availableDeliveryThead
+	background-color: #e5e5e5
+	padding: 20px
+	font-family: 'osb', sans-serif
+	color: #4d4d4d
+	font-size: em(13px)
+	font-weight: normal
+	line-height: em(14px)
+	div
+		padding-left: 10px
+		padding-right: 10px
+		text-align: center
+		&:first-child
+			text-align: left
+
+.cart-availableDeliveryRow
+	line-height: em(12px)
+	div
+		padding-left: 10px
+		padding-right: 10px
+		text-align: center
+		&:first-child
+			text-align: left
 
 
+.cart-availableDeliveryRow
+	padding: 20px
+	font-weight: normal
+	&:nth-child(odd)
+		background-color: #fbfbfb
+	&:nth-child(even)
+		background-color: #f0f0f0
+	label
+		position: relative
+		cursor: pointer
+		span
+			display: block
+			float: left
+		input
+			position: absolute
+			opacity: 0
+		.overlay
+			height: 17px
+			width: 17px
+			border: 1px solid lightgray
+			box-shadow: inset	0px 1px 1px rgba(0,0,0,.4)
+			display: block
+			float: left
+			border-radius: 999px
+			margin-right: 5px
+			position: relative
+			top: 2px
+			.inner
+				height: 9px
+				width: 9px
+				border-radius: 999px
+				background-color: #fff
+				left: 3px
+				position: absolute
+				top: 3px
+				box-shadow: inset	0px -1px 1px rgba(0,0,0,.4)
+		input:checked
+			+ .overlay
+					.inner
+						background-color: $green
 
-
-
+#inline-datepicker
+	margin-top: 219px
+	margin-left: 60px
+.cart-commentToOrder
+	margin-top: 30px
+	font-weight: normal
+	color: #4d4d4d
+	margin-bottom: 60px
+	span
+		display: inline-block
+		width: 100%
+		font-family: 'osb', sans-serif
+		margin-bottom: 5px
+	textarea
+		width: 100%
+		padding: 10px 20px
+		margin-bottom: 25px
+		height: 80px
+	.cart-commentToOrder_second
+		height: 130px
+	button
+		width: 50%
 
 
 
@@ -6121,6 +6172,97 @@ input[type=checkbox]
 
 
 //конец корзина//
+
+
+.hasDatepicker
+	&:hover
+		border-color: #666
+	&:focus, &:active
+		border-color: #50b74e
+#ui-datepicker-div
+.ui-datepicker
+	position: relative
+	width: 300px
+	font-family: 'OSR', sans-serif
+	background-color: #fff
+	margin-right: 15px
+	float: left
+	.ui-datepicker-title
+		text-align: center
+		font-family: 'osb', sans-serif
+		text-transform: uppercase
+		font-size: em(13px)
+		span
+			margin-top: 10px
+			display: inline-block
+	.ui-state-default
+		color: #333
+	.ui-datepicker-header
+		a
+			color: #333
+			text-transform: uppercase
+
+.ui-datepicker-current-day
+	background-color: $green
+	a
+		color: #fff !important
+.ui-datepicker-other-month
+	background-color: #fff
+.ui-datepicker-calendar
+	margin: 15px
+	margin-left: 0
+	margin-right: 0
+	margin-bottom: 0
+	width: 100%
+	thead
+		background-color: #e4e4e4
+		color: #7a7a7a
+		tr
+			height: 30px
+			border: 1px solid lightgray
+			th
+				width: 45px
+				border-right: 1px solid lightgray
+	tbody
+		tr
+			height: 35px
+			background-color: #f4f4f4
+			border: 1px solid lightgray
+			td
+				border-right: 1px solid lightgray
+				font-family: 'osb', sans-serif
+				color: #555
+				text-align: center
+				font-size: em(13px)
+				&:hover
+					background-color: lighten($green, 10%)
+					a
+						color: #fff
+						text-decoration: none
+.ui-datepicker-prev,
+.ui-datepicker-next
+	display: inline-block
+	width: 50px
+	height: 45px
+	text-align: center
+	cursor: pointer
+	background-image: url('../img/datearr.jpg')
+	background-repeat: no-repeat
+	background-position: 5px 3px !important
+	overflow: hidden
+	line-height: 200vh
+.ui-datepicker-prev
+	float: left
+.ui-datepicker-next
+	transform: rotate(180deg)
+	float: right
+
+
+
+
+
+
+
 
 .finReloadd
 	animation: finReloadd linear 0.7s

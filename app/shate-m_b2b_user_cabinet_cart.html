@@ -1034,6 +1034,9 @@
 							</div>
 						</div>
 
+
+					<form method="post">
+
 						<!--минимальная сумма доставки-->
 						<div class="cart-DeliveryInfo row">
 							<div class="cart-DeliveryInfo_minsum col-xs-12 col-sm-2 col-md-2 col-lg-2">
@@ -1102,7 +1105,7 @@
 								</div>
 							</div>
 							<!--Способ получения-->
-							<div class="cart-deliveryOptions_leftSide col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<div class="cart-deliveryOptions_leftSide col-xs-12 col-sm-6 col-md-6 col-lg-6">
 								<h5>Способ получения:*</h5>
 								<select name="cartvariantDelivery" required="required">
 									<option value="0">Физ. лицо</option>
@@ -1128,9 +1131,108 @@
 								</select>
 
 							</div>
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-6">2</div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
+								<div id="inline-datepicker"></div>
+							</div>
 
 						</div>
+
+
+						<div class="row cart-availableDelivery">
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<h2>Доступные варианты доставки</h2>
+							</div>
+						</div>
+
+
+						<!--Шапка таблицы-->
+						<div class="row cart-availableDeliveryThead">
+							<div class="col-xs-5 col-sm-3 col-md-3 col-lg-3"><span class="hidden-lg hidden-md">Вариант доставки</span><span class="hidden-xs hidden-sm">Описание варианта доставки</span></div>
+							<div class="col-xs-3 col-sm-1 col-md-1 col-lg-1"><span>Заказ до...</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span>Дата прибытия</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span>Прибытие до...</span></div>
+							<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2"><span>Место прибытия</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span>Ограничения</span></div>
+						</div>
+
+						<!--Ряд таблицы-->
+						<div class="row cart-availableDeliveryRow">
+							<div class="col-xs-5 col-sm-3 col-md-3 col-lg-3">
+								<label>
+									<input type="radio" name="radiogroupCartAvailable"/>
+									<span class="overlay"><span class="inner"></span></span>
+									<span>Привольный - Лида</span>
+								</label>
+							</div>
+							<div class="col-xs-3 col-sm-1 col-md-1 col-lg-1"><span>22:00</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span>05.05.2016</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span>8:00</span></div>
+							<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2"><span>По адрессу клиента</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span></span></div>
+						</div>
+
+						<!--Ряд таблицы-->
+						<div class="row cart-availableDeliveryRow">
+							<div class="col-xs-5 col-sm-3 col-md-3 col-lg-3">
+								<label>
+									<input type="radio" name="radiogroupCartAvailable"/>
+									<span class="overlay"><span class="inner"></span></span>
+									<span>Привольный - Лида</span>
+								</label>
+							</div>
+							<div class="col-xs-3 col-sm-1 col-md-1 col-lg-1"><span>22:00</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span>05.05.2016</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span>8:00</span></div>
+							<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2"><span>По адрессу клиента</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span></span></div>
+						</div>
+
+						<!--Ряд таблицы-->
+						<div class="row cart-availableDeliveryRow">
+							<div class="col-xs-5 col-sm-3 col-md-3 col-lg-3">
+								<label>
+									<input type="radio" name="radiogroupCartAvailable"/>
+									<span class="overlay"><span class="inner"></span></span>
+									<span>Привольный - Лида</span>
+								</label>
+							</div>
+							<div class="col-xs-3 col-sm-1 col-md-1 col-lg-1"><span>22:00</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span>05.05.2016</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span>8:00</span></div>
+							<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2"><span>По адрессу клиента</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span></span></div>
+						</div>
+
+						<!--Ряд таблицы-->
+						<div class="row cart-availableDeliveryRow">
+							<div class="col-xs-5 col-sm-3 col-md-3 col-lg-3">
+								<label>
+									<input type="radio" name="radiogroupCartAvailable"/>
+									<span class="overlay"><span class="inner"></span></span>
+									<span>Привольный - Лида</span>
+								</label>
+							</div>
+							<div class="col-xs-3 col-sm-1 col-md-1 col-lg-1"><span>22:00</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span>05.05.2016</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span>8:00</span></div>
+							<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2"><span>По адрессу клиента</span></div>
+							<div class="hidden-xs col-sm-2 col-md-2 col-lg-2"><span></span></div>
+						</div>
+
+
+						<div class="row cart-commentToOrder">
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<span>Заметки к заказу:</span>
+								<textarea name="cart-commentToOrder" placeholder="Введите текст"></textarea>
+
+								<span>Комметарий для менеджера:</span>
+								<textarea class="cart-commentToOrder_second" name="cart-commentToManager" placeholder="Введите текст"></textarea>
+
+								<button class="red_btn" type="submit">Оформить заказ</button>
+							</div>
+						</div>
+					</form>
+
 					</div>
 				</div>
 			</div>

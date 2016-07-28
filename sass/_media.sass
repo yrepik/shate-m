@@ -1846,9 +1846,18 @@ $base-font-size: 13px
 		.cell_wrap
 			height: 120px
 			padding: 0
+	.cart-availableDeliveryThead
+		font-size: em(13px)
+		line-height: em(13px)
 
 
 @media only screen and (max-width : 992px)
+	.cart-availableDeliveryThead,
+	.cart-availableDeliveryRow
+		padding: 10px
+	#inline-datepicker
+		margin-top: 40px
+		margin-left: 0
 	.cart-name,
 	.cart-exist
 		.content
@@ -1870,6 +1879,20 @@ $base-font-size: 13px
 
 
 @media only screen and (max-width : 768px)
+	.cart-availableDeliveryThead
+		font-family: 'osr', sans-serif
+		font-weight: normal
+		color: #4d4d4d
+		font-size: em(12px)
+		font-weight: bold
+	.cart-availableDeliveryRow
+		div
+    	padding-left: 5px
+    	padding-right: 5px
+
+
+	#inline-datepicker
+		margin-top: 10px
 	.cart-summAllOrders
 		padding: 20px 10px
 		.cart-summAllOrders_last
@@ -1940,6 +1963,27 @@ $base-font-size: 13px
 
 
 @media only screen and (max-width : 480px)
+	.cart-commentToOrder
+		button
+			width: 100%
+	.cart-availableDeliveryRow
+		line-height: em(13px) !important
+		.overlay
+			margin-bottom: 10px
+	.cart-availableDelivery h2
+		margin: 30px 0 20px 0
+		font-size: em(16px)
+	.cart-deliveryOptions_leftSide
+		margin-top: 10px
+	.cart-deliveryOptions .wrap-radio
+    float: left
+    width: 100%
+    margin-bottom: 20px
+    text-transform: uppercase
+	.ui-datepicker-calendar
+		margin-top: 0
+	.ui-datepicker-inline
+		width: 100%
 	.cart-alert
 		i
 			font-size: em(16px)

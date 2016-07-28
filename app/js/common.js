@@ -1,7 +1,20 @@
 $(function() {
     //корзина//
-    $( "#cart-datepicker" ).datepicker({//календарь
-    });
+    function cartAvailableDeliveryColored(){//окраска ряда таблицы в соответствии со складом
+        var z = $('.cart-availableDeliveryRow').find('input');
+        if(z.prop('checked')){
+
+        }else{
+            z.parents('.cart-availableDeliveryRow').css('backgroundColor', '')
+        }
+        $(this).find('input').parents('.cart-availableDeliveryRow').css('backgroundColor','#dbffda')
+    }
+    $('.cart-availableDeliveryRow').find('label').click(cartAvailableDeliveryColored)
+
+
+    $( "#inline-datepicker" ).datepicker({});//календарь
+
+
     function cartMouseoverCheckbox(){//ховер эффект
         $(this).parents('.cartForm').find('.overlay').css('backgroundColor','#3bc1f3')
     }
