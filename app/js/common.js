@@ -1,5 +1,7 @@
 $(function() {
     //корзина//
+    $( "#cart-datepicker" ).datepicker({//календарь
+    });
     function cartMouseoverCheckbox(){//ховер эффект
         $(this).parents('.cartForm').find('.overlay').css('backgroundColor','#3bc1f3')
     }
