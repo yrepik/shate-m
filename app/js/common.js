@@ -1,5 +1,99 @@
 $(function() {
     //корзина//
+    $(".refreshBtn").on('click', function() {//кнопка обнавления баланса анимация переворота стрелки
+        $(this).children().addClass('finReloadd');
+        $(this).children().delay(2000);
+    })
+    function removeAnim() {
+        $(this).children().removeClass('finReloadd');
+    }
+    $(".refreshBtn").on('mouseup', removeAnim)
+
+
+    $(".cart-beznal_table").sortable({//сортировка рядов таблиц безнал
+        placeholder: 'cartPlaceholder',
+        cursor: 'move',
+        revert: 'true',
+        delay: '200',
+        connectWith: '.connect',
+        helper: function(event, element) {
+        return element.clone().appendTo("body");
+        },
+        start: function() {
+            $('.cart-tableRow').css('borderColor','#f1f1f1')
+            $('.cart-nalTable').css('backgroundColor', '#edfaff');
+        },
+        stop: function() {
+            $('.cart-tableRow').css('borderColor','')
+            $('.cart-nalTable').css('backgroundColor', '')
+        }
+    })
+
+    $(".cart-nal_table").sortable({//сортировка рядов таблиц нал
+        placeholder: 'cartPlaceholder',
+        cursor: 'move',
+        revert: 'true',
+        delay: '200',
+        connectWith: '.connect',
+        helper: function(event, element) {
+        return element.clone().appendTo("body");
+        },
+        start: function() {
+            $('.cart-tableRow').css('borderColor','#f1f1f1')
+            $('.cart-beznal_lightbleu').css('backgroundColor', '#edfaff')
+        },
+        stop: function() {
+            $('.cart-tableRow').css('borderColor','')
+            $('.cart-beznal_lightbleu').css('backgroundColor', '')
+        }
+    })
+
+
+    function cartDellMarkNall(){//удалить выделленные в поле наличного расчета
+        var $input = $('.cart-nal_table').find('.cart-beznal_brand').find('input:checked');
+        $input.parents('.cart-tableRow').slideUp(200)
+    }
+    $('.cart-dellMarkNall').click(cartDellMarkNall)
+
+    function cartDellAllNal(){//снять выделение с чекбоксов в поле наличного расчета
+        var $input = $('.cart-nal_table').find('.cart-beznal_brand').find('input');
+        $input.removeAttr('checked');
+        $input.next().css('backgroundColor','')
+    }
+    $('.cart-dellAllNall').click(cartDellAllNal)
+
+    function сartMarkAllNall(){//выбрать все товары в поле наличного расчета
+        var $input = $('.cart-nal_table').find('.cart-beznal_brand').find('input');
+        $input.attr('checked','checked');
+        $input.next().css('backgroundColor','#50b74e')
+    }
+    $('.cart-MarkAllNall').click(сartMarkAllNall)
+
+    function cartdellAllMarcked(){//снять выделение со всех чекбоксов в таблице безнала
+        var $input = $('.cart-beznal_table').find('.cart-beznal_brand').find('input');
+        $input.removeAttr('checked');
+        $input.next().css('backgroundColor','')
+    }
+    $('.cart-dellAll').click(cartdellAllMarcked);
+
+    function cartMarkAll(){//выбрать все товары в поле безнала
+        var $input = $('.cart-beznal_table').find('.cart-beznal_brand').find('input');
+        $input.attr('checked','checked');
+        $input.next().css('backgroundColor','#7cc97a')
+    }
+    $('.cart-MarkAll').click(cartMarkAll)
+
+    function cartdellMark(){//удалить выбраныые ряды таблицы в поле безнала
+        var $input = $('.cart-beznal_table').find('input:checked');
+        $input.parents('.cart-tableRow').slideUp(200)
+    }
+    $('.cart-dellMark').click(cartdellMark)
+
+    function cartDellRow(){//удалить ряд таблицы
+        $(this).parents('.cart-tableRow, .cart-rowTableNal').slideUp(200)
+    }
+    $('.cart-dellRow').click(cartDellRow)
+
     function cartAvailableDeliveryColored(){//окраска ряда таблицы в соответствии со складом
         var z = $('.cart-availableDeliveryRow').find('input');
         if(z.prop('checked')){
@@ -11,9 +105,7 @@ $(function() {
     }
     $('.cart-availableDeliveryRow').find('label').click(cartAvailableDeliveryColored)
 
-
     $( "#inline-datepicker" ).datepicker({});//календарь
-
 
     function cartMouseoverCheckbox(){//ховер эффект
         $(this).parents('.cartForm').find('.overlay').css('backgroundColor','#3bc1f3')
@@ -28,8 +120,7 @@ $(function() {
     }
     $('.cartRowCheckbox').mouseout(cartMouseoutCheckbox);
 
-
-    function cartRowCheckbox(){//стилизация чекбоксов в таблице
+    function cartRowCheckbox(){//стилизация чекбоксов в таблице c синим цветом
         if($(this).prop('checked')){
             var x = $(this).parents('.cartForm').find('.inner').children().css('backgroundColor','#50b74e')
             $(this).parents('.cartForm').find('.overlay').css('backgroundColor','#3bc1f3')
@@ -39,7 +130,6 @@ $(function() {
         }
     }
     $('.cartRowCheckbox').click(cartRowCheckbox);
-
 
     function counrUp(){//увеличение количества товара биндим кнопки в поле
         var $prev = $(this).parents('.wrap').find('.cart-quantity');
