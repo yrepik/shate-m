@@ -1887,8 +1887,8 @@ $base-font-size: 13px
 		font-weight: bold
 	.cart-availableDeliveryRow
 		div
-    	padding-left: 5px
-    	padding-right: 5px
+			padding-left: 5px
+			padding-right: 5px
 
 
 	#inline-datepicker
@@ -1948,7 +1948,7 @@ $base-font-size: 13px
 	.cart-name,
 	.cart-exist
 		.content
-			background-color: #ebeeef  !important
+			background-color: #ebeeef	!important
 
 @media only screen and (max-width : 722px)
 	.cart-beznal
@@ -1976,10 +1976,10 @@ $base-font-size: 13px
 	.cart-deliveryOptions_leftSide
 		margin-top: 10px
 	.cart-deliveryOptions .wrap-radio
-    float: left
-    width: 100%
-    margin-bottom: 20px
-    text-transform: uppercase
+		float: left
+		width: 100%
+		margin-bottom: 20px
+		text-transform: uppercase
 	.ui-datepicker-calendar
 		margin-top: 0
 	.ui-datepicker-inline
@@ -2001,5 +2001,79 @@ $base-font-size: 13px
 							width: 30px
 						.input-group
 							@include calc(width, "100% - 30px")
-
 //конец корзина
+
+
+//поиск по VIN 01//
+@media only screen and (max-width : 1500px)
+	.searchToVinCars-tabs_wrapper .search .wrapper-search
+		width: 35%
+@media only screen and (max-width : 1200px)
+	.searchToVinCars-tabs_wrapper .search .wrapper-search
+		width: 40%
+@media only screen and (max-width : 1100px)
+	.searchToVin2-table_row
+		.title
+			font-size: em(9px)
+			padding: 3px
+@media only screen and (max-width : 992px)
+	.searchToVinCars-tabs_wrapper .search .wrapper-search
+		width: 70%
+	.searchToVin2-table_row
+		.dateToProd
+			.title
+				background-color: #666
+			.content
+				background-color: #e5e5e5
+@media only screen and (max-width : 767px)
+	.searchToVin1-searchfield
+		input
+			@include calc(width, "100% - 75px")
+		button
+			width: auto
+			padding: 8px 15px
+			i
+				font-size: em(18px)
+@media only screen and (max-width : 768px)
+	.searchToVinCars-info span
+		width: 100%
+		margin-bottom: 5px
+	.searchToVinCars-date span
+		display: inline-block
+		width: 100%
+		margin-bottom: 20px
+	.searchToVinCars-tabs_wrapper .search .wrapper-search
+		width: 100%
+	.searchToVin2-table_row
+		.content
+			padding: 10px
+		.name
+			.title
+				background-color: #666
+				padding-left: 10px
+		.Transmithion, .dateToProd
+			.title
+				background-color: #8d8d8d
+			.content
+				background-color: #f0f0f0
+@media only screen and (max-width : 460px)
+	.searchToVinCars-date
+		text-align: center
+		span
+			font-size: em(12px)
+		button
+			width: 100%
+			display: inline-block
+			line-height: em(14px)
+	.searchToVinCars-h3 h3
+		padding: 0
+		text-align: center
+		font-size: em(15px)
+	.searchToVinCars-tabs_wrapper .tabs .tab
+		width: 50%
+		line-height: em(12px)
+		padding: 15px 10px
+		font-size: em(10px)
+	.searchToVinCars-tabs_wrapper .search .wrapper-search input
+		font-size: em(10px)
+//конец поиск по	VIN 01//

@@ -1,4 +1,12 @@
 $(function() {
+    //поиск по ВИН//
+    $(".searchToVinCars-tabs_wrapper .tab").click(function() {
+    	$(".searchToVinCars-tabs_wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+    	$(".tab_item").hide().eq($(this).index()).fadeIn()
+    	}).eq(0).addClass("active");
+    //конец поиск по ВИН//
+
+
     //корзина//
     $(".refreshBtn").on('click', function() {//кнопка обнавления баланса анимация переворота стрелки
         $(this).children().addClass('finReloadd');

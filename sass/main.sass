@@ -94,7 +94,7 @@ body
 .markup
 	min-height: 370px
 #right_side
-	min-height: 70vh
+	min-height: 80vh
 	padding-bottom: 20px
 
 .red_btn
@@ -261,35 +261,37 @@ body
 	width: 4%
 	padding: 4px 10px
 	#hamburger-icon
-	width: 25px
-	height: 20px
-	position: relative
-	display: block
-	.line
+		width: 25px
+		height: 20px
+		position: relative
 		display: block
-		background: #757575
-		width: 100%
-		height: 4px
-		position: absolute
-		left: 0
-		transition: all 0.4s
-		&.line-1
-			top: 0
-		&.line-2
-			top: 50%
-		&.line-3
-			top: 100%
+		&.active
+			.line-1
+				transform: translateY(10px) translateX(0) rotate(45deg)
+			.line-2
+				opacity: 0
+			.line-3
+				transform: translateY(-10px) translateX(0) rotate(-45deg)
+		.line
+			display: block
+			background: #757575
+			width: 100%
+			height: 4px
+			position: absolute
+			left: 0
+			transition: all 0.4s
+			&.line-1
+				top: 0
+			&.line-2
+				top: 50%
+			&.line-3
+				top: 100%
 	&:hover .line-1
 		transform: translateY(-4px)
 	&:hover .line-3
 		transform: translateY(4px)
-	&.active
-		.line-1
-			transform: translateY(10px) translateX(0) rotate(45deg)
-		.line-2
-			opacity: 0
-		.line-3
-			transform: translateY(-10px) translateX(0) rotate(-45deg)
+
+
 .top-search
 	width: 23%
 	form
@@ -3237,7 +3239,7 @@ input
 			display: block
 			height: 35px
 			width: 35px
-			border: 1px solid gray
+			border: 1px solid lightgray
 			border-left: none
 			background-color: #fff
 			color: #666
@@ -4830,8 +4832,10 @@ input[type=checkbox]
 				background-color: #a3fd96 !important
 			.tree-addToCart
 				&:hover
-					background-color: $red !important
+					background-color: $green !important
 					color: #fff
+				&:active
+					background-color: $activeg !important
 
 .tree-addToWaitlist
 	display: none
@@ -6157,6 +6161,38 @@ input[type=checkbox]
 					.inner
 						background-color: $green
 
+.searchToVin2-table
+	padding-left: 0
+	padding-right: 0
+.searchToVin2-table_row
+	text-align: center
+	background-color: #e5e5e5
+	border: 1px solid lightgray
+	margin-bottom: 15px !important
+	a
+		color: $blue
+		font-family: 'osb', sans-serif
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+	div
+		padding: 0
+	.title
+		padding: 5px 10px
+		background-color: #666
+		color: #fff
+		text-transform: uppercase
+		font-size: em(8px)
+	.content
+		padding: 20px 10px
+	.name
+		text-align: left
+	.name, .dateToProd, .numberOfEngine, .engine, .prodaction
+		.title
+			background-color: #8d8d8d
+		.content
+			background-color: #f0f0f0
+
 #inline-datepicker
 	margin-top: 219px
 	margin-left: 60px
@@ -6188,14 +6224,200 @@ input[type=checkbox]
 	height: 115px
 	@include calc(width, "100% - 40px")
 	float: left
-
-
-
-
-
-
 //конец корзина//
 
+
+
+
+//поиск по ВИН 01//
+.searchToVin1
+	.row
+		margin: 0
+.searchToVin1-h2
+	margin: 20px 0
+	line-height: 0
+	i
+		color: #959595
+		margin-right: 20px
+		font-size: em(14px)
+		position: relative
+		top: 1px
+
+.searchToVin1-query
+	background-color: #e5e5e5
+	padding: 25px
+	text-transform: uppercase
+	font-size: em(13px)
+	span
+		display: inline-block
+		margin-right: 5px
+	a
+		font-family: 'osb', sans-serif
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+
+.searchToVin1-searchfield
+	padding: 30px 25px
+	background-color: #f0f0f0
+	margin-bottom: 15px
+	input
+		padding: 8px 10px
+		width: 40%
+		float: left
+		color: $green
+	button
+		padding: 8px
+		width: 120px
+.searchToVin1-brand
+	padding: 0
+	a
+		display: block
+		padding: 20px
+		transition: .2s
+		span
+			display: block
+			float: left
+		.searchToVin1-brand_image
+			transition: .5s
+			padding: 5px
+			height: 50px
+			width: 50px
+			img
+				width: 100%
+				width: 100%
+				display: block
+		.searchToVin1-brand_brandTitle
+			text-align: center
+			@include calc(width, "100% - 50px")
+			padding: 12.5px 5px
+			font-size: em(13px)
+			font-family: 'osb', sans-serif
+			color: #333
+	&:hover
+		background-color: #cfcfcf
+		a
+			.searchToVin1-brand_brandTitle
+				color: #fff
+			.searchToVin1-brand_image
+				background-color: #fff
+.searchToVin2-table
+	h3
+		text-transform: uppercase
+
+.searchToVinCars
+	padding: 0
+.searchToVinCars-h3
+	background-color: #e5e5e5
+	h3
+		padding-left: 15px
+.searchToVinCars-date
+	padding: 25px 20px
+	background-color: #f0f0f0
+	span
+		text-transform: uppercase
+		font-size: em(17px)
+		color: #333
+		position: relative
+		top: 5px
+	button
+		float: right
+.searchToVinCars-info
+	padding: 20px
+	background-color: #e5e5e5
+	color: #333
+	span
+		display: inline-block
+		margin-right: 35px
+		text-transform: uppercase
+		strong
+			margin-right: 5px
+
+.searchToVinCars-tabs_h3
+	padding: 30px 25px
+	color: #333
+.searchToVinCars-tabs_wrapper
+	div
+		padding: 0
+	.active
+		background-color: #d2d2d2
+		font-family: 'osb',sans-serif
+	.tabs
+		width: 100%
+		font-size: em(13px)
+		border-bottom: 7px solid #d2d2d2
+		.tab
+			display: block
+			border: 1px solid #d2d2d2
+			float: left
+			padding: 15px
+			width: 200px
+			text-align: center
+			cursor: pointer
+	.search
+		background-color: #f0f0f0
+		padding: 20px 25px
+		.wrapper-search
+			width: 22%
+			position: relative
+			input
+				padding: 5px 20px
+				@include calc(width, "100% - 40px")
+				border-radius: 999px
+				border: 1px solid lightgray
+				text-transform: uppercase
+			button
+				position: absolute
+				right: 0
+				top: 0
+				border-radius: 0 999px 999px 0
+				border: none
+				padding-right: 15px
+				padding-top: 6px
+				padding-bottom: 6px
+				background-color: transparent
+				i
+					font-size: em(17px)
+				&:hover
+					i
+						color: $green
+
+
+.tab_item
+  display: none
+  &:first-child
+    display: block
+//конец поиск по ВИН//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h2,h3,h4,h5,h6
+	text-transform: uppercase
+	font-family: 'osb', sans-serif
+h2
+	font-size: em(20px)
+h3
+	font-size: em(17px)
 
 .hasDatepicker
 	&:hover
