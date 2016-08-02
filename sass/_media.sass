@@ -2017,6 +2017,18 @@ $base-font-size: 13px
 			font-size: em(9px)
 			padding: 3px
 @media only screen and (max-width : 992px)
+	.searchToVinCarsTree
+		ul
+			li
+				padding-left: 20px !important
+				padding-top: 6px
+				padding-bottom: 6px
+			ul
+				display: none
+				ul
+					ul
+						li
+							padding-left: 80px !important
 	.searchToVinCars-tabs_wrapper .search .wrapper-search
 		width: 70%
 	.searchToVin2-table_row
@@ -2035,6 +2047,22 @@ $base-font-size: 13px
 			i
 				font-size: em(18px)
 @media only screen and (max-width : 768px)
+	.searchToVinCarsContent
+		padding: 0
+	.searchToVinCarsContent-right,
+	.searchToVinCarsContent-image
+		width: 100%
+	.searchToVinCarsContent-right
+		padding: 0
+	.searchToVinCarsContent-image
+		img
+			width: 180px
+			display: block
+			float: left
+			margin-right: 20px
+		a
+			text-align: left
+			display: block
 	.searchToVinCars-info span
 		width: 100%
 		margin-bottom: 5px
@@ -2076,4 +2104,9 @@ $base-font-size: 13px
 		font-size: em(10px)
 	.searchToVinCars-tabs_wrapper .search .wrapper-search input
 		font-size: em(10px)
+
+
+@media only screen and (min-width : 768px)
+	.searchToVinCarsTree ul li
+		padding-left: 0
 //конец поиск по	VIN 01//

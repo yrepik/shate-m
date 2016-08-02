@@ -3779,7 +3779,7 @@ input[type=checkbox]
 	width: 200px
 	position: absolute
 	float: right
-	z-index: 300
+	z-index: 1
 	.wrapper_tabs-wrapRemote-file
 		width: 100%
 		margin-top: 20px
@@ -4608,6 +4608,7 @@ input[type=checkbox]
 			&:focus, &:active
 				box-shadow:	0 0 2px $green
 				border-color: $green
+
 	.tree-leftNav
 		background: #f0f0f0
 		padding: 0
@@ -4638,6 +4639,7 @@ input[type=checkbox]
 							color: #fff
 							text-decoration: none
 				ul
+					display: none
 					li
 						padding-left: 20px
 						&:nth-child(odd)
@@ -4687,11 +4689,13 @@ input[type=checkbox]
 					i
 						margin-right: 5px
 						color: $red
+
 	.tree-tabWrap_content
 		padding: 20px
 		.tree-tabWrap_content-table
 			margin-bottom: 15px
 			margin-left: 0
+			background-color: #fff
 			border: 1px solid #666
 			.title
 				background-color: #666
@@ -6224,6 +6228,7 @@ input[type=checkbox]
 	height: 115px
 	@include calc(width, "100% - 40px")
 	float: left
+	position: relative
 //конец корзина//
 
 
@@ -6337,8 +6342,6 @@ input[type=checkbox]
 	padding: 30px 25px
 	color: #333
 .searchToVinCars-tabs_wrapper
-	div
-		padding: 0
 	.active
 		background-color: #d2d2d2
 		font-family: 'osb',sans-serif
@@ -6387,6 +6390,118 @@ input[type=checkbox]
   display: none
   &:first-child
     display: block
+
+.searchToVinCarsTree
+	padding: 0
+	ul
+		padding: 0
+		list-style-type: none
+		li
+			display: block
+			width: 100%
+			padding-left: 20px
+			background: #f0f0f0
+			a
+				padding: 5px 0
+				display: block
+				text-transform: uppercase
+				color: #333
+				text-decoration: none
+				font-size: em(10px)
+			i
+				margin-right: 5px
+				color: $red
+				cursor: pointer
+		ul
+			li
+				i
+					padding-left: 20px
+			ul
+				display: none
+				li
+					i
+						padding-left: 40px
+				ul
+					li
+						padding-left: 80px
+	ul
+		ul
+			&:nth-child(odd)
+				li
+					background-color: #e4e4e4
+			ul
+				&:nth-child(even)
+					li
+						background-color: #f0f0f0
+				ul
+						li
+							&:nth-child(even)
+								background-color: #e4e4e4
+.searchToVinCarsContent
+	padding-right: 0
+.searchToVinCarsContent-image,
+.searchToVinCarsContent-right
+	float: left
+.searchToVinCarsContent-image
+	padding: 20px
+	width: 200px
+	border: 1px solid lightgray
+	text-align: center
+	text-transform: uppercase
+	img
+		width: 100%
+	a
+		display: block
+		padding-top: 20px
+		color: $red
+		line-height: em(14px)
+		text-decoration: underline !important
+		&:hover
+			text-decoration: none !important
+.searchToVinCarsContent-right
+	padding: 10px
+	padding-right: 0
+	padding-top: 0
+	@include calc(width, "100% - 200px")
+	.searchToVinCarsContent-right_tableTitle
+		background-color: #cfcfcf
+		padding: 10px
+		font-family: 'osb', sans-serif
+		box-shadow: 0 3px 2px rgba(0,0,0,.3)
+		z-index: 1
+		position: relative
+	.searchToVinCarsContent-right_row
+		line-height: em(14px)
+		background-color: #f0f0f0
+		padding: 10px
+		z-index: 0
+		position: relative
+		.name
+			a
+				display: block
+				margin-top: 10px
+		&:nth-child(even)
+			background-color: #e4e4e4
+		&:hover
+			background-color: lightgray
+		span
+			position: relative
+			top: 3px
+		a
+			color: $red
+			text-transform: uppercase
+			text-decoration: underline
+			position: relative
+			top: 3px
+			&:hover
+				text-decoration: none
+		.price
+			button
+				width: 100%
+				padding: 3px 5px
+
+
+
 //конец поиск по ВИН//
 
 

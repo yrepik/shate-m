@@ -1,4 +1,31 @@
 $(function() {
+    //полет товара в корзину//
+    $('.tree-addToCart, .addcart').on('click', function(){
+        var t = $(this).parents('.tree-tabWrap_content-table, .table_search_goods_result'),
+        e = t.clone(),
+        b = $('.top-quantity'),
+        bo = b.offset(),
+        o = t.position(),
+        po = t.parent().offset();
+
+        e.css({top: o.top+'px', left: o.left+'px', position: 'absolute'});
+        t.parent().append(e);
+
+        e.animate({
+            top: -po.top+bo.top+(b.height()-t.height())/8,
+            left: -po.left+bo.left+(b.width()-t.width())/8,
+            opacity: 0,
+            height: 0,
+            width: 100,
+        },
+            1000, function(){
+            $(this).css({left: 0, top: 0, position: 'static'})
+        });
+        e.hide(0)
+    });
+    //конец полет товара в корзину//
+
+
     //поиск по ВИН//
     $(".searchToVinCars-tabs_wrapper .tab").click(function() {
     	$(".searchToVinCars-tabs_wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
@@ -362,12 +389,10 @@ $(function() {
     $('.tree-spinner .btn:last-of-type').on('click', minus);
 
 
-    $('.tree-third, .tree-second').parent('ul').children('ul').slideUp();
-    $('.tree-third, .tree-second').find('i').toggleClass('fa-minus').toggleClass('fa-plus')
+//    $('.tree-third, .tree-second').parent('ul').children('ul').slideUp();
+//    $('.tree-third, .tree-second').find('i').toggleClass('fa-minus').toggleClass('fa-plus')
 
     function treeMnuSlideup() { //свернуть все меню
-
-
         $(this).parent('ul').children('ul').slideToggle(200)
         $(this).find('i').toggleClass('fa-minus').toggleClass('fa-plus');
         $(this).toggleClass('tree-active')
