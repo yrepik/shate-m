@@ -82,11 +82,20 @@
 							<div class="top-search">
 								<form>
 									<input class="serch_field" type="search" name="search" placeholder="Поиск" autocomplete="off">
-									<button class="search_btn" type="submit" alt="ok"><i class="fa fa-search" aria-hidden="true"></i></button>
+									<button class="search_btn" alt="ok"><i class="fa fa-search" aria-hidden="true"></i></button>
 									<div class="drop_down_search_list">
 										<ul>
 											<li>
-												<a href="shate-m_b2b_user_cabinet_search_result.html"></a>
+												<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Kneht</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+											</li>
+											<li>
+												<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Mahle Filter</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+											</li>
+											<li>
+												<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Mahle Original</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+											</li>
+											<li>
+												<a href="shate-m_b2b_user_cabinet_search_result.html"><span>PUROLATOR</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
 											</li>
 										</ul>
 									</div>
@@ -96,8 +105,8 @@
 							<!--выбор параметров поиска-->
 							<div class="hidden-xs top-selectVin">
 								<select name="vin">
-									<option value="1">по VIN</option>
 									<option value="2">по артикулу</option>
+									<option value="1">по VIN</option>
 								</select>
 							</div>
 
@@ -162,6 +171,19 @@
 						</ul>
 					</div>
 
+					<!--зона обновление баланса-->
+					<div class="row alert">
+						<div class="col-xs-12">
+							<div class="cross_alert">
+								<i class="fa fa-plus" aria-hidden="true"></i>
+							</div>
+							<div class="alert_zone">
+								<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+								<span>Информация: запрос на обновление баланса отправлен.</span>
+							</div>
+						</div>
+					</div>
+
 
 
 
@@ -174,12 +196,40 @@
 						</div>
 
 
+						<div class="row managmentAllFilter">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<div class="managmentFilterlabelwrap pl0 col-xs-10 col-sm-8 col-md-8 col-lg-8">
+									<label>
+										<input type="checkbox">
+										<span class="overlay"></span>
+										<span class="hidden-sm hidden-md hidden-lg">Показать аналоги</span>
+										<span class="hidden-xs">Показывать/скрывать аналоги</span>
+									</label>
+
+									<label>
+										<input type="checkbox">
+										<span class="overlay"><span></span></span>
+										<span class="hidden-sm hidden-md hidden-lg">Показать цену покупки</span>
+										<span class="hidden-xs">Показывать/скрывать цену покупки</span>
+									</label>
+								</div>
+								<div class="pr0 col-xs-2 col-sm-4 col-md-4 col-lg-4">
+									<select name="managmentQurencySelect" class="managmentQurencySelect">
+										<option value="0">RUB</option>
+										<option value="1">USD</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+
+
 						<!--таблица с целевым результатом поиска -->
 						<div class="searchResult-aimed">
 							<div class="searchResult-result">
 								<span>Запрошенный номер</span>
 							</div>
-							<!--первый ряд таблицы-->
+							<!--ряд таблицы без рекомендованной цены-->
 							<div class="row table_search_goods_result">
 
 								<!--Бренд-->
@@ -202,8 +252,8 @@
 								<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
 									<div class="title">Описание</div>
 									<div class="content">
-										<h4>Фиильтр масляный</h4>
-										<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+										<h4>ФИЛЬТР масляный</h4>
+										<p>CITROEN: AX 86-98, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
 									</div>
 								</div>
 								<!--Город-->
@@ -240,12 +290,24 @@
 										<div class="bottom_cell light_bottom"><span class="date_count">1</span> <span>день</span></div>
 									</div>
 								</div>
-								<!--Цена с НДС-->
-								<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-2">
-									<div class="title">Цена с НДС</div>
+								<!--Цена покупки с НДС-->
+								<div class="cell_wrap price priceBuylWithNds hidden-xs hidden-md hidden-sm col-lg-1">
+									<div class="title">Цена покупки <br> с НДС</div>
 									<div class="content">
 										<div class="top_cell"><span>360,00</span> <span>руб.</span></div>
 										<div class="bottom_cell"><span>380,00</span> <span>руб.</span></div>
+									</div>
+								</div>
+								<!--Цена продажи с НДС-->
+								<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-1">
+									<div class="title ">Цена продажи <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell ">
+											<span>104,00 руб.</span>
+										</div>
+										<div class="bottom_cell">
+											<span>104,00 руб.</span>
+										</div>
 									</div>
 								</div>
 								<!--количество-->
@@ -255,14 +317,14 @@
 										<div class="top_cell light_top">
 											<span class="hidden_span">Нал</span>
 											<form action="post">
-												<input class="checkbox_result" type="checkbox">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 												<div class="checked_box">
 													<div class="inner">
 														<div class="green"></div>
 													</div>
 												</div>
 												<div class="input-group spinner">
-													<input type="text" class="form-control" value="10">
+													<input type="text" class="form-control" value="1">
 													<div class="input-group-btn-vertical">
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
@@ -274,14 +336,14 @@
 										<div class="bottom_cell light_bottom">
 											<span class="hidden_span">Нал</span>
 											<form action="post">
-												<input class="checkbox_result" type="checkbox">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 												<div class="checked_box">
 													<div class="inner">
 														<div class="green"></div>
 													</div>
 												</div>
 												<div class="input-group spinner">
-													<input type="text" class="form-control" value="120">
+													<input type="text" class="form-control" value="1">
 													<div class="input-group-btn-vertical">
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
@@ -294,6 +356,7 @@
 								</div>
 
 							</div>
+
 						</div>
 						<!--конец целевого результатом поиска -->
 
@@ -303,8 +366,10 @@
 							<div class="searchResult-result">
 								<span>Аналоги (замены) в наличии на наших складах</span>
 							</div>
-							<!--первый ряд таблицы-->
+
+							<!--ряд таблицы без рекомендованной цены-->
 							<div class="row table_search_goods_result">
+
 								<!--Бренд-->
 								<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
 									<div class="title">
@@ -315,9 +380,9 @@
 										<span>Бренд</span>
 									</div>
 									<div class="content">
-										<a href="#">Purfix</a>
+										<a href="#">Kneht</a>
 										<p>Артикул</p>
-										<span>AHC299</span>
+										<span>oc100</span>
 										<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -325,8 +390,8 @@
 								<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
 									<div class="title">Описание</div>
 									<div class="content">
-										<h4>Фиильтр салона</h4>
-										<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+										<h4>ФИЛЬТР масляный</h4>
+										<p>CITROEN: AX 86-98, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
 									</div>
 								</div>
 								<!--Город-->
@@ -363,48 +428,60 @@
 										<div class="bottom_cell light_bottom"><span class="date_count">1</span> <span>день</span></div>
 									</div>
 								</div>
-								<!--цена с НДС-->
-								<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-2">
-									<div class="title">Цена с НДС</div>
+								<!--Цена покупки с НДС-->
+								<div class="cell_wrap price priceBuylWithNds hidden-xs hidden-md hidden-sm col-lg-1">
+									<div class="title">Цена покупки <br> с НДС</div>
 									<div class="content">
-										<div class="top_cell"><span>84 500</span> <span>руб.</span></div>
-										<div class="bottom_cell"><span>131 112 289 900</span> <span>руб.</span></div>
+										<div class="top_cell"><span>360,00</span> <span>руб.</span></div>
+										<div class="bottom_cell"><span>380,00</span> <span>руб.</span></div>
 									</div>
 								</div>
-								<!--Количество-->
+								<!--Цена продажи с НДС-->
+								<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-1">
+									<div class="title ">Цена продажи <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell ">
+											<span>104,00 руб.</span>
+										</div>
+										<div class="bottom_cell">
+											<span>104,00 руб.</span>
+										</div>
+									</div>
+								</div>
+								<!--количество-->
 								<div class="cell_wrap quantity_ col-xs-7 col-sm-4 col-md-2 col-lg-2">
 									<div class="title light_title">Количество</div>
 									<div class="content">
 										<div class="top_cell light_top">
-											<span>Нал</span>
+											<span class="hidden_span">Нал</span>
 											<form action="post">
-												<input class="checkbox_result" type="checkbox">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 												<div class="checked_box">
 													<div class="inner">
 														<div class="green"></div>
 													</div>
 												</div>
 												<div class="input-group spinner">
-													<input type="text" class="form-control" value="10">
+													<input type="text" class="form-control" value="1">
 													<div class="input-group-btn-vertical">
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
 													</div>
 												</div>
-												<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+												<button class="waitImport btn_form" type="submit btn" name="button"><i class="fa fa-hourglass-end" aria-hidden="true"></i></button>
 											</form>
 										</div>
 										<div class="bottom_cell light_bottom">
-											<span>Нал</span>
+											<span class="hidden_span">Нал</span>
 											<form action="post">
-												<input class="checkbox_result" type="checkbox">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 												<div class="checked_box">
 													<div class="inner">
 														<div class="green"></div>
 													</div>
 												</div>
 												<div class="input-group spinner">
-													<input type="text" class="form-control" value="120">
+													<input type="text" class="form-control" value="1">
 													<div class="input-group-btn-vertical">
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
@@ -415,10 +492,13 @@
 										</div>
 									</div>
 								</div>
+
 							</div>
 
-							<!--второй ряд таблицы-->
+
+							<!--ряд таблицы-->
 							<div class="row table_search_goods_result">
+
 								<!--Бренд-->
 								<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
 									<div class="title">
@@ -429,9 +509,9 @@
 										<span>Бренд</span>
 									</div>
 									<div class="content">
-										<a href="#">Purfix</a>
+										<a href="#">Kneht</a>
 										<p>Артикул</p>
-										<span>AHC299</span>
+										<span>oc100</span>
 										<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -439,24 +519,24 @@
 								<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
 									<div class="title">Описание</div>
 									<div class="content">
-										<h4>Фиильтр салона</h4>
-										<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+										<h4>ФИЛЬТР масляный</h4>
+										<p>CITROEN: AX 86-98, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
 									</div>
 								</div>
 								<!--Город-->
 								<div class="cell_wrap town col-xs-4 col-sm-4 col-md-1 col-lg-1">
 									<div class="title">Город</div>
 									<div class="content">
-										<div class="top_cell white"><a href="#">Привольный</a></div>
-										<div class="bottom_cell lightgray"><a href="#">Подольск</a></div>
+										<div class="top_cell"><a href="#">Привольный</a></div>
+										<div class="bottom_cell"><a href="#">Подольск</a></div>
 									</div>
 								</div>
 								<!--Наличие-->
 								<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
 									<div class="title light_title">Наличие</div>
 									<div class="content">
-										<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>12</span></div>
-										<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+										<div class="top_cell light_top"><span>12</span></div>
+										<div class="bottom_cell light_bottom"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -464,8 +544,8 @@
 									<div class="title">Кратность
 										<br>продажи</div>
 									<div class="content">
-										<div class="top_cell white"></div>
-										<div class="bottom_cell lightgray"></div>
+										<div class="top_cell"></div>
+										<div class="bottom_cell"></div>
 									</div>
 								</div>
 								<!--Ожидаемый срок доставки-->
@@ -473,52 +553,66 @@
 									<div class="title light_title"><span class="hidden-md">Ожидаемый</span>
 										<br class="hidden-md">срок поставки</div>
 									<div class="content">
-										<div class="top_cell white"><span class="date_count">31</span> <span>день</span></div>
-										<div class="bottom_cell lightgray"><span class="date_count">1</span> <span>день</span></div>
+										<div class="top_cell light_top"><span>На складе</span></div>
+										<div class="bottom_cell light_bottom"><span class="date_count">1</span> <span>день</span></div>
 									</div>
 								</div>
-								<!--Цена с НДС-->
-								<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-2">
-									<div class="title">Цена с НДС</div>
+								<!--Цена покупки с НДС-->
+								<div class="cell_wrap price priceBuylWithNds hidden-xs hidden-md hidden-sm col-lg-1">
+									<div class="title">Цена покупки <br> с НДС</div>
 									<div class="content">
-										<div class="top_cell white"><span>84 500</span> <span>руб.</span></div>
-										<div class="bottom_cell lightgray"><span>131 112 289 900</span> <span>руб.</span></div>
+										<div class="top_cell"><span>360,00</span> <span>руб.</span></div>
+										<div class="bottom_cell"><span>380,00</span> <span>руб.</span></div>
+									</div>
+								</div>
+								<!--Цена продажи с НДС-->
+								<div class="cell_wrap price priceSellWithNds col-xs-5 col-sm-4 col-md-2 col-lg-1">
+									<div class="title ">Цена продажи <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell ">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
+										<div class="bottom_cell">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
 									</div>
 								</div>
 								<!--количество-->
 								<div class="cell_wrap quantity_ col-xs-7 col-sm-4 col-md-2 col-lg-2">
 									<div class="title light_title">Количество</div>
 									<div class="content">
-										<div class="top_cell white">
-											<span>Нал</span>
+										<div class="top_cell light_top">
+											<span class="hidden_span">Нал</span>
 											<form action="post">
-												<input class="checkbox_result" type="checkbox">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 												<div class="checked_box">
 													<div class="inner">
 														<div class="green"></div>
 													</div>
 												</div>
 												<div class="input-group spinner">
-													<input type="text" class="form-control" value="10">
+													<input type="text" class="form-control" value="1">
 													<div class="input-group-btn-vertical">
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
 													</div>
 												</div>
-												<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+												<button class="waitImport btn_form" type="submit btn" name="button"><i class="fa fa-hourglass-end" aria-hidden="true"></i></button>
 											</form>
 										</div>
-										<div class="bottom_cell lightgray">
-											<span>Нал</span>
+										<div class="bottom_cell light_bottom">
+											<span class="hidden_span">Нал</span>
 											<form action="post">
-												<input class="checkbox_result" type="checkbox">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 												<div class="checked_box">
 													<div class="inner">
 														<div class="green"></div>
 													</div>
 												</div>
 												<div class="input-group spinner">
-													<input type="text" class="form-control" value="120">
+													<input type="text" class="form-control" value="1">
 													<div class="input-group-btn-vertical">
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
@@ -529,18 +623,412 @@
 										</div>
 									</div>
 								</div>
+
 							</div>
+
+
+							<!--ряд таблицы-->
+							<div class="row table_search_goods_result">
+
+								<!--Бренд-->
+								<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
+									<div class="title">
+										<div class="checkbox">
+											<div class="inner"></div>
+										</div>
+										<input class="checkbox_brand" type="checkbox" name="checkBrand">
+										<span>Бренд</span>
+									</div>
+									<div class="content">
+										<a href="#">Kneht</a>
+										<p>Артикул</p>
+										<span>oc100</span>
+										<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+									</div>
+								</div>
+								<!--Описание-->
+								<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
+									<div class="title">Описание</div>
+									<div class="content">
+										<h4>ФИЛЬТР масляный</h4>
+										<p>CITROEN: AX 86-98, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
+									</div>
+								</div>
+								<!--Город-->
+								<div class="cell_wrap town col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title">Город</div>
+									<div class="content">
+										<div class="top_cell"><a href="#">Привольный</a></div>
+										<div class="bottom_cell"><a href="#">Подольск</a></div>
+									</div>
+								</div>
+								<!--Наличие-->
+								<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title light_title">Наличие</div>
+									<div class="content">
+										<div class="top_cell light_top"><span>12</span></div>
+										<div class="bottom_cell light_bottom"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+									</div>
+								</div>
+								<!--Кратность продажи-->
+								<div class="cell_wrap fold col-sm-4 hidden-xs col-md-1 col-lg-1">
+									<div class="title">Кратность
+										<br>продажи</div>
+									<div class="content">
+										<div class="top_cell"></div>
+										<div class="bottom_cell"></div>
+									</div>
+								</div>
+								<!--Ожидаемый срок доставки-->
+								<div class="cell_wrap delivery_time col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title light_title"><span class="hidden-md">Ожидаемый</span>
+										<br class="hidden-md">срок поставки</div>
+									<div class="content">
+										<div class="top_cell light_top"><span>На складе</span></div>
+										<div class="bottom_cell light_bottom"><span class="date_count">1</span> <span>день</span></div>
+									</div>
+								</div>
+								<!--Цена покупки с НДС-->
+								<div class="cell_wrap price priceBuylWithNds hidden-xs hidden-md hidden-sm col-lg-1">
+									<div class="title">Цена покупки <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell"><span>360,00</span> <span>руб.</span></div>
+										<div class="bottom_cell"><span>380,00</span> <span>руб.</span></div>
+									</div>
+								</div>
+								<!--Цена продажи с НДС-->
+								<div class="cell_wrap price priceSellWithNds col-xs-5 col-sm-4 col-md-2 col-lg-1">
+									<div class="title ">Цена продажи <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell ">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
+										<div class="bottom_cell">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
+									</div>
+								</div>
+								<!--количество-->
+								<div class="cell_wrap quantity_ col-xs-7 col-sm-4 col-md-2 col-lg-2">
+									<div class="title light_title">Количество</div>
+									<div class="content">
+										<div class="top_cell light_top">
+											<span class="hidden_span">Нал</span>
+											<form action="post">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
+												<div class="checked_box">
+													<div class="inner">
+														<div class="green"></div>
+													</div>
+												</div>
+												<div class="input-group spinner">
+													<input type="text" class="form-control" value="1">
+													<div class="input-group-btn-vertical">
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+													</div>
+												</div>
+												<button class="waitImport btn_form" type="submit btn" name="button"><i class="fa fa-hourglass-end" aria-hidden="true"></i></button>
+											</form>
+										</div>
+										<div class="bottom_cell light_bottom">
+											<span class="hidden_span">Нал</span>
+											<form action="post">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
+												<div class="checked_box">
+													<div class="inner">
+														<div class="green"></div>
+													</div>
+												</div>
+												<div class="input-group spinner">
+													<input type="text" class="form-control" value="1">
+													<div class="input-group-btn-vertical">
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+													</div>
+												</div>
+												<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+											</form>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+
+							<!--ряд таблицы-->
+							<div class="row table_search_goods_result">
+
+								<!--Бренд-->
+								<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
+									<div class="title">
+										<div class="checkbox">
+											<div class="inner"></div>
+										</div>
+										<input class="checkbox_brand" type="checkbox" name="checkBrand">
+										<span>Бренд</span>
+									</div>
+									<div class="content">
+										<a href="#">Kneht</a>
+										<p>Артикул</p>
+										<span>oc100</span>
+										<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+									</div>
+								</div>
+								<!--Описание-->
+								<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
+									<div class="title">Описание</div>
+									<div class="content">
+										<h4>ФИЛЬТР масляный</h4>
+										<p>CITROEN: AX 86-98, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
+									</div>
+								</div>
+								<!--Город-->
+								<div class="cell_wrap town col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title">Город</div>
+									<div class="content">
+										<div class="top_cell"><a href="#">Привольный</a></div>
+										<div class="bottom_cell"><a href="#">Подольск</a></div>
+									</div>
+								</div>
+								<!--Наличие-->
+								<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title light_title">Наличие</div>
+									<div class="content">
+										<div class="top_cell light_top"><span>12</span></div>
+										<div class="bottom_cell light_bottom"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+									</div>
+								</div>
+								<!--Кратность продажи-->
+								<div class="cell_wrap fold col-sm-4 hidden-xs col-md-1 col-lg-1">
+									<div class="title">Кратность
+										<br>продажи</div>
+									<div class="content">
+										<div class="top_cell"></div>
+										<div class="bottom_cell"></div>
+									</div>
+								</div>
+								<!--Ожидаемый срок доставки-->
+								<div class="cell_wrap delivery_time col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title light_title"><span class="hidden-md">Ожидаемый</span>
+										<br class="hidden-md">срок поставки</div>
+									<div class="content">
+										<div class="top_cell light_top"><span>На складе</span></div>
+										<div class="bottom_cell light_bottom"><span class="date_count">1</span> <span>день</span></div>
+									</div>
+								</div>
+								<!--Цена покупки с НДС-->
+								<div class="cell_wrap price priceBuylWithNds hidden-xs hidden-md hidden-sm col-lg-1">
+									<div class="title">Цена покупки <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell"><span>360,00</span> <span>руб.</span></div>
+										<div class="bottom_cell"><span>380,00</span> <span>руб.</span></div>
+									</div>
+								</div>
+								<!--Цена продажи с НДС-->
+								<div class="cell_wrap price priceSellWithNds col-xs-5 col-sm-4 col-md-2 col-lg-1">
+									<div class="title ">Цена продажи <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell ">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
+										<div class="bottom_cell">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
+									</div>
+								</div>
+								<!--количество-->
+								<div class="cell_wrap quantity_ col-xs-7 col-sm-4 col-md-2 col-lg-2">
+									<div class="title light_title">Количество</div>
+									<div class="content">
+										<div class="top_cell light_top">
+											<span class="hidden_span">Нал</span>
+											<form action="post">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
+												<div class="checked_box">
+													<div class="inner">
+														<div class="green"></div>
+													</div>
+												</div>
+												<div class="input-group spinner">
+													<input type="text" class="form-control" value="1">
+													<div class="input-group-btn-vertical">
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+													</div>
+												</div>
+												<button class="waitImport btn_form" type="submit btn" name="button"><i class="fa fa-hourglass-end" aria-hidden="true"></i></button>
+											</form>
+										</div>
+										<div class="bottom_cell light_bottom">
+											<span class="hidden_span">Нал</span>
+											<form action="post">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
+												<div class="checked_box">
+													<div class="inner">
+														<div class="green"></div>
+													</div>
+												</div>
+												<div class="input-group spinner">
+													<input type="text" class="form-control" value="1">
+													<div class="input-group-btn-vertical">
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+													</div>
+												</div>
+												<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+											</form>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+
+							<!--ряд таблицы-->
+							<div class="row table_search_goods_result">
+
+								<!--Бренд-->
+								<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
+									<div class="title">
+										<div class="checkbox">
+											<div class="inner"></div>
+										</div>
+										<input class="checkbox_brand" type="checkbox" name="checkBrand">
+										<span>Бренд</span>
+									</div>
+									<div class="content">
+										<a href="#">Kneht</a>
+										<p>Артикул</p>
+										<span>oc100</span>
+										<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+									</div>
+								</div>
+								<!--Описание-->
+								<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
+									<div class="title">Описание</div>
+									<div class="content">
+										<h4>ФИЛЬТР масляный</h4>
+										<p>CITROEN: AX 86-98, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
+									</div>
+								</div>
+								<!--Город-->
+								<div class="cell_wrap town col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title">Город</div>
+									<div class="content">
+										<div class="top_cell"><a href="#">Привольный</a></div>
+										<div class="bottom_cell"><a href="#">Подольск</a></div>
+									</div>
+								</div>
+								<!--Наличие-->
+								<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title light_title">Наличие</div>
+									<div class="content">
+										<div class="top_cell light_top"><span>12</span></div>
+										<div class="bottom_cell light_bottom"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+									</div>
+								</div>
+								<!--Кратность продажи-->
+								<div class="cell_wrap fold col-sm-4 hidden-xs col-md-1 col-lg-1">
+									<div class="title">Кратность
+										<br>продажи</div>
+									<div class="content">
+										<div class="top_cell"></div>
+										<div class="bottom_cell"></div>
+									</div>
+								</div>
+								<!--Ожидаемый срок доставки-->
+								<div class="cell_wrap delivery_time col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title light_title"><span class="hidden-md">Ожидаемый</span>
+										<br class="hidden-md">срок поставки</div>
+									<div class="content">
+										<div class="top_cell light_top"><span>На складе</span></div>
+										<div class="bottom_cell light_bottom"><span class="date_count">1</span> <span>день</span></div>
+									</div>
+								</div>
+								<!--Цена покупки с НДС-->
+								<div class="cell_wrap price priceBuylWithNds hidden-xs hidden-md hidden-sm col-lg-1">
+									<div class="title">Цена покупки <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell"><span>360,00</span> <span>руб.</span></div>
+										<div class="bottom_cell"><span>380,00</span> <span>руб.</span></div>
+									</div>
+								</div>
+								<!--Цена продажи с НДС-->
+								<div class="cell_wrap price priceSellWithNds col-xs-5 col-sm-4 col-md-2 col-lg-1">
+									<div class="title ">Цена продажи <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell ">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
+										<div class="bottom_cell">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
+									</div>
+								</div>
+								<!--количество-->
+								<div class="cell_wrap quantity_ col-xs-7 col-sm-4 col-md-2 col-lg-2">
+									<div class="title light_title">Количество</div>
+									<div class="content">
+										<div class="top_cell light_top">
+											<span class="hidden_span">Нал</span>
+											<form action="post">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
+												<div class="checked_box">
+													<div class="inner">
+														<div class="green"></div>
+													</div>
+												</div>
+												<div class="input-group spinner">
+													<input type="text" class="form-control" value="1">
+													<div class="input-group-btn-vertical">
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+													</div>
+												</div>
+												<button class="waitImport btn_form" type="submit btn" name="button"><i class="fa fa-hourglass-end" aria-hidden="true"></i></button>
+											</form>
+										</div>
+										<div class="bottom_cell light_bottom">
+											<span class="hidden_span">Нал</span>
+											<form action="post">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
+												<div class="checked_box">
+													<div class="inner">
+														<div class="green"></div>
+													</div>
+												</div>
+												<div class="input-group spinner">
+													<input type="text" class="form-control" value="1">
+													<div class="input-group-btn-vertical">
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+													</div>
+												</div>
+												<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+											</form>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
 						</div>
 						<!--конец АНАЛОГИ (ЗАМЕНЫ) В НАЛИЧИИ НА НАШИХ Складах-->
 
 
-						<!--Четвертый ряд таблицы-->
-						<div class="searchResult-aimed">
+						<div class="searchResult-aimed searchResult-aimed_analogs">
 							<div class="searchResult-result">
 								<span>Аналоги (замены) от сторонних поставщиков</span>
 							</div>
 
-							<!--первый ряд таблицы-->
+							<!--ряд таблицы без рекомендованной цены-->
 							<div class="row table_search_goods_result">
 								<!--Бренд-->
 								<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
@@ -552,9 +1040,9 @@
 										<span>Бренд</span>
 									</div>
 									<div class="content">
-										<a href="#">Purfix</a>
+										<a href="#">Fram</a>
 										<p>Артикул</p>
-										<span>AHC299</span>
+										<span>PH5566a</span>
 										<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -562,8 +1050,8 @@
 								<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
 									<div class="title">Описание</div>
 									<div class="content">
-										<h4>Фиильтр салона</h4>
-										<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+										<h4>ФИЛЬТР масляный</h4>
+										<p>CITROEN: AX 86-98, BERLINGO 96 -, BERLINGO фургон 96</p>
 									</div>
 								</div>
 								<!--Город-->
@@ -578,8 +1066,8 @@
 								<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
 									<div class="title light_title">Наличие</div>
 									<div class="content">
-										<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>12</span></div>
-										<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+										<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+										<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>53</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -597,15 +1085,27 @@
 										<br class="hidden-md">срок поставки</div>
 									<div class="content">
 										<div class="top_cell white"><span class="date_count">31</span> <span>день</span></div>
-										<div class="bottom_cell lightgray"><span class="date_count">1</span> <span>день</span></div>
+										<div class="bottom_cell lightgray"><span class="date_count">4</span> <span>дня</span></div>
 									</div>
 								</div>
-								<!--Цена с НДС-->
-								<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-2">
-									<div class="title">Цена с НДС</div>
+								<!--Цена покупки с НДС-->
+								<div class="cell_wrap price priceBuylWithNds hidden-xs hidden-md hidden-sm col-lg-1">
+									<div class="title">Цена покупки <br> с НДС</div>
 									<div class="content">
-										<div class="top_cell white"><span>84 500</span> <span>руб.</span></div>
-										<div class="bottom_cell lightgray"><span>131 112 289 900</span> <span>руб.</span></div>
+										<div class="top_cell white"><span>360,00</span> <span>руб.</span></div>
+										<div class="bottom_cell lightgray"><span>380,00</span> <span>руб.</span></div>
+									</div>
+								</div>
+								<!--Цена продажи с НДС-->
+								<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-1">
+									<div class="title ">Цена продажи <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell white">
+											<span>104,00 руб.</span>
+										</div>
+										<div class="bottom_cell lightgray">
+											<span>104,00 руб.</span>
+										</div>
 									</div>
 								</div>
 								<!--количество-->
@@ -615,7 +1115,7 @@
 										<div class="top_cell white">
 											<span>Нал</span>
 											<form action="post">
-												<input class="checkbox_result" type="checkbox">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 												<div class="checked_box">
 													<div class="inner">
 														<div class="green"></div>
@@ -634,7 +1134,7 @@
 										<div class="bottom_cell lightgray">
 											<span>Нал</span>
 											<form action="post">
-												<input class="checkbox_result" type="checkbox">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 												<div class="checked_box">
 													<div class="inner">
 														<div class="green"></div>
@@ -653,7 +1153,8 @@
 									</div>
 								</div>
 							</div>
-							<!--второй ряд таблицы-->
+
+							<!--ряд таблицы c рекомендованной ценой-->
 							<div class="row table_search_goods_result">
 								<!--Бренд-->
 								<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
@@ -665,9 +1166,9 @@
 										<span>Бренд</span>
 									</div>
 									<div class="content">
-										<a href="#">Purfix</a>
+										<a href="#">klaxcar</a>
 										<p>Артикул</p>
-										<span>AHC299</span>
+										<span>fh00z</span>
 										<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -675,7 +1176,7 @@
 								<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
 									<div class="title">Описание</div>
 									<div class="content">
-										<h4>Фиильтр салона</h4>
+										<h4>ФИЛЬТР масляный</h4>
 										<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
 									</div>
 								</div>
@@ -691,8 +1192,8 @@
 								<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
 									<div class="title light_title">Наличие</div>
 									<div class="content">
-										<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>12</span></div>
-										<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+										<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+										<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -709,16 +1210,30 @@
 									<div class="title light_title"><span class="hidden-md">Ожидаемый</span>
 										<br class="hidden-md">срок поставки</div>
 									<div class="content">
-										<div class="top_cell white"><span class="date_count">31</span> <span>день</span></div>
-										<div class="bottom_cell lightgray"><span class="date_count">1</span> <span>день</span></div>
+										<div class="top_cell white"><span class="date_count">5</span> <span>дней</span></div>
+										<div class="bottom_cell lightgray"><span class="date_count">4</span> <span>дня</span></div>
 									</div>
 								</div>
-								<!--Цена с НДС-->
-								<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-2">
-									<div class="title">Цена с НДС</div>
+								<!--Цена покупки с НДС-->
+								<div class="cell_wrap price priceBuylWithNds hidden-xs hidden-md hidden-sm col-lg-1">
+									<div class="title">Цена покупки <br> с НДС</div>
 									<div class="content">
-										<div class="top_cell white"><span>84 500</span> <span>руб.</span></div>
-										<div class="bottom_cell lightgray"><span>131 112 289 900</span> <span>руб.</span></div>
+										<div class="top_cell white"><span>360,00</span> <span>руб.</span></div>
+										<div class="bottom_cell lightgray"><span>380,00</span> <span>руб.</span></div>
+									</div>
+								</div>
+								<!--Цена продажи с НДС-->
+								<div class="cell_wrap price priceSellWithNds col-xs-5 col-sm-4 col-md-2 col-lg-1">
+									<div class="title ">Цена продажи <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell white">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
+										<div class="bottom_cell lightgray">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
 									</div>
 								</div>
 								<!--количество-->
@@ -728,14 +1243,14 @@
 										<div class="top_cell white">
 											<span>Нал</span>
 											<form action="post">
-												<input class="checkbox_result" type="checkbox">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 												<div class="checked_box">
 													<div class="inner">
 														<div class="green"></div>
 													</div>
 												</div>
 												<div class="input-group spinner">
-													<input type="text" class="form-control" value="10">
+													<input type="text" class="form-control" value="1">
 													<div class="input-group-btn-vertical">
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
@@ -747,14 +1262,14 @@
 										<div class="bottom_cell lightgray">
 											<span>Нал</span>
 											<form action="post">
-												<input class="checkbox_result" type="checkbox">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 												<div class="checked_box">
 													<div class="inner">
 														<div class="green"></div>
 													</div>
 												</div>
 												<div class="input-group spinner">
-													<input type="text" class="form-control" value="120">
+													<input type="text" class="form-control" value="1">
 													<div class="input-group-btn-vertical">
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
@@ -766,8 +1281,8 @@
 									</div>
 								</div>
 							</div>
-							<!--второй ряд таблицы-->
 
+							<!--ряд таблицы c рекомендованной ценой-->
 							<div class="row table_search_goods_result">
 								<!--Бренд-->
 								<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
@@ -779,9 +1294,9 @@
 										<span>Бренд</span>
 									</div>
 									<div class="content">
-										<a href="#">Purfix</a>
+										<a href="#">klaxcar</a>
 										<p>Артикул</p>
-										<span>AHC299</span>
+										<span>fh00z</span>
 										<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -789,7 +1304,7 @@
 								<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
 									<div class="title">Описание</div>
 									<div class="content">
-										<h4>Фиильтр салона</h4>
+										<h4>ФИЛЬТР масляный</h4>
 										<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
 									</div>
 								</div>
@@ -805,8 +1320,8 @@
 								<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
 									<div class="title light_title">Наличие</div>
 									<div class="content">
-										<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>12</span></div>
-										<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+										<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+										<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -823,16 +1338,30 @@
 									<div class="title light_title"><span class="hidden-md">Ожидаемый</span>
 										<br class="hidden-md">срок поставки</div>
 									<div class="content">
-										<div class="top_cell white"><span class="date_count">31</span> <span>день</span></div>
-										<div class="bottom_cell lightgray"><span class="date_count">1</span> <span>день</span></div>
+										<div class="top_cell white"><span class="date_count">5</span> <span>дней</span></div>
+										<div class="bottom_cell lightgray"><span class="date_count">4</span> <span>дня</span></div>
 									</div>
 								</div>
-								<!--Цена с НДС-->
-								<div class="cell_wrap price col-xs-5 col-sm-4 col-md-2 col-lg-2">
-									<div class="title">Цена с НДС</div>
+								<!--Цена покупки с НДС-->
+								<div class="cell_wrap price priceBuylWithNds hidden-xs hidden-md hidden-sm col-lg-1">
+									<div class="title">Цена покупки <br> с НДС</div>
 									<div class="content">
-										<div class="top_cell white"><span>84 500</span> <span>руб.</span></div>
-										<div class="bottom_cell lightgray"><span>131 112 289 900</span> <span>руб.</span></div>
+										<div class="top_cell white"><span>360,00</span> <span>руб.</span></div>
+										<div class="bottom_cell lightgray"><span>380,00</span> <span>руб.</span></div>
+									</div>
+								</div>
+								<!--Цена продажи с НДС-->
+								<div class="cell_wrap price priceSellWithNds col-xs-5 col-sm-4 col-md-2 col-lg-1">
+									<div class="title ">Цена продажи <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell white">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
+										<div class="bottom_cell lightgray">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
 									</div>
 								</div>
 								<!--количество-->
@@ -842,14 +1371,14 @@
 										<div class="top_cell white">
 											<span>Нал</span>
 											<form action="post">
-												<input class="checkbox_result" type="checkbox">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 												<div class="checked_box">
 													<div class="inner">
 														<div class="green"></div>
 													</div>
 												</div>
 												<div class="input-group spinner">
-													<input type="text" class="form-control" value="10">
+													<input type="text" class="form-control" value="1">
 													<div class="input-group-btn-vertical">
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
@@ -861,14 +1390,14 @@
 										<div class="bottom_cell lightgray">
 											<span>Нал</span>
 											<form action="post">
-												<input class="checkbox_result" type="checkbox">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 												<div class="checked_box">
 													<div class="inner">
 														<div class="green"></div>
 													</div>
 												</div>
 												<div class="input-group spinner">
-													<input type="text" class="form-control" value="120">
+													<input type="text" class="form-control" value="1">
 													<div class="input-group-btn-vertical">
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
 														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
@@ -879,12 +1408,260 @@
 										</div>
 									</div>
 								</div>
+							</div>
 
-								<div class="searchResult-lastresult col-xs-12 col-sm-12 col-md-12 col-lg-12">
-									<div class="">
-										<p>Показать остальные предложения</p>
-										<div class="triangle"></div>
-										<div class="triangle-right"></div>
+							<!--ряд таблицы c рекомендованной ценой-->
+							<div class="row table_search_goods_result">
+								<!--Бренд-->
+								<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
+									<div class="title">
+										<div class="checkbox">
+											<div class="inner"></div>
+										</div>
+										<input class="checkbox_brand" type="checkbox" name="checkBrand">
+										<span>Бренд</span>
+									</div>
+									<div class="content">
+										<a href="#">klaxcar</a>
+										<p>Артикул</p>
+										<span>fh00z</span>
+										<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+									</div>
+								</div>
+								<!--Описание-->
+								<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
+									<div class="title">Описание</div>
+									<div class="content">
+										<h4>ФИЛЬТР масляный</h4>
+										<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+									</div>
+								</div>
+								<!--Город-->
+								<div class="cell_wrap town col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title">Город</div>
+									<div class="content">
+										<div class="top_cell white"><a href="#">Привольный</a></div>
+										<div class="bottom_cell lightgray"><a href="#">Подольск</a></div>
+									</div>
+								</div>
+								<!--Наличие-->
+								<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title light_title">Наличие</div>
+									<div class="content">
+										<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+										<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+									</div>
+								</div>
+								<!--Кратность продажи-->
+								<div class="cell_wrap fold col-sm-4 hidden-xs col-md-1 col-lg-1">
+									<div class="title">Кратность
+										<br>продажи</div>
+									<div class="content">
+										<div class="top_cell white"></div>
+										<div class="bottom_cell lightgray"></div>
+									</div>
+								</div>
+								<!--Ожидаемый срок доставки-->
+								<div class="cell_wrap delivery_time col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title light_title"><span class="hidden-md">Ожидаемый</span>
+										<br class="hidden-md">срок поставки</div>
+									<div class="content">
+										<div class="top_cell white"><span class="date_count">5</span> <span>дней</span></div>
+										<div class="bottom_cell lightgray"><span class="date_count">4</span> <span>дня</span></div>
+									</div>
+								</div>
+								<!--Цена покупки с НДС-->
+								<div class="cell_wrap price priceBuylWithNds hidden-xs hidden-md hidden-sm col-lg-1">
+									<div class="title">Цена покупки <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell white"><span>360,00</span> <span>руб.</span></div>
+										<div class="bottom_cell lightgray"><span>380,00</span> <span>руб.</span></div>
+									</div>
+								</div>
+								<!--Цена продажи с НДС-->
+								<div class="cell_wrap price priceSellWithNds col-xs-5 col-sm-4 col-md-2 col-lg-1">
+									<div class="title ">Цена продажи <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell white">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
+										<div class="bottom_cell lightgray">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
+									</div>
+								</div>
+								<!--количество-->
+								<div class="cell_wrap quantity_ col-xs-7 col-sm-4 col-md-2 col-lg-2">
+									<div class="title light_title">Количество</div>
+									<div class="content">
+										<div class="top_cell white">
+											<span>Нал</span>
+											<form action="post">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
+												<div class="checked_box">
+													<div class="inner">
+														<div class="green"></div>
+													</div>
+												</div>
+												<div class="input-group spinner">
+													<input type="text" class="form-control" value="1">
+													<div class="input-group-btn-vertical">
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+													</div>
+												</div>
+												<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+											</form>
+										</div>
+										<div class="bottom_cell lightgray">
+											<span>Нал</span>
+											<form action="post">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
+												<div class="checked_box">
+													<div class="inner">
+														<div class="green"></div>
+													</div>
+												</div>
+												<div class="input-group spinner">
+													<input type="text" class="form-control" value="1">
+													<div class="input-group-btn-vertical">
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+													</div>
+												</div>
+												<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--ряд таблицы c рекомендованной ценой-->
+							<div class="row table_search_goods_result">
+								<!--Бренд-->
+								<div class="cell_wrap brand col-xs-12 col-sm-7 col-md-2 col-lg-2">
+									<div class="title">
+										<div class="checkbox">
+											<div class="inner"></div>
+										</div>
+										<input class="checkbox_brand" type="checkbox" name="checkBrand">
+										<span>Бренд</span>
+									</div>
+									<div class="content">
+										<a href="#">klaxcar</a>
+										<p>Артикул</p>
+										<span>fh00z</span>
+										<a href="#" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+									</div>
+								</div>
+								<!--Описание-->
+								<div class="cell_wrap descr col-xs-12 col-sm-5 col-md-2 col-lg-2">
+									<div class="title">Описание</div>
+									<div class="content">
+										<h4>ФИЛЬТР масляный</h4>
+										<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+									</div>
+								</div>
+								<!--Город-->
+								<div class="cell_wrap town col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title">Город</div>
+									<div class="content">
+										<div class="top_cell white"><a href="#">Привольный</a></div>
+										<div class="bottom_cell lightgray"><a href="#">Подольск</a></div>
+									</div>
+								</div>
+								<!--Наличие-->
+								<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title light_title">Наличие</div>
+									<div class="content">
+										<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+										<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+									</div>
+								</div>
+								<!--Кратность продажи-->
+								<div class="cell_wrap fold col-sm-4 hidden-xs col-md-1 col-lg-1">
+									<div class="title">Кратность
+										<br>продажи</div>
+									<div class="content">
+										<div class="top_cell white"></div>
+										<div class="bottom_cell lightgray"></div>
+									</div>
+								</div>
+								<!--Ожидаемый срок доставки-->
+								<div class="cell_wrap delivery_time col-xs-4 col-sm-4 col-md-1 col-lg-1">
+									<div class="title light_title"><span class="hidden-md">Ожидаемый</span>
+										<br class="hidden-md">срок поставки</div>
+									<div class="content">
+										<div class="top_cell white"><span class="date_count">5</span> <span>дней</span></div>
+										<div class="bottom_cell lightgray"><span class="date_count">4</span> <span>дня</span></div>
+									</div>
+								</div>
+								<!--Цена покупки с НДС-->
+								<div class="cell_wrap price priceBuylWithNds hidden-xs hidden-md hidden-sm col-lg-1">
+									<div class="title">Цена покупки <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell white"><span>360,00</span> <span>руб.</span></div>
+										<div class="bottom_cell lightgray"><span>380,00</span> <span>руб.</span></div>
+									</div>
+								</div>
+								<!--Цена продажи с НДС-->
+								<div class="cell_wrap price priceSellWithNds col-xs-5 col-sm-4 col-md-2 col-lg-1">
+									<div class="title ">Цена продажи <br> с НДС</div>
+									<div class="content">
+										<div class="top_cell white">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
+										<div class="bottom_cell lightgray">
+											<span>104,00 руб.</span>
+											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+										</div>
+									</div>
+								</div>
+								<!--количество-->
+								<div class="cell_wrap quantity_ col-xs-7 col-sm-4 col-md-2 col-lg-2">
+									<div class="title light_title">Количество</div>
+									<div class="content">
+										<div class="top_cell white">
+											<span>Нал</span>
+											<form action="post">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
+												<div class="checked_box">
+													<div class="inner">
+														<div class="green"></div>
+													</div>
+												</div>
+												<div class="input-group spinner">
+													<input type="text" class="form-control" value="1">
+													<div class="input-group-btn-vertical">
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+													</div>
+												</div>
+												<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+											</form>
+										</div>
+										<div class="bottom_cell lightgray">
+											<span>Нал</span>
+											<form action="post">
+												<input class="checkbox_result" type="checkbox" title="Оплата наличными">
+												<div class="checked_box">
+													<div class="inner">
+														<div class="green"></div>
+													</div>
+												</div>
+												<div class="input-group spinner">
+													<input type="text" class="form-control" value="1">
+													<div class="input-group-btn-vertical">
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+														<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+													</div>
+												</div>
+												<button class="btn_form" type="submit btn" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+											</form>
+										</div>
 									</div>
 								</div>
 							</div>

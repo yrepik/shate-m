@@ -110,6 +110,8 @@ body
 	&:focus, &:active
 		background-color: $active
 
+
+
 .dashboard_info
 	.content__item
 		.wrap
@@ -121,6 +123,8 @@ body
 				float: left
 				padding-right: 15px
 
+.cross_close, .arrows
+	display: none
 
 .dashboard_small
 	margin-top: 17px
@@ -198,7 +202,6 @@ body
 		top: 10px
 
 .drop_down_search_list
-	min-height: 40px
 	position: absolute
 	background-color: #fff
 	width: 100%
@@ -210,7 +213,6 @@ body
 	ul
 		margin: 0
 		padding: 0
-		padding-top: 17px
 		li
 			list-style-type: none
 			word-wrap: break-word
@@ -245,7 +247,7 @@ body
 
 
 .topLine
-	box-shadow: 3px 0px 3px rgba(0,0,0,.6)
+	box-shadow: 0px 3px 2px rgba(0,0,0,.3)
 	padding: 20px
 	width: 100%
 	background-color: #eaeaea
@@ -291,7 +293,9 @@ body
 	&:hover .line-3
 		transform: translateY(4px)
 
-
+.dachboardUserSettings
+	input
+		opacity: 1
 .top-search
 	width: 23%
 	form
@@ -331,9 +335,10 @@ body
 	width: 10%
 	select
 		width: 85%
-		padding: 4px 4%
+		padding: 6px 4%
 		border: 1px solid lightgray
 		text-transform: uppercase
+		font-size: em(9px)
 
 
 .top-balance
@@ -438,17 +443,6 @@ body
 		right: 0
 		left: 0
 		margin: auto
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1509,6 +1503,7 @@ body
 			a
 				text-decoration: underline
 				color: gray
+				display: block
 				i
 					display: inline-block
 					margin-left: 5px
@@ -1597,7 +1592,6 @@ body
 		left: 0
 		bottom: 0
 		top: 0
-		overflow-y: scroll
 		margin: auto
 		padding: 25px 0
 		.orders-info_popUp-inner-buttons
@@ -1662,6 +1656,8 @@ body
 				float: left
 				width: 100%
 				border-top: 2px solid lightgray
+				height: 300px
+				overflow-y: scroll
 				.tab_item
 					display: none
 					padding: 0px 0
@@ -2019,7 +2015,9 @@ body
 						text-decoration: none
 				i
 					float: right
-					margin-top: 5px
+					position: relative
+					top: 3px
+					font-size: em(10px)
 	.status_order
 		.inner_wrap
 			background-color: #fffdd7
@@ -2622,6 +2620,53 @@ input
 					background-color: #D4D4D4
 				i
 					margin-right: 10px
+		.settings
+			position: relative
+			padding-left: 13px
+			label
+				width: 100px
+				widows:
+				position: relative
+				font-size: em(10px)
+				cursor: pointer
+				input:checked
+					+ .overlay
+						background-color: #eaffde
+						&::after
+							background-color: $green
+							border-color: green
+							box-shadow: inset 0 2px 2px rgba(0,0,0,.2)
+							left: 14px
+				input
+					position: absolute
+					left: 0
+				.overlay
+					display: block
+					height: 16px
+					width: 30px
+					background-color: #fff
+					float: left
+					position: relative
+					top: 6px
+					margin-right: 7px
+					border: 1px solid lightgray
+					border-radius: 999px
+					&::after
+						height: 16px
+						width: 16px
+						display: block
+						position: absolute
+						content: ''
+						top: -1px
+						left: 0px
+						border: 1px solid gray
+						border-radius: 999px
+						background-color: gray
+						transition: .3s
+						box-shadow: 0 1px 2px rgba(0,0,0,.2)
+
+
+
 
 .btn
 	&:hover
@@ -2956,6 +3001,8 @@ input
 				position: absolute
 				left: 5px
 				top: 15px
+				&:hover
+					cursor: move
 		.col-xs-8
 			border-right: none
 		.checkbox
@@ -3099,12 +3146,9 @@ input
 		font-size: 1.5em
 	button
 		margin-right: 20px
-	.importFound,
-	.importAbsent
-		background: $green
-		color: #fff
 
-	.green_btn
+
+	.grакуыеeen_btn
 		padding: 11px 18px
 		margin-right: 0
 		transition: .2s
@@ -3112,9 +3156,10 @@ input
 			margin-right: 15px
 	.importActiveBtn
 		background-color: lightgray
-		color: #666
+		color: #fff
 		border-color: #fff
-		box-shadow: inset 3px 3px 0 rgba(0,0,0,.4)
+		background-color: #50b74e
+
 .search_goods-rightBtn
 	float: right
 .green_btn
@@ -3125,6 +3170,9 @@ input
 	background-color: #50b74e
 	&:active
 		background-color: #39d372
+	&:hover
+		box-shadow: inset 3px 3px 3px  rgba(0,0,0,.3)
+
 
 .table_search_goods_result
 	border: 1px solid #8d8d8d
@@ -3188,17 +3236,18 @@ input
 			float: right
 			color: #666
 			display: inline-block
-			height: 35px
-			width: 35px
+			height: 23px
+			width: 23px
 			border: 1px solid #d3d3d3
-			line-height: 40px
 			text-align: center
 			position: relative
 			top: -33px
 			right: 20px
 			cursor: pointer
 			i
-				font-size: 1.66667em
+				font-size: 1em
+				position: relative
+				top: 3px
 			&:active, &:focus, &:hover
 				border-color: #999
 	.descr .content
@@ -3210,9 +3259,32 @@ input
 			line-height: 15px
 			color: #999
 			font-size: 1.08333em
-	.price .content span
-		color: #333
-		font-size: 1.16667em
+	.price
+		.title
+			padding-top: 3px !important
+		.content
+			span
+				color: #333
+				font-family: 'osr', sans-serif
+
+	.priceSellWithNds
+		.content
+			.top_cell, .bottom_cell
+				padding-top: 10px !important
+				span
+					display: inline-block
+					display: inline-block
+					width: 100%
+					margin-bottom: 5px
+				.priceSellWithNds-recomendidPrice
+					font-family: 'osb', sans-serif
+					margin-top: 5px
+					i
+						margin-right: 0
+						margin-right: 5px
+						font-size: em(13px)
+
+
 	.availability span, .delivery_time .content .date_count
 		font-family: OSB,sans-serif
 		font-size: 1.08333em
@@ -4783,12 +4855,17 @@ input[type=checkbox]
 				.tree-tabWrap_content-table-btn
 					width: 50%
 					float: right
-					button
+					a
 						font-size: em(10px)
 						padding: 4px 10px
 						text-align: left
 						line-height: em(15px)
 						margin-top: 5px
+						display: block
+						color: #666
+						cursor: pointer
+						&:hover
+							text-decoration: none
 
 				.left
 					float: left
@@ -5333,8 +5410,6 @@ input[type=checkbox]
 				font-size: em(13px)
 		button
 			float: right
-			padding: 5px 23px
-			margin-right: 40px
 	.managment-rest
 		h3
 			text-transform: uppercase
@@ -5351,7 +5426,7 @@ input[type=checkbox]
 				margin: 0
 				background-color: #cfcfcf
 				font-family: 'osb', sans-serif
-				padding: 5px 25px
+				padding: 10px
 				text-align: center
 				box-shadow: 0 2px 2px rgba(0,0,0,.4)
 				position: relative
@@ -5359,7 +5434,30 @@ input[type=checkbox]
 				.plr0
 					padding: 5px
 					word-break: break-all
+				.buttonsBlock
+					button
+						padding: 2px  10px
+						font-size: em(14px)
+						border: none
+						float: right
+						margin-left: 4px
+						color: #fff
+						background-color: #a8a7a7
+						transition: .2s
+						&:hover
+							&:nth-last-child(1)
+								background-color: $green
+								text-shadow: 1px 2px 3px rgba(0,0,0,.3)
+							&:nth-last-child(2)
+								background-color: $red
+								text-shadow: 1px 2px 3px rgba(0,0,0,.3)
+							&:nth-last-child(3)
+								background-color: #2196f3
+								text-shadow: 1px 2px 3px rgba(0,0,0,.3)
+
+
 			.managment-rest_exports-table-row
+				padding: 10px !important
 				box-shadow: none
 				z-index: 1
 				font-family: 'osr', sans-serif
@@ -5439,6 +5537,47 @@ input[type=checkbox]
 					width: 100%
 					padding: 5px 10px
 					color: $red
+
+.managmentFilterlabelwrap
+	float: left
+	label
+		position: relative
+		margin-right: 20px
+		float: left
+		opacity: 1
+		input:checked
+			+ span::after
+				background-color: $green !important
+	.overlay
+		height: 16px
+		width: 16px
+		display: block
+		border: 1px solid lightgray
+		float: left
+		margin-right: 10px
+		position: relative
+		top: 3px
+		cursor: pointer
+		&:after
+			position: absolute
+			content: ''
+			display: block
+			height: 10px
+			width: 10px
+			position: relative
+			top: 2px
+			left: 2px
+		&:hover
+			&:after
+				border: 1px solid lightgray
+
+
+
+
+.managmentQurencySelect
+	float: right
+	padding: 10px
+
 
 //конец управление остатками rest_managment//
 
@@ -6360,6 +6499,9 @@ input[type=checkbox]
 	.search
 		background-color: #f0f0f0
 		padding: 20px 25px
+		box-shadow:  0 3px 2px rgba(0,0,0,.3)
+		position: relative
+		z-index: 1
 		.wrapper-search
 			width: 22%
 			position: relative
@@ -6384,7 +6526,6 @@ input[type=checkbox]
 				&:hover
 					i
 						color: $green
-
 
 .tab_item
   display: none
@@ -6500,13 +6641,111 @@ input[type=checkbox]
 				width: 100%
 				padding: 3px 5px
 
+.searchToVinCarsTree-categories
+	span
+		display: block
+		padding: 30px 20px
+		background-color: #d2d2d2
+		text-transform: uppercase
+		font-size: em(16px)
+.searchToVinCarsTree-manufacture
+	margin: 0
+	li
+		a
+			padding: 10px 15px !important
+			display: block
+			width: 100%
+			background-color: #e4e4e4
+		&:nth-child(even)
+			a
+				background-color: #f0f0f0
+		&:hover, &:active
+			a
+				background-color: #999999
+				color: #fff
+.searchToVinCarsTree-images
+	border: 1px solid red
+	padding: 30px
 
+.helper
+	.innrer_content_popUp
+		width: 70% !important
 
+.helper-carusel
+	min-height: 385px
+	position: relative
+	.owl-item
+		width: 100%
+	.item
+		position: relative
+		background-color: lightgray
+		text-align: center
+		min-height: 367px
+		width: 100%
+	.owl-controls
+		position: absolute
+		z-index: 999
+		bottom: 5px
 //конец поиск по ВИН//
 
 
 
+//результаты поиска//
+.managmentAllFilter
+	padding-top: 20px
+	padding-bottom: 0px 10px
+	margin: 0
+	margin-bottom: 20px
+.searchResult
+	padding: 0
+	.searchResult-h2
+		margin: 20px 0
+		i
+			color: #959595
+			margin-right: 20px
+			font-size: em(18px)
+			position: relative
+			top: 2px
+	.searchResult-result
+		background-color: #eaeaea
+		margin-left: 15px
+		margin-right: 15px
+		font-family: 'osb', sans-serif
+		text-transform: uppercase
+		font-size: em(9px)
+		padding: 10px
+		padding-left: 20px
+		color: #333
+	.searchResult-aimed
+		margin-bottom: 20px
+	.searchResult-lastresult
+		background-color: #eaeaea
+		padding: 5px
+		text-align: center
+		border: 1px solid #eaeaea
+		border-top: 1px solid #333
+		margin-bottom: 20px
+		cursor: pointer
+		p
+			margin: 0
+		&:hover
+			text-decoration: underline
+		.triangle,
+		.triangle-right
+			@include triangle(14px 10px, gray, down)
+			position: absolute
+		.triangle
+			left: 12px
+			top: 12px
+		.triangle-right
+			top: 12px
+			right: 12px
 
+
+
+
+
+//конец результаты поиска//
 
 
 
@@ -6616,10 +6855,6 @@ h3
 .ui-datepicker-next
 	transform: rotate(180deg)
 	float: right
-
-
-
-
 
 
 

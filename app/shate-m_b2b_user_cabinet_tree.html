@@ -15,8 +15,7 @@
 
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
 
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/fonts.min.css">
@@ -80,11 +79,20 @@
 							<div class="top-search">
 								<form>
 									<input class="serch_field" type="search" name="search" placeholder="Поиск" autocomplete="off">
-									<button class="search_btn" type="submit" alt="ok"><i class="fa fa-search" aria-hidden="true"></i></button>
+									<button  class="search_btn"  alt="ok"><i class="fa fa-search" aria-hidden="true"></i></button>
 									<div class="drop_down_search_list">
 										<ul>
 											<li>
-												<a href="shate-m_b2b_user_cabinet_search_result.html"></a>
+												<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Kneht</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+											</li>
+											<li>
+												<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Mahle Filter</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+											</li>
+											<li>
+												<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Mahle Original</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+											</li>
+											<li>
+												<a href="shate-m_b2b_user_cabinet_search_result.html"><span>PUROLATOR</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
 											</li>
 										</ul>
 									</div>
@@ -94,8 +102,8 @@
 							<!--выбор параметров поиска-->
 							<div class="hidden-xs top-selectVin">
 								<select name="vin">
-									<option value="1">по VIN</option>
 									<option value="2">по артикулу</option>
+									<option value="1">по VIN</option>
 								</select>
 							</div>
 
@@ -172,6 +180,19 @@
 						</div>
 					</div>
 
+					<!--зона обновление баланса-->
+					<div class="row alert">
+						<div class="col-xs-12">
+							<div class="cross_alert">
+								<i class="fa fa-plus" aria-hidden="true"></i>
+							</div>
+							<div class="alert_zone">
+								<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+								<span>Информация: запрос на обновление баланса отправлен.</span>
+							</div>
+						</div>
+					</div>
+
 
 
 					<!--зона поиска по дереву-->
@@ -179,7 +200,7 @@
 						<div class="row">
 							<div class="tree-h2 col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<h2><i class="fa fa-sitemap" aria-hidden="true"></i> Поиск по дереву</h2>
-								<button class="tree-selectCar red_btn" type="button" name="button"><img class="hidden-xs hidden-sm" src="img/whiteCar.png" alt=""><span>Выбрать машину</span></button>
+								<button class="tree-selectCar green_btn" type="button" name="button"><img class="hidden-xs hidden-sm" src="img/whiteCar.png" alt=""><span>Выбрать другую машину</span></button>
 							</div>
 
 
@@ -1175,7 +1196,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a href="shate-m_b2b_user_cabinet_search_result.html" class="gray_btn btn"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>
@@ -1235,7 +1256,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>
@@ -1295,7 +1316,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a href="shate-m_b2b_user_cabinet_search_result.html" class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>
@@ -1355,7 +1376,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a href="shate-m_b2b_user_cabinet_search_result.html" class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>
@@ -1415,7 +1436,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a href="shate-m_b2b_user_cabinet_search_result.html" class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>
@@ -1475,7 +1496,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a href="shate-m_b2b_user_cabinet_search_result.html" class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>
@@ -1535,7 +1556,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a href="shate-m_b2b_user_cabinet_search_result.html" class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>
@@ -1655,7 +1676,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a href="shate-m_b2b_user_cabinet_search_result.html" class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>
@@ -2433,7 +2454,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a href="shate-m_b2b_user_cabinet_search_result.html" class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>
@@ -2493,7 +2514,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a href="shate-m_b2b_user_cabinet_search_result.html" class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>
@@ -2613,7 +2634,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a href="shate-m_b2b_user_cabinet_search_result.html" class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>
@@ -2673,7 +2694,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a href="shate-m_b2b_user_cabinet_search_result.html" class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>
@@ -2793,7 +2814,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a href="shate-m_b2b_user_cabinet_search_result.html" class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>
@@ -2853,7 +2874,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a href="shate-m_b2b_user_cabinet_search_result.html" class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>
@@ -2913,7 +2934,7 @@
 															</div>
 														</div>
 														<div class="tree-tabWrap_content-table-btn">
-															<button class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></button>
+															<a href="shate-m_b2b_user_cabinet_search_result.html" class="gray_btn btn tree-greenStatus_btn" type="button"><span class="hidden-sm hidden-md hidden-lg">Сроки поставки</span><span class="hidden-xs">Предложение со сроками поставки</span></a>
 														</div>
 													</div>
 												</div>

@@ -94,7 +94,9 @@ $base-font-size: 13px
 @media only screen and (max-width : 1201px)
 	.user_name
 		top: 123px
-
+@media only screen and (max-width : 1400px)
+	.user_name ul .settings
+		display: none
 @media only screen and (max-width : 1200px)
 	.orders-info_popUp-inner-buttons
 		margin-top: 0
@@ -109,6 +111,7 @@ $base-font-size: 13px
 		position: absolute
 		right: 10px
 		bottom: 10px
+		font-size: em(12px)
 	.orders_list-wrapControl
 		float: right
 	.orders_list
@@ -1496,6 +1499,12 @@ $base-font-size: 13px
 	/*Disable Animation on Mobile Devices*/
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width : 600px)
+	.tree-h2
+		.tree-selectCar
+			width: 100%
+			margin-bottom: 30px
+
 @media only screen and (max-width : 480px)
 	#tree
 		.tree-filter
@@ -1641,6 +1650,7 @@ $base-font-size: 13px
 
 //////////страница менеджеров///////////////
 /* Large Devices, Wide Screens */
+
 @media only screen and (max-width : 1200px)
 	.manager
 		.manager-regional, .manager-self
@@ -1656,6 +1666,11 @@ $base-font-size: 13px
 						line-height: em(14px)
 						display: block
 	/**/
+@media only screen and (max-width : 768px)
+	.manager-info_body-bottom
+		font-size: em(18px)
+		top: 45px
+
 
 @media only screen and (max-width : 480px)
 	.manager
@@ -1668,6 +1683,10 @@ $base-font-size: 13px
 				.manager-info_body-right
 					span
 						font-size: em(14px)
+		.manager-info_body-bottom
+			font-size: em(15.2px)
+			top: 45px
+
 	/**/
 
 @media only screen and (min-width : 1200px)
@@ -2106,7 +2125,14 @@ $base-font-size: 13px
 		font-size: em(10px)
 
 
+
 @media only screen and (min-width : 768px)
 	.searchToVinCarsTree ul li
 		padding-left: 0
 //конец поиск по	VIN 01//
+
+//результаты поиска//
+@media only screen and (max-width : 460px)
+	.priceSellWithNds-recomendidPrice
+		margin-top: 0 !important
+//конец результаты поиска//

@@ -1,4 +1,27 @@
 $(function() {
+var x = $('.table_search_goods_result .descr .content p');
+x.text().slice(30)
+
+	$('.dashboardSettings').click(function(){//главная страница добавить/удалить элементы управления на блоки
+		var $input = $('.dashboardSettings-input');
+		if($input.prop('checked')){
+			$('.arrows, .cross_close').show();
+		}else{
+			$('.arrows, .cross_close').hide();
+		}
+	})
+
+
+	function treeAddToCart() { //имитация добавления товара в корзину
+		var $vol = $(this).parents('.spinner').find('input').val();
+		var cartCount = $('.top-quantity').text()
+		var $vol2 = +$vol;
+		var cartCount2 = +cartCount;
+		var summ = $vol2+cartCount2;
+		$('.top-quantity').text(summ);
+		$('.totall').html('('+ summ * 1000 + 'руб.)')
+	}
+	$('.tree-addToCart').click(treeAddToCart)
 
 	//полет товара в корзину//
 	$('.tree-addToCart, .addcart').on('click', function() {
@@ -355,13 +378,7 @@ $(function() {
 		}, 0)
 	})
 
-	function treeAddToCart() { //имитация добавления товара в корзину
-		var $vol = $(this).parents('.spinner').find('input').val();
-		$('.top-quantity').html($vol);
-		$('.totall').html('(' + $vol * 1000 + 'руб.)')
 
-	}
-	$('.tree-addToCart').click(treeAddToCart)
 
 	function treeTollLeftNav() { //изменение размера дерева каталога в зависимомти от разрешения
 		if ($(window).width() > 768) {
@@ -920,7 +937,7 @@ $(function() {
 
 	//удалить выбранные товары на странице листа ожтдания
 	function dellMark() {
-		var $input = $('.table_search_goods_result').find('input:checked');
+		var $input = $('.table_search_goods_result').find('.title').find('input:checked');
 		$input.parents('.table_search_goods_result').slideUp(200);
 		$input.removeAttr('checked');
 	}
@@ -975,20 +992,18 @@ $(function() {
 	}
 	$('.importAbsent').click(importAbsent)
 
-	 $(".helper-carusel").owlCarousel({
-		 	items: 1,
-			loop: true,
-			nav: true,
-			navText: ''
 
-	 });
 
 	function importFound() { //кнопка найденные товары на странице импорта
-		$(this).addClass('importActiveBtn');
-		$(this).siblings().removeClass('importActiveBtn');
 		$('.table_search_goods_result').fadeIn(100)
+		$(this).addClass('importActiveBtn')
+		$(this).siblings().removeClass('importActiveBtn');
 	}
 	$('.importFound').click(importFound)
+
+
+
+
 
 
 	$('.search_goods').find('.green_btn').on('click', function() { //добавить товар при клике по кнопке
@@ -1129,12 +1144,12 @@ $(function() {
 	//подставляем значения в форму поиска
 	function searchField() {
 		var $val = $(this).val();
-		$('.drop_down_search_list ul li a').empty()
-		$('.drop_down_search_list ul li a').text($val);
 
 		$('.drop_down_search_list').css({
 			'display': 'block'
 		});
+
+		$('.searchfieldA').html('<b>'+$val+'<b>')
 	}
 	$('.serch_field').on('keyup', searchField);
 
@@ -1270,7 +1285,7 @@ $(function() {
 	}
 	$('.ios-switch').on('click', checkBox);
 	////////////////////////////////////
-	$('.alert').slideDown(300) //появление зоны служебных сообщений при загрузке
+ //появление зоны служебных сообщений при загрузке
 
 	//закрытие окна с информационными сообщениями
 	function alertClose() {
@@ -1311,10 +1326,6 @@ $(function() {
 	//////////////////////////////////////////
 
 
-$('.helper_btn').click(function(){
-	$('.helper').fadeIn()
-})
-
 	//добавим поп-ап к ссылкам на коментарий
 	$('.comments_table, .inner_wrap a, .orders_container .comments_table_light .inner_wrap a').on('click', function() {
 		$(this).each(function() {
@@ -1333,6 +1344,9 @@ $('.helper_btn').click(function(){
 
 	// переворот стреки
 	$(".top-balance_update").on('click', function() {
+		var $alertZone = $('.alert');
+		$alertZone.slideDown(200);
+		$alertZone.delay(3000).slideUp(200)
 		$(this).children().addClass('finReloadd');
 		$(this).children().delay(2000);
 		$('.top-balance .totall').css({
