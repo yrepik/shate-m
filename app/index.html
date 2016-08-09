@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="css/fonts.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
 	<link rel="stylesheet" href="libs/owlcarousel/owl.carousel.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" charset="utf-8">
 </head>
 <!--[if lt IE 9]>
 <script src="libs/html5shiv/es5-shim.min.js"></script>
@@ -54,10 +55,11 @@
 						<li><a href="shate-m_b2b_user_cabinet_salesperson.html"><i class="fa fa-phone" aria-hidden="true"></i><span>Ваш менеджер</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_history.html"><i class="fa fa-history" aria-hidden="true"></i><span>История запросов</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_rest_managment.html"><i class="fa fa-cloud-upload" aria-hidden="true"></i><span>Управление остатками</span></a></li>
-						<li><a href="#"><i class="fa fa-percent" aria-hidden="true"></i><span>Акции</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_action.html"><i class="fa fa-percent" aria-hidden="true"></i><span>Акции</span></a></li>
 						<li><a href="#"><i class="fa fa-cart-arrow-down " aria-hidden="true"></i><span>Уцененные товары</span></a></li>
 						<li><a href="#"><i class="fa fa-cart-plus " aria-hidden="true"></i><span>Наценки</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_polls.html"><i class="fa fa-check-square-o " aria-hidden="true"></i><span>Опросы</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_report.html"><i class="fa fa-support" aria-hidden="true"></i><span>Форма обратной связи</span></a></li>
 					</ul>
 				</nav>
 
@@ -632,6 +634,28 @@
 
 						</div>
 
+						<!--Уцененные товары-->
+						<div class="dashboard_small col-xs-12 col-sm-12">
+
+							<div class="arrows">
+								<i class="fa fa-arrows" aria-hidden="true"></i>
+							</div>
+							<div class="cross_close">
+								<i class="fa fa-plus" aria-hidden="true"></i>
+							</div>
+
+							<a href="#" class="content__item">
+								<span class="content__item-left">
+								<i class="fa fa-cart-plus " aria-hidden="true"></i>
+							</span>
+								<span class="content__item-right">
+								<span>Уцененные товары</span>
+								</span>
+							</a>
+
+						</div>
+
+
 					</div>
 
 
@@ -649,7 +673,7 @@
 								<div class="title">
 									<i class="fa fa-history" aria-hidden="true"></i>
 									<span>История <br>запросов</span>
-									<button type="button" name="button">Все запросы</button>
+									<button type="button" class="hidden-xs" name="button">Все запросы</button>
 								</div>
 
 								<div class="history">
@@ -733,7 +757,9 @@
 					<!--блок акции-->
 					<div class="sell_request large_connect col-xs-12 col-sm-12 col-md-12 col-lg-6">
 
-						<div class="content__item large_block toll clearfix">
+						<div class="content__item clearfix dashboardSell-largeBlock">
+
+						<div class="dashboardSell-largeBlock_controls">
 							<div class="cross_close">
 								<i class="fa fa-plus" aria-hidden="true"></i>
 							</div>
@@ -741,8 +767,9 @@
 							<div class="arrows">
 								<i class="fa fa-arrows" aria-hidden="true"></i>
 							</div>
+						</div>
 
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="dashboardSell-h2 col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div class="percent_wrap">
 									<i class="fa fa-percent" aria-hidden="true"></i>
 									<h2>Акции</h2>
@@ -750,119 +777,90 @@
 								<button class="button_action">Все акции</button>
 							</div>
 
-
-							<!--блоки товара на акции-->
-							<div class="clearfix hidden-xs hidden-sm hidden-md col-lg-12 plr0 owl-carousel">
-
-								<div class="item_stock clearfix">
-									<div class="image_wrap">
-										<img src="img/1.jpg" alt="">
-										<button class="btn" type="button" name="stock">Узнать больше</button>
+							<!--товар на скидке-->
+							<div class="dashboardSell col-xs-12 col-sm-6 col-md-4 col-lg-6">
+								<div class="dashboardSell-wrapper clearfix">
+								<div class="dashboardSell-image col-xs-6 col-md-6 col-sm-6 col-lg-5">
+									<img src="img/1.jpg" alt="">
+									<button class="red_btn">Узнать больше</button>
+								</div>
+								<div class="dashboardSell-content col-xs-6 col-mde-6 col-sm-6 col-lg-7">
+									<div class="dashboardSell-content_date">
+											<sapn><b>12</b> дек <b>2015</b> - <b>12</b> дек <b>2016</b></sapn>
 									</div>
-									<div class="date_sell"><span>04</span> дек <span>2015</span> - <span>31</span> янв <span>2016</span></div>
-									<div class="text">
-										<h2>MAHLE для профессионалов</h2>
+									<div class="dashboardSell-content_text">
+										<h4>Комплект специальной одежды</h4>
 										<p>Комплект специальной одежды для механика в подарок</p>
 									</div>
 								</div>
-
-
-
-								<div class="item_stock clearfix">
-									<div class="image_wrap">
-										<img src="img/1.jpg" alt="">
-										<button class="btn" type="button" name="stock">Узнать больше</button>
-									</div>
-									<div class="date_sell"><span>04</span> дек <span>2015</span> - <span>31</span> янв <span>2016</span></div>
-									<div class="text">
-										<h2>MAHLE для профессионалов</h2>
-										<p>Комплект специальной одежды для механика в подарок</p>
-									</div>
-								</div>
-
-
-
-								<div class="item_stock clearfix">
-									<div class="image_wrap">
-										<img src="img/1.jpg" alt="">
-										<button class="btn" type="button" name="stock">Узнать больше</button>
-									</div>
-									<div class="date_sell"><span>04</span> дек <span>2015</span> - <span>31</span> янв <span>2016</span></div>
-									<div class="text">
-										<h2>MAHLE для профессионалов</h2>
-										<p>Комплект специальной одежды для механика в подарок</p>
-									</div>
-								</div>
-
-
-
-								<div class="item_stock clearfix">
-									<div class="image_wrap">
-										<img src="img/1.jpg" alt="">
-										<button class="btn" type="button" name="stock">Узнать больше</button>
-									</div>
-									<div class="date_sell"><span>04</span> дек <span>2015</span> - <span>31</span> янв <span>2016</span></div>
-									<div class="text">
-										<h2>MAHLE для профессионалов</h2>
-										<p>Комплект специальной одежды для механика в подарок</p>
-									</div>
-								</div>
-
-
-							</div>
-
-							<!--акция1-->
-							<div class="p0 col-xs-12 col-sm-6 hidden-lg">
-								<div class="item_stock clearfix">
-									<div class="image_wrap">
-										<img src="img/1.jpg" alt="">
-										<button class="btn" type="button" name="stock">Узнать больше</button>
-									</div>
-									<div class="date_sell"><span>04</span> дек <span>2015</span> - <span>31</span> янв <span>2016</span></div>
-									<div class="text">
-										<h2>MAHLE для профессионалов</h2>
-										<p>Комплект специальной одежды для механика в подарок</p>
-									</div>
 								</div>
 							</div>
 
-							<!--акция2-->
-							<div class="p0 col-xs-12 col-sm-6 col-md-6 hidden-lg">
-								<div class="item_stock clearfix">
-									<div class="image_wrap">
-										<img src="img/1.jpg" alt="">
-										<button class="btn" type="button" name="stock">Узнать больше</button>
+							<!--товар на скидке-->
+							<div class="dashboardSell col-xs-12 col-sm-6 col-md-4 col-lg-6">
+								<div class="dashboardSell-wrapper clearfix">
+								<div class="dashboardSell-image col-xs-6 col-md-6 col-sm-6 col-lg-5">
+									<img src="img/1.jpg" alt="">
+									<button class="red_btn">Узнать больше</button>
+								</div>
+								<div class="dashboardSell-content col-xs-6 col-mde-6 col-sm-6 col-lg-7">
+									<div class="dashboardSell-content_date">
+											<sapn><b>12</b> дек <b>2015</b> - <b>12</b> дек <b>2016</b></sapn>
 									</div>
-									<div class="date_sell"><span>04</span> дек <span>2015</span> - <span>31</span> янв <span>2016</span></div>
-									<div class="text">
-										<h2>MAHLE для профессионалов</h2>
+									<div class="dashboardSell-content_text">
+										<h4>Комплект специальной одежды</h4>
 										<p>Комплект специальной одежды для механика в подарок</p>
 									</div>
 								</div>
-							</div>
-
-							<!--акция3-->
-							<div class="p0 col-xs-12 col-sm-6 col-md-6 hidden-lg">
-								<div class="item_stock clearfix">
-									<div class="image_wrap">
-										<img src="img/1.jpg" alt="">
-										<button class="btn" type="button" name="stock">Узнать больше</button>
-									</div>
-									<div class="date_sell"><span>04</span> дек <span>2015</span> - <span>31</span> янв <span>2016</span></div>
-									<div class="text">
-										<h2>MAHLE для профессионалов</h2>
-										<p>Комплект специальной одежды для механика в подарок</p>
-									</div>
 								</div>
 							</div>
 
-						</div>
+							<!--товар на скидке-->
+							<div class="dashboardSell col-xs-12 col-sm-6 col-md-4 col-lg-6">
+								<div class="dashboardSell-wrapper clearfix">
+								<div class="dashboardSell-image col-xs-6 col-md-6 col-sm-6 col-lg-5">
+									<img src="img/1.jpg" alt="">
+									<button class="red_btn">Узнать больше</button>
+								</div>
+								<div class="dashboardSell-content col-xs-6 col-mde-6 col-sm-6 col-lg-7">
+									<div class="dashboardSell-content_date">
+											<sapn><b>12</b> дек <b>2015</b> - <b>12</b> дек <b>2016</b></sapn>
+									</div>
+									<div class="dashboardSell-content_text">
+										<h4>Комплект специальной одежды</h4>
+										<p>Комплект специальной одежды для механика в подарок</p>
+									</div>
+								</div>
+								</div>
+							</div>
+
+							<!--товар на скидке-->
+							<div class="dashboardSell col-xs-12 col-sm-6 hidden-md col-lg-6">
+								<div class="dashboardSell-wrapper clearfix">
+								<div class="dashboardSell-image col-xs-6 col-md-6 col-sm-6 col-lg-5">
+									<img src="img/1.jpg" alt="">
+									<button class="red_btn">Узнать больше</button>
+								</div>
+								<div class="dashboardSell-content col-xs-6 col-mde-6 col-sm-6 col-lg-7">
+									<div class="dashboardSell-content_date">
+											<sapn><b>12</b> дек <b>2015</b> - <b>12</b> дек <b>2016</b></sapn>
+									</div>
+									<div class="dashboardSell-content_text">
+										<h4>Комплект специальной одежды</h4>
+										<p>Комплект специальной одежды для механика в подарок</p>
+									</div>
+								</div>
+								</div>
+							</div>
+
+
 					</div>
 
 
 
 				</div>
 			</div>
+		</div>
 
 
 
@@ -957,11 +955,55 @@
 		</div>
 	</section>
 
+	<div class="generalPopUp">
+		<div class="generalPopUp-window">
+			<div class="generalPopUp-window_close"></div>
+			<div class="generalPopUp-window_header">
+				<h2>Форма обратной связи</h2>
+			</div>
+			<div class="generalPopUp-window_body">
+				<form class="generalPopUp-window-reportForm" action="post">
+
+				<select name="reportProblem" class="generalPopUp-window-select">
+					<option value="0">Ошибка в кроссе</option>
+					<option value="1">вариант ошибки номер 2</option>
+					<option value="2">вариант ошибки номер 3</option>
+					<option value="3">Другое</option>
+				</select>
+				<textarea class="generalPopUp-window-textarea" maxlength="250" name="anyerror" placeholder="Опишите ошибку"></textarea>
+
+				<div class="generalPopUp-window-innerWrapper">
+					<div class="item">
+						<span>Параметр 1:</span>
+						<input value="GDB1330 TRW" name="article" disabled>
+					</div>
+					<div class="item">
+						<span>Параметр 2:</span>
+						<input value="HP3010 HSB" name="analog" disabled>
+					</div>
+				</div>
+
+				<div class="generalPopUp-window_commentToError">
+					<span>Коментарий к ошибке:</span>
+					<textarea type="text" name="commentToError"></textarea>
+				</div>
+
+			</div>
+
+			<div class="generalPopUp-window_buttongroup clerfix">
+				<a href="#" class="gray_btn">отмена</a>
+				<button class="red_btn">отправить</button>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
 
 
 	<script src="js/add.js" charset="utf-8"></script>
 	<script src="js/common.js" charset="utf-8"></script>
-	<script src="libs/owlcarousel/owl.carousel.min.js" charset="utf-8"></script>
+	<script src="libs/Magnific-Popup/dist/jquery.magnific-popup.min.js" charset="utf-8"></script>
 
 
 </body>

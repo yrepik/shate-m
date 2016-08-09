@@ -1,7 +1,7 @@
 var gulp         = require('gulp'),
 		sass         = require('gulp-sass'),
 		autoprefixer = require('gulp-autoprefixer'),
-		cleanCSS    = require('gulp-clean-css'),
+		//cleanCSS    = require('gulp-clean-css'),
 		rename       = require('gulp-rename'),
 		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
@@ -23,7 +23,7 @@ gulp.task('styles', function () {
 	}).on('error', sass.logError))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer({browsers: ['last 15 versions'], cascade: false}))
-	.pipe(cleanCSS())
+//	.pipe(cleanCSS())
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.stream());
 });

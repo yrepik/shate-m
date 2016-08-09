@@ -1,12 +1,68 @@
 $(function() {
-var x = $('.table_search_goods_result .descr .content p');
-x.text().slice(30)
+	//результаты поиска//
+function slideUpAllElementstable(){//
+	$('.searchResultShowAllRow_anyDeliv').addClass('slideOn');
+	$('.searchResultShowAllRow').addClass('slideOn');
 
-	$('.dashboardSettings').click(function(){//главная страница добавить/удалить элементы управления на блоки
-		var $input = $('.dashboardSettings-input');
-		if($input.prop('checked')){
-			$('.arrows, .cross_close').show();
+	var row = $('.searchResult-aimed_analogs').children();
+	row.not(':nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4), .searchResultShowAllRow').slideUp(0);
+
+
+	var rowAnyDeliv = $('.searchResult-aimed_anyDeliv').children();
+	rowAnyDeliv.not(':nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4), .searchResultShowAllRow_anyDeliv').slideUp(0);
+
+
+	$('.searchResultShowAllRow_anyDeliv').click(function(){
+			$(this).toggleClass('slideOn');
+		if($(this).hasClass('slideOn')){
+			$(this).children('[class*=triangle]').css('transform','rotate(0deg)');
+			rowAnyDeliv.not(':nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4), .searchResultShowAllRow_anyDeliv').slideUp(300);
 		}else{
+			$(this).children('[class*=triangle]').css('transform','rotate(180deg)');
+			rowAnyDeliv.slideDown();
+		}
+	})
+
+
+	$('.searchResultShowAllRow').click(function(){
+		$(this).toggleClass('slideOn');
+		if($(this).hasClass('slideOn')){
+			$(this).children('[class*=triangle]').css('transform','rotate(0deg)');
+			row.not(':nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4), .searchResultShowAllRow').slideUp(300);
+		}else{
+			$(this).children('[class*=triangle]').css('transform','rotate(180deg)');
+			row.slideDown();
+		}
+	})
+
+}slideUpAllElementstable();
+
+	function searchResultCheckboxPrice() { //показать цену покупки
+		if ($('.managmentFilterlabelwrap_price input').is(':checked')) {
+			$('.priceBuylWithNds').show();
+			$('.priceBuylWithNds').next('.price').toggleClass('col-lg-1 col-lg-2');
+		} else {
+			$('.priceBuylWithNds').hide()
+		}
+	}
+	$('.managmentFilterlabelwrap_price').click(searchResultCheckboxPrice)
+
+	function searchResultCheckbox() { //показать аналоги
+		if ($('.managmentFilterlabelwrap_analogs input').is(':checked')) {
+			$('.searchResult-aimed_analogs, .searchResult-aimed_anyDeliv').slideDown(200)
+		} else {
+			$('.searchResult-aimed_analogs, .searchResult-aimed_anyDeliv').slideUp(200)
+		}
+	}
+	$('.managmentFilterlabelwrap_analogs').click(searchResultCheckbox)
+		//конец результаты поиска//
+		//////////////////////////
+
+	$('.dashboardSettings').click(function() { //главная страница добавить/удалить элементы управления на блоки
+		var $input = $('.dashboardSettings-input');
+		if ($input.prop('checked')) {
+			$('.arrows, .cross_close').show();
+		} else {
 			$('.arrows, .cross_close').hide();
 		}
 	})
@@ -17,9 +73,9 @@ x.text().slice(30)
 		var cartCount = $('.top-quantity').text()
 		var $vol2 = +$vol;
 		var cartCount2 = +cartCount;
-		var summ = $vol2+cartCount2;
+		var summ = $vol2 + cartCount2;
 		$('.top-quantity').text(summ);
-		$('.totall').html('('+ summ * 1000 + 'руб.)')
+		$('.totall').html('(' + summ * 1000 + 'руб.)')
 	}
 	$('.tree-addToCart').click(treeAddToCart)
 
@@ -60,7 +116,13 @@ x.text().slice(30)
 
 
 	//поиск по ВИН//
-	$('.searchToVin1-query a').click(function(){//подставить содержимое в инпут
+	$('.parent-wrapper').magnificPopup({//попАп на странице VIN_05 от производителя
+	  delegate: '.searchToVinCarsTree-images_zoom', // child items selector, by clicking on it popup will open
+	  type: 'image'
+	});
+
+
+	$('.searchToVin1-query a').click(function() { //подставить содержимое в инпут
 		var $text = $(this).text();
 		$('.searchToVin1-searchfield input').val($text)
 	})
@@ -334,18 +396,6 @@ x.text().slice(30)
 		$('.top-balance .totall').mouseout(balanceToolTipHide);
 	}
 
-
-
-
-	$('.owl-carousel').owlCarousel({
-		loop: true,
-		items: 2,
-		autoplay: true,
-		autoplayTimeout: 3000,
-		autoplayHoverPause: true,
-		nav: true,
-		navText: ''
-	});
 
 
 	function checkBoxDashboard() { // chekbox на главной странице сайта
@@ -1149,7 +1199,7 @@ x.text().slice(30)
 			'display': 'block'
 		});
 
-		$('.searchfieldA').html('<b>'+$val+'<b>')
+		$('.searchfieldA').html('<b>' + $val + '<b>')
 	}
 	$('.serch_field').on('keyup', searchField);
 
@@ -1285,7 +1335,7 @@ x.text().slice(30)
 	}
 	$('.ios-switch').on('click', checkBox);
 	////////////////////////////////////
- //появление зоны служебных сообщений при загрузке
+	//появление зоны служебных сообщений при загрузке
 
 	//закрытие окна с информационными сообщениями
 	function alertClose() {
@@ -1679,7 +1729,7 @@ x.text().slice(30)
 	}
 	$('.orders-info_popUp-inner-close').click(ordersPopUpClose);
 
-	$('.orders_container').find('[class*=fa-question-circle]').click(function() { //открыть попАп окно на страние заказо
+	$('.orders-tableLg_content-name').find('[class*=fa-info-circle]').click(function() { //открыть попАп окно на страние заказо
 		$('.orders-info_popUp').fadeIn(300);
 	})
 
@@ -1752,7 +1802,7 @@ x.text().slice(30)
 			}
 
 		})
-		if ($(window).width() <= 768) {
+		if ($(window).width() < 768) {
 			$('#hamburger-icon').click(function() {
 				$(this).toggleClass('flag');
 				if ($(this).hasClass('flag')) {
@@ -1765,7 +1815,7 @@ x.text().slice(30)
 					}, 400)
 				}
 			})
-		} else if ($(window).width() > 768 && $(window).width() <= 1400) {
+		} else if ($(window).width() >= 768 && $(window).width() <= 1400) {
 			$('.mob_logo img').attr('src', 'img/moblogo.png');
 
 			$('#hamburger-icon').click(function() {
@@ -1809,8 +1859,40 @@ x.text().slice(30)
 
 
 
-	$('.mob_mnu_left').find('li').click(function() {
+
+
+
+
+
+/////////////////
+//общие скрипты//
+$('i, .tooltipImport').tooltip()//тултип
+
+	$('.mob_mnu_left').find('li').click(function() {//переход по страницам
 		$(this).addClass('active');
 		$('.mob_mnu_left').find('li').removeClass('active')
 	})
 });
+
+
+
+//скрипт попАп окна//
+function popUpSelected(){
+	if($(this).val() == 3){
+		$('.generalPopUp-window-textarea').slideDown(200);
+	}else{
+		$('.generalPopUp-window-textarea').slideUp(200);
+	}
+}
+$(".generalPopUp-window-select").click(popUpSelected);
+
+function closemainpopup(){
+	$(this).parents('.generalPopUp-window').animate({
+		'bottom': '220vh'
+	}, 300);
+	$(this).parents('.generalPopUp').fadeOut(200);
+	$(this).parents('.generalPopUp-window').animate({
+		'bottom': ''
+	}, 0);
+}
+$('.generalPopUp-window_close, .gray_btn').click(closemainpopup)

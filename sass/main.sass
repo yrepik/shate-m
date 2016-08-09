@@ -2,7 +2,7 @@
 @import "vars.sass"
 
 //Load Libs SASS
-@import "app/libs/font-awesome/scss/font-awesome.scss"
+//@import "app/libs/font-awesome/scss/font-awesome.scss"
 
 
 $base-font-size: 12px
@@ -109,6 +109,61 @@ body
 		box-shadow: inset 3px 3px 3px rgba(0,0,0,.3)
 	&:focus, &:active
 		background-color: $active
+
+.dashboardSell-largeBlock_controls
+	position: absolute
+	right: 0
+	top: 0
+.dashboardSell-largeBlock
+	padding: 25px 7px 15px 7px
+	margin-top: 17px
+.dashboardSell
+	padding: 10px
+	.dashboardSell-wrapper
+		background-color: #fff
+		padding: 15px
+		box-shadow: 0 3px 3px rgba(0,0,0,.3)
+		position: relative
+	.dashboardSell-image
+		padding-left: 0
+		img
+			width: 100%
+			border: 1px solid #b2b2b2
+		button
+			font-family: 'osr', sans-serif
+			padding: 5px
+			font-size: em(10px)
+			width: 100%
+			line-height: em(14px)
+	.dashboardSell-content
+		padding: 0
+	.dashboardSell-content_date
+		position: absolute
+		top: -15px
+		right: -15px
+		padding: 10px 5px
+		background-color: $red
+		text-align: center
+		font-size: em(10px)
+		line-height: em(12px)
+		color: #fff
+		@include calc(width, "100% + 15px")
+	.dashboardSell-content_text
+		h4
+			color: #333
+			font-size: em(14px)
+			line-height: 1.2em
+			margin-top: 30px
+			margin-bottom: 10px
+		p
+			font-size: em(12px)
+			line-height: em(14px)
+			margin-bottom: 0
+			word-break: normal
+.dashboardSell-h2
+	margin-bottom: 20px
+
+
 
 
 
@@ -735,8 +790,6 @@ body
 
 .large_block
 	margin-top: 17px
-	padding: 40px 15px 30px 15px
-	height: 450px
 	.cross_close
 		right: -5px !important
 		top: -10px !important
@@ -890,12 +943,16 @@ body
 	background-color: #fff
 	min-height: 196px
 	height: auto
+	.image_wrap
+		img
+			width: 100%
 	&:hover
 		.image_wrap
 			button
 				background-color: darken(#ff0000, 3%)
 			img
 				filter: brightness(115%)
+
 
 
 
@@ -1412,7 +1469,7 @@ body
 			left: -10px
 			bottom: -5px
 			position: relative
-			width: 130%
+			@include calc(width, "100% + 20px")
 			display: inline-block
 			padding: 0 0 5px 15px
 			span
@@ -1671,7 +1728,7 @@ body
 							width: 50%
 							float: left
 						.inner-wrap
-							height: 230px
+							height: 267px
 							overflow-y: scroll
 							float: left
 							width: 100%
@@ -2983,7 +3040,6 @@ input
 		margin-left: 15px
 		margin-right: 15px
 		margin-bottom: 25px
-		-webkit-transition: .1s
 		transition: .1s
 		.thead
 			background-color: #cfcfcf
@@ -3025,10 +3081,7 @@ input
 			display: block
 			float: left
 			margin-right: 15px
-.table_stock_selection
-	&:hover
-		.tr_xs
-			background-color: #d3ffb8
+
 .add_file .add_tmpl button i, .file-input a
 	margin-right: 10px
 
@@ -3171,14 +3224,13 @@ input
 	&:active
 		background-color: #39d372
 	&:hover
-		box-shadow: inset 3px 3px 3px  rgba(0,0,0,.3)
+		box-shadow: inset 3px 3px 3px	rgba(0,0,0,.3)
 
 
 .table_search_goods_result
 	border: 1px solid #8d8d8d
 	margin-left: 15px
 	margin-right: 15px
-	height: 160px
 	.availability .title
 		padding-top: 7px !important
 	.town
@@ -3225,13 +3277,16 @@ input
 			text-decoration: underline
 			&:hover
 				text-decoration: none
-		p
-			font-size: 1em
-			text-transform: uppercase
-		span
+		.import_brandArticle
 			color: #dd3737
 			text-transform: uppercase
 			font-size: 1.16667em
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+		p
+			font-size: 1em
+			text-transform: uppercase
 		.info
 			float: right
 			color: #666
@@ -3300,8 +3355,8 @@ input
 			display: inline-block
 			float: left
 			text-transform: uppercase
-			margin-top: 13px
 			margin-right: 5px
+			top: 15px !important
 		.bottom_cell form, .top_cell form
 			float: left
 			width: 125px
@@ -3336,17 +3391,27 @@ input
 		.content
 			height: 100%
 			.top_cell
-				padding: 30px 5px 5px
 				display: inline-block
-				height: calc(50% - 10px)
 				background-color: #dcfdc7
 				width: 100%
+				padding: 5px
+				span, .alert-info
+					position: relative
+					top: 20px
+				.alert-info
+					color: #fbaf5d
+					font-size: em(14px)
 			.bottom_cell
-				padding: 30px 5px 5px
+				padding: 5px
 				width: 100%
 				display: inline-block
-				height: calc(50% - 16px)
 				background-color: #fdeec8
+				span, .alert-info
+					position: relative
+					top: 20px
+				.alert-info
+					color: #fbaf5d
+					font-size: em(14px)
 			.light_top
 				background-color: #eaffde
 			.light_bottom
@@ -3458,14 +3523,15 @@ input
 		cursor: pointer
 	.bottom_cell form .checked_box, .top_cell form .checked_box
 		background-color: #cfcfcf
-		height: 35px
-		width: 35px
+		height: 33px
+		width: 33px
 		position: absolute
-		left: 0
+		left: 1px
+		top: 1px
 		cursor: pointer
 	.bottom_cell form .checked_box .inner, .top_cell form .checked_box .inner
-		height: 21px
-		width: 21px
+		height: 19px
+		width: 19px
 		background-color: #fff
 		left: 7px
 		top: 7px
@@ -3475,8 +3541,8 @@ input
 		height: 13px
 		width: 13px
 		position: relative
-		top: 3px
-		left: 3px
+		top: 2px
+		left: 2px
 
 .lightgray
 	background-color: #ededed !important
@@ -3590,6 +3656,16 @@ input[type=checkbox]
 		-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), 0 0 0 1px #00a23f
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), 0 0 0 1px #00a23f
 
+.table_stock_selectionPlace
+	line-height: em(13px)
+	font-size: em(13px) !important
+	padding: 12px 20px!important
+	height: 55px
+.import-repeatRow
+	height: 65px
+	margin: 0
+	.bottom_cell, .top_cell
+		height: 100% !important
 ///конец стилей страницы импорта заказов//
 
 
@@ -4861,7 +4937,7 @@ input[type=checkbox]
 						text-align: left
 						line-height: em(15px)
 						margin-top: 5px
-						display: block
+						display: inline-block
 						color: #666
 						cursor: pointer
 						&:hover
@@ -5007,6 +5083,8 @@ input[type=checkbox]
 
 ///////////стили для страницы финанасов reconciliation.html///////////////
 .finances
+	padding-left: 15px !important
+	padding-right: 15px !important
 	.finances-h2
 		margin-left: 0
 		margin-right: 0
@@ -5436,7 +5514,7 @@ input[type=checkbox]
 					word-break: break-all
 				.buttonsBlock
 					button
-						padding: 2px  10px
+						padding: 2px	10px
 						font-size: em(14px)
 						border: none
 						float: right
@@ -5537,48 +5615,6 @@ input[type=checkbox]
 					width: 100%
 					padding: 5px 10px
 					color: $red
-
-.managmentFilterlabelwrap
-	float: left
-	label
-		position: relative
-		margin-right: 20px
-		float: left
-		opacity: 1
-		input:checked
-			+ span::after
-				background-color: $green !important
-	.overlay
-		height: 16px
-		width: 16px
-		display: block
-		border: 1px solid lightgray
-		float: left
-		margin-right: 10px
-		position: relative
-		top: 3px
-		cursor: pointer
-		&:after
-			position: absolute
-			content: ''
-			display: block
-			height: 10px
-			width: 10px
-			position: relative
-			top: 2px
-			left: 2px
-		&:hover
-			&:after
-				border: 1px solid lightgray
-
-
-
-
-.managmentQurencySelect
-	float: right
-	padding: 10px
-
-
 //конец управление остатками rest_managment//
 
 
@@ -6499,7 +6535,7 @@ input[type=checkbox]
 	.search
 		background-color: #f0f0f0
 		padding: 20px 25px
-		box-shadow:  0 3px 2px rgba(0,0,0,.3)
+		box-shadow:	0 3px 2px rgba(0,0,0,.3)
 		position: relative
 		z-index: 1
 		.wrapper-search
@@ -6528,9 +6564,9 @@ input[type=checkbox]
 						color: $green
 
 .tab_item
-  display: none
-  &:first-child
-    display: block
+	display: none
+	&:first-child
+		display: block
 
 .searchToVinCarsTree
 	padding: 0
@@ -6664,8 +6700,59 @@ input[type=checkbox]
 				background-color: #999999
 				color: #fff
 .searchToVinCarsTree-images
-	border: 1px solid red
 	padding: 30px
+.searchToVinCarsTree-images_wrap
+	display: block
+	color: gray
+	transition: .3s
+	border: 0px
+	padding: 2px
+	background-color: #fff
+	position: relative
+	z-index: 0
+	overflow: hidden
+	.parent-wrapper
+		display: block
+		padding: 15px
+		width: 100%
+		background-color: #fff
+		text-align: center
+		overflow: hidden
+	img
+		width: 100%
+		transition: .2s
+		max-height: 300px
+	span
+		display: block
+		background-color: transparent
+	.descr
+		margin-top: 5px
+		font-size: em(13px)
+		text-align: center
+		color: #333
+		b
+			font-family: 'osb', sans-serif
+	&:hover, &:focus
+		text-decoration: none
+		color: gray
+		background-color: #ec8f8c
+.searchToVinCarsTree-images_zoom
+	display: block
+	position: absolute
+	color: gray
+	line-height: 0
+	transition: .3
+	z-index: 999
+	left: 0
+	top: 0
+	font-size: em(25px)
+	padding: 10px
+	&:hover
+		color: #ec8f8c
+	&:focus
+		outline: none
+		color: gray
+
 
 .helper
 	.innrer_content_popUp
@@ -6688,16 +6775,148 @@ input[type=checkbox]
 		bottom: 5px
 //конец поиск по ВИН//
 
+//поиск по вин 06//
+.searchToVin6
+	.searchToVin6-h2
+		margin: 30px 0 10px 0
+		i
+			color: #959595
+			font-size: (30px)
+			margin-right: 20px
+			position: relative
+			top: 3px
+.searchToVin6-breadCrumbs
+	margin: 0
+	ul
+		padding: 0
+		margin: 0
+		color: #4d4d4d
+		li
+			list-style-type: none
+			display: inline-block
+			text-transform: uppercase
+			font-size: em(18px)
+			a
+				color: #4d4d4d
+			span
+				margin-right: 5px
+		b
+			font-size: em(18px)
+			font-weight: normal
+			margin: 0 20px
+			position: relative
+			bottom: 2px
+.searchToVin6-breadCrumbs-descr
+	text-transform: uppercase
+	margin-top: 20px
+
+.searchToVin6_content
+	margin-top: 20px
+.searchToVin6_content-image
+	border: 1px solid gray
+	position: relative
+	a
+		position: absolute
+		top: 10px
+		left: 10px
+		line-height: 0
+		height: 0
+		padding: 0
+	img
+		width: 100%
+.searchToVin6_content-table
+	.header
+		background-color: #cfcfcf
+		font-family: 'osb', sans-serif
+		position: relative
+		z-index: 4
+		box-shadow: 0 3px 3px rgba(0,0,0,.3)
+		padding: 10px 5px
+	.table-row i
+		position: absolute
+		right: 10px
+		display: block
+		border: 1px solid lightgray
+		position: relative
+		float: right
+		height: 20px
+		width: 20px
+		text-align: center
+		line-height: 20px
+		background-color: #fff
+	.table-row
+		padding: 10px 5px
+		background-color: #f0f0f0
+		a
+			color: $red
+			text-transform: uppercase
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+		&:nth-child(even)
+			background-color: #e4e4e4
+
+
+//конеу поиск по вин 06//
+
 
 
 //результаты поиска//
 .managmentAllFilter
-	padding-top: 20px
-	padding-bottom: 0px 10px
-	margin: 0
-	margin-bottom: 20px
+	padding: 20px
+	background-color: #eaeaea
+	.managmentFilterlabelwrap
+		position: relative
+		top: 10px
+
+.managmentFilterlabelwrap
+	float: left
+	label
+		position: relative
+		margin-right: 20px
+		float: left
+		opacity: 1
+		input:checked
+			+ span
+				background-color: $green
+				border-color: $green
+				&:after
+					left: 24px
+					box-shadow: inset 0 1px 2px rgba(0,0,0,.3)
+
+	.overlay
+		height: 22px
+		width: 46px
+		display: block
+		border: 1px solid gray
+		background-color: #fff
+		border-radius: 999px
+		float: left
+		margin-right: 10px
+		position: relative
+		cursor: pointer !important
+		background-color: #d2d2d2
+		transition: .3s
+		&:after
+			position: absolute
+			content: ''
+			display: block
+			height: 10px
+			width: 10px
+			position: relative
+			left: 0px
+			background-color: #fff
+			border: 1px solid gray
+			border-radius: 999px
+			width: 20px
+			height: 20px
+			transition: .3s
+			box-shadow: 0 1px 2px rgba(0,0,0,.3)
+
+
 .searchResult
 	padding: 0
+	min-height: 70vh
 	.searchResult-h2
 		margin: 20px 0
 		i
@@ -6740,6 +6959,57 @@ input[type=checkbox]
 		.triangle-right
 			top: 12px
 			right: 12px
+.managmentQurencySelect
+	float: right
+	padding: 7px 10px
+	cursor: pointer
+.managmentAllFilter-wrap
+	span, select, button
+		float: right
+		margin-left: 20px
+		text-transform: uppercase
+	span
+		position: relative
+		top: 6px
+	select
+		margin-left: 5px
+	button
+		padding: 8px 10px
+		line-height: 1.2em
+		display: block
+		position: relative
+		top: 2px
+
+
+
+.searchResultShowAllRow,
+.searchResultShowAllRow_anyDeliv
+	position: relative
+	margin-left: 15px
+	margin-right: 15px
+	span
+		display: block
+		text-align: center
+		background-color: #eaeaea
+		padding: 5px 10px
+		text-transform: uppercase
+		font-family: 'osb', sans-serif
+		font-size: em(10px)
+		text-decoration: none
+		cursor: pointer
+		&:hover
+			cursor: pointer
+			text-decoration: underline
+	.triangle,
+	.triangleR
+		@include triangle(12px 10px, gray, down)
+		position: absolute
+	.triangle
+		left: 10px
+		top: 10px
+	.triangleR
+		right: 10px
+		top: 10px
 
 
 
@@ -6748,20 +7018,40 @@ input[type=checkbox]
 //конец результаты поиска//
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//акции//
+.actions
+	min-height: 80vh
+	.breadcrumbs_bottom
+		padding-left: 6px
+		margin-top: 20px
+		position: relative
+		top: 3px
+	.actions-h2
+		margin: 20px 0 10px 0
+		padding: 20px 0
+		h2
+			margin: 0
+		i
+			color: #959595
+			margin-right: 20px
+			font-size: em(16px)
+			position: relative
+			top: 3px
+		button, select
+			float: right
+			padding: 7px 25px
+		select
+			padding: 7px 15px
+			font-size: em(13px)
+			margin-left: 20px
+		.actions-controls
+			padding: 0
+	.dashboardSell .dashboardSell-image button
+		padding: 10px 5px
+.actions-content
+	.dashboardSell-wrapper
+		background-color: #eaeaea
+//конец акции/
 
 
 
@@ -6900,5 +7190,235 @@ h3
 		-ms-transform: rotate(-360deg)
 	100%
 		-ms-transform: rotate(0deg)
+
+
+
+
+
+//tooltiops//
+.tooltip
+	position: absolute
+	z-index: 1070
+	display: block
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+	font-style: normal
+	font-weight: normal
+	letter-spacing: normal
+	line-break: auto
+	line-height: 1.42857143
+	text-align: left
+	text-align: start
+	text-decoration: none
+	text-shadow: none
+	text-transform: none
+	white-space: normal
+	word-break: normal
+	word-spacing: normal
+	word-wrap: normal
+	font-size: 12px
+	opacity: 0
+	filter: alpha(opacity = 0)
+	&.in
+		opacity: 0.9
+		filter: alpha(opacity = 90)
+	&.top
+		margin-top: -3px
+		padding: 5px 0
+	&.right
+		margin-left: 3px
+		padding: 0 5px
+	&.bottom
+		margin-top: 3px
+		padding: 5px 0
+	&.left
+		margin-left: -3px
+		padding: 0 5px
+
+.tooltip-inner
+	min-width: 150px
+	padding: 3px 8px
+	color: #ffffff
+	text-align: center
+	background-color: rgba(0,0,0,.8)
+	border-radius: 4px
+
+.tooltip-arrow
+	position: absolute
+	width: 0
+	height: 0
+	border-color: transparent
+	border-style: solid
+
+.tooltip
+	&.top .tooltip-arrow
+		bottom: 0
+		left: 50%
+		margin-left: -5px
+		border-width: 5px 5px 0
+		border-top-color: #000000
+	&.top-left .tooltip-arrow
+		bottom: 0
+		right: 5px
+		margin-bottom: -5px
+		border-width: 5px 5px 0
+		border-top-color: #000000
+	&.top-right .tooltip-arrow
+		bottom: 0
+		left: 5px
+		margin-bottom: -5px
+		border-width: 5px 5px 0
+		border-top-color: #000000
+	&.right .tooltip-arrow
+		top: 50%
+		left: 0
+		margin-top: -5px
+		border-width: 5px 5px 5px 0
+		border-right-color: #000000
+	&.left .tooltip-arrow
+		top: 50%
+		right: 0
+		margin-top: -5px
+		border-width: 5px 0 5px 5px
+		border-left-color: #000000
+	&.bottom .tooltip-arrow
+		top: 0
+		left: 50%
+		margin-left: -5px
+		border-width: 0 5px 5px
+		border-bottom-color: #000000
+	&.bottom-left .tooltip-arrow
+		top: 0
+		right: 5px
+		margin-top: -5px
+		border-width: 0 5px 5px
+		border-bottom-color: #000000
+	&.bottom-right .tooltip-arrow
+		top: 0
+		left: 5px
+		margin-top: -5px
+		border-width: 0 5px 5px
+		border-bottom-color: #000000
+
+
+
+
+//обратная связь//
+.report
+	min-height: 70vh
+	padding-top: 20px
+	padding-bottom: 20px
+	.generalPopUp-window_commentToError
+		margin-top: 0
+	.generalPopUp-window-select
+		margin-top: 5px
+.report-h2
+	margin: 0
+	margin-bottom: 20px
+	i
+		font-size: em(16px)
+		top: 3px
+		position: relative
+		color:	#959595
+		margin-right: 20px
+.report-content
+	margin: 0
+
+//поп-ап окно для репортов//
+.generalPopUp
+	position: fixed
+	display: none
+	left: 0
+	right: 0
+	bottom: 0
+	top: 0
+	background-color: rgba(0,0,0,.4)
+	z-index: 900
+	.generalPopUp-window
+		overflow: hidden
+		padding: 25px
+		width: 50%
+		height: 70%
+		background-color: #fff
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		top: 0
+		.generalPopUp-window_close
+			height: 23px
+			width: 23px
+			background-color: $red
+			position: absolute
+			right: 0
+			top: 0
+			&:hover
+				cursor: pointer
+				background-color: $active
+			&:after, &::before
+				position: absolute
+				content: ''
+				width: 90%
+				left: 0
+				right: 0
+				margin: auto
+				height: 2px
+				background-color: #fff
+				@include calc(top, "50% - 2px")
+			&::before
+				transform: rotate(45deg)
+			&::after
+				transform: rotate(-45deg)
+		.generalPopUp-window_header
+			h2
+				margin: 0
+		.generalPopUp-window_body
+			margin-top: 20px
+			@include calc(height, "100% - 120px")
+			overflow-y: scroll
+.generalPopUp-window-reportForm
+	select, textarea
+		width: 100%
+		padding: 5px 10px
+		text-transform: uppercase
+		margin-bottom: 20px
+	.generalPopUp-window-textarea
+		display: none
+		height: 90px
+.generalPopUp-window-innerWrapper
+	.item
+		margin-bottom: 25px
+		span
+			width: 120px
+			display: inline-block
+			position: relative
+			top: 4px
+		input
+			@include calc(width, "100% - 130px")
+			float: right
+			padding: 5px 10px
+			font-family: 'osb', sans-serif
+			cursor: no-drop
+.generalPopUp-window_commentToError
+	margin-top: 35px
+	textarea
+		height: 150px
+		margin-top: 5px
+.generalPopUp-window_buttongroup
+	left: 25px
+	bottom: 25px
+	right: 25px
+	.gray_btn
+		color: gray
+		float: left
+		padding: 10px 30px
+		&:hover, &:focus, &:active
+			text-decoration: none
+	.red_btn
+		border: none
+		float: right
+		padding: 10px 30px
+/////////////////////////////
+
 
 @import "media"

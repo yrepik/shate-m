@@ -85,7 +85,9 @@ $base-font-size: 13px
 /*конец шапка сайта*/
 
 
-
+@media only screen and (max-width : 1650px)
+	.dashboardSell .dashboardSell-content_text h4
+		font-size: em(13px)
 @media only screen and (max-width : 1842px)
 	.orders_list_changes_btn
 		span
@@ -98,6 +100,10 @@ $base-font-size: 13px
 	.user_name ul .settings
 		display: none
 @media only screen and (max-width : 1200px)
+	.history_request
+		margin-top: 17px
+		.content__item
+			padding: 20px
 	.orders-info_popUp-inner-buttons
 		margin-top: 0
 		button
@@ -152,8 +158,11 @@ $base-font-size: 13px
 		padding: 10px 12px
 	.top_serch .search_btn
 		right: 3%
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.dashboardSell .dashboardSell-image button
+		padding: 10px 5px
 	.orders-info_popUp-inner
 		.tab_item
 			padding: 0 !important
@@ -351,17 +360,7 @@ $base-font-size: 13px
 				i
 					margin-right: 10px !important
 					margin-left: 0 !important
-	.large_block
-		.title
-			button
-				padding: 5px 10px
-				font-size: em(12px)
-			i
-				margin-right: 10px
-				left: 10px
-			span
-				margin-right: 5px
-				font-size: em(13px)
+
 	.percent_wrap
 		i
 			margin-right: 10px
@@ -574,9 +573,6 @@ $base-font-size: 13px
 				margin-top: 5px	!important
 				float: left
 				margin: 0
-	.large_block
-		min-height: 450px
-		height: auto
 	.hidemenuR
 		left: 48px
 		padding-right: 64px
@@ -779,8 +775,7 @@ $base-font-size: 13px
 			width: 30%
 		.th:nth-child(3)
 			width: 20%
-	.large_block
-		height: 450px
+
 
 @media only screen and (min-width : 1288px)
 	.history .tr .description
@@ -893,6 +888,9 @@ $base-font-size: 13px
 			padding: 10px
 
 @media only screen and (max-width : 1200px)
+	.managmentFilterlabelwrap label
+		margin-bottom: 10px
+		line-height: em(12px)
 	.search_goods
 		button
 			font-size: em(10px)
@@ -920,8 +918,7 @@ $base-font-size: 13px
 				padding-left: 15px !important
 	.table_search_goods_result
 		margin-bottom: 25px
-		.cell_wrap
-			height: 150px
+
 
 	.import
 		.stock_selection
@@ -938,10 +935,18 @@ $base-font-size: 13px
 					font-size: em(10px)
 
 @media only screen and (max-width : 768px)
-	.table_stock_selection
-		&:hover
-			.tr_xs
-				background-color: #d6fed5 !important
+	.import-repeatRow
+		height: 100px
+		.top_cell, .bottom_cell
+			line-height: 13px
+			height: 75px !important
+			padding-left: 15px !important
+	.managmentFilterlabelwrap label
+		margin-bottom: 10px
+		line-height: em(22px)
+		.managmentFilterlabelwrap_analogs-text
+			display: inline-block
+			line-height: em(12px)
 	.search_goods-rightBtn
 		width: 100%
 	.search_goods
@@ -972,10 +977,6 @@ $base-font-size: 13px
 			padding-left: 15px
 	.price
 		text-align: left !important
-		.top_cell, .bottom_cell
-			padding-top: 25px !important
-			line-height: 13px
-			padding-left: 15px !important
 	.search_goods
 		button
 			width: 100%
@@ -1761,6 +1762,20 @@ $base-font-size: 13px
 					display: inline-block
 					font-size: em(11px)
 					line-height: 12px
+		.managment-rest_exports-table-row
+			.buttonsBlock-wrapper
+				width: 32px
+				float: right
+			.buttonsBlock
+				button
+					display: inline-block
+					text-align: center
+					width: 100%
+					margin-bottom: 4px
+					padding: 0
+					&:nth-last-child(1)
+						margin-bottom: 0
+
 
 	/*Disable Animation on Mobile Devices*/
 
@@ -2136,3 +2151,53 @@ $base-font-size: 13px
 	.priceSellWithNds-recomendidPrice
 		margin-top: 0 !important
 //конец результаты поиска//
+
+//акции//
+@media only screen and (max-width : 768px)
+	.actions-h2
+		h2
+			margin-bottom: 20px !important
+		button
+			float: left !important
+			padding-left: 10px !important
+			padding-right: 10px !important
+//конец акции//
+
+//обратная связь//
+@media only screen and (max-width : 768px)
+	.report-h2
+		font-size: em(8px)
+		margin-bottom: 30px
+		i
+			margin-right: 5px
+			top: 0
+
+//конец обратная связь//
+
+@media only screen and (max-width : 768px)
+	.generalPopUp-window
+		width: 90% !important
+@media only screen and (max-width : 440px)
+	.generalPopUp-window_commentToError
+		textarea
+			height: 100px
+	.generalPopUp-window_buttongroup
+		button, a
+			width: 100%
+			text-align: center
+			margin-bottom: 10px
+			padding: 5px !important
+		button
+			margin-bottom: 0
+	.generalPopUp-window-innerWrapper
+		.item
+			input
+				width: 100%
+				margin-top: 3px
+	.generalPopUp-window-reportForm select, .generalPopUp-window-reportForm textarea
+		margin-bottom: 5px
+	.generalPopUp .generalPopUp-window .generalPopUp-window_header h2
+		font-size: em(16px)
+@media only screen and (max-height : 640px)
+	.generalPopUp-window
+		height: 90% !important

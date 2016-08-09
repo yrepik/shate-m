@@ -20,7 +20,8 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/fonts.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
-	<link rel="stylesheet" href="libs/owlcarousel/owl.carousel.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" charset="utf-8">
+
 </head>
 <!--[if lt IE 9]>
 <script src="libs/html5shiv/es5-shim.min.js"></script>
@@ -54,10 +55,12 @@
 						<li><a href="shate-m_b2b_user_cabinet_salesperson.html"><i class="fa fa-phone" aria-hidden="true"></i><span>Ваш менеджер</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_history.html"><i class="fa fa-history" aria-hidden="true"></i><span>История запросов</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_rest_managment.html"><i class="fa fa-cloud-upload" aria-hidden="true"></i><span>Управление остатками</span></a></li>
-						<li><a href="#"><i class="fa fa-percent" aria-hidden="true"></i><span>Акции</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_action.html"><i class="fa fa-percent" aria-hidden="true"></i><span>Акции</span></a></li>
 						<li><a href="#"><i class="fa fa-cart-arrow-down " aria-hidden="true"></i><span>Уцененные товары</span></a></li>
 						<li><a href="#"><i class="fa fa-cart-plus " aria-hidden="true"></i><span>Наценки</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_polls.html"><i class="fa fa-check-square-o " aria-hidden="true"></i><span>Опросы</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_report.html"><i class="fa fa-support" aria-hidden="true"></i><span>Форма обратной связи</span></a></li>
+
 					</ul>
 				</nav>
 
@@ -171,6 +174,35 @@
 						</ul>
 					</div>
 
+					<!--фильтры страницы-->
+					<div class="row managmentAllFilter">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="managmentFilterlabelwrap pl0 col-xs-10 col-sm-4 col-md-5 col-lg-5">
+								<label class="managmentFilterlabelwrap_analogs">
+									<input type="checkbox" checked="">
+									<span class="overlay"></span>
+									<span class="managmentFilterlabelwrap_analogs-text">Показать <br class="hidden-sm hidden-md hidden-lg">аналоги</span>
+								</label>
+
+								<label  class="managmentFilterlabelwrap_price">
+									<input type="checkbox" checked>
+									<span class="overlay"><span></span></span>
+									<span class="managmentFilterlabelwrap_analogs-text">Показать <br class="hidden-sm hidden-md hidden-lg">цену покупки</span>
+								</label>
+							</div>
+							<div class="pr0 managmentAllFilter-wrap col-xs-2 col-sm-8 col-md-7 col-lg-7">
+
+								<select name="managmentQurencySelect" class="managmentQurencySelect">
+									<option value="0">RUB</option>
+									<option value="1">USD</option>
+								</select>
+								<span class="hidden-xs">Валюта:</span>
+								<button type="button" class="red_btn hidden-xs">Очистить</button>
+								<button type="button" class="gray_btn hidden-xs">Сохранить</button>
+							</div>
+						</div>
+					</div>
+
 					<!--зона обновление баланса-->
 					<div class="row alert">
 						<div class="col-xs-12">
@@ -186,7 +218,6 @@
 
 
 
-
 					<div class="searchResult container-fluid">
 						<div class="row searchResult-h2">
 							<!--импорт заказов-->
@@ -196,31 +227,7 @@
 						</div>
 
 
-						<div class="row managmentAllFilter">
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<div class="managmentFilterlabelwrap pl0 col-xs-10 col-sm-8 col-md-8 col-lg-8">
-									<label>
-										<input type="checkbox">
-										<span class="overlay"></span>
-										<span class="hidden-sm hidden-md hidden-lg">Показать аналоги</span>
-										<span class="hidden-xs">Показывать/скрывать аналоги</span>
-									</label>
 
-									<label>
-										<input type="checkbox">
-										<span class="overlay"><span></span></span>
-										<span class="hidden-sm hidden-md hidden-lg">Показать цену покупки</span>
-										<span class="hidden-xs">Показывать/скрывать цену покупки</span>
-									</label>
-								</div>
-								<div class="pr0 col-xs-2 col-sm-4 col-md-4 col-lg-4">
-									<select name="managmentQurencySelect" class="managmentQurencySelect">
-										<option value="0">RUB</option>
-										<option value="1">USD</option>
-									</select>
-								</div>
-							</div>
-						</div>
 
 
 
@@ -253,7 +260,7 @@
 									<div class="title">Описание</div>
 									<div class="content">
 										<h4>ФИЛЬТР масляный</h4>
-										<p>CITROEN: AX 86-98, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
+										<p class="tooltipImport" data-toggle="tooltip" data-placement="right" title="CITROEN: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93 Citrien: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93">CITROEN: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
 									</div>
 								</div>
 								<!--Город-->
@@ -269,7 +276,8 @@
 									<div class="title light_title">Наличие</div>
 									<div class="content">
 										<div class="top_cell light_top"><span>12</span></div>
-										<div class="bottom_cell light_bottom"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+										<div class="bottom_cell light_bottom">
+											<a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -362,7 +370,7 @@
 
 
 						<!--АНАЛОГИ (ЗАМЕНЫ) В НАЛИЧИИ НА НАШИХ Складах-->
-						<div class="searchResult-aimed">
+						<div class="searchResult-aimed searchResult-aimed_analogs">
 							<div class="searchResult-result">
 								<span>Аналоги (замены) в наличии на наших складах</span>
 							</div>
@@ -391,7 +399,7 @@
 									<div class="title">Описание</div>
 									<div class="content">
 										<h4>ФИЛЬТР масляный</h4>
-										<p>CITROEN: AX 86-98, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
+										<p class="tooltipImport" data-toggle="tooltip" data-placement="right" title="CITROEN: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93 Citrien: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93">CITROEN: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
 									</div>
 								</div>
 								<!--Город-->
@@ -407,7 +415,7 @@
 									<div class="title light_title">Наличие</div>
 									<div class="content">
 										<div class="top_cell light_top"><span>12</span></div>
-										<div class="bottom_cell light_bottom"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+										<div class="bottom_cell light_bottom"><a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -492,7 +500,6 @@
 										</div>
 									</div>
 								</div>
-
 							</div>
 
 
@@ -520,7 +527,7 @@
 									<div class="title">Описание</div>
 									<div class="content">
 										<h4>ФИЛЬТР масляный</h4>
-										<p>CITROEN: AX 86-98, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
+										<p class="tooltipImport" data-toggle="tooltip" data-placement="right" title="CITROEN: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93 Citrien: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93">CITROEN: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
 									</div>
 								</div>
 								<!--Город-->
@@ -536,7 +543,7 @@
 									<div class="title light_title">Наличие</div>
 									<div class="content">
 										<div class="top_cell light_top"><span>12</span></div>
-										<div class="bottom_cell light_bottom"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+										<div class="bottom_cell light_bottom"><a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -571,11 +578,11 @@
 									<div class="content">
 										<div class="top_cell ">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 										<div class="bottom_cell">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 									</div>
 								</div>
@@ -651,7 +658,7 @@
 									<div class="title">Описание</div>
 									<div class="content">
 										<h4>ФИЛЬТР масляный</h4>
-										<p>CITROEN: AX 86-98, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
+										<p class="tooltipImport" data-toggle="tooltip" data-placement="right" title="CITROEN: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93 Citrien: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93">CITROEN: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
 									</div>
 								</div>
 								<!--Город-->
@@ -667,7 +674,8 @@
 									<div class="title light_title">Наличие</div>
 									<div class="content">
 										<div class="top_cell light_top"><span>12</span></div>
-										<div class="bottom_cell light_bottom"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+										<div class="bottom_cell light_bottom"><a href="#">
+											<i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -702,11 +710,11 @@
 									<div class="content">
 										<div class="top_cell ">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 										<div class="bottom_cell">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 									</div>
 								</div>
@@ -782,7 +790,7 @@
 									<div class="title">Описание</div>
 									<div class="content">
 										<h4>ФИЛЬТР масляный</h4>
-										<p>CITROEN: AX 86-98, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
+										<p class="tooltipImport" data-toggle="tooltip" data-placement="right" title="CITROEN: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93 Citrien: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93">CITROEN: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
 									</div>
 								</div>
 								<!--Город-->
@@ -798,7 +806,7 @@
 									<div class="title light_title">Наличие</div>
 									<div class="content">
 										<div class="top_cell light_top"><span>12</span></div>
-										<div class="bottom_cell light_bottom"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+										<div class="bottom_cell light_bottom"><a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -833,11 +841,11 @@
 									<div class="content">
 										<div class="top_cell ">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 										<div class="bottom_cell">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 									</div>
 								</div>
@@ -913,7 +921,7 @@
 									<div class="title">Описание</div>
 									<div class="content">
 										<h4>ФИЛЬТР масляный</h4>
-										<p>CITROEN: AX 86-98, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
+										<p class="tooltipImport" data-toggle="tooltip" data-placement="right" title="CITROEN: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93 Citrien: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93">CITROEN: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>
 									</div>
 								</div>
 								<!--Город-->
@@ -929,7 +937,7 @@
 									<div class="title light_title">Наличие</div>
 									<div class="content">
 										<div class="top_cell light_top"><span>12</span></div>
-										<div class="bottom_cell light_bottom"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
+										<div class="bottom_cell light_bottom"><a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>205</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -964,11 +972,11 @@
 									<div class="content">
 										<div class="top_cell ">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 										<div class="bottom_cell">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 									</div>
 								</div>
@@ -1017,13 +1025,20 @@
 									</div>
 								</div>
 
+							</div>
+
+
+							<div class="searchResultShowAllRow">
+								<div class="triangle"></div>
+								<div class="triangleR"></div>
+								<span>Показать остальные предложения</span>
 							</div>
 
 						</div>
 						<!--конец АНАЛОГИ (ЗАМЕНЫ) В НАЛИЧИИ НА НАШИХ Складах-->
 
 
-						<div class="searchResult-aimed searchResult-aimed_analogs">
+						<div class="searchResult-aimed searchResult-aimed_anyDeliv">
 							<div class="searchResult-result">
 								<span>Аналоги (замены) от сторонних поставщиков</span>
 							</div>
@@ -1051,8 +1066,7 @@
 									<div class="title">Описание</div>
 									<div class="content">
 										<h4>ФИЛЬТР масляный</h4>
-										<p>CITROEN: AX 86-98, BERLINGO 96 -, BERLINGO фургон 96</p>
-									</div>
+<p class="tooltipImport" data-toggle="tooltip" data-placement="right" title="CITROEN: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93 Citrien: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93">CITROEN: AX 86-91, BERLINGO 96-, BERLINGO фургон 96-, BX 82-93</p>									</div>
 								</div>
 								<!--Город-->
 								<div class="cell_wrap town col-xs-4 col-sm-4 col-md-1 col-lg-1">
@@ -1066,8 +1080,8 @@
 								<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
 									<div class="title light_title">Наличие</div>
 									<div class="content">
-										<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
-										<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>53</span></div>
+										<div class="top_cell white"><a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+										<div class="bottom_cell lightgray"><a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>53</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -1177,7 +1191,7 @@
 									<div class="title">Описание</div>
 									<div class="content">
 										<h4>ФИЛЬТР масляный</h4>
-										<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+										<p><p class="tooltipImport" data-toggle="tooltip" data-placement="right" title="Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02">Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02</p></p>
 									</div>
 								</div>
 								<!--Город-->
@@ -1192,8 +1206,8 @@
 								<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
 									<div class="title light_title">Наличие</div>
 									<div class="content">
-										<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
-										<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+										<div class="top_cell white"><a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+										<div class="bottom_cell lightgray"><a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -1228,11 +1242,11 @@
 									<div class="content">
 										<div class="top_cell white">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 										<div class="bottom_cell lightgray">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 									</div>
 								</div>
@@ -1305,7 +1319,7 @@
 									<div class="title">Описание</div>
 									<div class="content">
 										<h4>ФИЛЬТР масляный</h4>
-										<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+										<p><p class="tooltipImport" data-toggle="tooltip" data-placement="right" title="Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02">Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02</p></p>
 									</div>
 								</div>
 								<!--Город-->
@@ -1320,8 +1334,8 @@
 								<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
 									<div class="title light_title">Наличие</div>
 									<div class="content">
-										<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
-										<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+										<div class="top_cell white"><a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+										<div class="bottom_cell lightgray"><a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -1356,11 +1370,11 @@
 									<div class="content">
 										<div class="top_cell white">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 										<div class="bottom_cell lightgray">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 									</div>
 								</div>
@@ -1433,7 +1447,7 @@
 									<div class="title">Описание</div>
 									<div class="content">
 										<h4>ФИЛЬТР масляный</h4>
-										<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+										<p><p class="tooltipImport" data-toggle="tooltip" data-placement="right" title="Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02">Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02</p></p>
 									</div>
 								</div>
 								<!--Город-->
@@ -1448,8 +1462,8 @@
 								<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
 									<div class="title light_title">Наличие</div>
 									<div class="content">
-										<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
-										<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+										<div class="top_cell white"><a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+										<div class="bottom_cell lightgray"><a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -1484,11 +1498,11 @@
 									<div class="content">
 										<div class="top_cell white">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 										<div class="bottom_cell lightgray">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 									</div>
 								</div>
@@ -1561,7 +1575,7 @@
 									<div class="title">Описание</div>
 									<div class="content">
 										<h4>ФИЛЬТР масляный</h4>
-										<p>Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02-</p>
+										<p><p class="tooltipImport" data-toggle="tooltip" data-placement="right" title="Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02">Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02</p></p>
 									</div>
 								</div>
 								<!--Город-->
@@ -1576,8 +1590,8 @@
 								<div class="cell_wrap availability col-xs-4 col-sm-4 col-md-1 col-lg-1">
 									<div class="title light_title">Наличие</div>
 									<div class="content">
-										<div class="top_cell white"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
-										<div class="bottom_cell lightgray"><a href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+										<div class="top_cell white"><a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
+										<div class="bottom_cell lightgray"><a href="#"><i data-toggle="tooltip" data-placement="top" title="Время размещения заказа до 17.00 Группы, недопустимые для заказа: антифризы, жидкости омывающие." class="tooltipImport fa fa-exclamation-triangle" aria-hidden="true"></i></a><span>1</span></div>
 									</div>
 								</div>
 								<!--Кратность продажи-->
@@ -1612,11 +1626,11 @@
 									<div class="content">
 										<div class="top_cell white">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 										<div class="bottom_cell lightgray">
 											<span>104,00 руб.</span>
-											<span title="рекомендованная цена" class="priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
+											<span data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport priceSellWithNds-recomendidPrice"> <i class="fa fa-balance-scale" aria-hidden="true"></i>139,00 руб.</span>
 										</div>
 									</div>
 								</div>
@@ -1664,6 +1678,12 @@
 										</div>
 									</div>
 								</div>
+							</div>
+
+							<div class="searchResultShowAllRow_anyDeliv">
+								<div class="triangle"></div>
+								<div class="triangleR"></div>
+								<span>Показать остальные предложения</span>
 							</div>
 
 
@@ -3410,6 +3430,10 @@
 
 	<script src="js/add.js" charset="utf-8"></script>
 	<script src="js/common.js" charset="utf-8"></script>
+	<script src="js/tooltip.min.js" charset="utf-8"></script>
+	<script src="libs/Magnific-Popup/dist/jquery.magnific-popup.min.js" charset="utf-8"></script>
+
+
 </body>
 
 </html>
