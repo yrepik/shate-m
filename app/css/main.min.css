@@ -7935,29 +7935,104 @@ h3 {
       float: right;
       padding: 6px 10px; }
 
-.generalPopUp-extraCharge .extraCharge-window {
+.generalPopUp-extraCharge .extraCharge-window,
+.generalPopUpFastExtraCharge .extraCharge-window {
   height: 450px !important; }
 
-.generalPopUp-extraCharge .generalPopUp-window_body {
+.generalPopUp-extraCharge .generalPopUp-window_body,
+.generalPopUpFastExtraCharge .generalPopUp-window_body {
   overflow: auto !important; }
-  .generalPopUp-extraCharge .generalPopUp-window_body span {
+  .generalPopUp-extraCharge .generalPopUp-window_body span,
+  .generalPopUpFastExtraCharge .generalPopUp-window_body span {
     display: block;
     width: 100%;
     font-family: 'osb', sans-serif;
     margin-bottom: 5px; }
-  .generalPopUp-extraCharge .generalPopUp-window_body input {
+  .generalPopUp-extraCharge .generalPopUp-window_body input,
+  .generalPopUpFastExtraCharge .generalPopUp-window_body input {
     padding: 7px 10px;
     width: 100%;
     margin-bottom: 20px; }
 
-.generalPopUp-productGroup .productGroup-window {
-  width: 80% !important; }
+.generalPopUp-productGroup .productGroup-window,
+.generalPopUp-productGroup_brand .productGroup-window {
+  width: 80% !important;
+  height: 78% !important; }
 
 .productGroup-windowBody {
   margin-top: 20px; }
   .productGroup-windowBody input {
     width: 100%;
     padding: 6px 10px; }
+
+.roductGroup-windowBody_info input:disabled {
+  background-color: #d3ffb8;
+  cursor: not-allowed;
+  margin-bottom: 30px; }
+  .roductGroup-windowBody_info input:disabled:hover {
+    border-color: lightgray; }
+
+.roductGroup-windowBody_info span {
+  font-family: 'osb', sans-serif;
+  font-size: 1.08333em;
+  margin-bottom: 5px;
+  display: inline-block; }
+
+.roductGroup-windowBody_info button {
+  margin-top: 40px;
+  float: right; }
+
+.roductGroup-windowBody_tree {
+  height: 560px;
+  overflow-y: scroll; }
+  .roductGroup-windowBody_tree .tree-general {
+    background-color: #888;
+    padding-left: 5px; }
+    .roductGroup-windowBody_tree .tree-general a {
+      color: #fff; }
+  .roductGroup-windowBody_tree ul {
+    padding: 0;
+    text-transform: uppercase; }
+    .roductGroup-windowBody_tree ul li {
+      list-style-type: none;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      font-size: 0.83333em;
+      cursor: pointer; }
+      .roductGroup-windowBody_tree ul li:hover {
+        background-color: #888 !important; }
+        .roductGroup-windowBody_tree ul li:hover a {
+          text-decoration: none;
+          color: #fff;
+          width: 100%;
+          display: block; }
+      .roductGroup-windowBody_tree ul li i {
+        color: #dd3737;
+        margin-right: 5px; }
+      .roductGroup-windowBody_tree ul li a {
+        color: #333; }
+    .roductGroup-windowBody_tree ul ul {
+      background-color: #f0f0f0;
+      padding: 0; }
+      .roductGroup-windowBody_tree ul ul:nth-child(odd) {
+        background-color: #e4e4e4; }
+      .roductGroup-windowBody_tree ul ul li {
+        padding-left: 20px; }
+      .roductGroup-windowBody_tree ul ul ul {
+        display: none;
+        padding: 0;
+        background-color: #f0f0f0; }
+        .roductGroup-windowBody_tree ul ul ul li {
+          padding-left: 40px; }
+          .roductGroup-windowBody_tree ul ul ul li a {
+            padding-left: 0px; }
+        .roductGroup-windowBody_tree ul ul ul:nth-child(odd) {
+          background-color: #e4e4e4; }
+        .roductGroup-windowBody_tree ul ul ul ul li {
+          background-color: #f0f0f0;
+          padding-left: 60px; }
+          .roductGroup-windowBody_tree ul ul ul ul li:nth-child(even) {
+            background-color: #e4e4e4; }
 
 .generalPopUp {
   position: fixed;
@@ -8071,12 +8146,6 @@ h3 {
     border: none;
     float: right;
     padding: 10px 30px; }
-
-.productGroup-window_search .tree-leftNav {
-  border: 1px  solid;
-  height: 430px !important;
-  margin-bottom: 20px;
-  overflow-y: scroll; }
 
 .overlaypreloader {
   background-color: rgba(0, 0, 0, 0.4);
@@ -9984,7 +10053,12 @@ h3 {
   .extraCharge-settings_checkBoxes {
     padding-top: 0; }
   .extraCharge-settings_btns button {
-    width: 100%; } }
+    width: 100%; }
+  .roductGroup-windowBody_tree {
+    height: auto; }
+  .productGroup-windowBody {
+    overflow-y: scroll;
+    max-height: 92%; } }
 
 @media only screen and (max-width: 768px) {
   .extraCharge-settings_title {
@@ -10004,3 +10078,28 @@ h3 {
 @media only screen and (max-width: 441px) {
   .extraCharge-window .red_btn {
     margin-top: 10px; } }
+
+@media only screen and (max-height: 800px) {
+  .generalPopUp-productGroup .productGroup-window,
+  .generalPopUp-productGroup_brand .productGroup-window {
+    height: 88% !important; } }
+
+@media only screen and (max-height: 768px) {
+  .generalPopUp-productGroup .productGroup-window,
+  .generalPopUp-productGroup_brand .productGroup-window {
+    height: 91% !important; } }
+
+@media only screen and (max-height: 768px) {
+  .generalPopUp-productGroup .productGroup-window,
+  .generalPopUp-productGroup_brand .productGroup-window {
+    max-height: 91% !important; } }
+
+@media only screen and (min-height: 800px) {
+  .generalPopUp-productGroup .roductGroup-windowBody_tree,
+  .generalPopUp-productGroup_brand .roductGroup-windowBody_tree {
+    max-height: 10000px !important; } }
+
+@media only screen and (height: 1024px) {
+  .generalPopUp-productGroup .productGroup-window,
+  .generalPopUp-productGroup_brand .productGroup-window {
+    height: 95% !important; } }

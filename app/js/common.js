@@ -1,5 +1,21 @@
 $(function() {
 	//наценки//
+	function generalPopUpFastExtraCharge(){//попАп быстрое добавление наценки
+		$('.generalPopUpFastExtraCharge').fadeIn(200)
+	}
+	$('.addFastExtraCharge').click(generalPopUpFastExtraCharge)
+
+	function generalPopUpProductGroup(){//наценка товарной группы
+		$('.generalPopUp-productGroup').fadeIn(200);
+	}
+	$('.addProductGroupextraCharge').click(generalPopUpProductGroup)
+
+	function  generalPopUpProductGroupBrand(){//ПопАд добавить наценку на бренд
+		$('.generalPopUp-productGroup_brand').fadeIn();
+	}
+	$('.addProductGroupextraChargeBrand').click(generalPopUpProductGroupBrand)
+
+
 	$('.addDiaposonExtroCharge').click(function(){//попАп диапазон наценки
 			$('.generalPopUp-extraCharge').fadeIn()
 		});

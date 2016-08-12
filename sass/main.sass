@@ -7901,7 +7901,8 @@ h3
 			float: right
 			padding: 6px 10px
 
-.generalPopUp-extraCharge
+.generalPopUp-extraCharge,
+.generalPopUpFastExtraCharge
 	.extraCharge-window
 		height: 450px !important
 	.generalPopUp-window_body
@@ -7915,14 +7916,85 @@ h3
 			padding: 7px 10px
 			width: 100%
 			margin-bottom: 20px
-.generalPopUp-productGroup
+.generalPopUp-productGroup,
+.generalPopUp-productGroup_brand
 	.productGroup-window
 		width: 80% !important
+		height: 78% !important
 .productGroup-windowBody
 	margin-top: 20px
 	input
 		width: 100%
 		padding: 6px 10px
+
+.roductGroup-windowBody_info
+	input:disabled
+		background-color: #d3ffb8
+		cursor: not-allowed
+		margin-bottom: 30px
+		&:hover
+			border-color: lightgray
+	span
+		font-family: 'osb', sans-serif
+		font-size: em(13px)
+		margin-bottom: 5px
+		display: inline-block
+	button
+		margin-top: 40px
+		float: right
+.roductGroup-windowBody_tree
+	height: 560px
+	overflow-y: scroll
+	.tree-general
+		background-color: #888
+		padding-left: 5px
+		a
+			color: #fff
+	ul
+		padding: 0
+		text-transform: uppercase
+		li
+			list-style-type: none
+			padding-top: 9px
+			padding-bottom: 9px
+			font-size: em(10px)
+			cursor: pointer
+			&:hover
+				background-color: #888 !important
+				a
+					text-decoration: none
+					color: #fff
+					width: 100%
+					display: block
+			i
+				color: $red
+				margin-right: 5px
+			a
+				color: #333
+		ul
+			background-color: #f0f0f0
+			padding: 0
+			&:nth-child(odd)
+				background-color: #e4e4e4
+			li
+				padding-left: 20px
+
+			ul
+				display: none
+				padding: 0
+				background-color: #f0f0f0
+				li
+					padding-left: 40px
+					a
+						padding-left: 0px
+				&:nth-child(odd)
+					background-color: #e4e4e4
+				ul
+					li
+						background-color: #f0f0f0
+						padding-left: 60px
+						&:nth-child(even)
+							background-color: #e4e4e4
 //конец наценка//
 
 
@@ -8030,12 +8102,11 @@ h3
 		border: none
 		float: right
 		padding: 10px 30px
-.productGroup-window_search
-	.tree-leftNav
-		border: 1px  solid
-		height: 430px !important
-		margin-bottom: 20px
-		overflow-y: scroll
+
+
+
+
+
 /////////////////////////////
 
 

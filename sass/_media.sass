@@ -2327,6 +2327,11 @@ $base-font-size: 13px
 	.extraCharge-settings_btns
 		button
 			width: 100%
+	.roductGroup-windowBody_tree
+		height: auto
+	.productGroup-windowBody
+		overflow-y: scroll
+		max-height: 92%
 @media only screen and (max-width : 768px)
 	.extraCharge-settings_title
 		font-size: em(12px)
@@ -2349,4 +2354,34 @@ $base-font-size: 13px
 		.red_btn
 			margin-top: 10px
 
+
+@media only screen and (max-height : 800px)
+	.generalPopUp-productGroup,
+	.generalPopUp-productGroup_brand
+		.productGroup-window
+			height: 88% !important
+@media only screen and (max-height : 768px)
+	.generalPopUp-productGroup,
+	.generalPopUp-productGroup_brand
+		.productGroup-window
+			height: 91% !important
+
+@media only screen and (max-height : 768px)
+	.generalPopUp-productGroup,
+	.generalPopUp-productGroup_brand
+		.productGroup-window
+			max-height: 91% !important
+@media only screen and (min-height : 800px)
+	.generalPopUp-productGroup,
+	.generalPopUp-productGroup_brand
+		.roductGroup-windowBody_tree
+			max-height: 10000px !important
+
+
+
+@media only screen and (height : 1024px)
+	.generalPopUp-productGroup,
+	.generalPopUp-productGroup_brand
+		.productGroup-window
+			height: 95% !important
 //конец наценка//
