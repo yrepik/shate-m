@@ -57,10 +57,11 @@
 						<li><a href="shate-m_b2b_user_cabinet_history.html"><i class="fa fa-history" aria-hidden="true"></i><span>История запросов</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_rest_managment.html"><i class="fa fa-cloud-upload" aria-hidden="true"></i><span>Управление остатками</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_action.html"><i class="fa fa-percent" aria-hidden="true"></i><span>Акции</span></a></li>
-						<li><a href="#"><i class="fa fa-cart-arrow-down " aria-hidden="true"></i><span>Уцененные товары</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_cutprice_Items.html"><i class="fa fa-cart-arrow-down " aria-hidden="true"></i><span>Уцененные товары</span></a></li>
 						<li><a href="#"><i class="fa fa-cart-plus " aria-hidden="true"></i><span>Наценки</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_polls.html"><i class="fa fa-check-square-o " aria-hidden="true"></i><span>Опросы</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_report.html"><i class="fa fa-support" aria-hidden="true"></i><span>Форма обратной связи</span></a></li>
+						<li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span>Настройки</span></a></li>
 
 					</ul>
 				</nav>
@@ -196,7 +197,7 @@
 							<!--импорт заказов-->
 							<div class="orders_import col-xs-6 col-sm-6 col-md-6 col-lg-6">
 								<i class="fa fa-download" aria-hidden="true"></i>
-								<h2>Импорт <br class="hidden-sm hidden-md hidden-lg">заказаов</h2>
+								<h2>Импорт <br class="hidden-sm hidden-md hidden-lg">заказов</h2>
 							</div>
 
 							<!--кнопка помощь по разделу-->
@@ -509,7 +510,7 @@
 										<div class="cell_wrap town col-xs-6 col-sm-2 col-md-2 col-lg-2">
 											<div class="title hidden-sm hidden-md hidden-lg">Город</div>
 											<div class="content">
-												<div class="top_cell"><a href="#"><span>Привольный</span></a></div>
+												<div class="top_cell privolniyStatus"><a href="#"><span>Привольный</span></a></div>
 											</div>
 										</div>
 
@@ -517,10 +518,10 @@
 										<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 cell_wrap availability">
 											<div class="content">
 												<div class="title hidden-sm hidden-md hidden-lg">Наличие</div>
-												<div class="top_cell light_top">
+												<div class="top_cell privolniyStatus light_top">
 
 													<div class="content">
-														<div class="top_cell light_top">
+														<div class="top_cell privolniyStatus light_top">
 															<i data-toggle="tooltip" data-placement="right" title="" class="alert-info tooltipImport fa fa-exclamation-triangle" aria-hidden="true" data-original-title="Возврат невозможен! Время размещения заказа до 17:00"></i>
 															<span>12</span>
 														</div>
@@ -532,7 +533,7 @@
 										<!--Кратность продажи-->
 										<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
 											<div class="content">
-												<div class="top_cell"></div>
+												<div class="top_cell privolniyStatus"></div>
 											</div>
 										</div>
 
@@ -541,7 +542,7 @@
 											<div class="title hidden-sm hidden-md hidden-lg"><span>Ожидаемый</span>
 												<br>срок поставки</div>
 											<div class="content">
-												<div class="top_cell light_top"><span>На складе</span></div>
+												<div class="top_cell privolniyStatus light_top"><span>На складе</span></div>
 											</div>
 										</div>
 
@@ -549,8 +550,8 @@
 										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-2 col-lg-2">
 											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 											<div class="content">
-												<div class="top_cell"><span>84 500</span> <span>руб.</span></div>
-												<!--	<div class="bottom_cell"><span>131 112 289 900</span> <span>руб.</span></div>-->
+												<div class="top_cell privolniyStatus"><span>84 500</span> <span>руб.</span></div>
+												<!--	<div class="bottom_cell podolskStatus"><span>131 112 289 900</span> <span>руб.</span></div>-->
 											</div>
 										</div>
 
@@ -558,7 +559,7 @@
 										<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
 											<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
 											<div class="content">
-												<div class="top_cell light_top">
+												<div class="top_cell privolniyStatus light_top">
 													<span class="hidden_span">Нал</span>
 													<form action="post">
 														<input class="checkbox_result" type="checkbox" title="Оплата наличными">
@@ -591,7 +592,7 @@
 										<div class="cell_wrap town col-xs-6 col-sm-2 col-md-2 col-lg-2">
 											<div class="title hidden-sm hidden-md hidden-lg">Город</div>
 											<div class="content">
-												<div class="bottom_cell"><a href="#"><span>Подольск</span></a></div>
+												<div class="bottom_cell podolskStatus"><a href="#"><span>Подольск</span></a></div>
 											</div>
 										</div>
 
@@ -599,14 +600,14 @@
 										<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 cell_wrap availability">
 											<div class="content">
 												<div class="title hidden-sm hidden-md hidden-lg">Наличие</div>
-												<div class="bottom_cell light_bottom"><span>12</span></div>
+												<div class="bottom_cell podolskStatus light_bottom"><span>12</span></div>
 											</div>
 										</div>
 
 										<!--Кратность продажи-->
 										<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
 											<div class="content">
-												<div class="bottom_cell"></div>
+												<div class="bottom_cell podolskStatus"></div>
 											</div>
 										</div>
 
@@ -615,7 +616,7 @@
 											<div class="title hidden-sm hidden-md hidden-lg"><span>Ожидаемый</span>
 												<br>срок поставки</div>
 											<div class="content">
-												<div class="bottom_cell light_bottom"><span>На складе</span></div>
+												<div class="bottom_cell podolskStatus light_bottom"><span>На складе</span></div>
 											</div>
 										</div>
 
@@ -623,8 +624,8 @@
 										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-2 col-lg-2">
 											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 											<div class="content">
-												<div class="bottom_cell"><span>84 500</span> <span>руб.</span></div>
-												<!--	<div class="bottom_cell"><span>131 112 289 900</span> <span>руб.</span></div>-->
+												<div class="bottom_cell podolskStatus"><span>84 500</span> <span>руб.</span></div>
+												<!--	<div class="bottom_cell podolskStatus"><span>131 112 289 900</span> <span>руб.</span></div>-->
 											</div>
 										</div>
 
@@ -632,7 +633,7 @@
 										<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
 											<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
 											<div class="content">
-												<div class="bottom_cell light_bottom">
+												<div class="bottom_cell podolskStatus light_bottom">
 													<span class="hidden_span">Нал</span>
 													<form action="post">
 														<input class="checkbox_result" type="checkbox" title="Оплата наличными">
@@ -665,7 +666,7 @@
 										<div class="cell_wrap town col-xs-6 col-sm-2 col-md-2 col-lg-2">
 											<div class="title hidden-sm hidden-md hidden-lg">Город</div>
 											<div class="content">
-												<div class="top_cell"><a href="#"><span>Привольный</span></a></div>
+												<div class="top_cell privolniyStatus"><a href="#"><span>Привольный</span></a></div>
 											</div>
 										</div>
 
@@ -673,10 +674,10 @@
 										<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 cell_wrap availability">
 											<div class="content">
 												<div class="title hidden-sm hidden-md hidden-lg">Наличие</div>
-												<div class="top_cell light_top">
+												<div class="top_cell privolniyStatus light_top">
 
 													<div class="content">
-														<div class="top_cell light_top">
+														<div class="top_cell privolniyStatus light_top">
 															<i data-toggle="tooltip" data-placement="right" title="" class="alert-info tooltipImport fa fa-exclamation-triangle" aria-hidden="true" data-original-title="Возврат невозможен! Время размещения заказа до 17:00"></i>
 															<span>12</span>
 														</div>
@@ -688,7 +689,7 @@
 										<!--Кратность продажи-->
 										<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
 											<div class="content">
-												<div class="top_cell"></div>
+												<div class="top_cell privolniyStatus"></div>
 											</div>
 										</div>
 
@@ -697,7 +698,7 @@
 											<div class="title hidden-sm hidden-md hidden-lg"><span>Ожидаемый</span>
 												<br>срок поставки</div>
 											<div class="content">
-												<div class="top_cell light_top"><span>На складе</span></div>
+												<div class="top_cell privolniyStatus light_top"><span>На складе</span></div>
 											</div>
 										</div>
 
@@ -705,8 +706,8 @@
 										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-2 col-lg-2">
 											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 											<div class="content">
-												<div class="top_cell"><span>84 500</span> <span>руб.</span></div>
-												<!--	<div class="bottom_cell"><span>131 112 289 900</span> <span>руб.</span></div>-->
+												<div class="top_cell privolniyStatus"><span>84 500</span> <span>руб.</span></div>
+												<!--	<div class="bottom_cell podolskStatus"><span>131 112 289 900</span> <span>руб.</span></div>-->
 											</div>
 										</div>
 
@@ -714,7 +715,7 @@
 										<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
 											<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
 											<div class="content">
-												<div class="top_cell light_top">
+												<div class="top_cell privolniyStatus light_top">
 													<span class="hidden_span">Нал</span>
 													<form action="post">
 														<input class="checkbox_result" type="checkbox" title="Оплата наличными">
@@ -820,7 +821,7 @@
 												<div class="cell_wrap town col-xs-6 col-sm-2 col-md-2 col-lg-2">
 													<div class="title hidden-sm hidden-md hidden-lg">Город</div>
 													<div class="content">
-														<div class="top_cell white"><a href="#"><span></span></a></div>
+														<div class="top_cell privolniyStatus white"><a href="#"><span></span></a></div>
 													</div>
 												</div>
 
@@ -829,7 +830,7 @@
 													<div class="content">
 														<div class="title hidden-sm hidden-md hidden-lg">Наличие</div>
 
-																<div class="top_cell white">
+																<div class="top_cell privolniyStatus white">
 																	<i data-toggle="tooltip" data-placement="right" title="" class="alert-info tooltipImport fa fa-exclamation-triangle" aria-hidden="true" data-original-title="Возврат невозможен! Время размещения заказа до 17:00"></i>
 																	<span>12</span>
 																</div>
@@ -840,7 +841,7 @@
 												<!--Кратность продажи-->
 												<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
 													<div class="content">
-														<div class="top_cell white"></div>
+														<div class="top_cell privolniyStatus white"></div>
 													</div>
 												</div>
 
@@ -849,7 +850,7 @@
 													<div class="title hidden-sm hidden-md hidden-lg"><span>Ожидаемый</span>
 														<br>срок поставки</div>
 													<div class="content">
-														<div class="top_cell white"><span>На складе</span></div>
+														<div class="top_cell privolniyStatus white"><span>На складе</span></div>
 													</div>
 												</div>
 
@@ -857,8 +858,8 @@
 												<div class="cell_wrap price col-xs-6 col-sm-3 col-md-2 col-lg-2">
 													<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 													<div class="content">
-														<div class="top_cell white"><span>84 500</span> <span>руб.</span></div>
-														<!--	<div class="bottom_cell"><span>131 112 289 900</span> <span>руб.</span></div>-->
+														<div class="top_cell privolniyStatus white"><span>84 500</span> <span>руб.</span></div>
+														<!--	<div class="bottom_cell podolskStatus"><span>131 112 289 900</span> <span>руб.</span></div>-->
 													</div>
 												</div>
 
@@ -866,7 +867,7 @@
 												<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
 													<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
 													<div class="content">
-														<div class="top_cell white">
+														<div class="top_cell privolniyStatus white">
 															<span class="hidden_span">Нал</span>
 															<form action="post">
 																<input class="checkbox_result" type="checkbox" title="Оплата наличными">
@@ -899,7 +900,7 @@
 												<div class="cell_wrap town col-xs-6 col-sm-2 col-md-2 col-lg-2">
 													<div class="title hidden-sm hidden-md hidden-lg">Город</div>
 													<div class="content">
-														<div class="bottom_cell lightgray"><a href="#"><span></span></a></div>
+														<div class="bottom_cell podolskStatus lightgray"><a href="#"><span></span></a></div>
 													</div>
 												</div>
 
@@ -907,14 +908,14 @@
 												<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 cell_wrap availability">
 													<div class="content">
 														<div class="title hidden-sm hidden-md hidden-lg">Наличие</div>
-														<div class="bottom_cell lightgray"><span>12</span></div>
+														<div class="bottom_cell podolskStatus lightgray"><span>12</span></div>
 													</div>
 												</div>
 
 												<!--Кратность продажи-->
 												<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
 													<div class="content">
-														<div class="bottom_cell lightgray"></div>
+														<div class="bottom_cell podolskStatus lightgray"></div>
 													</div>
 												</div>
 
@@ -923,7 +924,7 @@
 													<div class="title hidden-sm hidden-md hidden-lg"><span>Ожидаемый</span>
 														<br>срок поставки</div>
 													<div class="content">
-														<div class="bottom_cell lightgray"><span>На складе</span></div>
+														<div class="bottom_cell podolskStatus lightgray"><span>На складе</span></div>
 													</div>
 												</div>
 
@@ -931,8 +932,8 @@
 												<div class="cell_wrap price col-xs-6 col-sm-3 col-md-2 col-lg-2">
 													<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 													<div class="content">
-														<div class="bottom_cell lightgray"><span>84 500</span> <span>руб.</span></div>
-														<!--	<div class="bottom_cell"><span>131 112 289 900</span> <span>руб.</span></div>-->
+														<div class="bottom_cell podolskStatus lightgray"><span>84 500</span> <span>руб.</span></div>
+														<!--	<div class="bottom_cell podolskStatus"><span>131 112 289 900</span> <span>руб.</span></div>-->
 													</div>
 												</div>
 
@@ -940,7 +941,7 @@
 												<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
 													<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
 													<div class="content">
-														<div class="bottom_cell lightgray">
+														<div class="bottom_cell podolskStatus lightgray">
 															<span class="hidden_span">Нал</span>
 															<form action="post">
 																<input class="checkbox_result" type="checkbox" title="Оплата наличными">
@@ -1036,7 +1037,7 @@
 												<div class="cell_wrap town col-xs-6 col-sm-2 col-md-2 col-lg-2">
 													<div class="title hidden-sm hidden-md hidden-lg">Город</div>
 													<div class="content">
-														<div class="top_cell white"><a href="#"><span></span></a></div>
+														<div class="top_cell privolniyStatus white"><a href="#"><span></span></a></div>
 													</div>
 												</div>
 
@@ -1045,7 +1046,7 @@
 													<div class="content">
 														<div class="title hidden-sm hidden-md hidden-lg">Наличие</div>
 
-																<div class="top_cell white">
+																<div class="top_cell privolniyStatus white">
 																	<i data-toggle="tooltip" data-placement="right" title="" class="alert-info tooltipImport fa fa-exclamation-triangle" aria-hidden="true" data-original-title="Возврат невозможен! Время размещения заказа до 17:00"></i>
 																	<span>12</span>
 																</div>
@@ -1056,7 +1057,7 @@
 												<!--Кратность продажи-->
 												<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
 													<div class="content">
-														<div class="top_cell white"></div>
+														<div class="top_cell privolniyStatus white"></div>
 													</div>
 												</div>
 
@@ -1065,7 +1066,7 @@
 													<div class="title hidden-sm hidden-md hidden-lg"><span>Ожидаемый</span>
 														<br>срок поставки</div>
 													<div class="content">
-														<div class="top_cell white"><span>На складе</span></div>
+														<div class="top_cell privolniyStatus white"><span>На складе</span></div>
 													</div>
 												</div>
 
@@ -1073,8 +1074,8 @@
 												<div class="cell_wrap price col-xs-6 col-sm-3 col-md-2 col-lg-2">
 													<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 													<div class="content">
-														<div class="top_cell white"><span>84 500</span> <span>руб.</span></div>
-														<!--	<div class="bottom_cell"><span>131 112 289 900</span> <span>руб.</span></div>-->
+														<div class="top_cell privolniyStatus white"><span>84 500</span> <span>руб.</span></div>
+														<!--	<div class="bottom_cell podolskStatus"><span>131 112 289 900</span> <span>руб.</span></div>-->
 													</div>
 												</div>
 
@@ -1082,7 +1083,7 @@
 												<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
 													<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
 													<div class="content">
-														<div class="top_cell white">
+														<div class="top_cell privolniyStatus white">
 															<span class="hidden_span">Нал</span>
 															<form action="post">
 																<input class="checkbox_result" type="checkbox" title="Оплата наличными">
@@ -1109,13 +1110,13 @@
 											<!--конец ряд таблицы для репита white-->
 
 
-											<!--ряд таблицы для репита оранжевый-->
+											<!--ряд таблицы для репита lightgray-->
 											<div class="import-repeatRow row">
 												<!--Город-->
 												<div class="cell_wrap town col-xs-6 col-sm-2 col-md-2 col-lg-2">
 													<div class="title hidden-sm hidden-md hidden-lg">Город</div>
 													<div class="content">
-														<div class="bottom_cell lightgray"><a href="#"><span></span></a></div>
+														<div class="bottom_cell podolskStatus lightgray"><a href="#"><span></span></a></div>
 													</div>
 												</div>
 
@@ -1123,14 +1124,14 @@
 												<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 cell_wrap availability">
 													<div class="content">
 														<div class="title hidden-sm hidden-md hidden-lg">Наличие</div>
-														<div class="bottom_cell lightgray"><span>12</span></div>
+														<div class="bottom_cell podolskStatus lightgray"><span>12</span></div>
 													</div>
 												</div>
 
 												<!--Кратность продажи-->
 												<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
 													<div class="content">
-														<div class="bottom_cell lightgray"></div>
+														<div class="bottom_cell podolskStatus lightgray"></div>
 													</div>
 												</div>
 
@@ -1139,7 +1140,7 @@
 													<div class="title hidden-sm hidden-md hidden-lg"><span>Ожидаемый</span>
 														<br>срок поставки</div>
 													<div class="content">
-														<div class="bottom_cell lightgray"><span>На складе</span></div>
+														<div class="bottom_cell podolskStatus lightgray"><span>На складе</span></div>
 													</div>
 												</div>
 
@@ -1147,8 +1148,8 @@
 												<div class="cell_wrap price col-xs-6 col-sm-3 col-md-2 col-lg-2">
 													<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 													<div class="content">
-														<div class="bottom_cell lightgray"><span>84 500</span> <span>руб.</span></div>
-														<!--	<div class="bottom_cell"><span>131 112 289 900</span> <span>руб.</span></div>-->
+														<div class="bottom_cell podolskStatus lightgray"><span>84 500</span> <span>руб.</span></div>
+														<!--	<div class="bottom_cell podolskStatus"><span>131 112 289 900</span> <span>руб.</span></div>-->
 													</div>
 												</div>
 
@@ -1156,7 +1157,7 @@
 												<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
 													<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
 													<div class="content">
-														<div class="bottom_cell lightgray">
+														<div class="bottom_cell podolskStatus lightgray">
 															<span class="hidden_span">Нал</span>
 															<form action="post">
 																<input class="checkbox_result" type="checkbox" title="Оплата наличными">
@@ -1252,7 +1253,7 @@
 												<div class="cell_wrap town col-xs-6 col-sm-2 col-md-2 col-lg-2">
 													<div class="title hidden-sm hidden-md hidden-lg">Город</div>
 													<div class="content">
-														<div class="top_cell white"><a href="#"><span></span></a></div>
+														<div class="top_cell privolniyStatus white"><a href="#"><span></span></a></div>
 													</div>
 												</div>
 
@@ -1261,7 +1262,7 @@
 													<div class="content">
 														<div class="title hidden-sm hidden-md hidden-lg">Наличие</div>
 
-																<div class="top_cell white">
+																<div class="top_cell privolniyStatus white">
 																	<i data-toggle="tooltip" data-placement="right" title="" class="alert-info tooltipImport fa fa-exclamation-triangle" aria-hidden="true" data-original-title="Возврат невозможен! Время размещения заказа до 17:00"></i>
 																	<span>12</span>
 																</div>
@@ -1272,7 +1273,7 @@
 												<!--Кратность продажи-->
 												<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
 													<div class="content">
-														<div class="top_cell white"></div>
+														<div class="top_cell privolniyStatus white"></div>
 													</div>
 												</div>
 
@@ -1281,7 +1282,7 @@
 													<div class="title hidden-sm hidden-md hidden-lg"><span>Ожидаемый</span>
 														<br>срок поставки</div>
 													<div class="content">
-														<div class="top_cell white"><span>На складе</span></div>
+														<div class="top_cell privolniyStatus white"><span>На складе</span></div>
 													</div>
 												</div>
 
@@ -1289,8 +1290,8 @@
 												<div class="cell_wrap price col-xs-6 col-sm-3 col-md-2 col-lg-2">
 													<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 													<div class="content">
-														<div class="top_cell white"><span>84 500</span> <span>руб.</span></div>
-														<!--	<div class="bottom_cell"><span>131 112 289 900</span> <span>руб.</span></div>-->
+														<div class="top_cell privolniyStatus white"><span>84 500</span> <span>руб.</span></div>
+														<!--	<div class="bottom_cell podolskStatus"><span>131 112 289 900</span> <span>руб.</span></div>-->
 													</div>
 												</div>
 
@@ -1298,7 +1299,7 @@
 												<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
 													<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
 													<div class="content">
-														<div class="top_cell white">
+														<div class="top_cell privolniyStatus white">
 															<span class="hidden_span">Нал</span>
 															<form action="post">
 																<input class="checkbox_result" type="checkbox" title="Оплата наличными">
@@ -1325,13 +1326,13 @@
 											<!--конец ряд таблицы для репита white-->
 
 
-											<!--ряд таблицы для репита оранжевый-->
+											<!--ряд таблицы для репита lightgray-->
 											<div class="import-repeatRow row">
 												<!--Город-->
 												<div class="cell_wrap town col-xs-6 col-sm-2 col-md-2 col-lg-2">
 													<div class="title hidden-sm hidden-md hidden-lg">Город</div>
 													<div class="content">
-														<div class="bottom_cell lightgray"><a href="#"><span></span></a></div>
+														<div class="bottom_cell podolskStatus lightgray"><a href="#"><span></span></a></div>
 													</div>
 												</div>
 
@@ -1339,14 +1340,14 @@
 												<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 cell_wrap availability">
 													<div class="content">
 														<div class="title hidden-sm hidden-md hidden-lg">Наличие</div>
-														<div class="bottom_cell lightgray"><span>12</span></div>
+														<div class="bottom_cell podolskStatus lightgray"><span>12</span></div>
 													</div>
 												</div>
 
 												<!--Кратность продажи-->
 												<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
 													<div class="content">
-														<div class="bottom_cell lightgray"></div>
+														<div class="bottom_cell podolskStatus lightgray"></div>
 													</div>
 												</div>
 
@@ -1355,7 +1356,7 @@
 													<div class="title hidden-sm hidden-md hidden-lg"><span>Ожидаемый</span>
 														<br>срок поставки</div>
 													<div class="content">
-														<div class="bottom_cell lightgray"><span>На складе</span></div>
+														<div class="bottom_cell podolskStatus lightgray"><span>На складе</span></div>
 													</div>
 												</div>
 
@@ -1363,8 +1364,8 @@
 												<div class="cell_wrap price col-xs-6 col-sm-3 col-md-2 col-lg-2">
 													<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 													<div class="content">
-														<div class="bottom_cell lightgray"><span>84 500</span> <span>руб.</span></div>
-														<!--	<div class="bottom_cell"><span>131 112 289 900</span> <span>руб.</span></div>-->
+														<div class="bottom_cell podolskStatus lightgray"><span>84 500</span> <span>руб.</span></div>
+														<!--	<div class="bottom_cell podolskStatus"><span>131 112 289 900</span> <span>руб.</span></div>-->
 													</div>
 												</div>
 
@@ -1372,7 +1373,7 @@
 												<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
 													<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
 													<div class="content">
-														<div class="bottom_cell lightgray">
+														<div class="bottom_cell podolskStatus lightgray">
 															<span class="hidden_span">Нал</span>
 															<form>
 																<input class="checkbox_result" type="checkbox" title="Оплата наличными">
@@ -3127,6 +3128,9 @@
 		</div>
 	</div>
 
+	<div class="overlaypreloader">
+		<img class="preloader" src="img/preloader.gif" alt="" />
+	</div>
 
 
 	<script src="js/add.js" charset="utf-8"></script>

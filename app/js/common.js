@@ -1,4 +1,56 @@
 $(function() {
+	//наценки//
+	$('.addDiaposonExtroCharge').click(function(){//попАп диапазон наценки
+			$('.generalPopUp-extraCharge').fadeIn()
+		});
+
+	function editextraCharge(){//открытие окна изменения наценки
+		$('.extraCharge-edite').fadeIn(200);
+		$('.extraCharge-edite').find('.close').click(function(){
+			$('.extraCharge-edite .window').animate({
+				'bottom': '200vh'
+			}, 300)
+			$('.extraCharge-edite').delay(300).fadeOut(200);
+			$('.extraCharge-edite .window').delay(200).animate({
+				'bottom': ''
+			}, 0)
+		})
+	}
+	$('.editextraCharge').click(editextraCharge);
+;
+	function extraChargeDellRow(){//удаление наценки
+		$(this).parents('.extraCharge-addSettings_tableRowProduct').slideUp(200)
+	}
+	$('.dellRow').click(extraChargeDellRow);
+
+	function extraCharge(){//отображение типа наценки
+		if($('.noExtraCharge').prop('checked')){
+			$('.markupOnProduct, .markupOnGroupProducts').slideUp(200);
+			$('.extraCharge-addSettings').hide(200)
+		}
+		else if($('.extraChargeOnProd').prop('checked')){
+			$('.markupOnProduct').slideDown(200);
+			$('.markupOnGroupProducts').slideUp(200);
+			$('.extraCharge-addSettings').fadeIn()
+
+		}else {
+			$('.markupOnProduct').slideUp(200);
+			$('.markupOnGroupProducts').slideDown(200);
+			$('.extraCharge-addSettings').fadeIn()
+
+		}
+	}
+	$('.noExtraCharge, .extraChargeOnProd, .extraChargeDiapason').click(extraCharge)
+	//конец наценки//
+
+	//уцененные товары//
+	$('.image_wrap').magnificPopup({//попАп на странице уцененные товары
+		delegate: '.cutePrice-images_zoom', // child items selector, by clicking on it popup will open
+		type: 'image'
+	});
+	//конецуцененные товары//
+
+
 	//результаты поиска//
 function slideUpAllElementstable(){//
 	$('.searchResultShowAllRow_anyDeliv').addClass('slideOn');
@@ -40,10 +92,15 @@ function slideUpAllElementstable(){//
 	function searchResultCheckboxPrice() { //показать цену покупки
 		if ($('.managmentFilterlabelwrap_price input').is(':checked')) {
 			$('.priceBuylWithNds').show();
-			$('.priceBuylWithNds').next('.price').toggleClass('col-lg-1 col-lg-2');
+			$('.priceSelllWithNds').css({
+				'width':'',
+			})
 		} else {
 			$('.priceBuylWithNds').hide()
-		}
+			$('.priceSelllWithNds').css({
+				'width':'100%',
+			})
+;		}
 	}
 	$('.managmentFilterlabelwrap_price').click(searchResultCheckboxPrice)
 
@@ -383,7 +440,6 @@ function slideUpAllElementstable(){//
 
 
 	function balanceToolTip() { //отображение тултипа
-		console.log('1');
 		$(this).parents('.top-balance').find('.balance-tooltip').fadeIn()
 	}
 
@@ -919,7 +975,6 @@ function slideUpAllElementstable(){//
 	}).eq(0).addClass("active");
 
 	function waitCancellAllMarck() { //снять выделение на странице листа ожидания
-		console.log('222');
 		$('input:checked').attr('checked', false);
 		$('.checkbox').find('.inner').css({
 			'backgroundColor': '#fff'
@@ -1294,14 +1349,12 @@ function slideUpAllElementstable(){//
 	function checkboxResult() {
 		if ($(this).prop('checked')) {
 			var $ch = $(this).parent().children('.checked_box');
-			console.log($ch);
 			$ch.css({
 				'backgroundColor': '#00aeef'
 			});
 			$ch.children('.inner').children().css({
 				'backgroundColor': '#50b74e'
 			})
-			console.log('2');
 		} else {
 			var $ch = $(this).parent().children('.checked_box');
 			$ch.css({
@@ -1518,7 +1571,6 @@ function slideUpAllElementstable(){//
 		$('.markup').css({
 			'minHeight': toolsHeight
 		});
-		console.log('2');
 	}
 	$('.arrows').mouseover(solveHight);
 
@@ -1793,9 +1845,9 @@ function slideUpAllElementstable(){//
 	function mobMnu() {
 		$(window).resize(function() {
 			$('.hidemenuR').removeAttr('style') //сброс стилей
-			if ($(window).width() <= 768) { //подмена лого
+			if ($(window).width() < 768) { //подмена лого
 				$('.mob_logo img').attr('src', 'img/logo.png');
-			} else if ($(window).width() > 768 && $(window).width() <= 1400) {
+			} else if ($(window).width() >= 768 && $(window).width() <= 1400) {
 				$('.mob_logo img').attr('src', 'img/moblogo.png');
 			} else {
 				$('.mob_logo img').attr('src', 'img/logo.png');
@@ -1803,6 +1855,8 @@ function slideUpAllElementstable(){//
 
 		})
 		if ($(window).width() < 768) {
+			$('.mob_logo img').attr('src', 'img/logo.png');
+
 			$('#hamburger-icon').click(function() {
 				$(this).toggleClass('flag');
 				if ($(this).hasClass('flag')) {
@@ -1896,3 +1950,19 @@ function closemainpopup(){
 	}, 0);
 }
 $('.generalPopUp-window_close, .gray_btn').click(closemainpopup)
+
+function generalPopUpAddField(){//добавить новое поле в попап окне на странице результатов поиска
+	var clone = $(this).parents('.generalPopUp-window-cloneElement').clone();
+//	clone.find('.generalPopUp-addField').remove();
+	clone.find('textarea').val(' ')
+	clone.appendTo('.generalPopUp-window-reportForm');
+	$('.generalPopUp-addField').click(generalPopUpAddField)
+}
+$('.generalPopUp-addField').click(generalPopUpAddField)
+
+$('.findBug').click(function(){
+	$('.generalPopUp-searchresult').fadeIn(100);
+})
+
+
+$('.overlaypreloader').hide()//убрать прелоадер

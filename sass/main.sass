@@ -91,6 +91,27 @@ body
 		top: 5px
 		left: 3px
 
+.countInfo
+	border-radius: 9px
+	background-color: $red
+	position: absolute
+	min-width: 20px
+	height: 18px
+	text-align: center
+	top: 12px
+	right: 10px
+	span
+		display: inline-block
+		line-height: 16px
+		width: 100%
+		float: left
+		border-radius: 9px
+		position: absolute
+		left: 0px !important
+		padding-left: 4px
+		padding-right: 4px
+		top: 0
+
 .markup
 	min-height: 370px
 #right_side
@@ -231,9 +252,21 @@ body
 				top: 20px
 				i
 					font-style: normal
-					color: $red
 					display: block
 					width: 100%
+		.countInfo-dashboardWidget
+			right: 10px
+			top: 38px
+			position: absolute
+			height: auto
+			padding: 3px 5px
+			border-radius: 999px
+			font-size: em(14px)
+			span
+				position: relative
+				top: auto
+				color: #fff
+				font-family: 'osr', sans-serif
 .dashboard_small-call
 	.content__item
 		&:hover
@@ -242,11 +275,12 @@ body
 		.content__item-right
 			span
 				top: 0px
-
+				i
+					color: $red
 .dashboard_info-innertext
 	padding-left: 10px
 	padding-right: 15px
-	color: red
+	color: $red
 	text-transform: uppercase
 	display: inline-block
 	float: left
@@ -2496,11 +2530,13 @@ input
 		li
 			list-style-type: none
 			text-align: left
+			position: relative
 			&.active
 				a
 					background-color: #545454
 					i
 						padding: 11px 16px
+						position: relative
 						background-color: #dd3737
 						box-shadow: inset 2px 0 5px rgba(0,0,0,.40)
 			&:nth-child(even)
@@ -2530,7 +2566,9 @@ input
 				span
 					position: relative
 					left: 4px
-
+.countInfo-copy
+	right: -20px
+	z-index: 999 !important
 
 
 .orders_list_changes_btn,
@@ -3392,7 +3430,6 @@ input
 			height: 100%
 			.top_cell
 				display: inline-block
-				background-color: #dcfdc7
 				width: 100%
 				padding: 5px
 				span, .alert-info
@@ -3405,7 +3442,6 @@ input
 				padding: 5px
 				width: 100%
 				display: inline-block
-				background-color: #fdeec8
 				span, .alert-info
 					position: relative
 					top: 20px
@@ -3431,7 +3467,10 @@ input
 	.quantity_ .content
 		font-family: OSB,sans-serif
 
-
+.privolniyStatus
+	background-color: #dcfdc7
+.podolskStatus
+	background-color: #fdeec8
 .wait_list_table
 	.table_search_goods_result
 		.quantity_
@@ -6862,6 +6901,39 @@ input[type=checkbox]
 
 
 //результаты поиска//
+.searchResult-h2_btn
+	button
+		float: right
+		margin-top: 10px
+.searchResult-tableRow_foldSpan,
+.searchResult-tableRow_srok
+	position: relative
+	top: 5px
+
+.search-tableContent_titleL
+	width: 45%
+	float: left
+.search-tableContent_titleR
+	width: 55%
+	float: left
+.search-tableContent_priceLeft,
+.search-tableContent_priceRight
+	width: 55%
+	float: left
+	.wrap
+		height: 63px
+		padding: 5px
+		padding-top: 15px
+		font-size: em(11px)
+		.recomend
+			margin-top: 8px
+			i
+				color: #333
+			span
+				font-family: 'osb', sans-serif !important
+.search-tableContent_priceLeft,
+	width: 45%
+
 .managmentAllFilter
 	padding: 20px
 	background-color: #eaeaea
@@ -6980,8 +7052,6 @@ input[type=checkbox]
 		position: relative
 		top: 2px
 
-
-
 .searchResultShowAllRow,
 .searchResultShowAllRow_anyDeliv
 	position: relative
@@ -7011,7 +7081,46 @@ input[type=checkbox]
 		right: 10px
 		top: 10px
 
-
+.generalPopUp-searchresult
+	.generalPopUp-searchresult_selectwrap
+		.center
+			font-size: em(25px)
+			padding: 0 5px
+			width: 60px
+			text-align: center
+			display: inline-block
+			position: relative
+			margin-left: 10px
+			margin-right: 10px
+		select
+			width: 30%
+			padding: 10px
+			margin-bottom: 0
+			float: left
+			&:last-child
+				float: left
+		i
+			color: $green
+			font-size: em(23px)
+			cursor: pointer
+			float: right
+			position: relative
+			top: 10px
+			right: 10px
+	.generalPopUp-window_commentToError
+		display: inline-block
+		width: 100%
+		margin-top: 10px
+		textarea
+			height: 70px
+	.themeMail
+		margin-bottom: 20px
+		span
+			display: inline-block
+			width: 100%
+		input
+			width: 100%
+			padding: 10px
 
 
 
@@ -7322,6 +7431,503 @@ h3
 		margin-right: 20px
 .report-content
 	margin: 0
+//конец обратная связь//
+
+//уцененные товары//
+.cutePrice
+	padding-top: 30px
+	padding-bottom: 25px
+	.privolniyStatus
+		background-color: #d3ffb8
+	.podolskStatus
+		background-color: #ffedc1
+	.astanaStatus
+		background-color: #f7dfff
+	.ectStatus
+		background-color: #dadeff
+.cutePrice-h2
+	margin-bottom: 30px
+	h2
+		margin: 0
+		i
+			color: #959595
+			font-size: em(18px)
+			position: relative
+			top: 3px
+			margin-right: 20px
+.cutePrice-h2_breadCrumbs
+	select, div
+		float: right
+		display: inline-block
+		margin-bottom: 0
+	select
+		padding: 5px 10px
+		margin-left: 20px
+.cutePrice-table
+	border: 1px solid gray
+	margin: 0
+	div
+		&:nth-child(even)
+			.title
+				background-color: #8d8d8d
+	.title
+		color: #fff
+		background-color: #666
+		padding: 3px 5px
+		text-transform: uppercase
+		font-size: em(8px)
+		line-height: em(25px)
+		height: 25px
+	.timeDelivery
+		line-height: em(14px)
+	.body
+		padding: 3px 5px
+		height: 75px
+		span
+			position: relative
+			top: 20px
+.cutePrice-table_image
+	text-align: center
+	.body
+		padding: 0
+	.image_wrap
+		position: relative
+		padding: 10px
+		img
+			max-width: 100%
+			width: auto
+			height: 65px
+			position: relative
+			top: -5px
+		i
+			position: absolute
+			color: #d5d5d5
+			right: 0
+			top: 0
+			bottom: 0
+			display: inline-block
+			height: 38%
+			width: 30%
+			left: 0
+			margin: auto
+			cursor: pointer
+			font-size: em(25px)
+			transition: .2s
+			text-shadow: 0 0 3px (r)
+			&:hover
+				color: #fff
+				transform: scale(1.1)
+.cutePrice-table_brand
+	.body
+		font-family: 'osb', sans-serif
+		text-transform: uppercase
+		line-height: em(14px)
+		span
+			margin-top: 10px
+			top: 0
+			display: inline-block
+		a
+			display: inline-block
+			width: 100%
+			text-decoration: underline
+			&:last-child
+				color: $red
+.cutePrice-table_town
+	span
+		font-style: italic
+		text-decoration: underline
+.cutePrice-table_exist
+	text-align: center
+	span
+		font-family: 'osb', sans-serif
+	i
+		margin-right: 5px
+		color: #fbaf5d
+		font-size: em(16px)
+		position: relative
+		top: 3px
+.cutePrice-table_price
+	text-align: center
+	.body
+		font-family: 'osb', sans-serif
+.cutePrice-table_quantity
+	text-align: center
+.cutePrice-table_description
+	span
+		line-height: em(12px)
+		display: inline-block
+.cutePrice-table_quantity
+	.nal
+		font-family: 'osb', sans-serif
+		text-transform: uppercase
+		float: right
+		margin-right: 5px
+	.wrapperSpinner
+		border: 1px solid lightgray
+		width: 120px
+		float: right
+		position: relative
+		margin-top: 15px
+		button
+			height: 30px
+			width: 30px
+			float: right
+			border: none
+		.waitImport
+			border-left: 1px solid lightgray
+			transition: .2s
+			background-color: #fff
+			&:hover
+				background-color: $green
+				color: #fff
+		.form-control
+			width: 88px
+			float: left
+			height: 30px
+			padding-left: 40px
+			text-align: center
+			border: none
+		.checked_box
+			height: 30px
+			width: 30px
+			background-color: lightgray
+			border: 1px solid lightgray
+			position: absolute
+			left: 0
+			top: 0
+			&:hover
+				background-color: #00aeef !important
+			.inner
+				height: 18px
+				width: 18px
+				position: relative
+				left: 5px
+				top: 5px
+				border: 1px solid lightgray
+				background-color: #fff
+				.green
+					height: 12px
+					width: 12px
+					left: 2px
+					top: 2px
+					position: absolute
+
+.cutePrice
+	.privolniyRow
+		div
+			&:nth-last-child(1),
+			&:nth-last-child(3),
+			&:nth-last-child(5),
+				.body
+					background-color: #eaffde
+
+.cutePrice-h2_breadCrumbs-bottom
+.cutePrice-filter
+	background-color: #eaeaea
+	margin-left: -15px
+	margin-right: -15px
+	padding: 25px 25px
+	.cutePrice-filter_innerWrap
+		color: #959595
+		i
+			display: block
+			float: left
+			width: 35px
+			font-size: em(34px)
+			margin-right: 35px
+		.wrapper
+			float: left
+			font-size: em(14px)
+			font-family: 'osb', sans-serif
+			color: #333
+			width: 100%
+			span
+				margin-right: 10px
+				display: block
+				float: left
+				width: 85px
+				position: relative
+				top: 5px
+			input
+				padding: 5px 10px
+				font-family: 'osr', sans-serif
+				text-transform: uppercase
+				color: gray
+				@include calc(width, "100% - 100px")
+				float: left
+				display: block
+		.brandWrapper
+			float: left
+			@include calc(width, "100% - 70px")
+
+	.cutePrice-filter_buttons
+		button
+			@include calc(width, "50% - 10px")
+			float: left
+			padding: 6px 10px
+			&:last-child
+				margin-left: 20px
+//конец уцененные товары//
+
+
+//наценка//
+.extraCharge
+	min-height: 80vh
+	padding-top: 10px
+	h2
+		i
+			color: #959595
+			margin-right: 20px
+			position: relative
+			top: 3px
+			font-size: em(18px)
+.extraCharge-settings
+	margin: 0
+	background-color: #f0f0f0
+.extraCharge-settings_title
+	background-color: #e5e5e5
+.extraCharge-settings_select
+	padding-top: 20px
+	padding-bottom: 20px
+	span
+		color: #4d4d4d
+		font-size: em(12px)
+		font-family: 'osb', sans-serif
+		text-transform: uppercase
+		display: inline-block
+		width: 100%
+		margin-bottom: 25px
+	select
+		padding: 5px 10px
+		width: 100%
+		color: gray
+.extraCharge-settings_btns
+	text-align: center
+	padding-top: 20px
+	padding-bottom: 20px
+	button
+		width: 80%
+		margin-top: 40px
+		padding: 7px
+
+.extraCharge-settings_checkBoxes
+	padding-top: 20px
+	padding-bottom: 20px
+	span
+		display: inline-block
+		width: 100%
+		font-family: 'osb', sans-serif
+		text-transform: uppercase
+		color: #4d4d4d
+	label
+		display: inline-block
+		width: 100%
+		input
+			opacity: 0
+		input:checked
+			+ span span
+				background-color: $green
+		.overlay
+			display: block
+			height: 16px
+			width: 16px
+			border: 1px solid lightgray
+			float: left
+			margin-right: 5px
+			position: relative
+			top: 3px
+			background-color: #fff
+			cursor: pointer
+			span
+				height: 10px
+				width: 10px
+				border: 1px solid transparent
+				left: 2px
+				top: 2px
+				position: absolute
+			&:hover
+				span
+					border-color: lightgray
+		span
+			display: block
+			float: left
+			width: auto
+			font-size: em(12px)
+			font-family: 'osr', sans-serif
+			text-transform: lowercase
+.extraCharge-addSettings
+	margin: 0
+	margin-top: 30px
+.extraCharge-addSettings_btns
+	background-color: #f0f0f0
+	padding: 20px
+	button
+		margin-right: 20px
+		i
+			margin-right: 10px
+			font-size: em(14px)
+			position: relative
+			top: 2px
+.extraCharge-addSettings_thead
+	margin: 0
+	background-color: #cfcfcf
+	font-family: 'osb', sans-serif
+	text-transform: uppercase
+	padding: 8px 20px
+	box-shadow: 0 2px 3px rgba(0,0,0,.3)
+	color: #4d4d4d
+	.percsent
+		text-align: center
+.extraCharge-addSettings_tableTitle
+	text-transform: uppercase
+	font-family: 'osb', sans-serif
+	text-align: center
+	background-color: #e5e5e5
+	margin: 0
+	padding: 12px
+.extraCharge-addSettings_tableRow
+	margin: 0
+	text-transform: uppercase
+	font-family: 'osb', sans-serif
+	padding: 10px 0
+	border-bottom: 1px solid lightgray
+	background-color: #f0f0f0
+	button
+		float: right
+		height: 25px
+		width: 25px
+		padding: 0
+		i
+			margin: 0
+			font-size: em(12px)
+.extraCharge-addSettings_tableRowProduct
+	margin: 0
+	background-color: #f0f0f0
+	padding: 10px 0
+	i
+		color: $red
+		font-size: em(14px)
+		margin-right: 10px
+		position: relative
+		top: 2px
+.extraCharge-addSettings_tableRowProduct
+	button
+		height: 25px
+		width: 25px
+		padding: 0
+		text-align: center
+		float: right
+		margin-left: 5px
+		border: none
+		i
+			color: #fff
+			font-size: em(12px)
+			margin: 0
+		&:last-child
+			i
+				color: gray
+		&:nth-last-child(2)
+			i
+				transform: rotate(45deg)
+.extraCharge-addMarkPrice_thead
+	div
+		&:nth-last-child(2),
+		&:nth-last-child(3)
+			text-align: center
+
+.markupOnProduct,
+.extraCharge-addSettings,
+.markupOnGroupProducts
+	display: none
+
+.extraCharge-edite
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	background-color: rgba(0,0,0,.4)
+	z-index: 300
+	display: none
+	.window
+		width: 320px
+		height: 200px
+		background-color: #fff
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		margin: auto
+		padding: 20px
+		.close
+			cursor: pointer
+			height: 25px
+			width: 25px
+			position: absolute
+			right: 0
+			top: 0
+			background-color: $red
+			&::after,
+			&::before
+				position: absolute
+				width: 90%
+				content: ''
+				left: 0
+				right: 0
+				bottom: 0
+				top: 0
+				height: 2px
+				background-color: #fff
+				margin: auto
+			&::before
+				transform: rotate(45deg)
+			&::after
+				transform: rotate(-45deg)
+		h2
+			margin: 0
+			font-size: em(14px)
+			margin-bottom: 20px
+		span
+			display: inline-block
+			width: 100%
+			font-family: 'osb', sans-serif
+			margin-bottom: 5px
+		input
+			width: 100%
+			padding: 5px 10px
+			margin-bottom: 20px
+		button
+			float: right
+			padding: 6px 10px
+
+.generalPopUp-extraCharge
+	.extraCharge-window
+		height: 450px !important
+	.generalPopUp-window_body
+		overflow: auto !important
+		span
+			display: block
+			width: 100%
+			font-family: 'osb', sans-serif
+			margin-bottom: 5px
+		input
+			padding: 7px 10px
+			width: 100%
+			margin-bottom: 20px
+.generalPopUp-productGroup
+	.productGroup-window
+		width: 80% !important
+.productGroup-windowBody
+	margin-top: 20px
+	input
+		width: 100%
+		padding: 6px 10px
+//конец наценка//
+
+
+
+
 
 //поп-ап окно для репортов//
 .generalPopUp
@@ -7385,6 +7991,12 @@ h3
 	.generalPopUp-window-textarea
 		display: none
 		height: 90px
+.generalPopUp-window-cloneElement
+	background-color: #f0f0f0
+	padding: 20px
+	margin-bottom: 20px
+	border-radius: 2px
+	box-shadow: 1px 1px 3px rgba(0,0,0,.3)
 .generalPopUp-window-innerWrapper
 	.item
 		margin-bottom: 25px
@@ -7418,7 +8030,32 @@ h3
 		border: none
 		float: right
 		padding: 10px 30px
+.productGroup-window_search
+	.tree-leftNav
+		border: 1px  solid
+		height: 430px !important
+		margin-bottom: 20px
+		overflow-y: scroll
 /////////////////////////////
+
+
+.overlaypreloader
+	background-color: rgba(0,0,0,.4)
+	position: fixed
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	z-index: 999
+.preloader
+	position: fixed
+	left: 0
+	right: 0
+	bottom: 0
+	top: 0
+	margin: auto
+	display: block
+	z-index: 999
 
 
 @import "media"

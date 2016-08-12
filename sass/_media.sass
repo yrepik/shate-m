@@ -2150,6 +2150,17 @@ $base-font-size: 13px
 @media only screen and (max-width : 460px)
 	.priceSellWithNds-recomendidPrice
 		margin-top: 0 !important
+@media only screen and (max-width : 768px)
+	.import-repeatRow
+		.content
+			height: auto !important
+	.search-tableContent_priceLeft .wrap, .search-tableContent_priceRight .wrap
+		height: 75px
+
+
+
+
+
 //конец результаты поиска//
 
 //акции//
@@ -2201,3 +2212,141 @@ $base-font-size: 13px
 @media only screen and (max-height : 640px)
 	.generalPopUp-window
 		height: 90% !important
+
+
+//уцененные товары//
+@media only screen and (max-width : 992px)
+	.cutePrice
+		padding-bottom: 0px
+	.cutePrice-h2_breadCrumbs
+		margin-top: 20px
+		.breadcrumbs_bottom
+			float: left
+
+	.privolniyRow
+		div
+			&:nth-last-child(1),
+			&:nth-last-child(2),
+			&:nth-last-child(3),
+			&:nth-last-child(4),
+			&:nth-last-child(5),
+				.body
+					background-color: #eaffde
+
+	.cutePrice-table
+		div
+			&:nth-last-child(6)
+				.body
+					background-color: #fff
+			&:nth-last-child(2),
+			&:nth-last-child(4)
+				.title
+					background-color: #8d8d8d
+			&:nth-last-child(7)
+				.title
+					background-color: #666
+	.cutePrice-filter_innerWrap
+		.wrapper
+			width: 91% !important
+			float: right !important
+			margin-bottom: 10px
+			input
+				float: right !important
+				font-size: em(11px)
+	.cutePrice-filter .cutePrice-filter_innerWrap i
+		position: absolute
+		top: 25px
+
+@media only screen and (max-width : 768px)
+	.cutePrice-filter_innerWrap
+		.wrapper
+			width: 80% !important
+
+	.cutePrice-h2_breadCrumbs-bottom
+		margin-top: 10px
+		text-align: center
+		.breadcrumbs_bottom
+			width: 100%
+	.cutePrice-h2
+		h2
+			font-size: em(18px)
+		.breadcrumbs_bottom
+			text-align: center
+			float: none
+			width: 100%
+	.cutePrice-h2_breadCrumbs select
+		margin-bottom: 20px
+	.cutePrice-table
+		border: 1px solid gray
+		margin: 0
+		margin-bottom: 15px
+		div
+			&:nth-last-child(7)
+				.title
+					background-color: #666
+			&:nth-child(odd)
+				.title
+					background-color: #8d8d8d
+			&:nth-last-child(8)
+				.title
+					background-color: #666
+	.privolniyRow
+		div
+			&:nth-last-child(6)
+				.body
+					background-color: #eaffde
+	.podolskRow
+		div
+			&:nth-last-child(6),
+			&:nth-last-child(4)
+				.body
+					background-color: #ffedc1
+	.astanaRow
+		div
+			&:nth-last-child(6),
+			&:nth-last-child(4)
+				.body
+					background-color: #f7dfff
+	.ectRow
+		div
+			&:nth-last-child(6),
+			&:nth-last-child(4)
+				.body
+					background-color: #dadeff
+@media only screen and (max-width : 392px)
+	.cutePrice-table .body .nal
+		display: none
+//Конец уцененные товары//
+
+
+//наценка//
+@media only screen and (max-width : 992px)
+	.extraCharge-settings_btns,
+	.extraCharge-settings_checkBoxes
+		padding-top: 0
+	.extraCharge-settings_btns
+		button
+			width: 100%
+@media only screen and (max-width : 768px)
+	.extraCharge-settings_title
+		font-size: em(12px)
+		line-height: em(18px)
+		text-align: center
+	.extraCharge-addSettings_btns
+		button
+			width: 100%
+			&:first-child
+				margin-bottom: 20px
+	.extraCharge-settings_checkBoxes
+		label
+			margin-bottom: 10px
+	.extraCharge-settings_btns
+		button
+			width: 100%
+			margin: 0
+@media only screen and (max-width : 441px)
+	.extraCharge-window
+		.red_btn
+			margin-top: 10px
+
+//конец наценка//
