@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/fonts.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="libs/owlcarousel/owl.carousel.css">
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" charset="utf-8">
 
 </head>
@@ -54,6 +55,7 @@
 						<li><a href="shate-m_b2b_user_cabinet_reconciliation.html"><i class="fa fa-money" aria-hidden="true"></i><span>Финансы</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_profile.html"><i class="fa fa-user" aria-hidden="true"></i><span>Персональные данные</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_salesperson.html"><i class="fa fa-phone" aria-hidden="true"></i><span>Ваш менеджер</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_user_docs.html"><i class="fa fa-stack-1x fa-file-word-o"></i><span>Документы</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_history.html"><i class="fa fa-history" aria-hidden="true"></i><span>История запросов</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_rest_managment.html"><i class="fa fa-cloud-upload" aria-hidden="true"></i><span>Управление остатками</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_action.html"><i class="fa fa-percent" aria-hidden="true"></i><span>Акции</span></a></li>
@@ -61,7 +63,7 @@
 						<li><a href="shate-m_b2b_user_cabinet_extra_charge_settings.html"><i class="fa fa-cart-plus " aria-hidden="true"></i><span>Наценки</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_polls.html"><i class="fa fa-check-square-o " aria-hidden="true"></i><span>Опросы</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_report.html"><i class="fa fa-support" aria-hidden="true"></i><span>Форма обратной связи</span></a></li>
-						<li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span>Настройки</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_user_settings.html"><i class="fa fa-cog" aria-hidden="true"></i><span>Настройки</span></a></li>
 
 					</ul>
 				</nav>
@@ -144,9 +146,11 @@
 
 							<!--корзина-->
 							<div class="top-cart">
-								<a class="totall">(0 руб.)</a>
-								<a href="shate-m_b2b_user_cabinet_cart.html" class="top-quantity">0</a>
+								<a href="shate-m_b2b_user_cabinet_cart.html">
+								<span class="totall">(0 руб.)</span>
+								<span class="top-quantity">0</span>
 								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+								</a>
 							</div>
 
 							<!--кабинет пользователя-->
@@ -160,7 +164,7 @@
 							<div class="user_name">
 								<ul>
 									<li><i class="fa fa-user" aria-hidden="true"></i>Фамилия Имя Отчество</li>
-									<li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i>Настройки пользователя</a></li>
+									<li><a href="shate-m_b2b_user_cabinet_user_settings.html"><i class="fa fa-cog" aria-hidden="true"></i>Настройки пользователя</a></li>
 									<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Выход</a></li>
 								</ul>
 							</div>
@@ -185,7 +189,7 @@
 					<div class="row togglemnu">
 						<ul>
 							<li>Фамилия Имя Отчество</li>
-							<li><a href="#">Настройки пользователя</a></li>
+							<li><a href="shate-m_b2b_user_cabinet_user_settings.html">Настройки пользователя</a></li>
 							<li><a href="#">Выход</a></li>
 						</ul>
 					</div>
@@ -194,8 +198,15 @@
             <div class="row">
 							<!--Поиск по ВИН-->
               <div class="searchToVin1-h2 col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h2><i class="fa fa-search" aria-hidden="true"></i><span>Поиск по VIN</span></h2>
+                <h2>
+									<i class="fa fa-search" aria-hidden="true"></i>
+									<span>Поиск по VIN</span>
+								</h2>
+								<button class="btn gray_btn hidden-xs helperBtn" type="button" name="button">
+									<i class="fa fa-life-ring" aria-hidden="true"></i> Помощь <span class="hidden-xs">по разделу</span>
+								</button>
               </div>
+
 							<!--Поле поиска-->
 							<div class="searchToVin1-query col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<span>Введите Vin автомобиля</span>
@@ -204,7 +215,7 @@
 							<!--поле поиска-->
 							<div class="searchToVin1-searchfield col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<input type="search" name="searchToVin1" value="">
-								<button title="поиск" class="red_btn"><i class="hidedn-sm hidden-md hidden-lg fa fa-search" aria-hidden="true"></i><span class="hidden-xs">Поиск</span></button>
+								<button title="поиск" class="red_btn"><i class="hidden-sm hidden-md hidden-lg fa fa-search" aria-hidden="true"></i><span class="hidden-xs">Поиск</span></button>
               </div>
             </div>
 
@@ -587,14 +598,48 @@
 		</div>
 	</section>
 
+
+<!--модалка помощь по разделу-->
+<!--popUp диапазон наценки-->
+<div class="generalPopUp generalPopUp-helper">
+	<div class="generalPopUp-window generalPopUp-helperWindow">
+		<div class="generalPopUp-window_close"></div>
+		<div class="generalPopUp-window_header">
+			<h2>Помощь по разделу</h2>
+		</div>
+		<div class="generalPopUp-window_body generalPopUp-helperBody">
+
+
+			<div class="owl-helper owl-theme">
+  			<div><img src="img/слайд/слайд-1.jpg" alt=""></div>
+  			<div><img src="img/слайд/слайд-2.jpg" alt=""></div>
+  			<div><img src="img/слайд/слайд-3.jpg" alt=""></div>
+			</div>
+
+		</div>
+
+		<div class="generalPopUp-window_buttongroup clerfix">
+			<button class="gray_btn">Отмена</button>
+			</form>
+		</div>
+
+	</div>
+</div>
+
+
+
+
 	<!--прилоадер-->
 	<div class="overlaypreloader">
 		<img class="preloader" src="img/preloader.gif" alt="" />
 	</div>
 
-	<script src="js/add.js" charset="utf-8"></script>
-	<script src="js/common.js" charset="utf-8"></script>
-	<script src="libs/Magnific-Popup/dist/jquery.magnific-popup.min.js" charset="utf-8"></script>
+
+	<scrip  scr="libs/owlcarousel/owl.carousel.min.js"></scrip>
+	<script  src="js/add.js" charset="utf-8"></script>
+	<script  src="libs/Magnific-Popup/dist/jquery.magnific-popup.min.js" charset="utf-8"></script>
+
+	<script  src="js/common.js" charset="utf-8"></script>
 
 </body>
 

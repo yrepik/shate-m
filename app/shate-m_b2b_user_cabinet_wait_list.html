@@ -52,6 +52,7 @@
 						<li><a href="shate-m_b2b_user_cabinet_reconciliation.html"><i class="fa fa-money" aria-hidden="true"></i><span>Финансы</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_profile.html"><i class="fa fa-user" aria-hidden="true"></i><span>Персональные данные</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_salesperson.html"><i class="fa fa-phone" aria-hidden="true"></i><span>Ваш менеджер</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_user_docs.html"><i class="fa fa-stack-1x fa-file-word-o"></i><span>Документы</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_history.html"><i class="fa fa-history" aria-hidden="true"></i><span>История запросов</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_rest_managment.html"><i class="fa fa-cloud-upload" aria-hidden="true"></i><span>Управление остатками</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_action.html"><i class="fa fa-percent" aria-hidden="true"></i><span>Акции</span></a></li>
@@ -59,7 +60,7 @@
 						<li><a href="shate-m_b2b_user_cabinet_extra_charge_settings.html"><i class="fa fa-cart-plus " aria-hidden="true"></i><span>Наценки</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_polls.html"><i class="fa fa-check-square-o " aria-hidden="true"></i><span>Опросы</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_report.html"><i class="fa fa-support" aria-hidden="true"></i><span>Форма обратной связи</span></a></li>
-						<li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span>Настройки</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_user_settings.html"><i class="fa fa-cog" aria-hidden="true"></i><span>Настройки</span></a></li>
 
 					</ul>
 				</nav>
@@ -140,9 +141,11 @@
 
 							<!--корзина-->
 							<div class="top-cart">
-								<a class="totall">(0 руб.)</a>
-								<a href="shate-m_b2b_user_cabinet_cart.html" class="top-quantity">0</a>
+								<a href="shate-m_b2b_user_cabinet_cart.html">
+								<span class="totall">(0 руб.)</span>
+								<span class="top-quantity">0</span>
 								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+								</a>
 							</div>
 
 							<!--кабинет пользователя-->
@@ -156,7 +159,7 @@
 							<div class="user_name">
 								<ul>
 									<li><i class="fa fa-user" aria-hidden="true"></i>Фамилия Имя Отчество</li>
-									<li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i>Настройки пользователя</a></li>
+									<li><a href="shate-m_b2b_user_cabinet_user_settings.html"><i class="fa fa-cog" aria-hidden="true"></i>Настройки пользователя</a></li>
 									<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Выход</a></li>
 								</ul>
 							</div>
@@ -167,7 +170,7 @@
 					<div class="row togglemnu">
 						<ul>
 							<li>Фамилия Имя Отчество</li>
-							<li><a href="#">Настройки пользователя</a></li>
+							<li><a href="shate-m_b2b_user_cabinet_user_settings.html">Настройки пользователя</a></li>
 							<li><a href="#">Выход</a></li>
 						</ul>
 					</div>
@@ -330,7 +333,7 @@
 								<div class="content">
 									<div class="top_cell">
 
-										<form action="post" class="clearfix">
+										<div class="action" action="post" class="clearfix">
 											<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 											<div class="checked_box">
 												<div class="inner">
@@ -346,7 +349,7 @@
 											</div>
 											<button class="btn_form dellRowTamleWaitList wait" type="submit" name="button"><i class="fa fa-hourglass-end" aria-hidden="true"></i></button>
 											<button class="dellRowWaitList btn_form gray hidden-xs" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
-										</form>
+										</div>
 									</div>
 
 								</div>
@@ -439,7 +442,7 @@
 								<div class="title">Количество</div>
 								<div class="content">
 									<div class="top_cell">
-										<form action="post" class="clearfix">
+										<div  class="action" action="post" class="clearfix">
 											<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 											<div class="checked_box">
 												<div class="inner">
@@ -455,7 +458,7 @@
 											</div>
 											<button class="btn_form addcart" type="submit" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
 											<button class="dellRowWaitList btn_form gray hidden-xs" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
-										</form>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -546,7 +549,7 @@
 								<div class="title">Количество</div>
 								<div class="content">
 									<div class="top_cell">
-										<form action="post" class="clearfix">
+										<div  class="action" action="post" class="clearfix">
 											<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 											<div class="checked_box">
 												<div class="inner">
@@ -562,7 +565,7 @@
 											</div>
 											<button class="btn_form addcart" type="submit" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
 											<button class="dellRowWaitList btn_form gray hidden-xs" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
-										</form>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -652,7 +655,7 @@
 								<div class="title">Количество</div>
 								<div class="content">
 									<div class="top_cell">
-										<form action="post" class="clearfix">
+										<div  class="action" action="post" class="clearfix">
 											<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 											<div class="checked_box">
 												<div class="inner">
@@ -668,7 +671,7 @@
 											</div>
 											<button class="btn_form addcart" type="submit" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
 											<button class="dellRowWaitList btn_form gray hidden-xs" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
-										</form>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -760,7 +763,7 @@
 								<div class="title">Количество</div>
 								<div class="content">
 									<div class="top_cell">
-										<form action="post" class="clearfix">
+										<div  class="action" action="post" class="clearfix">
 											<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 											<div class="checked_box">
 												<div class="inner">
@@ -776,7 +779,7 @@
 											</div>
 											<button class="btn_form addcart" type="submit" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
 											<button class="dellRowWaitList btn_form gray hidden-xs" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
-										</form>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -867,7 +870,7 @@
 								<div class="title">Количество</div>
 								<div class="content">
 									<div class="top_cell">
-										<form action="post" class="clearfix">
+										<div  class="action" action="post" class="clearfix">
 											<input class="checkbox_result" type="checkbox" title="Оплата наличными">
 											<div class="checked_box">
 												<div class="inner">
@@ -883,7 +886,7 @@
 											</div>
 											<button class="btn_form addcart" type="submit" name="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
 											<button class="dellRowWaitList btn_form gray hidden-xs" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
-										</form>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1024,6 +1027,39 @@
 			</div>
 		</div>
 	</div>
+
+
+
+	<!--pop-Up дОБАВИТЬ ПОЗИЦИЮ В ЛИСТ ОЖИДАНИЯ-->
+	<div class="tree-addToWaitlist">
+		<div class="tree-addToWaitlist-wrapper">
+			<div class="tree-addToWaitlist_header">
+				<h2><span class="hidden-sm hidden-md hidden-lg">Добавить в лист ожидания</span><span class="hidden-xs">Добавление позиции в лист ожидания</span></h2>
+				<div class="tree-addToWaitlist_header-close"></div>
+			</div>
+			<form action="post">
+				<div class="tree-addToWaitlist_body">
+					<div class="tree-addToWaitlist_body-wrap">
+						<h5>Бренд:</h5> <span>NGK</span>
+					</div>
+					<div class="tree-addToWaitlist_body-wrap">
+						<h5>Артикул:</h5> <span>V-line9</span>
+					</div>
+					<div class="tree-addToWaitlist_body-wrap">
+						<h5>Количество:</h5></h5>
+						<input type="text" value="1">
+					</div>
+				</div>
+				<div class="tree-addToWaitlist_fotter">
+					<a class="gray_btn treeCancell">Нет, спасибо</a>
+					<button class="red_btn"><span class="hidden-xs">Добавить позицию</span><span class="hidden-sm hidden-md hidden-lg">Добавить</span></button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+
+
 
 	<!--прилоадер-->
 	<div class="overlaypreloader">

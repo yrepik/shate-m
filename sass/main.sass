@@ -131,6 +131,28 @@ body
 	&:focus, &:active
 		background-color: $active
 
+.nonActive
+	cursor: default
+	color: #999
+	background-color: lightgray
+	border-color: #b2b2b2
+	&:hover
+		color: lightgray !important
+
+.blue_btn
+	background-color: #2196f3
+	border: none
+	text-transform: uppercase
+	color: #fff
+	font-family: 'osb', sans-serif
+	padding: 10px 15px
+	border: 1px solid #2196f3
+	&:hover
+		box-shadow: inset 3px 3px 3px rgba(0,0,0,.3)
+	&:focus, &:active
+		background-color: lighten(#2196f3, 10%)
+
+
 .dashboardSell-largeBlock_controls
 	position: absolute
 	right: 0
@@ -290,7 +312,8 @@ body
 		position: relative
 		top: 10px
 
-.drop_down_search_list
+.drop_down_search_list,
+.drop_down_search_listTree
 	position: absolute
 	background-color: #fff
 	width: 100%
@@ -469,6 +492,7 @@ body
 
 .top-cart
 	width: 17%
+	display: inline-block
 	text-align: center
 	text-transform: uppercase
 	padding: 4px 0
@@ -477,9 +501,9 @@ body
 		color: gray
 		font-size: em(12px)
 		&:hover
-			text-decoration: underline
-		&:focus, &:active
-			color: gray
+			text-decoration: none
+			.top-quantity
+				background-color: $active
 	.totall
 		font-family: 'osb', sans-serif
 	.top-quantity
@@ -494,6 +518,8 @@ body
 	i
 		font-size: em(20px)
 		color: #959595
+		position: relative
+		top: 2px
 .top-userCabinet
 	width: 21%
 	text-align: center
@@ -761,65 +787,6 @@ body
 		text-transform: uppercase
 		&:active
 			box-shadow: inset 0 2px 5px rgba(0,0,0,.40)
-
-
-
-.owl-stage-outer
-	position: absolute !important
-.owl-carousel
-	overflow: hidden
-	min-height: 330px
-	position: relative
-.owl-controls
-	position: absolute
-	bottom: 0
-	width: 100%
-	text-align: center
-	.owl-nav
-		margin-top: 10px
-		.owl-prev
-			background-image: url('/img/owlArr.png')
-			background-repeat: no-repeat
-			background-size: cover
-			background-position: 4px 0
-			height: 22px
-			width: 15px
-			float: right
-			right: 40px
-			position: relative
-			&:hover
-				background-image: url('/img/owlArrHover.png')
-		.owl-next
-			float: right
-			right: 0px
-			background-image: url('/img/owlArr.png')
-			background-repeat: no-repeat
-			background-size: cover
-			background-position: -11px 0
-			height: 22px
-			width: 15px
-			&:hover
-				background-image: url('/img/owlArrHover.png')
-
-
-
-//.owl-dots
-	margin: 0 auto
-	float: right
-	margin-right: 5px
-	.owl-dot
-		height: 15px
-		width: 15px
-		background-color: #fff
-		border-radius: 50%
-		float: left
-		margin: 0 2px
-		display: inline
-		box-shadow: inset -2px -2px 3px #ccc
-	.active
-		border: 1px solid #b2b2b2
-
-
 
 
 .large_block
@@ -1662,7 +1629,16 @@ body
 	.orders_list_changes_btn
 		i
 			color: #fff
-
+.orders_list-h2
+	margin-bottom: 20px
+	h2
+		display: inline-block
+	.helperBtn
+		float: right
+		i
+			font-size: em(16px)
+			top: 3px
+			position: relative
 .orders-info_popUp
 	display: none
 	position: fixed
@@ -2894,8 +2870,11 @@ input
 ///////////////////////////////////////
 ////стили страницы импорта заказов////
 //////////////////////////////////////
-
-.table_search_goods_result .quantity_ .content .bottom_cell form .btn_form, .table_search_goods_result .quantity_ .content .top_cell form .btn_form
+.acceptedcheckbox
+	background-color: #50b74e !important
+.action
+	width: 100% !important
+.table_search_goods_result .quantity_ .content .bottom_cell .action .btn_form, .table_search_goods_result .quantity_ .content .top_cell form .btn_form
 	&:hover
 		background-color: $green
 		box-shadow: inset 0 2px 2px rgba(0,0,0,.3)
@@ -3395,11 +3374,11 @@ input
 			text-transform: uppercase
 			margin-right: 5px
 			top: 15px !important
-		.bottom_cell form, .top_cell form
+		.bottom_cell .action, .top_cell .action
 			float: left
 			width: 125px
 			position: relative
-		.bottom_cell form .btn_form, .top_cell form .btn_form
+		.bottom_cell .action .btn_form, .top_cell .action .btn_form
 			float: left
 			display: block
 			height: 35px
@@ -3412,7 +3391,7 @@ input
 			transition: .1s
 			position: relative
 			overflow: hidden
-		.bottom_cell form .btn_form:hover, .top_cell form .btn_form:hover
+		.bottom_cell .action .btn_form:hover, .top_cell .action .btn_form:hover
 			color: #fff
 	.cell_wrap .content
 		.bottom_cell a, .top_cell a
@@ -3420,7 +3399,7 @@ input
 			font-size: 1em
 			font-style: italic
 	.quantity_ .content
-		.bottom_cell form .btn_form:hover:before, .top_cell form .btn_form:hover:before
+		.bottom_cell .action .btn_form:hover:before, .top_cell .action .btn_form:hover:before
 			left: 0
 	.cell_wrap
 		padding: 0
@@ -3476,7 +3455,7 @@ input
 		.quantity_
 			.content
 				.top_cell
-					form
+					.action
 						.gray
 							&:hover
 								background-color: $red
@@ -3489,6 +3468,12 @@ input
 							&:hover
 								background-color: $green
 								box-shadow: inset 0 2px 2px rgba(0,0,0,.3)
+
+.addcart
+	&:hover
+		background-color: $green !important
+		box-shadow: inset 0 2px 2px rgba(0,0,0,.3)
+
 .wait_list
 	.top_button, h2
 		font-family: OSB,sans-serif
@@ -3551,7 +3536,7 @@ input
 		left: 4px
 
 .quantity_ .content
-	.bottom_cell form .checkbox_result, .top_cell form .checkbox_result
+	.bottom_cell .action .checkbox_result, .top_cell .action .checkbox_result
 		height: 35px
 		width: 35px
 		position: absolute
@@ -3560,7 +3545,7 @@ input
 		left: 0
 		border: none
 		cursor: pointer
-	.bottom_cell form .checked_box, .top_cell form .checked_box
+	.bottom_cell .action .checked_box, .top_cell .action .checked_box
 		background-color: #cfcfcf
 		height: 33px
 		width: 33px
@@ -3568,7 +3553,7 @@ input
 		left: 1px
 		top: 1px
 		cursor: pointer
-	.bottom_cell form .checked_box .inner, .top_cell form .checked_box .inner
+	.bottom_cell .action .checked_box .inner, .top_cell .action .checked_box .inner
 		height: 19px
 		width: 19px
 		background-color: #fff
@@ -3576,7 +3561,7 @@ input
 		top: 7px
 		position: relative
 		border: 1px solid gray
-	.bottom_cell form .checked_box .inner .green, .top_cell form .checked_box .inner .green
+	.bottom_cell .action .checked_box .inner .green, .top_cell .action .checked_box .inner .green
 		height: 13px
 		width: 13px
 		position: relative
@@ -3705,6 +3690,30 @@ input[type=checkbox]
 	margin: 0
 	.bottom_cell, .top_cell
 		height: 100% !important
+
+.warhauseClaime
+	margin-top: 40px
+	.row
+		margin: 0
+		.descr
+			text-align: center
+			.content
+				span
+					font-family: 'osb', sans-serif
+					position: relative
+					top: 20px
+		.title-descr
+			text-align: center
+			span
+				margin-right: 10px
+		.content
+			padding: 20px
+			.warhauseClaime-input
+				padding: 10px
+				position: relative
+				top: 5px
+				float: right
+
 ///конец стилей страницы импорта заказов//
 
 
@@ -4603,6 +4612,53 @@ input[type=checkbox]
 ///////////////////////////////////////////////////////////////
 ///////Стили для страницы поиска по дереву tree.html///////////
 ///////////////////////////////////////////////////////////////
+.generalPopUp-details
+	display: block !important
+	.generalPopUp-detailsWindow
+		width: 95% !important
+		height: 90% !important
+		color: #333
+		h5
+			text-transform: none
+			font-size: em(16px)
+			margin-bottom: 20px
+.generalPopUp-details_row
+	margin-top: 20px
+.generalPopUp-details_left
+	span
+		font-family: 'osb', sans-serif
+		font-size: em(13px)
+		margin-bottom: 5px
+		display: inline-block
+	p
+		background-color: #d3ffb8
+		margin: 0
+		padding: 6px 20px
+		font-size: em(13px)
+		margin-bottom: 5px
+.additionalOptions_header
+	padding: 6px 10px
+	margin: 0
+	background-color: #cfcfcf
+	box-shadow: 0 3px 3px rgba(0,0,0,.3)
+	position: relative
+	z-index: 1
+.additionalOptions_tableRow
+	background-color: #f1f1f1
+	position: relative
+	z-index: 0
+	margin: 0
+	padding: 6px
+	&:nth-child(even)
+		background-color: #e4e4e4
+	span
+		font-family: 'osr', sans-serif
+		line-height: em(14px)
+		font-size: em(11px)
+
+
+
+
 .alert_zone-tree
 	background-color: #fff3eb
 	border-bottom-color: #fbaf5d
@@ -4908,7 +4964,6 @@ input[type=checkbox]
 				padding: 15px
 				height: 85px
 				overflow: hidden
-				word-break: break-all
 				.tree-tabWrap_content-tableSpinner
 					float: left
 					width: 50%
@@ -5122,6 +5177,7 @@ input[type=checkbox]
 
 ///////////стили для страницы финанасов reconciliation.html///////////////
 .finances
+	min-height: 100vh
 	padding-left: 15px !important
 	padding-right: 15px !important
 	.finances-h2
@@ -5130,8 +5186,14 @@ input[type=checkbox]
 		font-size: em(14px)
 		text-transform: uppercase
 		margin-top: 10px
+		padding-top: 30px
+		padding-bottom: 25px
+		.helperBtn
+			float: right
 		h2
 			font-family: 'osb', sans-serif
+			display: inline-block
+			margin: 0
 			i
 				font-size: em(16px)
 				position: relative
@@ -5293,6 +5355,7 @@ input[type=checkbox]
 
 //////////Стили для страницы Менеджера salesperson.html///////////////
 .manager
+	min-height: 100vh
 	.manager-self, .manager-h2
 		margin: 0
 	.manager-h3
@@ -5403,21 +5466,26 @@ input[type=checkbox]
 			position: relative
 			top: 4px
 			margin-right: 10px
-
-.userinfo
-	.row
-		margin: 0
+.userinfo-h2
+	padding-top: 30px
+	padding-bottom: 20px
 	h2
 		text-transform: uppercase
 		font-family: 'osb', sans-serif
 		font-size: em(20px)
-		margin: 40px 0
+		margin: 0
+		display: inline-block
 		i
 			font-size: em(18px)
 			color: #959595
 			margin-right: 25px
 			position: relative
 			top: 3px
+	button
+		float: right
+.userinfo
+	.row
+		margin: 0
 	.userinfo-leftSide, .userinfo-rightSide
 		width: 80%
 		span
@@ -5506,6 +5574,7 @@ input[type=checkbox]
 //управление остатками rest_managment//
 .managment
 	margin-bottom: 60px
+	min-height: 100vh
 	.managment-MinskStatus
 		background-color: #d3ffb8 !important
 	.managment-EctStatus
@@ -5550,28 +5619,30 @@ input[type=checkbox]
 				z-index: 2
 				.plr0
 					padding: 5px
-					word-break: break-all
+					word-wrap: break-word
 				.buttonsBlock
 					button
 						padding: 2px	10px
+						line-height: 1.8em
 						font-size: em(14px)
 						border: none
 						float: right
 						margin-left: 4px
-						color: #fff
-						background-color: #a8a7a7
+						color: gray
 						transition: .2s
+						background-color: transparent
 						&:hover
 							&:nth-last-child(1)
-								background-color: $green
-								text-shadow: 1px 2px 3px rgba(0,0,0,.3)
+								color: $green
 							&:nth-last-child(2)
-								background-color: $red
-								text-shadow: 1px 2px 3px rgba(0,0,0,.3)
+								color: $red
 							&:nth-last-child(3)
-								background-color: #2196f3
-								text-shadow: 1px 2px 3px rgba(0,0,0,.3)
-
+								color: $blue
+					.nonActive
+						cursor: default
+						color: lightgray
+						&:hover
+							color: lightgray !important
 
 			.managment-rest_exports-table-row
 				padding: 10px !important
@@ -5654,12 +5725,36 @@ input[type=checkbox]
 					width: 100%
 					padding: 5px 10px
 					color: $red
+
+//попап
+.generalPopUp-rest
+	span
+		font-family: 'osb', sans-serif
+		display: inline-block
+		width: 100%
+		margin-bottom: 4px
+	select, input
+		width: 100%
+		padding: 8px 10px
+		margin-bottom: 15px
+.generalPopUp-rest_mailwrap
+	margin-top: 15px
+.generalPopUp-rest_dell, .generalPopUp-rest_orderred
+	.generalPopUp-restwindow
+		height: 290px !important
+	.generalPopUp-window_body
+		height: 290px
+		overflow-y: auto !important
+		p
+			text-align: center
+			font-size: em(16px)
 //конец управление остатками rest_managment//
 
 
 //история запросов history//
 .queryHistory
 	margin: 20px 0 0
+	min-height: 100vh
 	.breadcrumbs_bottom
 		margin-top: 30px
 	.queryHistory-h2
@@ -5712,6 +5807,29 @@ input[type=checkbox]
 
 
 //опросы//
+
+.generalPopUp-poolsWindow
+	background-color: #f3f3f3 !important
+	height: 400px !important
+
+.generalPopUp-poolsHeader
+	h2
+		font-size: em(14px)
+		margin-top: 30px !important
+		display: inline-block
+.generalPopUp-poolsBody
+	label
+		width: 100%
+		display: block
+		margin-bottom: 20px
+		position: relative
+		input
+			opacity: 0
+		input:checked
+			+ .overlayCheckBoxDiv span
+				background-color: $green
+
+
 .pools
 	.pools-h2
 		margin: 0
@@ -6029,6 +6147,7 @@ input[type=checkbox]
 			height: 100%
 			float: left
 			margin-right: 10px
+			cursor: move
 			.dots-1,
 			.dots-2,
 			.dots-3
@@ -6449,18 +6568,93 @@ input[type=checkbox]
 
 
 //поиск по ВИН 01//
+.owl-helper
+	.owl-item, .cloned
+		height: 100%
+		img
+			height: 500px
+.generalPopUp-helper
+	.generalPopUp-helperWindow
+		height: 650px !important
+		width: 760px !important
+		.owl-prev, .owl-next
+			position: absolute
+			left: 0
+			top: 0
+			height: 100%
+			width: 20%
+			color: transparent
+			&:hover
+				&:before,
+				&::after
+					background-color: $active
+
+		.owl-next
+			left: auto
+			right: 0
+			color: transparent
+		.owl-next,
+		.owl-prev
+			&:before,
+			&::after
+				position: absolute
+				content: ''
+				height: 4px
+				width: 50%
+				background-color: $red
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+				margin: auto
+
+		.owl-prev
+			&:before,
+			&::after
+				right: auto
+				left: -17px
+			&::after
+				transform: rotate(-65deg)
+				bottom: 62px
+			&:before
+				transform: rotate(65deg)
+				top: 62px
+		.owl-next
+			&:before,
+			&::after
+				left: auto
+				right: -17px
+			&::after
+				transform: rotate(65deg)
+				bottom: 62px
+			&:before
+				transform: rotate(-65deg)
+				top: 62px
+	.generalPopUp-window_body
+		overflow: hidden !important
+		margin-bottom: 23px
+		height: 500px
+		width: 710px
 .searchToVin1
 	.row
 		margin: 0
 .searchToVin1-h2
 	margin: 20px 0
 	line-height: 0
+	padding-top: 20px
+	padding-bottom: 15px
+	h2
+		display: inline-block
+		position: relative
+		top: -3px
 	i
 		color: #959595
 		margin-right: 20px
 		font-size: em(14px)
 		position: relative
 		top: 1px
+	.helperBtn
+		float: right
 
 .searchToVin1-query
 	background-color: #e5e5e5
@@ -6611,14 +6805,17 @@ input[type=checkbox]
 	padding: 0
 	ul
 		padding: 0
+		margin: 0
 		list-style-type: none
 		li
 			display: block
 			width: 100%
+			cursor: pointer
 			padding-left: 20px
 			background: #f0f0f0
+
 			a
-				padding: 5px 0
+				padding: 10px 0
 				display: block
 				text-transform: uppercase
 				color: #333
@@ -6727,7 +6924,7 @@ input[type=checkbox]
 	margin: 0
 	li
 		a
-			padding: 10px 15px !important
+			padding: 10px !important
 			display: block
 			width: 100%
 			background-color: #e4e4e4
@@ -6814,6 +7011,114 @@ input[type=checkbox]
 		bottom: 5px
 //конец поиск по ВИН//
 
+
+
+//поиск по ВИН 03//
+.searchToVin3-factory
+	text-align: center
+	.searchToVin3-factory_inner
+		display: block
+		width: 100%
+		position: relative
+		padding: 10px
+		height: 100%
+		span
+			line-height: em(14px)
+			display: inline-block
+			font-size: em(12px)
+			top: 10px
+.searchToVin3-query
+	h3
+		margin: 0
+		font-size: em(15px)
+.searchToVin3-searchfield
+	padding: 20px
+	margin-bottom: 0
+	span
+		text-transform: uppercase
+		font-size: em(15px)
+	button
+		float: right
+		width: auto
+		font-size: em(10px)
+	.searchToVin3-model
+		position: relative
+		top: 5px
+.searchToVin3_modelDescr
+	padding: 15px 20px
+	margin-bottom: 30px
+	span
+		margin-right: 30px
+		strong
+			font-family: 'osb', sans-serif
+			margin-right: 5px
+.searchToVin3-brand
+	margin-top: 20px
+	a
+		display: block
+		background-color: #eaeaea
+		color: #333
+		position: relative
+		transition: .1s
+		height: 80px
+		span
+			font-family: 'osr', sans-serif
+			position: relative
+			font-size: em(13px)
+			text-transform: uppercase
+			transition: .3s
+			i::before
+				line-height: 0
+
+		.verticalline
+			background-color: #b8b8b8
+			width: 5px
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			transition: .2s
+		&:hover, &:active
+			text-decoration: none
+			box-shadow: 0 2px 2px rgba(0,0,0,.3)
+			.verticalline
+				background-color: $red
+			i
+				color: $red
+			span
+				font-family: 'osb', sans-serif
+.searchToVin3-brand_left
+	width: 80px
+	height: 100%
+	display: block
+	float: left
+	position: relative
+	padding: 5px
+	text-align: center
+	i
+		color: #b8b8b8
+		font-size: em(40px)
+		transition: .3s
+		position: relative
+		top: -5px
+.searchToVin3-brand_right
+	height: 100%
+	display: block
+	@include calc(width, "100% - 80px")
+	float: right
+	padding: 5px
+	span
+		position: relative
+		top: 20px
+		display: inline-block
+		margin-left: 5px
+		line-height: em(14px)
+
+
+
+//конец поиск по вВИН 03//
+
+
 //поиск по вин 06//
 .searchToVin6
 	.searchToVin6-h2
@@ -6894,7 +7199,6 @@ input[type=checkbox]
 				text-decoration: none
 		&:nth-child(even)
 			background-color: #e4e4e4
-
 
 //конеу поиск по вин 06//
 
@@ -7129,7 +7433,7 @@ input[type=checkbox]
 
 //акции//
 .actions
-	min-height: 80vh
+	min-height: 100vh
 	.breadcrumbs_bottom
 		padding-left: 6px
 		margin-top: 20px
@@ -7307,7 +7611,7 @@ h3
 //tooltiops//
 .tooltip
 	position: absolute
-	z-index: 1070
+	z-index: 999
 	display: block
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 	font-style: normal
@@ -7437,6 +7741,7 @@ h3
 .cutePrice
 	padding-top: 30px
 	padding-bottom: 25px
+	min-height: 100vh
 	.privolniyStatus
 		background-color: #d3ffb8
 	.podolskStatus
@@ -7445,6 +7750,14 @@ h3
 		background-color: #f7dfff
 	.ectStatus
 		background-color: #dadeff
+.cutePrice-h2_helper
+	padding-bottom: 30px
+	h2
+		display: inline-block
+	button, select
+		float: right
+	select
+		padding: 5px 10px
 .cutePrice-h2
 	margin-bottom: 30px
 	h2
@@ -7568,6 +7881,12 @@ h3
 		float: right
 		position: relative
 		margin-top: 15px
+		.checkbox_result
+			opacity: 0
+			height: 1px
+			width: 1px
+			right: 0
+			top: 0
 		button
 			height: 30px
 			width: 30px
@@ -7671,8 +7990,16 @@ h3
 
 
 //наценка//
+.extraCharge-h2
+	padding-top: 30px
+	padding-bottom: 25px
+	h2
+		display: inline-block
+		margin: 0
+	button
+		float: right
 .extraCharge
-	min-height: 80vh
+	min-height: 100vh
 	padding-top: 10px
 	h2
 		i
@@ -7684,8 +8011,19 @@ h3
 .extraCharge-settings
 	margin: 0
 	background-color: #f0f0f0
+	h3
+		display: inline-block
+		margin: 0
+		position: relative
+		top: 3px
+	.extraCharge-settings_save
+		float: right
+		i
+			font-size: em(25px)
 .extraCharge-settings_title
 	background-color: #e5e5e5
+	padding-top: 20px
+	padding-bottom: 20px
 .extraCharge-settings_select
 	padding-top: 20px
 	padding-bottom: 20px
@@ -8053,7 +8391,7 @@ h3
 		.generalPopUp-window_body
 			margin-top: 20px
 			@include calc(height, "100% - 120px")
-			overflow-y: scroll
+			overflow-y: auto
 .generalPopUp-window-reportForm
 	select, textarea
 		width: 100%
@@ -8103,12 +8441,66 @@ h3
 		float: right
 		padding: 10px 30px
 
+////////////////////////////
 
 
 
+//настройки пользователя//
+.generalPopUp-userSettings
+	.userSettings-window
+		width: 95% !important
+	.generalPopUp-window_buttongroup
+		padding-top: 15px
 
-/////////////////////////////
+.generalUserSettings
+	min-height: 90vh
+	padding-top: 20px
+	padding-bottom: 20px
+.generalUserSettings-h2
+	margin: 0
+	i
+		color: #959595
+		font-size: em(18px)
+		position: relative
+		top: 3px
+		margin-right: 20px
 
+.generalUserSettings-settingsField
+	background-color: #e5e5e5
+	margin: 0
+	padding: 20px
+	button
+		float: right
+	span
+		font-family: 'osb',  sans-serif
+		text-transform: uppercase
+		font-size: em(16px)
+		position: relative
+		top: 5px
+
+.generalUserSettings-settingsField_content
+	background-color: #f0f0f0
+	margin: 0
+	padding: 20px
+	.title
+		font-family: 'osb', sans-serif
+		text-transform: uppercase
+		margin-bottom: 15px
+		display: inline-block
+	label
+		display: block
+		width: 100%
+		margin-bottom: 5px
+		input
+			height: 1px
+			width: 1px
+			display: block
+			opacity: 0
+		input:checked
+			+ .overlayCheckBox
+				&::after
+					background-color: $green
+//конец настройки пользователя//
 
 .overlaypreloader
 	background-color: rgba(0,0,0,.4)
@@ -8128,5 +8520,184 @@ h3
 	display: block
 	z-index: 999
 
+//модалка страницы импорта//
+.modalImpostToCart
+	.title
+		span
+			position: relative
+			top: 5px
+	.content
+		padding: 10px
+		select
+			width: 100%
+			padding:  8px 5px
+.quantity_modal
+	padding:  8px 5px
+	text-align: center
+	width: 100%
+.modaltable-searchGoods_result
+	margin: 0
+
+.generalPopUp-inportAddToCart
+	display: block !important
+	.generalPopUp-window_body
+		margin-top: 10px !important
+	.generalPopUp-window_buttongroup
+		margin-bottom: 20px
+	label
+		padding-top: 10px
+		padding-bottom: 10px
+		display: inline-block
+		width: 100%
+		input
+			height: 1px
+			width: 1px
+			opacity: 1
+		span
+			font-family: 'osb', sans-serif
+		input:checked
+			+ .overlayCheckBoxDiv
+				span
+					background-color: $green
+//конец модалка импорт//
+
+
+//докусенты//
+.userDocs
+	min-height: 100vh
+	padding-top: 30px
+	padding-bottom: 30px
+	.userDocs-h2
+		margin: 0
+		margin-bottom: 30px
+		h2
+			margin: 0
+			i
+				color: #959595
+				float: left
+				margin-right: 20px
+				display: block
+				width: auto
+				font-size: em(18px)
+				position: relative
+				top: -3px
+			span
+				position: relative
+				top: 3px
+		.userDocs-helper
+			button
+				float: right
+.userDocs-tabs
+	.tabs
+		border-bottom: 5px solid #d2d2d2
+		.tab
+			font-family: 'osb', sans-serif
+			text-transform: uppercase
+			display: block
+			float: left
+			padding: 20px
+			cursor: pointer
+			border: 1px solid #d2d2d2
+			&.active
+				background-color: #d2d2d2
+				color: #333
+	.tab_content
+		padding: 20px 0 0 0
+		border: 1px solid lightgray
+	.tab_item
+		i
+			font-style: normal
+		span
+			display: inline-block
+			width: 100%
+			margin-bottom: 5px
+		select, input
+			text-transform: uppercase
+			padding: 8px 10px
+			width: 100%
+			margin-bottom: 20px
+		button
+			&:first-child
+				margin-right: 20px
+.userDocs-contentTabs
+	margin: 0
+	margin-bottom: 35px
+.userDocs-table
+	border: 1px solid gray
+	margin: 0
+	margin-top: 15px
+.userDocs-table_title
+	background-color: #666
+	color: #fff
+	text-align: center
+	span
+		font-family: 'osr', sans-serif !important
+		text-transform: uppercase
+		font-size: em(10px) !important
+.userDocs-content
+	text-align: center
+	height: 80px
+	span
+		position: relative
+		top: 30px
+	a
+		color: #333
+		font-size: em(20px)
+		position: relative
+		top: -5px
+		&:hover
+			color: #666
+	//конец документы//
+
+.overlayCheckBoxDiv
+	display: block
+	background-color: #fff
+	height: 16px
+	width: 16px
+	border:	1px solid lightgray
+	float: left
+	margin-right: 5px
+	position: relative
+	top:	2px
+	cursor: pointer
+	span
+		height: 10px
+		width: 10px
+		background-color: transparent
+		position: absolute
+		left: 2px
+		top: 2px
+		border: 1px solid transparent
+		background-color: #fff
+	&:hover
+		span
+			border-color: lightgray
+
+.overlayCheckBox
+	display: block
+	background-color: #fff
+	height: 16px
+	width: 16px
+	border:	1px solid lightgray
+	float: left
+	margin-right: 5px
+	position: relative
+	top:	2px
+	cursor: pointer
+	&::after
+		height: 10px
+		width: 10px
+		background-color: transparent
+		position: absolute
+		content: ''
+		left: 2px
+		top: 2px
+		border: 1px solid transparent
+	&:hover
+		&::after
+			border-color: lightgray
+
+	span
+		display: inline-block
 
 @import "media"

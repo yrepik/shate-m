@@ -1,4 +1,23 @@
 $(function() {
+
+/////////////////////////
+//опросы////////////////
+
+$('.pools-newPools_item button').click(function(){[
+	$('.generalPopUp-pools').fadeIn(200)
+]})
+//конец опросы////
+
+
+	//карусель для помощи по разделу
+	$('.owl-helper').owlCarousel({
+		loop: true,
+		items: 1,
+		nav: true,
+	});
+
+
+
 	//наценки//
 	function generalPopUpFastExtraCharge(){//попАп быстрое добавление наценки
 		$('.generalPopUpFastExtraCharge').fadeIn(200)
@@ -150,7 +169,20 @@ function slideUpAllElementstable(){//
 		$('.top-quantity').text(summ);
 		$('.totall').html('(' + summ * 1000 + 'руб.)')
 	}
-	$('.tree-addToCart').click(treeAddToCart)
+	$('.tree-addToCart, .addToCart').click(treeAddToCart)
+
+
+	function treeAddToCartImport() { //имитация добавления товара в корзину страница импорта
+		var $vol = $(this).prev('.spinner').find('input').val();
+		var cartCount = $('.top-quantity').text()
+		var $vol2 = +$vol;
+		var cartCount2 = +cartCount;
+		var summ = $vol2 + cartCount2;
+		$('.top-quantity').text(summ);
+		$('.totall').html('(' + summ * 1000 + 'руб.)')
+	}
+	$('.addcart').click(treeAddToCartImport)
+
 
 	//полет товара в корзину//
 	$('.tree-addToCart, .addcart').on('click', function() {
@@ -184,8 +216,16 @@ function slideUpAllElementstable(){//
 				})
 			});
 		e.hide(0)
+
+		$('.addcart').children().css('color','inherit');
+		$(this).parents('.import-repeatRow').slideUp(200);
+
+
+
+		$(this).parents('.tree-tabWrap_content-table').slideUp(200);
 	});
 	//конец полет товара в корзину//
+
 
 
 	//поиск по ВИН//
@@ -364,6 +404,32 @@ function slideUpAllElementstable(){//
 
 
 	//управление остатками//
+	function dellRestManagment(){//удалить настроенный экспорт
+		$('.dellRestManagment').removeClass('forDell')
+		$(this).addClass('forDell');
+		$('.generalPopUp-rest_dell').fadeIn(200)
+	}
+	$('.dellRestManagment').click(dellRestManagment)
+	$('.dellexport').click(function(){
+		$('.forDell').parents('.managment-rest_exports-table-row').slideUp(200)
+	})
+
+	function orderedRestToEmail(){
+		if($(this).hasClass('nonActive')){
+
+		}else{
+			$('.generalPopUp-rest_orderred').fadeIn(200)
+		}
+	}
+	$('.orderedRestToEmail').click(orderedRestToEmail)
+
+
+	function addRestOptions(){//попАп настроить экспорт остатков
+		$('.generalPopUp-rest_diapason').fadeIn(200)
+	}
+	$('.addRestOptions').click(addRestOptions)
+
+
 	function restCheckBoxMouseOut() {
 		if ($(this).prop('checked')) {} else {
 			$(this).next().css('borderColor', '');
@@ -486,6 +552,11 @@ function slideUpAllElementstable(){//
 	///////////////////////////////////////////
 	/////скрипты страницы поиска по дереву/////
 	///////////////////////////////////////////
+	$('.waitImport').click(function(){
+		console.log('1212');
+		$('.tree-addToWaitlist').fadeIn(300)
+	})
+
 	$('.tree-tabWrap_content-tableSpinner').find('.yellow').click(function() { //показать попАп Добавления позиции в лист ожидания
 		$('.tree-addToWaitlist').fadeIn(300)
 	})
@@ -1274,9 +1345,20 @@ function slideUpAllElementstable(){//
 	}
 	$('.serch_field').on('keyup', searchField);
 
+
+	function searchFieldT() {//форма поиска поиск по дереву
+		var $val = $(this).val();
+		$('.drop_down_search_listTree').css({
+			'display': 'block'
+		});
+
+		$('.searchfieldT').html('<b>' + $val + '<b>')
+	}
+	$('.tree-filter_searchField').on('keyup', searchFieldT);
+
 	//скрывать выпадающее меню при клике в любой области//
 	$(document).mouseup(function(e) {
-		var container = $(".drop_down_search_list");
+		var container = $(".drop_down_search_list, .drop_down_search_listTree");
 		if (container.has(e.target).length === 0) {
 			container.slideUp(200);
 		}
@@ -1936,13 +2018,13 @@ function slideUpAllElementstable(){//
 
 /////////////////
 //общие скрипты//
-$('i, .tooltipImport').tooltip()//тултип
+$('.tooltipImport').tooltip()//тултип
 
 	$('.mob_mnu_left').find('li').click(function() {//переход по страницам
 		$(this).addClass('active');
 		$('.mob_mnu_left').find('li').removeClass('active')
 	})
-});
+
 
 
 
@@ -1965,7 +2047,7 @@ function closemainpopup(){
 		'bottom': ''
 	}, 0);
 }
-$('.generalPopUp-window_close, .gray_btn').click(closemainpopup)
+$('.generalPopUp-window_close, .gray_btn, .closePopUp').click(closemainpopup)
 
 function generalPopUpAddField(){//добавить новое поле в попап окне на странице результатов поиска
 	var clone = $(this).parents('.generalPopUp-window-cloneElement').clone();
@@ -1982,3 +2064,17 @@ $('.findBug').click(function(){
 
 
 $('.overlaypreloader').hide()//убрать прелоадер
+
+
+
+
+
+
+
+
+
+
+
+
+
+});

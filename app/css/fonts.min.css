@@ -15,3 +15,9 @@
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/OpenSans/OpenSans-Italic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "SVG";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/fontello/font/fontello.ttf") format("truetype"); }

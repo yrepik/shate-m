@@ -54,6 +54,7 @@
 						<li><a href="shate-m_b2b_user_cabinet_reconciliation.html"><i class="fa fa-money" aria-hidden="true"></i><span>Финансы</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_profile.html"><i class="fa fa-user" aria-hidden="true"></i><span>Персональные данные</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_salesperson.html"><i class="fa fa-phone" aria-hidden="true"></i><span>Ваш менеджер</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_user_docs.html"><i class="fa fa-stack-1x fa-file-word-o"></i><span>Документы</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_history.html"><i class="fa fa-history" aria-hidden="true"></i><span>История запросов</span></a></li>
 						<li class="active"><a href="shate-m_b2b_user_cabinet_rest_managment.html"><i class="fa fa-cloud-upload" aria-hidden="true"></i><span>Управление остатками</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_action.html"><i class="fa fa-percent" aria-hidden="true"></i><span>Акции</span></a></li>
@@ -61,7 +62,7 @@
 						<li><a href="shate-m_b2b_user_cabinet_extra_charge_settings.html"><i class="fa fa-cart-plus " aria-hidden="true"></i><span>Наценки</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_polls.html"><i class="fa fa-check-square-o " aria-hidden="true"></i><span>Опросы</span></a></li>
 						<li><a href="shate-m_b2b_user_cabinet_report.html"><i class="fa fa-support" aria-hidden="true"></i><span>Форма обратной связи</span></a></li>
-						<li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span>Настройки</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_user_settings.html"><i class="fa fa-cog" aria-hidden="true"></i><span>Настройки</span></a></li>
 
 					</ul>
 				</nav>
@@ -144,9 +145,11 @@
 
 							<!--корзина-->
 							<div class="top-cart">
-									<a class="totall">(0 руб.)</a>
-									<a href="shate-m_b2b_user_cabinet_cart.html" class="top-quantity">0</a>
-									<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+								<a href="shate-m_b2b_user_cabinet_cart.html">
+								<span class="totall">(0 руб.)</span>
+								<span class="top-quantity">0</span>
+								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+								</a>
 							</div>
 
 							<!--кабинет пользователя-->
@@ -160,7 +163,7 @@
 							<div class="user_name">
 								<ul>
 									<li><i class="fa fa-user" aria-hidden="true"></i>Фамилия Имя Отчество</li>
-									<li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i>Настройки пользователя</a></li>
+									<li><a href="shate-m_b2b_user_cabinet_user_settings.html"><i class="fa fa-cog" aria-hidden="true"></i>Настройки пользователя</a></li>
 									<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Выход</a></li>
 								</ul>
 							</div>
@@ -184,7 +187,7 @@
 					<div class="row togglemnu">
 						<ul>
 							<li>Фамилия Имя Отчество</li>
-							<li><a href="#">Настройки пользователя</a></li>
+							<li><a href="shate-m_b2b_user_cabinet_user_settings.html">Настройки пользователя</a></li>
 							<li><a href="#">Выход</a></li>
 						</ul>
 					</div>
@@ -196,7 +199,7 @@
 					<div class="row">
 						<div class="managment-h2 col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<h2><i class="fa fa-cloud-download" aria-hidden="true"></i><span>Управление остатками</span></h2>
-							<button class="green_btn">Добавить</button>
+							<button class="green_btn addRestOptions">Добавить</button>
 						</div>
 					</div>
 
@@ -228,9 +231,9 @@
 								<div class="plr0 hidden-xs hidden-sm col-md-1 col-lg-1">статус</div>
 								<div class="buttonsBlock plr0 col-xs-2 col-sm-3 col-md-2 col-lg-2">
 									<div class="buttonsBlock-wrapper clearfix">
-									<button title="отправить на Email" class="gray_btn" type="button" name="button"><i class="fa fa-share" aria-hidden="true"></i></button>
-									<button title="удалить" class="gray_btn" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
-									<button title="редактировать" class="gray_btn" type="button" name="button"><i class="fa fa-cog" aria-hidden="true"></i></button>
+										<button class="nonActive orderedRestToEmail" type="button" name="button"><i class="fa fa-share" aria-hidden="true"></i></button>
+										<button  class=" dellRestManagment" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
+										<button class="" type="button" name="button"><i class="fa fa-cog" aria-hidden="true"></i></button>
 									</div>
 								</div>
 							</div>
@@ -238,17 +241,17 @@
 							<!--ряд таблицы-->
 							<div class="row managment-rest_exports-table-row managment-EctStatus">
 								<div class="plr0 hidden-xs col-sm-1 col-md-1 col-lg-1 number">1</div>
-								<div class="plr0 col-xs-4 col-sm-2 col-md-1 col-lg-1">ШМ+ <br class="hidden-lg"/>Минск</div>
+								<div class="plr0 col-xs-4 col-sm-2 col-md-1 col-lg-1">ШМ+ <br class="hidden-lg"/>Екатеринбург</div>
 								<div class="plr0 col-xs-2 col-sm-2 col-md-1 col-lg-1 qurency">RUR</div>
-								<div class="plr0 col-xs-4 col-sm-2 col-md-2 col-lg-2"><a href="#">101@.com</a></div>
+								<div class="plr0 col-xs-4 col-sm-2 col-md-2 col-lg-2"><a>101@.com</a></div>
 								<div class="plr0 hidden-xs col-sm-2 col-md-2 col-lg-2">Ежедневно</div>
 								<div class="plr0 hidden-xs hidden-sm col-md-2 col-lg-2">Текстовый документ (txt)</div>
 								<div class="plr0 hidden-xs hidden-sm col-md-1 col-lg-1">статус</div>
 								<div class="buttonsBlock plr0 col-xs-2 col-sm-3 col-md-2 col-lg-2">
 									<div class="buttonsBlock-wrapper clearfix">
-									<button title="отправить на Email" class="gray_btn" type="button" name="button"><i class="fa fa-share" aria-hidden="true"></i></button>
-									<button title="удалить" class="gray_btn" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
-									<button title="редактировать" class="gray_btn" type="button" name="button"><i class="fa fa-cog" aria-hidden="true"></i></button>
+									<button  class="orderedRestToEmail" type="button" name="button"><i class="fa fa-share" aria-hidden="true"></i></button>
+									<button  class="dellRestManagment" type="button" name="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
+									<button  class="" type="button" name="button"><i class="fa fa-cog" aria-hidden="true"></i></button>
 									</div>
 								</div>
 							</div>
@@ -379,6 +382,129 @@
 			</div>
 		</div>
 	</div>
+
+
+
+
+
+
+
+
+
+	<!--popUp диапазон наценки-->
+	<div class="generalPopUp generalPopUp-rest generalPopUp-rest_diapason">
+		<div class="generalPopUp-window generalPopUp-restwindow">
+			<div class="generalPopUp-window_close"></div>
+			<div class="generalPopUp-window_header">
+				<h2>Настроить экспорт остатков</h2>
+			</div>
+			<div class="generalPopUp-window_body">
+
+				<span>Склад:</span>
+				<select name="warehouse">
+					<option value="0">Минск</option>
+					<option value="1">Подольск</option>
+				</select>
+
+				<span>Валюта:</span>
+				<select name="qurency">
+					<option value="0">BYN</option>
+				</select>
+
+				<span>Шаблон для экспорта:</span>
+				<select name="tamplateToExport">
+					<option value="0">Бренд;Каталожный номер;Описани;Остаток;Кратность отгрузки;Валюта;Цена;Штрихкод</option>
+				</select>
+
+				<div class="generalPopUp-rest_mailwrap">
+					<span>Email:</span>
+					<input type="text" placeholder="Введите email">
+
+					<span>Формат:</span>
+					<select name="format">
+						<option value="0">Файл с разделениями (csv)</option>
+						<option value="0">Текстовый документ (txt)</option>
+						<option value="0">Книга Microsoft Exel (xlsx)</option>
+					</select>
+				</div>
+
+
+
+
+			</div>
+
+			<div class="generalPopUp-window_buttongroup clerfix">
+				<button class="gray_btn">Отмена</button>
+				<button class="red_btn modalImportRedBtn">Сохранить</button>
+
+
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!--popUp удалить экспорт-->
+	<div class="generalPopUp generalPopUp-rest_dell">
+		<div class="generalPopUp-window generalPopUp-restwindow">
+			<div class="generalPopUp-window_close"></div>
+			<div class="generalPopUp-window_header">
+				<h2>Удалить настроенный экспорт</h2>
+			</div>
+			<div class="generalPopUp-window_body">
+			<p>Действительно удалить данный настроенный экспорт?</p>
+			</div>
+
+			<div class="generalPopUp-window_buttongroup clerfix">
+				<button class="gray_btn">Отмена</button>
+				<button class="red_btn closePopUp modalImportRedBtn dellexport">Удалить</button>
+
+
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+	<!--заказать экспорт остатков на емаил-->
+	<div class="generalPopUp  generalPopUp-rest_orderred">
+		<div class="generalPopUp-window generalPopUp-restwindow">
+			<div class="generalPopUp-window_close"></div>
+			<div class="generalPopUp-window_header">
+				<h2>Заказ экспорта остатков на Email</h2>
+			</div>
+			<div class="generalPopUp-window_body">
+			<p>Действительно заказать экспорт остатков на Email?</p>
+			</div>
+
+			<div class="generalPopUp-window_buttongroup clerfix">
+				<button class="gray_btn">Отмена</button>
+				<button class="red_btn closePopUp modalImportRedBtn">Заказать</button>
+
+
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	<!--прилоадер-->

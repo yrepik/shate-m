@@ -935,6 +935,22 @@ $base-font-size: 13px
 					font-size: em(10px)
 
 @media only screen and (max-width : 768px)
+	.not_in_stock
+		h2
+			font-size: em(18px)
+			text-align: center
+			margin-bottom: 10px !important
+			line-height: em(16px)
+	.search_goods h3
+		font-size: em(18px)
+		text-align: center
+		margin-bottom: 10px !important
+		line-height: em(16px)
+		margin-top: 30px
+	.warhauseClaime-h2
+		font-size: em(18px)
+		text-align: center
+		border-bottom: 0px !important
 	.import-repeatRow
 		height: 100px
 		.top_cell, .bottom_cell
@@ -1407,12 +1423,10 @@ $base-font-size: 13px
 			font-size: em(15px)
 		span, p
 			font-size: em(13px)
-	/**/
 //конец
 
 
 /*медиазапросы для страницы поиска по дереву*/
-/* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	#tree
 		.tree-tabWrap_content
@@ -1445,7 +1459,6 @@ $base-font-size: 13px
 
 	/**/
 
-/* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	#tree
 		.tree-filter
@@ -1455,7 +1468,6 @@ $base-font-size: 13px
 		width: 90% !important
 	/**/
 
-/* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.tree-addToWaitlist-wrapper
 		h2
@@ -1482,7 +1494,6 @@ $base-font-size: 13px
 			.tree-filter_fildForBrand,
 			.tree-filter_selectAuto
 				margin-right: 10px
-				padding: 5px
 			.wrap-selectAuto
 				margin-right: 0
 		.tree-tabWrap_content-table-btn
@@ -1496,10 +1507,17 @@ $base-font-size: 13px
 			.price
 				background-color: #fff !important
 
-
-	/*Disable Animation on Mobile Devices*/
-
-/* Extra Small Devices, Phones */
+@media only screen and (max-width : 767px)
+	.tree-tabWrap_content-table-btn
+		width: auto !important
+		float: right !important
+	.tree-tabWrap_content-table
+		.content
+			.right
+				button
+					width: auto !important
+					float: right !important
+					font-size: 0.83333em !important
 @media only screen and (max-width : 600px)
 	.tree-h2
 		.tree-selectCar
@@ -1531,8 +1549,6 @@ $base-font-size: 13px
 				float: left
 			button
 				margin-left: 0 !important
-
-	/**/
 /*конец*/
 
 
@@ -1542,7 +1558,6 @@ $base-font-size: 13px
 
 
 //////////страница Финансов///////////// //
-/* Large Devices, Wide Screens */
 @media only screen and (max-width : 1550px)
 	.finances
 		.finances-bill_balance-head
@@ -1550,9 +1565,6 @@ $base-font-size: 13px
 				float: none
 			button
 				top: -18px
-	/**/
-
-/* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.finances
 		.finances-bill_balance-head
@@ -1586,20 +1598,12 @@ $base-font-size: 13px
 		.finances-act_tableBody
 			button
 				padding: 6px 30px
-
-	/**/
-
-/* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.finances
 		padding: 0
 		.finances-act_tableBody
 			button
 				margin-top: 25px
-
-	/*Disable Animation on Mobile Devices*/
-
-/* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	.finances
 		.finances-h2
@@ -1641,8 +1645,6 @@ $base-font-size: 13px
 				width: 90%
 				float: none
 				margin-left: 5%
-
-	/**/
 //////////конец страница Финансов///////////// //
 
 
@@ -1650,8 +1652,6 @@ $base-font-size: 13px
 
 
 //////////страница менеджеров///////////////
-/* Large Devices, Wide Screens */
-
 @media only screen and (max-width : 1200px)
 	.manager
 		.manager-regional, .manager-self
@@ -1672,7 +1672,6 @@ $base-font-size: 13px
 		font-size: em(18px)
 		top: 45px
 
-
 @media only screen and (max-width : 480px)
 	.manager
 		.manager-regional, .manager-self
@@ -1687,9 +1686,6 @@ $base-font-size: 13px
 		.manager-info_body-bottom
 			font-size: em(15.2px)
 			top: 45px
-
-	/**/
-
 @media only screen and (min-width : 1200px)
 	.manager
 		.manager-regional
@@ -1729,7 +1725,6 @@ $base-font-size: 13px
 
 
 //управление остатками managment_rest//
-/* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.managment
 		.managment-rest
@@ -1738,7 +1733,6 @@ $base-font-size: 13px
 						padding: 10px 5px
 	/**/
 
-/* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.managment
 		.managment-h2
@@ -1776,11 +1770,6 @@ $base-font-size: 13px
 					&:nth-last-child(1)
 						margin-bottom: 0
 
-
-	/*Disable Animation on Mobile Devices*/
-
-/* Extra Small Devices, Phones */
-
 @media only screen and (max-width : 530px)
 	.managment
 		.managment-h2
@@ -1796,31 +1785,14 @@ $base-font-size: 13px
 			.managment-rest_exports-table
 				font-size: em(12px)
 				line-height: em(12px)
-
-
-	/**/
-
-@media only screen and (max-width : 480px)
-	/**/
-
-
-@media only screen and (max-width : 320px)
-	/**/
-
 //конец управление остатками managment_rest//
 
 
-/////////истрия заказов history//////////////////
-/////////////////////////////////////////
-/* Small Devices, Tablets */
+/////////истрия заказов history//////////////
 @media only screen and (max-width : 768px)
 	.queryHistory
 		.queryHistory-row_descr
 			line-height: em(14px)
-
-	/*Disable Animation on Mobile Devices*/
-
-/* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	.queryHistory
 		.queryHistory-h2
@@ -1884,7 +1856,6 @@ $base-font-size: 13px
 		font-size: em(13px)
 		line-height: em(13px)
 
-
 @media only screen and (max-width : 992px)
 	.cart-availableDeliveryThead,
 	.cart-availableDeliveryRow
@@ -1911,7 +1882,6 @@ $base-font-size: 13px
 				.title
 					background-color: #666 !important
 
-
 @media only screen and (max-width : 768px)
 	.cart-availableDeliveryThead
 		font-family: 'osr', sans-serif
@@ -1924,7 +1894,6 @@ $base-font-size: 13px
 			padding-left: 5px
 			padding-right: 5px
 
-
 	#inline-datepicker
 		margin-top: 10px
 	.cart-summAllOrders
@@ -1933,7 +1902,6 @@ $base-font-size: 13px
 			margin-top: 20px
 			.date
 				float: right
-
 
 	.cart-DeliveryInfo
 		padding: 20px 10px
@@ -1955,7 +1923,6 @@ $base-font-size: 13px
 			b
 				font-weight: normal
 				font-family: 'osb', sans-serif
-
 
 	.cart-beznal_table
 		.row
@@ -1994,7 +1961,6 @@ $base-font-size: 13px
 					padding: 10px !important
 					i
 						display: none
-
 
 @media only screen and (max-width : 480px)
 	.cart-commentToOrder
@@ -2054,9 +2020,11 @@ $base-font-size: 13px
 	.searchToVinCarsTree
 		ul
 			li
-				padding-left: 20px !important
+				padding-left: 20px
 				padding-top: 6px
 				padding-bottom: 6px
+				a
+					padding: 10px 15px
 			ul
 				display: none
 				ul
@@ -2139,12 +2107,82 @@ $base-font-size: 13px
 	.searchToVinCars-tabs_wrapper .search .wrapper-search input
 		font-size: em(10px)
 
-
-
 @media only screen and (min-width : 768px)
 	.searchToVinCarsTree ul li
 		padding-left: 0
+
 //конец поиск по	VIN 01//
+
+//поиск по VIN 06//
+@media only screen and (max-width : 1200px)
+	.searchToVin6_content-table
+		.table-row_descr
+			word-wrap: break-word
+			line-height: em(14px)
+@media only screen and (max-width : 768px)
+	.searchToVin6_content-table .table-row a
+		font-size: em(10px)
+	.searchToVin6_content-table .header
+		line-height: em(14px)
+		word-wrap: break-word
+	.searchToVin6-breadCrumbs-descr
+		font-size: em(10px)
+	.searchToVin6_content-image
+		margin-bottom: 20px
+	.searchToVin6-breadCrumbs ul
+		font-size: em(10px)
+	.searchToVin6_content-table
+		.table-row_descr
+			span:nth-last-child(1)
+				display: inline-block
+				width: 100%
+				text-align: center
+				i
+					float: none
+					right: auto
+					display: inline-block
+					margin-top: 5px
+	.searchToVinCarsTree-manufacture
+		li
+			padding: 0 !important
+			a
+				padding: 15px !important
+//конец поиск по	VIN 06//
+
+
+//поиск VIN03
+@media only screen and (max-width : 768px)
+	.searchToVin3-model
+		display: inline-block
+		width: 100%
+		text-align: center
+		margin-bottom: 20px
+	.searchToVin3-searchfield
+		text-align: center
+		button
+			float: none
+			font-size: em(9px)
+			line-height: em(22px)
+	.searchToVin3-model
+		font-size: em(14px) !important
+	.searchToVin3_modelDescr span
+		display: inline-block
+		width: 100%
+		margin-bottom: 10px
+		&:nth-last-child(1)
+			margin-bottom: 0
+	.searchToVin3-brand
+		padding-left: 0
+		padding-right: 0
+
+
+@media only screen and (max-width : 450px)
+	.searchToVin3-query h3
+		font-size: em(13px)
+//Конец поиск ВИН 03//
+
+
+
 
 //результаты поиска//
 @media only screen and (max-width : 460px)
@@ -2156,10 +2194,6 @@ $base-font-size: 13px
 			height: auto !important
 	.search-tableContent_priceLeft .wrap, .search-tableContent_priceRight .wrap
 		height: 75px
-
-
-
-
 
 //конец результаты поиска//
 
@@ -2184,11 +2218,12 @@ $base-font-size: 13px
 			top: 0
 
 //конец обратная связь//
-
 @media only screen and (max-width : 768px)
 	.generalPopUp-window
 		width: 90% !important
 @media only screen and (max-width : 440px)
+	.confirm
+		margin-top: 20px
 	.generalPopUp-window_commentToError
 		textarea
 			height: 100px
@@ -2200,6 +2235,8 @@ $base-font-size: 13px
 			padding: 5px !important
 		button
 			margin-bottom: 0
+		.modalImportRedBtn
+			margin-top: 7px
 	.generalPopUp-window-innerWrapper
 		.item
 			input
@@ -2209,6 +2246,8 @@ $base-font-size: 13px
 		margin-bottom: 5px
 	.generalPopUp .generalPopUp-window .generalPopUp-window_header h2
 		font-size: em(16px)
+	.generalPopUp-window_body
+		height: calc(100% - 160px) !important
 @media only screen and (max-height : 640px)
 	.generalPopUp-window
 		height: 90% !important
@@ -2258,6 +2297,8 @@ $base-font-size: 13px
 		top: 25px
 
 @media only screen and (max-width : 768px)
+	.cutePrice-h2_helper
+		padding-bottom: 10px
 	.cutePrice-filter_innerWrap
 		.wrapper
 			width: 80% !important
@@ -2316,6 +2357,9 @@ $base-font-size: 13px
 @media only screen and (max-width : 392px)
 	.cutePrice-table .body .nal
 		display: none
+	.cutePrice-h2 h2
+		width: 100%
+		margin-bottom: 10px
 //Конец уцененные товары//
 
 
@@ -2333,10 +2377,13 @@ $base-font-size: 13px
 		overflow-y: scroll
 		max-height: 92%
 @media only screen and (max-width : 768px)
+
 	.extraCharge-settings_title
 		font-size: em(12px)
 		line-height: em(18px)
-		text-align: center
+		h3
+			width: 100%
+			margin-bottom: 15px
 	.extraCharge-addSettings_btns
 		button
 			width: 100%
@@ -2354,7 +2401,6 @@ $base-font-size: 13px
 		.red_btn
 			margin-top: 10px
 
-
 @media only screen and (max-height : 800px)
 	.generalPopUp-productGroup,
 	.generalPopUp-productGroup_brand
@@ -2371,13 +2417,17 @@ $base-font-size: 13px
 	.generalPopUp-productGroup_brand
 		.productGroup-window
 			max-height: 91% !important
+	.generalPopUp-window_header
+		font-size: em(11px)
+	.generalPopUp-rest_dell, .generalPopUp-window_body
+		p
+			line-height: em(16px)
+			font-size: em(14px) !important
 @media only screen and (min-height : 800px)
 	.generalPopUp-productGroup,
 	.generalPopUp-productGroup_brand
 		.roductGroup-windowBody_tree
 			max-height: 10000px !important
-
-
 
 @media only screen and (height : 1024px)
 	.generalPopUp-productGroup,
@@ -2385,3 +2435,53 @@ $base-font-size: 13px
 		.productGroup-window
 			height: 95% !important
 //конец наценка//
+
+
+//настройки пользователя//
+@media only screen and (max-width : 768px)
+	.generalUserSettings-settingsField_content
+		div
+			&:first-child
+				margin-bottom: 30px
+	.generalUserSettings-h2
+		h2
+			i
+				margin-right: 5px
+				font-size: em(23px)
+				display: inline-block
+				height: 40px
+				float: left
+				top: 4px
+				margin-right: 15px
+			span
+				line-height: em(15px)
+				display: block !important
+				font-size: em(12px)
+				width: 100%
+		.generalUserSettings-settingsField
+			.left, .right
+				width: 100%
+				.title
+					line-height: em(16px)
+//конец настройки пользователя//
+
+
+
+//документы//
+@media only screen and (max-width : 768px)
+	.userDocs-tabs
+		.tab
+			width: 50%
+			text-align: center
+			font-size: em(10px)
+			line-height: em(14px)
+		.tab_item
+			button:first-child
+				margin: 0
+			button:nth-last-child(1)
+				float: right
+			button
+				padding-left: 10px
+				padding-right: 10px
+
+//конец документы//
