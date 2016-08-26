@@ -1,6 +1,13 @@
 @import "bourbon"
+@import "bourbon"
 @import "vars.sass"
 
+
+$prefix-for-webkit:	true
+$prefix-for-mozilla:	true
+$prefix-for-microsoft:	true
+$prefix-for-opera:	true
+$prefix-for-spec:	true
 //Load Libs SASS
 //@import "app/libs/font-awesome/scss/font-awesome.scss"
 
@@ -44,8 +51,8 @@ input, select, textarea, option
 
 textarea
 	resize: none
-
-
+html
+	overflow-x: hidden
 body
 	font-size: em(16px)
 	min-width: 320px
@@ -55,6 +62,60 @@ body
 	overflow-x: hidden
 	height: 100%
 	color: #666
+body
+	clear: both
+	display: block
+	width: 100%
+	float: none
+	margin: 0
+	padding: 0
+
+
+.menuActiveTo
+	animation: menuActive ease-in .3s
+	animation-iteration-count: 1
+	transform-origin: 50% 50%
+	animation-fill-mode: forwards
+@keyframes menuActive
+	0%
+		transform: translate(0px, 0px)
+	100%
+		transform: translate(215px, 0px)
+
+.menuActiveFrom
+	animation: menuActiveFrom ease-in .3s
+	animation-iteration-count: 1
+	transform-origin: 50% 50%
+	animation-fill-mode: forwards
+@keyframes menuActiveFrom
+	0%
+		transform: translate(215px, 0px)
+	100%
+		transform: translate(0px, 0px)
+
+
+.tabletSmenuActiveTo
+	animation: tabletSmenuActiveTo ease-in .3s
+	animation-iteration-count: 1
+	transform-origin: 50% 50%
+	animation-fill-mode: forwards
+@keyframes tabletSmenuActiveTo
+	0%
+		transform: translate(0px, 0px)
+	100%
+		transform: translate(167px, 0px)
+
+.tabletSmenuActiveFrom
+	animation: tabletSmenuActiveFrom ease-in .3s
+	animation-iteration-count: 1
+	transform-origin: 50% 50%
+	animation-fill-mode: forwards
+@keyframes tabletSmenuActiveFrom
+	0%
+		transform: translate(167px, 0px)
+	100%
+		transform: translate(0px, 0px)
+
 
 #ordersFilter
 	.field-start
@@ -70,7 +131,6 @@ body
 			top: 5px
 			position: relative
 			left: 10px
-
 
 #datepicker-field,
 #datepicker-field2,
@@ -118,6 +178,7 @@ body
 	min-height: 80vh
 	padding-bottom: 20px
 
+
 .red_btn
 	background-color: $red
 	border: none
@@ -152,6 +213,19 @@ body
 	&:focus, &:active
 		background-color: lighten(#2196f3, 10%)
 
+
+.dashboardSell .dashboardSell-content_ActionsInArchive_date
+	position: absolute
+	top: -15px
+	right: -15px
+	padding: 10px 5px
+	background-color: #9e9e9e
+	text-align: center
+	font-size: 0.83333em
+	line-height: 1em
+	color: #fff
+	width: -webkit-calc(100% + 15px)
+	width: calc(100% + 15px)
 
 .dashboardSell-largeBlock_controls
 	position: absolute
@@ -205,8 +279,6 @@ body
 			word-break: normal
 .dashboardSell-h2
 	margin-bottom: 20px
-
-
 
 
 
@@ -343,9 +415,6 @@ body
 					border-bottom-color: #25ce23
 					text-decoration: none
 
-
-
-
 .wait_list-count
 	background-color: $red
 	margin-left: 10px
@@ -353,9 +422,6 @@ body
 	border-radius: 999px
 .content__item_bottom
 	margin-bottom: 25px
-
-
-
 
 
 .topLine
@@ -454,42 +520,53 @@ body
 
 
 .top-balance
-	width: 25%
-	border-right: 1px solid gray
-	border-left: 1px solid gray
-	font-size: em(12px)
-	position: relative
-	i
-		margin-right: 10px
-	.top-balance_update
-		background-color: #959595
-		margin-left: 10px
-		text-align: center
-		border-radius: 999px
-		padding: 3px 6px
-		cursor: pointer
-		&:hover
-			background-color: #686868
-		i
-			margin: auto
-			display: inline-block
-			color: #fff
-	a
-		color: gray
-		text-transform: uppercase
-		padding: 4px 0
-		display: block
-		text-align: center
-		font-size: em(13px)
-		cursor: pointer
-		&:hover
-			text-decoration: none
-			color: #000
-		span
-			text-align: center
+  width: 25%
+  border-right: 1px solid gray
+  border-left: 1px solid gray
+  font-size: 1em
+  position: relative
+  .top-balance_wrapper
+    color: gray
+    text-transform: uppercase
+    font-size: 1.08333em
+    cursor: pointer
+    &:hover
+      text-decoration: none
+      color: #000
+    div
+      float: right
+    i
+      margin-right: 10px
+    .top-balance_update
+      margin-left: 10px
+      text-align: center
+      padding: 3px 6px
+      cursor: pointer
+      &:hover
+        background-color: #686868
+      i
+        margin: auto
+        display: inline-block
+        color: #fff
+        color-display: block
+    div
+      margin-top: 4px
+    .fa-money
+      display: block
+      float: right
+      margin-top: 9px
+    .top-balance_update
+      margin-top: 0
+      height: 30px
+      width: 30px
+      background-color: #959595
+      display: inline-block
+      -webkit-border-radius: 999px
+      border-radius: 999px
+    display: inline-block
+    float: right
 
-
-
+		
 .top-cart
 	width: 17%
 	display: inline-block
@@ -1381,7 +1458,140 @@ body
 		background-color: lighten(#d2d2d2, 10%)
 
 
-//лист заказов страница заказов	user_cabinet_orders_list
+//лист заказов страница заказов		user_cabinet_orders_list
+
+//стили модального окна
+.mfp-content
+ position: relative
+ background: #FFF
+ padding: 20px
+ width: auto
+ max-width: 900px
+ margin: 20px auto
+ height: auto
+ .modal-btnWrap
+	 text-align: center
+.modal-body
+	margin-bottom: 20px
+.popup-block
+	h2
+		margin-bottom: 20px
+		line-height: 20px
+.popup-modal-dismiss
+	background-color: $red
+	position: absolute
+	top: 0
+	right: 0
+	height: 25px
+	width: 25px
+	cursor: pointer
+	&:hover
+		background-color: $active
+	&:before, &:after
+		position: absolute
+		content: ''
+		height: 2px
+		background-color: #fff
+		width: 90%
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		margin: auto
+	&:after
+		transform: rotate(-45deg)
+	&:before
+		transform: rotate(45deg)
+.modal-btnWrap
+	.red_btn
+		float: right
+	.gray_btn
+		float: left
+//конец стили модального окна
+
+.modal-infoAboutProduct
+	min-height: 95% !important
+.orderes-historyStatus_header
+	background-color: #666
+	margin: 0
+	color: #fff
+	text-transform: uppercase
+	font-family: 'osr', sans-serif
+	font-size: em(10px)
+	padding: 3px 5px
+	line-height: em(14px)
+.orderes-historyStatus_tableRow
+	margin: 0
+	padding: 10px 5px
+	line-height: em(14px)
+	background-color: #f0f0f0
+	&:nth-child(even)
+		background-color: #e5e5e5
+	&:hover
+		background-color: #b2b2b2
+		color: #222
+
+.modal-infoAboutProduct_about
+	margin-bottom: 20px
+	h5
+		font-family: 'osr', sans-serif
+		margin-bottom: 0
+		margin-top: 10px
+	strong
+		margin-top: 0
+		font-family: 'osb', sans-serif
+		font-size: em(13px)
+		color: #555
+		line-height: em(16px)
+		text-transform: uppercase
+
+.modal-infoAboutProduct_buttons
+	text-align: center
+	margin-bottom: 20px
+	button
+		border: 1px solid #959595
+		text-transform: uppercase
+		font-size: 1em
+		padding: 5px
+		background-color: #d2d2d2
+		color: gray
+		text-align: center
+		&:active
+			background-color: #e6e6e6
+		&:hover
+			box-shadow: inset 3px 3px 3px rgba(0,0,0,.3)
+.modal-infoAboutProduct_tabs
+	.tabs
+		border-bottom: 5px solid #d2d2d2
+		.tab
+			padding: 10px
+			display: block
+			float: left
+		.active
+			background-color: #d2d2d2
+.modal-infoAboutProduct_content
+	border: 1px solid #d2d2d2
+.modal-infoAboutProduct_tableHeader
+	background-color: #666
+	margin: 0
+	color: #fff
+.modal-infoAboutProduct_tableWrapper
+	overflow-y: scroll
+	border: 1px solid #d2d2d2
+	.row
+		margin: 0
+		padding-top: 5px
+		padding-bottom: 5px
+		background-color: #f0f0f0
+		&:nth-child(even)
+			background-color: #e1e1e1
+		&:hover
+			background-color: #b2b2b2
+			color: #222
+.modal-infoAboutProduct_tableWrapper-tree
+	padding-left: 10px
+
+
 
 .orders-greatestatus
 	background-color: #fffdd7 !important
@@ -1516,6 +1726,13 @@ body
 			right: 10px
 			bottom: 10px
 			color: gray
+			display: block
+			height: 20px
+			width: 20px
+			background-color: #fff
+			border: 1px solid lightgray
+			line-height: em(18px)
+			text-align: center
 			&:hover
 				color: #000
 	.orders-tableLg_content-arr
@@ -1545,7 +1762,7 @@ body
 			top: 25px
 			display: none
 	.orders-tableLg_content-comment
-		word-break: break-all
+		word-break: break-word
 		a
 			display: inline-block
 			line-height: em(14px)
@@ -1771,12 +1988,15 @@ body
 		margin: 0
 		li
 			list-style-type: none
+			padding-top: 10px
+			padding-bottom: 10px
 			i
 				position: relative
 				cursor: pointer
 				color: $red
 				margin-right: 2px
 				transform: rotate(-90deg)
+				display: inline-block
 		ul
 			padding-left: 15px
 			ul
@@ -2368,12 +2588,12 @@ body
 				right: 10px
 	.date_of_order
 		background-color: #ccc
-		font-family: 'OSR',	sans-serif
+		font-family: 'OSR',		sans-serif
 		color: #333
 	.status_order
 		.Status_of_order
 			background-color: #ccc
-			font-family: 'OSR',	sans-serif
+			font-family: 'OSR',		sans-serif
 			color: #333
 		.inner_wrap
 			i
@@ -2388,12 +2608,12 @@ body
 	.comments_table
 		.date_of_order
 			background-color: #ccc
-			font-family: 'OSR',	sans-serif
+			font-family: 'OSR',		sans-serif
 			color: #333
 	.tottal_price
 		.tottal_price_nds
 			background-color: #ccc
-			font-family: 'OSR',	sans-serif
+			font-family: 'OSR',		sans-serif
 			color: #333
 .warehause
 	.warehause_title_lg
@@ -2467,7 +2687,8 @@ body
 	padding-right: 0
 .pb0
 	padding-bottom: 0
-/* RESET
+
+
 input
 	&[type=radio], &[type=checkbox]
 		margin-bottom: 0
@@ -2561,22 +2782,20 @@ input
 	background-color: #fff
 
 
-/* SOURCE ELEMENT (when checkator is enabled on an element)
+//SOURCE ELEMENT (when checkator is enabled on an element)
 
 .checkator_source
 	position: relative
 	z-index: 2
 	display: block
 
-/* SHARED SETTING
+// SHARED SETTING
 
 .checkator_holder
-	/* Holder for the new element
 	display: inline-block
 	position: relative
 
 .checkator_element
-	/* New element
 	border: 1px solid #b2b2b2
 	background-color: #fff
 	display: block
@@ -2615,7 +2834,6 @@ input
 
 .checkator_source
 	&:checked + .checkator_element:after
-		/* Checked element dot
 		background-color: #50b74e
 		display: block
 		content: ' '
@@ -2630,7 +2848,6 @@ input
 		//border: 2px solid #cc0
 	&:hover + .checkator_element
 		/* Hovered element*/
-		/* Bug: There is a bug in chrome preventing this from working correctly
 		background-color: #fff
 		border: 1px solid #a0a0a0
 .checkator_element
@@ -2870,6 +3087,7 @@ input
 ///////////////////////////////////////
 ////стили страницы импорта заказов////
 //////////////////////////////////////
+
 .acceptedcheckbox
 	background-color: #50b74e !important
 .action
@@ -2882,10 +3100,10 @@ input
 	.help_topics button, .table_stock_selection .checkbox label .wrap
 		float: right
 .top_cell
-	.waitImport
-		&:hover
-			background-color: $yellow !important
-			box-shadow: inset 0 2px 2px rgba(0,0,0,.3)
+.waitImport
+	&:hover
+		background-color: $yellow !important
+		box-shadow: inset 0 2px 2px rgba(0,0,0,.3)
 .wrap_item_block .content__item_toll .wrapper_icon_and_h2 h2
 	margin: 5px 0 0
 	padding: 0
@@ -3200,6 +3418,8 @@ input
 	font-size: 1em
 	padding: 10px 22px
 	background-color: #d2d2d2
+	color: gray
+	text-align: center
 	&:active
 		background-color: #e6e6e6
 	&:hover
@@ -3232,6 +3452,21 @@ input
 
 .search_goods-rightBtn
 	float: right
+	.labelwrap
+		width: auto
+		display: inline-block
+		float: left
+		margin-top: 3px
+		span
+			display: block
+			float: left
+			text-align: right
+			margin-right: 5px
+			line-height: em(14px)
+			font-size: em(13px)
+		label
+			div
+				margin-top: 4px
 .green_btn
 	padding: 14px
 	text-transform: uppercase
@@ -3241,8 +3476,15 @@ input
 	&:active
 		background-color: #39d372
 	&:hover
-		box-shadow: inset 3px 3px 3px	rgba(0,0,0,.3)
+		box-shadow: inset 3px 3px 3px		rgba(0,0,0,.3)
 
+.addcart
+	background-color: #fff
+	&:hover
+		background-color: $green
+		color: #fff
+	&:active
+		background-color: $activeg
 
 .table_search_goods_result
 	border: 1px solid #8d8d8d
@@ -3427,10 +3669,7 @@ input
 				.alert-info
 					color: #fbaf5d
 					font-size: em(14px)
-			.light_top
-				background-color: #eaffde
-			.light_bottom
-				background-color: #fff5de
+
 		.title
 			height: 25px
 			background-color: #666
@@ -3487,7 +3726,7 @@ input
 			background-color: #8d8d8d
 	.quantity_ .content
 		.bottom_cell, .top_cell
-			padding: 15px !important
+			padding: 15px 10px !important
 		font-size: 1.08333em
 		color: #333
 		.bottom_cell a i
@@ -3575,6 +3814,7 @@ input
 	background-color: #fff !important
 	.not_in_stock
 		margin-top: 50px
+		display: none
 		.row
 			margin-left: 0
 			margin-right: 0
@@ -3718,9 +3958,8 @@ input[type=checkbox]
 
 
 
-///////////////////////////////////////////////////////////////
-/////////////////Стили для страницы с листом ожидания//////////
-///////////////////////////////////////////////////////////////
+
+//Стили для страницы с листом ожидания
 .waitList-alert_close
 	height: 20px
 	width: 20px
@@ -3944,11 +4183,22 @@ input[type=checkbox]
 
 
 
-
-
 ///////////////////////////////////////////////////////////////
 /////////////////Стили для страницы возвратов/////////////////
 ///////////////////////////////////////////////////////////////
+.returnes-table_true
+	height: 20px
+	width: 20px
+	background-color: #6baf63
+	display: inline-block
+	line-height: 20px
+	color: #fff
+	border-radius: 50%
+.returnes-wrapTable
+ margin-top: 0 !important
+.breadcrumbs_bottom-row
+	.breadcrumbs_bottom
+		left: 0 !important
 .alert_returnes
 	.alert_returnes-close
 		height: 20px
@@ -4052,72 +4302,6 @@ input[type=checkbox]
 					margin-top: 30px
 				&:first-child
 					display: block
-			.table_returnes
-				height: 80px
-				border: 1px solid #8d8d8d
-				margin-bottom: 15px
-				overflow: hidden
-				.title
-					background-color: #666666
-					color: #fff
-					font-size: em(10px)
-					font-family: 'OSB', sans-serif
-					padding-left: 15px
-					text-transform: uppercase
-				.text_comments
-					word-wrap: break-word
-					overflow: hidden
-					a
-						font-style: italic
-						font-size: em(10px) !important
-						font-family: 'osr', sans-serif !important
-						margin-left: 0 !important
-				.content
-					height: 52px
-					padding: 10px 15px
-					color: #666
-					position: relative
-					word-wrap: break-word
-					.gray_btn
-						padding: 4px
-						span
-							font-family: 'osr', sans-serif
-							text-transform: none
-						i
-							color: #888
-					.trash
-						padding: 4px 10px
-						float: right
-						margin-right: 15px
-					.over, input
-						border-radius: 0
-						left: 15px
-						top: 15px
-						.inner
-							border-radius: 0
-					input
-						opacity: 0
-						z-index: 2
-						position: absolute
-					span
-						font-family: 'osb', sans-serif
-						text-transform: uppercase
-						font-size: em(12px)
-					p
-						font-family: 'osr', sans-serif
-						font-size: em(11px)
-						margin: 0
-						line-height: em(11px)
-					a
-						color: #3366cc
-						font-family: 'osb', sans-serif
-						margin-left: 30px
-						font-size: em(15px)
-						text-decoration: underline
-						&:hover
-							text-decoration: none
-							&:focus, &:active
-								color: $red
 
 		.returnes-table
 			border: 1px solid #e2e2e2
@@ -4187,6 +4371,72 @@ input[type=checkbox]
 					position: absolute
 					top: 20px
 					right: 5px
+.table_returnes
+	height: 80px
+	border: 1px solid #8d8d8d
+	margin-bottom: 15px
+	overflow: hidden
+	.title
+		background-color: #666666
+		color: #fff
+		font-size: em(10px)
+		font-family: 'OSB', sans-serif
+		padding-left: 15px
+		text-transform: uppercase
+	.text_comments
+		word-wrap: break-word
+		overflow: hidden
+		a
+			font-style: italic
+			font-size: em(10px) !important
+			font-family: 'osr', sans-serif !important
+			margin-left: 0 !important
+	.content
+		height: 52px
+		padding: 10px 15px
+		color: #666
+		position: relative
+		word-wrap: break-word
+		.gray_btn
+			padding: 4px
+			span
+				font-family: 'osr', sans-serif
+				text-transform: none
+			i
+				color: #888
+		.trash
+			padding: 4px 10px
+			float: right
+			margin-right: 15px
+		.over, input
+			border-radius: 0
+			left: 15px
+			top: 15px
+			.inner
+				border-radius: 0
+		input
+			opacity: 0
+			z-index: 2
+			position: absolute
+		span
+			font-family: 'osb', sans-serif
+			text-transform: uppercase
+			font-size: em(12px)
+		p
+			font-family: 'osr', sans-serif
+			font-size: em(11px)
+			margin: 0
+			line-height: em(11px)
+		a
+			color: #3366cc
+			font-family: 'osb', sans-serif
+			font-size: em(15px)
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+				&:focus, &:active
+					color: $red
+
 .returnes
 	.wrapper_tabs
 		.returnes-table
@@ -4199,6 +4449,7 @@ input[type=checkbox]
 					position: absolute
 					right: 3px
 					top: 4px
+					cursor: pointer
 			.returnes-table_content
 				word-break: break-all
 				padding: 10px
@@ -4349,6 +4600,7 @@ input[type=checkbox]
 				.returnes-table_title
 					.returnes-table_title-triangleL, .returnes-table_title-triangleR
 						@include triangle(11px 9px, #fff, down)
+						cursor: pointer !important
 						position: absolute
 						left: 2px
 						top: 4px
@@ -4356,6 +4608,7 @@ input[type=checkbox]
 					.returnes-table_title-triangleR
 						right: 3px
 						left: auto
+						cursor: pointer !important
 					span
 						&:nth-child(2)
 							margin-left: 7px
@@ -4381,17 +4634,25 @@ input[type=checkbox]
 	top: 0
 	left: 0
 	z-index: 300
-	.returnes-popUpgoods_wrap
-		margin: auto
-		position: absolute
-		padding: 20px
-		height: 200px
-		width: 50%
-		background-color: #fff
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
+
+ .returnes-popUpgoods_buttonWrap
+	width: auto
+	background-color: #fff
+	padding-top: 5px
+	float: right
+	position: absolute
+	left: 20px
+	bottom: 20px
+	right: 20px
+	.returnes-popUpgoods_cancell
+		float: left
+		padding-left: 20px
+		padding-right: 20px
+	.red_btn
+		float: right
+		padding-left: 20px
+		padding-right: 20px
+
 		h2
 			margin-top: 0
 			text-transform: uppercase
@@ -4407,17 +4668,7 @@ input[type=checkbox]
 			position: relative
 			top: 5px
 		button
-			width: 20%
 			padding: 5px
-		hr
-			margin-top: 25px
-		.returnes-popUpgoods_buttonWrap
-			width: 70%
-			float: right
-			button
-				float: right
-				@include calc(width, "50% - 20px")
-				margin-left: 20px
 		.returnes-popUpgoods_close
 			height: 25px
 			width: 25px
@@ -4443,7 +4694,32 @@ input[type=checkbox]
 					width: 100%
 					background-color: #fff
 					transform: rotate(90deg)
-
+.returnes-popUpgoods_wrap
+	margin: auto
+	position: absolute
+	padding: 20px
+	height: 60%
+	width: 70%
+	background-color: #fff
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+ .returnes-popUpgoods_body
+	padding: 15px
+	margin-top: 20px
+	height: 71%
+	overflow-y: auto
+	overflow-x: hidden
+	input
+	 border: 1px solid lightgray
+	 opacity: 1
+	 text-align: center
+	select
+	 width: 100%
+	 padding: 6px 10px
+	 position: relative
+	 top: 5px
 .lightyellow-status
 	background-color: #fffdd7
 .lightblue-status
@@ -4613,11 +4889,15 @@ input[type=checkbox]
 ///////Стили для страницы поиска по дереву tree.html///////////
 ///////////////////////////////////////////////////////////////
 .generalPopUp-details
-	display: block !important
+	.tree-tabWrap_content
+		padding: 0 !important
+		.row
+			margin: 0
 	.generalPopUp-detailsWindow
 		width: 95% !important
 		height: 90% !important
 		color: #333
+		padding: 20px !important
 		h5
 			text-transform: none
 			font-size: em(16px)
@@ -4655,6 +4935,54 @@ input[type=checkbox]
 		font-family: 'osr', sans-serif
 		line-height: em(14px)
 		font-size: em(11px)
+.generalPopUp-details_righ
+.generalPopUp-details_rightTitle
+	font-family: 'osb', sans-serif
+	margin-bottom: 5px
+	display: inline-block
+	font-size: em(13px)
+.generalPopUp-details_rightHeader
+	background-color: #a3fd96
+	padding: 6px 10px
+	margin: 0
+	span
+		font-family: 'osb', sans-serif
+.generalPopUp-details_righttableRow
+	padding: 6px 10px
+	background-color: #dcffd7
+	font-size: em(13px)
+	span
+		color: #666
+	a
+		color: $red
+		text-decoration: underline
+		text-transform: uppercase
+.generalPopUp-details_rightWrapper
+	overflow-y: scroll
+	overflow-x: hidden
+	height: 140px
+.generalPopUp-details_rightPhoto
+	.wrapper
+		height: 130px
+		width: 130px
+		border: 1px solid #b8b8b8
+		img
+			width: 100%
+			height: 100%
+.generalPopUp-details_body
+	height: 90%
+	overflow-y: scroll
+	overflow-x: hidden
+.generalPopUp-details_body
+ .tree-tabWrap_content
+	margin-left: -15px
+
+
+
+.generalPopUp-detailsAnalogs
+	h5
+		margin-bottom: 0 !important
+		margin-top: 20px !important
 
 
 
@@ -4681,7 +5009,7 @@ input[type=checkbox]
 			content: ''
 			height: 2px
 			width: 100%
-			background-color:	#fbaf5d
+			background-color:		#fbaf5d
 			top: 5px
 			transform: rotate(45deg)
 		&::after
@@ -4775,7 +5103,7 @@ input[type=checkbox]
 			position: absolute
 			right: 0
 			top: 0
-			border-radius:	0 999px 999px 0
+			border-radius:		0 999px 999px 0
 			border: none
 			height: 100%
 			width: 40px
@@ -4849,7 +5177,7 @@ input[type=checkbox]
 			&:hover
 				border-color: gray
 			&:focus, &:active
-				box-shadow:	0 0 2px $green
+				box-shadow:		0 0 2px $green
 				border-color: $green
 
 	.tree-leftNav
@@ -5136,7 +5464,7 @@ input[type=checkbox]
 					position: absolute
 					margin: auto
 				&::after
-				 	transform: rotate(45deg)
+					 transform: rotate(45deg)
 				&::before
 					transform: rotate(-45deg)
 		.tree-addToWaitlist_body
@@ -5445,7 +5773,7 @@ input[type=checkbox]
 				img
 					border-color: $green
 
-//////////Конец стилей	для страницы Менеджера salesperson.html///////////////
+//////////Конец стилей		для страницы Менеджера salesperson.html///////////////
 
 
 
@@ -5622,7 +5950,7 @@ input[type=checkbox]
 					word-wrap: break-word
 				.buttonsBlock
 					button
-						padding: 2px	10px
+						padding: 2px		10px
 						line-height: 1.8em
 						font-size: em(14px)
 						border: none
@@ -5748,6 +6076,7 @@ input[type=checkbox]
 		p
 			text-align: center
 			font-size: em(16px)
+
 //конец управление остатками rest_managment//
 
 
@@ -5807,17 +6136,45 @@ input[type=checkbox]
 
 
 //опросы//
+.pools-iteration
+		text-align: right
+		color: #333
+		margin-bottom: 0px
+		font-family: 'osr', sans-serif
+		text-transform: uppercase
+		b
+			font-family: 'osb', sans-serif
+			font-size: em(14px)
+			margin: 0 5px
+.modal-pools_image
+	width: 100%
+#modal-pools3
+	.progress
+		 overflow: hidden
+		 height: 20px
+		 margin-bottom: 20px
+		 background-color: #f5f5f5
+		 border-radius: 4px
+		 -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1)
+		 box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1)
+.progress-bar
+	 float: left
+	 width: 0
+	 height: 100%
+	 font-size: 12px
+	 line-height: 20px
+	 color: #fff
+	 text-align: center
+	 background-color: #428bca
+	 -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15)
+	 box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15)
+	 -webkit-transition: width .6s ease
+	 transition: width .6s ease
 
-.generalPopUp-poolsWindow
-	background-color: #f3f3f3 !important
-	height: 400px !important
-
-.generalPopUp-poolsHeader
-	h2
-		font-size: em(14px)
-		margin-top: 30px !important
-		display: inline-block
-.generalPopUp-poolsBody
+#modal-pools1
+	h3
+		text-transform: none
+		margin-top: 0
 	label
 		width: 100%
 		display: block
@@ -5828,7 +6185,6 @@ input[type=checkbox]
 		input:checked
 			+ .overlayCheckBoxDiv span
 				background-color: $green
-
 
 .pools
 	.pools-h2
@@ -5862,13 +6218,18 @@ input[type=checkbox]
 			.wrap_btn
 				@include calc(width, "40%")
 				float: right
+				position: relative
+				right: 0
+				top: 0
+				text-align: center
 			span
 				@include calc(width, "60%")
 				display: inline-block
 				padding-right: 10px
 				display: inline-block
 				line-height: em(14px)
-			button
+
+			a
 				float: right
 				position: relative
 				border: none
@@ -5876,13 +6237,21 @@ input[type=checkbox]
 				padding: 5px 10px
 				text-transform: uppercase
 				font-size: em(10px)
+				line-height: em(14px)
 				transition: .1s
 				box-shadow: 1px 1px 1px 1px rgba(0,0,0,.3)
+				color: #fff
+				outline: none
+				padding: 15px 10px
 				&:hover
 					background-color: darken($green, 3%)
+					text-decoration: none
 				&:active
 					background-color: darken($green, 7%)
 					box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,.3)
+					text-decoration: none
+				&:focus
+					text-decoration: none
 	.pools-pastPools
 		h3
 			text-transform: uppercase
@@ -5898,7 +6267,7 @@ input[type=checkbox]
 			.wrap_btn
 				width: 40%
 				float: right
-				button
+				a
 					float: right
 					padding: 10px
 					text-transform: uppercase
@@ -6363,7 +6732,7 @@ input[type=checkbox]
 				border-radius: 999px
 				background-color: $red
 				position: relative
-				box-shadow:	inset	0px 3px 2px rgba(0,0,0,.4)
+				box-shadow:		inset		0px 3px 2px rgba(0,0,0,.4)
 				overflow: hidden
 				&::after
 					position: absolute
@@ -6374,7 +6743,7 @@ input[type=checkbox]
 					left: 0
 					border-radius: 999px
 					transition: .3s
-					box-shadow:	inset	0px 1px 2px rgba(0,0,0,.4)
+					box-shadow:		inset		0px 1px 2px rgba(0,0,0,.4)
 				.on, .off
 					position: relative
 					color: #fff
@@ -6477,7 +6846,7 @@ input[type=checkbox]
 			height: 17px
 			width: 17px
 			border: 1px solid lightgray
-			box-shadow: inset	0px 1px 1px rgba(0,0,0,.4)
+			box-shadow: inset		0px 1px 1px rgba(0,0,0,.4)
 			display: block
 			float: left
 			border-radius: 999px
@@ -6492,7 +6861,7 @@ input[type=checkbox]
 				left: 3px
 				position: absolute
 				top: 3px
-				box-shadow: inset	0px -1px 1px rgba(0,0,0,.4)
+				box-shadow: inset		0px -1px 1px rgba(0,0,0,.4)
 		input:checked
 			+ .overlay
 					.inner
@@ -6768,7 +7137,7 @@ input[type=checkbox]
 	.search
 		background-color: #f0f0f0
 		padding: 20px 25px
-		box-shadow:	0 3px 2px rgba(0,0,0,.3)
+		box-shadow:		0 3px 2px rgba(0,0,0,.3)
 		position: relative
 		z-index: 1
 		.wrapper-search
@@ -7466,6 +7835,60 @@ input[type=checkbox]
 		background-color: #eaeaea
 //конец акции/
 
+//акции внутрення страница//
+.fullAction
+	min-height: 90vh
+.fullAction-wrapper_row
+	margin: 0
+.fullAction-wrapper
+	border: 1px solid lightgray
+	box-shadow: 0 2px 3px rgba(0,0,0,.3)
+	padding: 20px 0
+	img
+		width: 100%
+.fullAction-wrapper_title
+	background-color: $red
+	color: #fff
+	padding: 10px 20px
+	text-transform: uppercase
+	.dateOfAction
+		float: right
+		text-transform: lowercase
+		position: relative
+		bottom: 3px
+		b
+			font-family: 'osb', sans-serif
+			font-size: em(14px)
+.fullAction-wrapper_content
+	text-align: right
+	padding-right: 20px
+	color: #333
+	h1
+		font-size: em(35px)
+	span
+		text-transform: uppercase
+		margin-top: 50px
+		display: inline-block
+	p
+		font-size: em(60px)
+		margin: 0
+		font-family: 'osb', sans-serif
+		label
+			font-size: em(8px)
+			font-family: 'osr', sans-serif
+.fullAction-wrapper_row
+	h3
+		font-size: em(15px)
+	.detailInformation
+		margin-top: 30px
+		a
+			color: $red
+			text-decoration: underline
+			&:hover
+				color: $active
+				text-decoration: none
+//конец акции внутрення страница//
+
 
 
 h2,h3,h4,h5,h6
@@ -7717,7 +8140,7 @@ h3
 
 //обратная связь//
 .report
-	min-height: 70vh
+	min-height: 90vh
 	padding-top: 20px
 	padding-bottom: 20px
 	.generalPopUp-window_commentToError
@@ -7731,13 +8154,19 @@ h3
 		font-size: em(16px)
 		top: 3px
 		position: relative
-		color:	#959595
+		color:		#959595
 		margin-right: 20px
 .report-content
 	margin: 0
 //конец обратная связь//
 
 //уцененные товары//
+.generalPopUp-generalPopUp
+	.generalPopUp-generalPopUp_window
+		height: 350px !important
+
+.cutePrice-table_quantity .wrapperSpinner .addcart
+	border-left: 1px solid lightgray
 .cutePrice
 	padding-top: 30px
 	padding-bottom: 25px
@@ -7897,7 +8326,6 @@ h3
 			transition: .2s
 			background-color: #fff
 			&:hover
-				background-color: $green
 				color: #fff
 		.form-control
 			width: 88px
@@ -7990,6 +8418,7 @@ h3
 
 
 //наценка//
+
 .extraCharge-h2
 	padding-top: 30px
 	padding-bottom: 25px
@@ -8239,6 +8668,7 @@ h3
 			float: right
 			padding: 6px 10px
 
+
 .generalPopUp-extraCharge,
 .generalPopUpFastExtraCharge
 	.extraCharge-window
@@ -8430,6 +8860,7 @@ h3
 	left: 25px
 	bottom: 25px
 	right: 25px
+	position: absolute
 	.gray_btn
 		color: gray
 		float: left
@@ -8446,6 +8877,21 @@ h3
 
 
 //настройки пользователя//
+.generalPopUpCengePass
+	span
+		font-family: 'osb', sans-serif
+		margin-bottom: 5px
+	input
+		padding: 5px 10px
+		margin-bottom: 10px
+	span, input
+		display: block
+		width: 100%
+.generalPopUpCengePass-window
+	height: 330px !important
+	width: 500px !important
+.generalPopUpCengePass-body
+	height: 220px !important
 .generalPopUp-userSettings
 	.userSettings-window
 		width: 95% !important
@@ -8471,8 +8917,9 @@ h3
 	padding: 20px
 	button
 		float: right
+		margin-top: 20px
 	span
-		font-family: 'osb',  sans-serif
+		font-family: 'osb',		sans-serif
 		text-transform: uppercase
 		font-size: em(16px)
 		position: relative
@@ -8530,9 +8977,9 @@ h3
 		padding: 10px
 		select
 			width: 100%
-			padding:  8px 5px
+			padding:		8px 5px
 .quantity_modal
-	padding:  8px 5px
+	padding:		8px 5px
 	text-align: center
 	width: 100%
 .modaltable-searchGoods_result
@@ -8654,11 +9101,11 @@ h3
 	background-color: #fff
 	height: 16px
 	width: 16px
-	border:	1px solid lightgray
+	border:		1px solid lightgray
 	float: left
 	margin-right: 5px
 	position: relative
-	top:	2px
+	top:		2px
 	cursor: pointer
 	span
 		height: 10px
@@ -8678,11 +9125,11 @@ h3
 	background-color: #fff
 	height: 16px
 	width: 16px
-	border:	1px solid lightgray
+	border:		1px solid lightgray
 	float: left
 	margin-right: 5px
 	position: relative
-	top:	2px
+	top:		2px
 	cursor: pointer
 	&::after
 		height: 10px
@@ -8699,5 +9146,30 @@ h3
 
 	span
 		display: inline-block
+.generalPopUp-generalPopUp
+	h2
+		font-size: em(14px)
+	.addToWaitlist_body
+		h5
+			width: auto
+			display: inline-block
+			margin-right: 10px
+			margin: 10px 10px 0 0
+		input
+			text-align: center
+			width: 50px
+	.generalPopUp-generalPopUp_cutePricrBody
+		margin-top: 0 !important
+		height: 120px !important
+	.generalPopUp-generalPopUp_window
+		height: 255px !important
+		width: 450px
+
+.generalPopUp-window_cutepriceButtongroup
+	position: absolute
+	bottom: 20px
+	right: 20px
+	left: 20px
+
 
 @import "media"

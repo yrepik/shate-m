@@ -67,7 +67,6 @@
 				</nav>
 
 
-
 				<!--			шапка сайта		 -->
 				<div id="right_side" class="white hidemenuR col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
@@ -125,29 +124,28 @@
 
 							<!--баланс-->
 							<div class="top-balance">
-
-								<a class="">
+								<div class="top-balance_wrapper">
 									<span class="balance-tooltip">
 											<span>Баланс устарел</span>
-									<span class="balance-tooltip_triangle"></span>
+											<span class="balance-tooltip_triangle"></span>
 									</span>
-									<i class="fa fa-money" aria-hidden="true"></i>
-									<span class="balance_count">Баланс </span><span class="hidden-xs hidden-sm hidden-md">- 13.03.2016 - </span>
-									<span class="totall">198 365 489 руб.</span>
-									<span class="top-balance_update">
+									<div class="top-balance_update">
 										<i class="fa fa-refresh" aria-hidden="true"></i>
-									</span>
-								</a>
-
+									</div>
+									<div class="totall">198 365 489 руб.</div>
+									<div class="hidden-xs hidden-sm hidden-md">- 13.03.2016 - </div>
+									<div class="balance_count">Баланс </div>
+									<i class="fa fa-money" aria-hidden="true"></i>
+								</div>
 							</div>
 
 
 							<!--корзина-->
 							<div class="top-cart">
 								<a href="shate-m_b2b_user_cabinet_cart.html">
-								<span class="totall">(0 руб.)</span>
-								<span class="top-quantity">0</span>
-								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+									<span class="totall">(0 руб.)</span>
+									<span class="top-quantity">0</span>
+									<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 								</a>
 							</div>
 
@@ -204,34 +202,50 @@
 
 						<div class="row report-content">
 							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+
 								<form class="generalPopUp-window-reportForm" action="post">
-									<span>Тема письма:</span>
-									<select name="reportProblem" class="generalPopUp-window-select">
+
+									<select name="reportProblem" class="reportProblemFromUser">
 										<option value="0">Ошибка в кроссе</option>
 										<option value="1">вариант ошибки номер 2</option>
 										<option value="2">вариант ошибки номер 3</option>
 									</select>
 
+									<div class="generalPopUp-window-innerWrapper">
+										<div class="item">
+											<span>Параметр 1:</span>
+											<input value="GDB1330 TRW" name="article" disabled>
+										</div>
+										<div class="item">
+											<span>Параметр 2:</span>
+											<input value="HP3010 HSB" name="analog" disabled>
+										</div>
+									</div>
+
 									<div class="generalPopUp-window_commentToError">
-										<span>Сообщение:</span>
+										<span>Коментарий к ошибке:</span>
 										<textarea type="text" name="commentToError"></textarea>
 									</div>
 
-									<div class="generalPopUp-window_buttongroup clerfix">
-										<button class="red_btn">отправить в службу поддержки</button>
-										</form>
-									</div>
 
+									<div class="clerfix">
+										<button class="red_btn">отправить в службу поддержки</button>
+								</form>
+								</div>
 
 							</div>
+
+
 						</div>
-
-
 					</div>
+
 
 				</div>
 
 			</div>
+
+		</div>
 		</div>
 
 

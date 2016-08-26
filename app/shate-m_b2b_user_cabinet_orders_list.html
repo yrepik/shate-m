@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/fonts.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="libs/Magnific-Popup/dist/magnific-popup.css">
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" charset="utf-8">
 
 </head>
@@ -88,7 +89,7 @@
 							<div class="top-search">
 								<form>
 									<input class="serch_field" type="search" name="search" placeholder="Поиск" autocomplete="off">
-									<button  class="search_btn"  alt="ok"><i class="fa fa-search" aria-hidden="true"></i></button>
+									<button class="search_btn" alt="ok"><i class="fa fa-search" aria-hidden="true"></i></button>
 									<div class="drop_down_search_list">
 										<ul>
 											<li>
@@ -118,44 +119,43 @@
 
 							<!--кабинет пользователя-->
 							<div class="top-userCabinet top-firstUserCabinet">
-									<i class="fa fa-user" aria-hidden="true"></i>
-									<a href="#">Имя Пользователя</a>
-									<div class="triangle"></div>
+								<i class="fa fa-user" aria-hidden="true"></i>
+								<a href="#">Имя Пользователя</a>
+								<div class="triangle"></div>
 							</div>
 
 							<!--баланс-->
 							<div class="top-balance">
-
-								<a class="">
+								<div class="top-balance_wrapper">
 									<span class="balance-tooltip">
 											<span>Баланс устарел</span>
-											<span class="balance-tooltip_triangle"></span>
+									<span class="balance-tooltip_triangle"></span>
 									</span>
-									<i class="fa fa-money" aria-hidden="true"></i>
-									<span class="balance_count">Баланс </span><span class="hidden-xs hidden-sm hidden-md">- 13.03.2016 - </span>
-									<span class="totall">198 365 489 руб.</span>
-									<span class="top-balance_update">
+									<div class="top-balance_update">
 										<i class="fa fa-refresh" aria-hidden="true"></i>
-									</span>
-								</a>
-
+									</div>
+									<div class="totall">198 365 489 руб.</div>
+									<div class="hidden-xs hidden-sm hidden-md">- 13.03.2016 - </div>
+									<div class="balance_count">Баланс </div>
+									<i class="fa fa-money" aria-hidden="true"></i>
+								</div>
 							</div>
 
 
 							<!--корзина-->
 							<div class="top-cart">
 								<a href="shate-m_b2b_user_cabinet_cart.html">
-								<span class="totall">(0 руб.)</span>
-								<span class="top-quantity">0</span>
-								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+									<span class="totall">(0 руб.)</span>
+									<span class="top-quantity">0</span>
+									<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 								</a>
 							</div>
 
 							<!--кабинет пользователя-->
 							<div class="top-userCabinet top-SecondUserCabinet">
-									<i class="fa fa-user" aria-hidden="true"></i>
-									<a href="#">Имя Пользователя</a>
-									<div class="triangle"></div>
+								<i class="fa fa-user" aria-hidden="true"></i>
+								<a href="#">Имя Пользователя</a>
+								<div class="triangle"></div>
 							</div>
 
 
@@ -490,7 +490,8 @@
 										<div class="inner_wrap craete-status_order-list">
 											<i title="описание продукта" class="to-crate fa fa-paper-plane" aria-hidden="true"></i>
 											<span>Создано</span>
-											<a href="#"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
+
+											<a class="popup-modal" href="#modal-historyStatus"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
 								</div>
@@ -538,7 +539,7 @@
 										<div class="name_title">Наименование</div>
 										<div class="inner_wrap craete-status_order-list">
 											<a href="#"><span>THK10w40</span><br><span>Magnum Motor</span><br><span>plus/5</span></a>
-											<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
 								</div>
@@ -611,7 +612,7 @@
 										<div class="name_title">Наименование</div>
 										<div class="inner_wrap rouge_error">
 											<a href="#"><span>THK10w40</span><br><span>Magnum Motor</span><br><span>plus/5</span></a>
-											<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
 								</div>
@@ -698,7 +699,7 @@
 										<div class="inner_wrap craete-status_order-list">
 											<i class="to-crate fa fa-paper-plane" aria-hidden="true"></i>
 											<span>Создано</span>
-											<a href="#"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-historyStatus"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
 								</div>
@@ -746,7 +747,7 @@
 										<div class="name_title">Наименование</div>
 										<div class="inner_wrap craete-status_order-list">
 											<a href="#"><span>THK10w40</span><br><span>Magnum Motor</span><br><span>plus/5</span></a>
-											<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
 								</div>
@@ -766,7 +767,7 @@
 											</div>
 											<div class="right">
 												<span>Создано</span>
-												<a href="#"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
+												<a class="popup-modal" href="#modal-historyStatus"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -819,7 +820,7 @@
 										<div class="name_title">Наименование</div>
 										<div class="inner_wrap rouge_error">
 											<a href="#"><span>THK10w40</span><br><span>Magnum Motor</span><br><span>plus/5</span></a>
-											<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
 								</div>
@@ -906,7 +907,7 @@
 										<div class="inner_wrap craete-status_order-list">
 											<i class="to-crate fa fa-paper-plane" aria-hidden="true"></i>
 											<span>Создано</span>
-											<a href="#"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-historyStatus"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
 								</div>
@@ -954,7 +955,7 @@
 										<div class="name_title">Наименование</div>
 										<div class="inner_wrap craete-status_order-list">
 											<a href="#"><span>THK10w40</span><br><span>Magnum Motor</span><br><span>plus/5</span></a>
-											<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
 								</div>
@@ -974,7 +975,7 @@
 											</div>
 											<div class="right">
 												<span>Создано</span>
-												<a href="#"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
+												<a class="popup-modal" href="#modal-historyStatus"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -1027,7 +1028,7 @@
 										<div class="name_title">Наименование</div>
 										<div class="inner_wrap rouge_error">
 											<a href="#"><span>THK10w40</span><br><span>Magnum Motor</span><br><span>plus/5</span></a>
-											<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
 								</div>
@@ -1117,7 +1118,7 @@
 											<div class="inner_wrap">
 												<i class="to-crate fa fa-paper-plane" aria-hidden="true"></i>
 												<span>Создано</span>
-												<a href="#"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
+												<a class="popup-modal" href="#modal-historyStatus"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -1189,7 +1190,7 @@
 											<div class="name_title">Наименование</div>
 											<div class="inner_wrap">
 												<a href="#"><span>THK10w40 <br> Magnum Motor plus/5</span></a>
-												<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+												<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -1228,7 +1229,7 @@
 											</div>
 											<div class="inner_wrap">
 												<span>Создано</span>
-												<a href="#"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
+												<a class="popup-modal" href="#modal-historyStatus"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -1413,7 +1414,7 @@
 											<div class="inner_wrap">
 												<i class="to-crate fa fa-paper-plane" aria-hidden="true"></i>
 												<span>Создано</span>
-												<a href="#"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
+												<a class="popup-modal" href="#modal-historyStatus"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -1485,7 +1486,7 @@
 											<div class="name_title">Наименование</div>
 											<div class="inner_wrap">
 												<a href="#"><span>THK10w40 <br> Magnum Motor plus/5</span></a>
-												<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+												<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -1524,7 +1525,7 @@
 											</div>
 											<div class="inner_wrap">
 												<span>Создано</span>
-												<a href="#"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
+												<a class="popup-modal" href="#modal-historyStatus"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -1709,7 +1710,7 @@
 											<div class="inner_wrap">
 												<i class="to-crate fa fa-paper-plane" aria-hidden="true"></i>
 												<span>Создано</span>
-												<a href="#"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
+												<a class="popup-modal" href="#modal-historyStatus"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -1781,7 +1782,7 @@
 											<div class="name_title">Наименование</div>
 											<div class="inner_wrap">
 												<a href="#"><span>THK10w40 <br> Magnum Motor plus/5</span></a>
-												<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+												<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -1820,7 +1821,7 @@
 											</div>
 											<div class="inner_wrap">
 												<span>Создано</span>
-												<a href="#"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
+												<a class="popup-modal" href="#modal-historyStatus"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -2005,7 +2006,7 @@
 											<div class="inner_wrap">
 												<i class="to-crate fa fa-paper-plane" aria-hidden="true"></i>
 												<span>Создано</span>
-												<a href="#"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
+												<a class="popup-modal" href="#modal-historyStatus"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -2077,7 +2078,7 @@
 											<div class="name_title">Наименование</div>
 											<div class="inner_wrap">
 												<a href="#"><span>THK10w40 <br> Magnum Motor plus/5</span></a>
-												<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+												<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -2116,7 +2117,7 @@
 											</div>
 											<div class="inner_wrap">
 												<span>Создано</span>
-												<a href="#"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
+												<a class="popup-modal" href="#modal-historyStatus"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 											</div>
 										</div>
 									</div>
@@ -2363,7 +2364,7 @@
 										<div class="orders-tableLg-title">Наименование</div>
 										<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
 											<a href="#">THK 10w40 magnum motor plus/53</a>
-											<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
 									<!--Стрелки-->
@@ -2392,7 +2393,7 @@
 										<div class="orders-tableLg-title">Статус</div>
 										<div class="orders-tableLg_content orders-tableLg_content-status orders-greatestatus">
 											<span>Создано</span>
-											<a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-historyStatus"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
 											<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 										</div>
 									</div>
@@ -2480,7 +2481,7 @@
 										<div class="orders-tableLg-title">Статус</div>
 										<div class="orders-tableLg_content orders-tableLg_content-status orders-greatestatus">
 											<span>Создано</span>
-											<a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-historyStatus"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
 											<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 										</div>
 									</div>
@@ -2607,7 +2608,7 @@
 										<div class="orders-tableLg-title">Наименование</div>
 										<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
 											<a href="#">THK 10w40 magnum motor plus/5</a>
-											<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
 									<!--Стрелки-->
@@ -2636,7 +2637,7 @@
 										<div class="orders-tableLg-title">Статус</div>
 										<div class="orders-tableLg_content orders-tableLg_content-status orders-greatestatus">
 											<span>Создано</span>
-											<a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-historyStatus"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
 											<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 										</div>
 									</div>
@@ -2695,7 +2696,7 @@
 										<div class="orders-tableLg-title">Наименование</div>
 										<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
 											<a href="#">THK 10w40 magnum motor plus/55</a>
-											<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
 									<!--Стрелки-->
@@ -2724,7 +2725,7 @@
 										<div class="orders-tableLg-title">Статус</div>
 										<div class="orders-tableLg_content orders-tableLg_content-status orders-greatestatus">
 											<span>Создано</span>
-											<a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-historyStatus"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
 											<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 										</div>
 									</div>
@@ -2851,7 +2852,7 @@
 										<div class="orders-tableLg-title">Наименование</div>
 										<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
 											<a href="#">THK 10w40 magnum motor plus/5</a>
-											<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
 									<!--Стрелки-->
@@ -2880,7 +2881,7 @@
 										<div class="orders-tableLg-title">Статус</div>
 										<div class="orders-tableLg_content orders-tableLg_content-status orders-greatestatus">
 											<span>Создано</span>
-											<a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-historyStatus"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
 											<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 										</div>
 									</div>
@@ -2939,7 +2940,7 @@
 										<div class="orders-tableLg-title">Наименование</div>
 										<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
 											<a href="#">THK 10w40 magnum motor plus/5</a>
-											<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
 									<!--Стрелки-->
@@ -2968,7 +2969,7 @@
 										<div class="orders-tableLg-title">Статус</div>
 										<div class="orders-tableLg_content orders-tableLg_content-status orders-greatestatus">
 											<span>Создано</span>
-											<a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+											<a class="popup-modal" href="#modal-historyStatus"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
 											<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 										</div>
 									</div>
@@ -3038,7 +3039,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -3068,7 +3069,7 @@
 									<div class="orders-tableLg-title">Статус</div>
 									<div class="orders-tableLg_content orders-tableLg_content-status orders-greatestatus">
 										<span>Создано</span>
-										<a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-historyStatus"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
 										<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 									</div>
 								</div>
@@ -3135,7 +3136,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -3232,7 +3233,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-inJobStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -3328,7 +3329,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -3424,7 +3425,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-inJobStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -3521,7 +3522,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-inJobStatus">
 										<a href="#">THK 10w40 magnum motor plus/56</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -3618,7 +3619,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-inJobStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -3714,7 +3715,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-toWarehouseStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -3811,7 +3812,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-cancellStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -3908,7 +3909,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-cancellStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -4005,7 +4006,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-reservStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -4102,7 +4103,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-reservStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -4199,7 +4200,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-toWarehouseStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -4296,7 +4297,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-toWarehouseStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -4393,7 +4394,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-toWarehouseStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -4490,7 +4491,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-deliveredStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -4587,7 +4588,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-deliveredStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -4685,7 +4686,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-removeStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -4782,7 +4783,7 @@
 									<div class="orders-tableLg-title">Наименование</div>
 									<div class="orders-tableLg_content orders-tableLg_content-name orders-cancellStatus">
 										<a href="#">THK 10w40 magnum motor plus/5</a>
-										<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
+										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
 
@@ -4954,1600 +4955,1612 @@
 		</div>
 	</section>
 
-	<!--pop-Up окно c информацией о продукте-->
 
-	<div class="container-fluid orders-info_popUp">
-		<div class="orders-info_popUp-inner">
-			<div class="orders-info_popUp-inner-close"></div>
 
-				<div class="row">
-					<div class="orders-info_popUp-inner-image hidden-xs col-sm-4 col-md-4 col-lg-3">
-						<img src="img/ifoProd.jpg" alt="">
-					</div>
-					<div class="orders-info_popUp-inner-about col-xs-12 col-sm-8 col-md-8 col-lg-9">
-						<h5>Каталожный номер:</h5>
-						<strong>OC47</strong>
-						<h5>Наименование:</h5>
-						<strong>Фильтр масляный</strong>
-						<h5>Торговая марка:</h5>
-						<strong>KNECHT</strong>
-						<h5>Единица измерения:</h5>
-						<strong>ШТ</strong>
-						<h5>Дополнительная информация:</h5>
-						<strong>AUDI: 100 76-82, 100 82-90, 100 90-94, 100 68-76, 100 Avant 77-83, 100 Avant 82-90, 100 Avant 90-94, 100 купе 70-76, 200 79-82, 200 83-91, 200 Av</strong>
-					</div>
+	<!-- модалка истории статусов -->
+	<div id="modal-infoAboutProduct" class="popup-block mfp-hide">
+		<h2>история изменения статуса</h2>
+		<div class="modal-body clearfix"><!--тело модалки-->
+			<div class="row">
+				<div class="modal-infoAboutProduct_image hidden-xs col-sm-4 col-md-4 col-lg-3">
+					<img src="img/ifoProd.jpg" alt="">
+				</div>
+				<div class="modal-infoAboutProduct_about col-xs-12 col-sm-8 col-md-8 col-lg-9">
+					<h5>Каталожный номер:</h5>
+					<strong>OC47</strong>
+					<h5>Наименование:</h5>
+					<strong>Фильтр масляный</strong>
+					<h5>Торговая марка:</h5>
+					<strong>KNECHT</strong>
+					<h5>Единица измерения:</h5>
+					<strong>ШТ</strong>
+					<h5>Дополнительная информация:</h5>
+					<strong>AUDI: 100 76-82, 100 82-90, 100 90-94, 100 68-76, 100 Avant 77-83, 100 Avant 82-90, 100 Avant 90-94, 100 купе 70-76, 200 79-82, 200 83-91, 200 Av</strong>
+				</div>
+			</div>
+
+			<div class="row hidden-xs modal-infoAboutProduct_buttons">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<button type="button">Искать изображения в Google</button>
 				</div>
 
-				<div class="row hidden-xs orders-info_popUp-inner-buttons">
-					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-						<button type="button">Искать изображения в Google</button>
-					</div>
-
-					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-						<button type="button">Искать изображения в Yandex</button>
-					</div>
-
-					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-						<button type="button">Искать изображения в Bing</button>
-					</div>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<button type="button">Искать изображения в Yandex</button>
 				</div>
 
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<div class="wrapper">
-							<div class="tabs">
-								<div class="tab">Характеристики</div>
-								<div class="tab"><span class="hidden-sm hidden-md hidden-lg">Авто</span><span class="hidden-xs">Применение в автомобилях</span></div>
-							</div>
-							<div class="tab_content">
-								<div class="tab_item">
-									<div class="orders-info_popUp-inner-tabItemContent">
-										<div class="title">Описание</div>
-										<div class="title">Значение</div>
-										<div class="inner-wrap">
-											<div class="content-row clearfix">
-												<div class="left">Диаметр [мм]</div>
-												<div class="right">76</div>
-											</div>
-											<div class="content-row clearfix">
-												<div class="left">Размер резьбы</div>
-												<div class="right">3/4"-16UNF-2B</div>
-											</div>
-											<div class="content-row clearfix">
-												<div class="left">диаметр 2 (мм)</div>
-												<div class="right">72</div>
-											</div>
-											<div class="content-row clearfix">
-												<div class="left">диаметр 3 (мм)</div>
-												<div class="right">76</div>
-											</div>
-											<div class="content-row clearfix">
-												<div class="left">Исполнение фильтра</div>
-												<div class="right">Накручиваемый фильтр</div>
-											</div>
-											<div class="content-row clearfix">
-												<div class="left">Диаметр [мм]</div>
-												<div class="right">76</div>
-											</div>
-											<div class="content-row clearfix">
-												<div class="left">Размер резьбы</div>
-												<div class="right">3/4"-16UNF-2B</div>
-											</div>
-											<div class="content-row clearfix">
-												<div class="left">диаметр 2 (мм)</div>
-												<div class="right">72</div>
-											</div>
-											<div class="content-row clearfix">
-												<div class="left">диаметр 3 (мм)</div>
-												<div class="right">76</div>
-											</div>
-											<div class="content-row clearfix">
-												<div class="left">Исполнение фильтра</div>
-												<div class="right">Накручиваемый фильтр</div>
-											</div>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<button type="button">Искать изображения в Bing</button>
+				</div>
+			</div>
+
+			<div class="row modal-infoAboutProduct_tabs">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="wrapper">
+						<div class="tabs clearfix">
+							<div class="tab">Характеристики</div>
+							<div class="tab"><span class="hidden-sm hidden-md hidden-lg">Авто</span><span class="hidden-xs">Применение в автомобилях</span></div>
+						</div>
+						<div class="tab_content">
+							<div class="tab_item">
+								<div class="modal-infoAboutProduct_content">
+									<!--шапка-->
+									<div class="row modal-infoAboutProduct_tableHeader">
+										<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+											<span>Описание</span>
+										</div>
+										<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+											<span>Значение</span>
 										</div>
 									</div>
+									
+									<!--тело-->
+									<div class="modal-infoAboutProduct_tableWrapper clearfix">
+										<!--ряд таблицы-->
+										<div class="row">
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><span>Диаметр [мм]</span></div>
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><span>76</span></div>
+										</div>
+										<!--ряд таблицы-->
+										<div class="row">
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><span>Размер резьбы</span></div>
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><span>3/4"-16UNF-2B</span></div>
+										</div>
+										<!--ряд таблицы-->
+										<div class="row">
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><span>диаметр 2 (мм)</span></div>
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><span>72</span></div>
+										</div>
+										<!--ряд таблицы-->
+										<div class="row">
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><span>диаметр 3 (мм)</span></div>
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><span>76</span></div>
+										</div>
+										<!--ряд таблицы-->
+										<div class="row">
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><span>Исполнение фильтра</span></div>
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><span>Накручиваемый фильтр</span></div>
+										</div>
+										<!--ряд таблицы-->
+										<div class="row">
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><span>Размер резьбы</span></div>
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><span>3/4"-16UNF-2B</span></div>
+										</div>
+									</div>
+								
+							
 								</div>
-								<div class="tab_item info-table">
-									<!--первы	 уровень вложенности-->
-									<ul class="first-lavel">
-										<li><i class="fa fa-chevron-down"></i><span>BMW</span>
-											<!--второй	 уровень вложенности-->
-											<ul class="second-lavel">
-												<li><i class="fa fa-chevron-down"></i><span>5 (E60)</span>
-													<!--третий уровень вложенности-->
-													<ul class="third">
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="title-info">Название</div>
-																<div class="content-info">
-																	BMW 5 (E60) 520i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Начало</div>
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Конец</div>
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">кВт</div>
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">лс.</div>
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">куб. см</div>
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Цилиндров</div>
-																<div class="content-info">
-																	6
-																</div>
+							</div>
+							<div class="tab_item info-table">
+								<div class="modal-infoAboutProduct_tableWrapper modal-infoAboutProduct_tableWrapper-tree">
+								<!--первы	 уровень вложенности-->
+								<ul class="first-lavel">
+									<li><i class="fa fa-chevron-down"></i><span>BMW</span>
+										<!--второй	 уровень вложенности-->
+										<ul class="second-lavel">
+											<li><i class="fa fa-chevron-down"></i><span>5 (E60)</span>
+												<!--третий уровень вложенности-->
+												<ul class="third">
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="title-info">Название</div>
+															<div class="content-info">
+																BMW 5 (E60) 520i
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Начало</div>
+															<div class="content-info">
+																07.2003
 															</div>
 														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Конец</div>
+															<div class="content-info">
 
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">кВт</div>
+															<div class="content-info">
+																125
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">лс.</div>
+															<div class="content-info">
+																170
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">куб. см</div>
+															<div class="content-info">
+																2171
 															</div>
 														</div>
-
-													</ul>
-												</li>
-											</ul>
-
-											<!--второй	 уровень вложенности-->
-											<ul class="second-lavel">
-												<li><i class="fa fa-chevron-down"></i><span>5 (E60)</span>
-													<!--третий уровень вложенности-->
-													<ul class="third">
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="title-info">Название</div>
-																<div class="content-info">
-																	BMW 5 (E60) 520i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Начало</div>
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Конец</div>
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">кВт</div>
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">лс.</div>
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">куб. см</div>
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Цилиндров</div>
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Цилиндров</div>
+															<div class="content-info">
+																6
 															</div>
 														</div>
+													</div>
 
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
 															</div>
 														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
 
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
 															</div>
 														</div>
-
-													</ul>
-												</li>
-											</ul>
-
-										</li>
-									</ul>
-
-									<!--первы	 уровень вложенности-->
-									<ul class="first-lavel">
-										<li><i class="fa fa-chevron-down"></i><span>BMW</span>
-											<!--второй	 уровень вложенности-->
-											<ul class="second-lavel">
-												<li><i class="fa fa-chevron-down"></i><span>5 (E60)</span>
-													<!--третий уровень вложенности-->
-													<ul class="third">
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="title-info">Название</div>
-																<div class="content-info">
-																	BMW 5 (E60) 520i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Начало</div>
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Конец</div>
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">кВт</div>
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">лс.</div>
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">куб. см</div>
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Цилиндров</div>
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
 															</div>
 														</div>
+													</div>
 
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
 															</div>
 														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
 
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
 															</div>
 														</div>
-
-													</ul>
-												</li>
-											</ul>
-
-											<!--второй	 уровень вложенности-->
-											<ul class="second-lavel">
-												<li><i class="fa fa-chevron-down"></i><span>5 (E60)</span>
-													<!--третий уровень вложенности-->
-													<ul class="third">
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="title-info">Название</div>
-																<div class="content-info">
-																	BMW 5 (E60) 520i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Начало</div>
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Конец</div>
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">кВт</div>
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">лс.</div>
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">куб. см</div>
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Цилиндров</div>
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
 															</div>
 														</div>
+													</div>
 
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
 															</div>
 														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
 
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
 															</div>
 														</div>
-
-													</ul>
-												</li>
-											</ul>
-
-										</li>
-									</ul>
-
-									<!--первы	 уровень вложенности-->
-									<ul class="first-lavel">
-										<li><i class="fa fa-chevron-down"></i><span>BMW</span>
-											<!--второй	 уровень вложенности-->
-											<ul class="second-lavel">
-												<li><i class="fa fa-chevron-down"></i><span>5 (E60)</span>
-													<!--третий уровень вложенности-->
-													<ul class="third">
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="title-info">Название</div>
-																<div class="content-info">
-																	BMW 5 (E60) 520i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Начало</div>
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Конец</div>
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">кВт</div>
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">лс.</div>
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">куб. см</div>
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Цилиндров</div>
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
 															</div>
 														</div>
+													</div>
 
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
 															</div>
 														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
 
-													</ul>
-												</li>
-											</ul>
-
-											<!--второй	 уровень вложенности-->
-											<ul class="second-lavel">
-												<li><i class="fa fa-chevron-down"></i><span>5 (E60)</span>
-													<!--третий уровень вложенности-->
-													<ul class="third">
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="title-info">Название</div>
-																<div class="content-info">
-																	BMW 5 (E60) 520i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Начало</div>
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Конец</div>
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">кВт</div>
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">лс.</div>
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="title-info">куб. см</div>
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="title-info">Цилиндров</div>
-																<div class="content-info">
-																	6
-																</div>
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
 															</div>
 														</div>
-
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
 															</div>
 														</div>
+													</div>
 
-														<div class="row table">
-															<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
-																<div class="content-info">
-																	BMW 5 (E60) 530i
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	07.2003
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	125
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	170
-																</div>
-															</div>
-															<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
-																<div class="content-info">
-																	2171
-																</div>
-															</div>
-															<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
-																<div class="content-info">
-																	6
-																</div>
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
 															</div>
 														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
 
-													</ul>
-												</li>
-											</ul>
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
 
-										</li>
-									</ul>
+												</ul>
+											</li>
+										</ul>
 
+										<!--второй	 уровень вложенности-->
+										<ul class="second-lavel">
+											<li><i class="fa fa-chevron-down"></i><span>5 (E60)</span>
+												<!--третий уровень вложенности-->
+												<ul class="third">
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="title-info">Название</div>
+															<div class="content-info">
+																BMW 5 (E60) 520i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Начало</div>
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Конец</div>
+															<div class="content-info">
 
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">кВт</div>
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">лс.</div>
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">куб. см</div>
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Цилиндров</div>
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+												</ul>
+											</li>
+										</ul>
+
+									</li>
+								</ul>
+
+								<!--первы	 уровень вложенности-->
+								<ul class="first-lavel">
+									<li><i class="fa fa-chevron-down"></i><span>BMW</span>
+										<!--второй	 уровень вложенности-->
+										<ul class="second-lavel">
+											<li><i class="fa fa-chevron-down"></i><span>5 (E60)</span>
+												<!--третий уровень вложенности-->
+												<ul class="third">
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="title-info">Название</div>
+															<div class="content-info">
+																BMW 5 (E60) 520i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Начало</div>
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Конец</div>
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">кВт</div>
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">лс.</div>
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">куб. см</div>
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Цилиндров</div>
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+												</ul>
+											</li>
+										</ul>
+
+										<!--второй	 уровень вложенности-->
+										<ul class="second-lavel">
+											<li><i class="fa fa-chevron-down"></i><span>5 (E60)</span>
+												<!--третий уровень вложенности-->
+												<ul class="third">
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="title-info">Название</div>
+															<div class="content-info">
+																BMW 5 (E60) 520i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Начало</div>
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Конец</div>
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">кВт</div>
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">лс.</div>
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">куб. см</div>
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Цилиндров</div>
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+												</ul>
+											</li>
+										</ul>
+
+									</li>
+								</ul>
+
+								<!--первы	 уровень вложенности-->
+								<ul class="first-lavel">
+									<li><i class="fa fa-chevron-down"></i><span>BMW</span>
+										<!--второй	 уровень вложенности-->
+										<ul class="second-lavel">
+											<li><i class="fa fa-chevron-down"></i><span>5 (E60)</span>
+												<!--третий уровень вложенности-->
+												<ul class="third">
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="title-info">Название</div>
+															<div class="content-info">
+																BMW 5 (E60) 520i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Начало</div>
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Конец</div>
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">кВт</div>
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">лс.</div>
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">куб. см</div>
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Цилиндров</div>
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+												</ul>
+											</li>
+										</ul>
+
+										<!--второй	 уровень вложенности-->
+										<ul class="second-lavel">
+											<li><i class="fa fa-chevron-down"></i><span>5 (E60)</span>
+												<!--третий уровень вложенности-->
+												<ul class="third">
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="title-info">Название</div>
+															<div class="content-info">
+																BMW 5 (E60) 520i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Начало</div>
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Конец</div>
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">кВт</div>
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">лс.</div>
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="title-info">куб. см</div>
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="title-info">Цилиндров</div>
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+													<div class="row table">
+														<div class="plr0 col-xs-3 col-sm-3 col-md-3 col-md-3 col-lg-3">
+															<div class="content-info">
+																BMW 5 (E60) 530i
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																07.2003
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																125
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																170
+															</div>
+														</div>
+														<div class="plr0 col-xs-3 col-sm-1 col-md-1 col-md-1 col-lg-1">
+															<div class="content-info">
+																2171
+															</div>
+														</div>
+														<div class="plr0 hidden-xs col-sm-2 col-md-2 col-md-2 col-lg-2">
+															<div class="content-info">
+																6
+															</div>
+														</div>
+													</div>
+
+												</ul>
+											</li>
+										</ul>
+
+									</li>
+								</ul>
 								</div>
+
+
 							</div>
 						</div>
 					</div>
 				</div>
-
+			</div>
+		</div><!--конец тело модалки-->
+		<span class="popup-modal-dismiss"></span>
+		<div class="modal-btnWrap hidden">
+			<button class="gray_btn modal-close">Ок</button>
+			<button class="red_btn hidden">Отправить</button>
 		</div>
 	</div>
+
 
 
 	<!--pop-Up окно для коментария к заказу-->
 	<div class="popUp">
 		<div class="innrer_content_popUp">
-			<h2>Текст примечания</h2> Далеко-далеко за словесными рыбные тексты. Вскоре до большой своего снова, путь языком рот текстами, бросил, семь то которой дороге переулка агенство силуэт сих о скатился над последний. Единственное, злых? Все буквенных, возвращайся напоивший своего
-			вопроса ведущими деревни, рыбными последний залетают страна. Эта большого рукописи до, своих, образ имени лучше свое агенство текстов напоивший проектах журчит ты, бросил встретил! Великий пустился над, сих предложения ты, путь родного! Lorem запятых
-			продолжил осталось даже текстов, злых рыбного возвращайся! Великий меня она парадигматическая раз, своего текстами использовало он ручеек, рукопись семь маленькая. Буквоград агенство безопасную, своего пустился последний заголовок!
+			<h2>Текст примечания</h2> Далеко-далеко за словесными рыбные тексты. Вскоре до большой своего снова, путь языком рот текстами,
+			бросил, семь то которой дороге переулка агенство силуэт сих о скатился над последний. Единственное, злых? Все буквенных,
+			возвращайся напоивший своего вопроса ведущими деревни, рыбными последний залетают страна. Эта большого рукописи до, своих,
+			образ имени лучше свое агенство текстов напоивший проектах журчит ты, бросил встретил! Великий пустился над, сих предложения
+			ты, путь родного! Lorem запятых продолжил осталось даже текстов, злых рыбного возвращайся! Великий меня она парадигматическая
+			раз, своего текстами использовало он ручеек, рукопись семь маленькая. Буквоград агенство безопасную, своего пустился последний
+			заголовок!
 			<div class="wrap_cross">
 			</div>
 		</div>
@@ -6556,6 +6569,7 @@
 
 
 	<!--pop-Up окно для коментария к заказу-->
+	<!-- модалка истории статусов -->
 	<div class="addComent">
 		<div class="innrer_content_popUp_addComent">
 			<h2>Добавить примечание</h2>
@@ -6568,6 +6582,114 @@
 			</div>
 		</div>
 	</div>
+
+
+	<!-- модалка истории статусов -->
+	<div id="modal-historyStatus" class="popup-block mfp-hide">
+		<h2>история изменения статуса</h2>
+		<div class="modal-body clearfix">
+			<!--шапка таблицы-->
+			<div class="row orderes-historyStatus_header">
+				<div class="plr0 col-xs-3 col-sm-4 col-md-3 col-lg-3">
+					<span>Дата и время</span>
+				</div>
+				<div class="plr0 col-xs-4 col-sm-4 col-md-3 col-lg-3">
+					<span>Статус</span>
+				</div>
+				<div class="plr0 col-xs-5 col-sm-4 col-md-6 col-lg-6">
+					<span>Справочная информация</span>
+				</div>
+			</div>
+
+			<!--тело таблицы-->
+			<!--ряд 1-->
+			<div class="row orderes-historyStatus_tableRow">
+				<div class="plr0 col-xs-3 col-sm-4 col-md-3 col-lg-3">
+					<span>10.08.16; 17:50</span>
+				</div>
+				<div class="plr0 col-xs-4 col-sm-4 col-md-3 col-lg-3">
+					<span>Создано</span>
+				</div>
+				<div class="plr0 col-xs-5 col-sm-4 col-md-6 col-lg-6">
+					<span>Заказ ожидает отправки в очередь по обработке</span>
+				</div>
+			</div>
+
+			<!--ряд 2-->
+			<div class="row orderes-historyStatus_tableRow">
+				<div class="plr0 col-xs-3 col-sm-4 col-md-3 col-lg-3">
+					<span>10.08.16; 17:50</span>
+				</div>
+				<div class="plr0 col-xs-4 col-sm-4 col-md-3 col-lg-3">
+					<span>Создано</span>
+				</div>
+				<div class="plr0 col-xs-5 col-sm-4 col-md-6 col-lg-6">
+					<span>Заказ ожидает отправки в очередь по обработке</span>
+				</div>
+			</div>
+
+			<!--ряд 3-->
+			<div class="row orderes-historyStatus_tableRow">
+				<div class="plr0 col-xs-3 col-sm-4 col-md-3 col-lg-3">
+					<span>10.08.16; 17:50</span>
+				</div>
+				<div class="plr0 col-xs-4 col-sm-4 col-md-3 col-lg-3">
+					<span>Создано</span>
+				</div>
+				<div class="plr0 col-xs-5 col-sm-4 col-md-6 col-lg-6">
+					<span>Заказ ожидает отправки в очередь по обработке</span>
+				</div>
+			</div>
+
+
+			<!--ряд 1-->
+			<div class="row orderes-historyStatus_tableRow">
+				<div class="plr0 col-xs-3 col-sm-4 col-md-3 col-lg-3">
+					<span>10.08.16; 17:50</span>
+				</div>
+				<div class="plr0 col-xs-4 col-sm-4 col-md-3 col-lg-3">
+					<span>Создано</span>
+				</div>
+				<div class="plr0 col-xs-5 col-sm-4 col-md-6 col-lg-6">
+					<span>Заказ ожидает отправки в очередь по обработке</span>
+				</div>
+			</div>
+
+			<!--ряд 2-->
+			<div class="row orderes-historyStatus_tableRow">
+				<div class="plr0 col-xs-3 col-sm-4 col-md-3 col-lg-3">
+					<span>10.08.16; 17:50</span>
+				</div>
+				<div class="plr0 col-xs-4 col-sm-4 col-md-3 col-lg-3">
+					<span>Создано</span>
+				</div>
+				<div class="plr0 col-xs-5 col-sm-4 col-md-6 col-lg-6">
+					<span>Заказ ожидает отправки в очередь по обработке</span>
+				</div>
+			</div>
+
+			<!--ряд 3-->
+			<div class="row orderes-historyStatus_tableRow">
+				<div class="plr0 col-xs-3 col-sm-4 col-md-3 col-lg-3">
+					<span>10.08.16; 17:50</span>
+				</div>
+				<div class="plr0 col-xs-4 col-sm-4 col-md-3 col-lg-3">
+					<span>Создано</span>
+				</div>
+				<div class="plr0 col-xs-5 col-sm-4 col-md-6 col-lg-6">
+					<span>Заказ ожидает отправки в очередь по обработке</span>
+				</div>
+			</div>
+
+		</div>
+		<span class="popup-modal-dismiss"></span>
+		<div class="modal-btnWrap">
+			<button class="gray_btn modal-close">Ок</button>
+			<button class="red_btn hidden">Отправить</button>
+		</div>
+	</div>
+
+
 
 	<!--прилоадер-->
 	<div class="overlaypreloader">

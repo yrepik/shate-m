@@ -124,21 +124,19 @@
 
 							<!--баланс-->
 							<div class="top-balance">
-
-								<a class="">
+								<div class="top-balance_wrapper">
 									<span class="balance-tooltip">
 											<span>Баланс устарел</span>
-									<span class="balance-tooltip_triangle"></span>
+											<span class="balance-tooltip_triangle"></span>
 									</span>
-									<i class="fa fa-money" aria-hidden="true"></i>
-									<span class="balance_count">Баланс </span><span class="hidden-xs hidden-sm hidden-md">- 13.03.2016 - </span>
-									<span class="totall">198 365 489 руб.</span>
-									<span class="top-balance_update">
+									<div class="top-balance_update">
 										<i class="fa fa-refresh" aria-hidden="true"></i>
-									</span>
-
-								</a>
-
+									</div>
+									<div class="totall">198 365 489 руб.</div>
+									<div class="hidden-xs hidden-sm hidden-md">- 13.03.2016 - </div>
+									<div class="balance_count">Баланс </div>
+									<i class="fa fa-money" aria-hidden="true"></i>
+								</div>
 							</div>
 
 
@@ -201,8 +199,8 @@
 									<option value="1">USD</option>
 								</select>
 								<span class="hidden-xs">Валюта:</span>
-								<button type="button" class="red_btn hidden-xs">Очистить</button>
-								<button type="button" class="gray_btn hidden-xs">Сохранить</button>
+								<button type="button" class="gray_btn hidden">Очистить</button>
+								<button type="button" class="red_btn  hidden-xs">Сохранить</button>
 							</div>
 						</div>
 					</div>
@@ -225,10 +223,10 @@
 					<div class="searchResult container-fluid">
 						<div class="row searchResult-h2">
 							<!--импорт заказов-->
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 								<h2><i class="fa fa-search" aria-hidden="true"></i><span>Результаты поиска</span></h2>
 							</div>
-							<div class="searchResult-h2_btn col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="searchResult-h2_btn col-xs-12 col-sm-6 col-md-6 col-lg-6">
 								<button class="red_btn findBug">Нашли несовпадение ?</button>
 							</div>
 						</div>
@@ -353,7 +351,7 @@
 											<div class="content">
 												<div class="search-tableContent_priceLeft priceBuylWithNds">
 													<div class="wrap">
-														<span>84 500</span> <span>руб.</span>
+														<span>84 509</span> <span>руб.</span>
 													</div>
 												</div>
 												<div class="search-tableContent_priceRight priceSelllWithNds">
@@ -613,12 +611,12 @@
 										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-3 col-lg-3">
 											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 											<div class="content podolskStatus">
-												<div class="search-tableContent_priceLeft priceBuylWithNds">
+												<div class="search-tableContent_priceLeft priceBuylWithNds podolskStatus">
 													<div class="wrap">
 														<span>84 500</span> <span>руб.</span>
 													</div>
 												</div>
-												<div class="search-tableContent_priceRight priceSelllWithNds">
+												<div class="search-tableContent_priceRight priceSelllWithNds podolskStatus">
 													<div class="wrap">
 														<span>84 500</span> <span>руб.</span>
 														<div class="recomend">
@@ -707,12 +705,12 @@
 										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-3 col-lg-3">
 											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 											<div class="content privolniyStatus">
-												<div class="search-tableContent_priceLeft priceBuylWithNds">
+												<div class="search-tableContent_priceLeft priceBuylWithNds privolniyStatus">
 													<div class="wrap  ">
 														<span>84 500</span> <span>руб.</span>
 													</div>
 												</div>
-												<div class="search-tableContent_priceRight priceSelllWithNds">
+												<div class="search-tableContent_priceRight priceSelllWithNds privolniyStatus">
 													<div class="wrap">
 														<span>84 500</span> <span>руб.</span>
 														<div class="recomend">
@@ -863,17 +861,17 @@
 										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-3 col-lg-3">
 											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 											<div class="content podolskStatus">
-												<div class="search-tableContent_priceLeft priceBuylWithNds">
+												<div class="search-tableContent_priceLeft priceBuylWithNds podolskStatus">
 													<div class="wrap">
-														<span>84 500</span> <span>руб.</span>
+														<span>84 505</span> <span>руб.</span>
 													</div>
 												</div>
-												<div class="search-tableContent_priceRight priceSelllWithNds">
+												<div class="search-tableContent_priceRight priceSelllWithNds podolskStatus">
 													<div class="wrap">
-														<span>84 500</span> <span>руб.</span>
+														<span>84 504</span> <span>руб.</span>
 														<div class="recomend">
 															<i data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport fa fa-balance-scale" aria-hidden="true" data-original-title="" title=""></i>
-															<span>84 500</span> <span>руб.</span>
+															<span>84 504</span> <span>руб.</span>
 														</div>
 													</div>
 												</div>
@@ -955,12 +953,261 @@
 										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-3 col-lg-3">
 											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 											<div class="content privolniyStatus">
-												<div class="search-tableContent_priceLeft priceBuylWithNds">
+												<div class="search-tableContent_priceLeft priceBuylWithNds privolniyStatus">
 													<div class="wrap">
 														<span>84 500</span> <span>руб.</span>
 													</div>
 												</div>
-												<div class="search-tableContent_priceRight priceSelllWithNds">
+												<div class="search-tableContent_priceRight priceSelllWithNds privolniyStatus">
+													<div class="wrap">
+														<span>84 500</span> <span>руб.</span>
+														<div class="recomend">
+															<i data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport fa fa-balance-scale" aria-hidden="true" data-original-title="" title=""></i>
+															<span>84 500</span> <span>руб.</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!--количество-->
+										<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
+											<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
+											<div class="content">
+												<div class="top_cell privolniyStatus">
+													<span class="hidden_span">Нал</span>
+													<div class="action" action="post">
+														<input class="checkbox_result" type="checkbox" title="Оплата наличными">
+														<div class="checked_box">
+															<div class="inner">
+																<div class="green"></div>
+															</div>
+														</div>
+														<div class="input-group spinner">
+															<input type="text" class="form-control" value="10">
+															<div class="input-group-btn-vertical">
+																<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+																<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+															</div>
+														</div>
+														<button class="waitImport btn_form" type="submit btn" name="button"><i class="fa fa-hourglass-end" aria-hidden="true"></i></button>
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+									</div>
+									<!--конец ряд таблицы для репита white-->
+								</div>
+							</div>
+
+
+							<!--ряд таблицы-->
+							<div class="row table_search_goods_result">
+								<!--Бренд-->
+								<div class="cell_wrap brand plr0 col-xs-12 col-sm-7 col-md-2 col-lg-2">
+									<div class="title">
+										<div class="checkbox">
+											<div class="inner"></div>
+										</div>
+										<input class="checkbox_brand" type="checkbox" name="checkBrand">
+										<span>Бренд</span>
+									</div>
+									<div class="content">
+										<a href="#">Purfix</a>
+										<p>Артикул</p>
+										<a class="import_brandArticle" href="#">AHC2991</a>
+										<a href="#" data-toggle="tooltip" data-placement="bottom" class="tooltipImport info" title="информация  о товаре"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+									</div>
+								</div>
+								<!--Описание-->
+								<div class="cell_wrap descr plr0 col-xs-12 col-sm-5 col-md-2 col-lg-2">
+									<div class="title">Описание</div>
+									<div class="content">
+										<h4>ФИЛЬТР салона</h4>
+										<p class="tooltipImport" data-toggle="tooltip" data-placement="bottom" title="Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02--угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02">Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02--</p>
+									</div>
+								</div>
+
+								<!--ряды таблицы для репита-->
+								<div class="col-sm-12 col-md-8 col-lg-8 plr0">
+									<!--шапка таблицы-->
+									<div class="hidden-xs col-sm-12 col-md-12 col-lg-12 import-tableheader plr0">
+										<!--Город-->
+										<div class="cell_wrap town col-xs-4 col-sm-2 col-md-2 col-lg-2">
+											<div class="title">Город</div>
+										</div>
+										<!--Наличие-->
+										<div class="cell_wrap availability col-xs-4 col-sm-2 col-md-1 col-lg-1">
+											<div class="title light_title">Наличие</div>
+										</div>
+										<!--Кратность продажи-->
+										<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
+											<div class="title">
+												<span class="hidden-md">Кратность<br>продажи</span>
+												<span class="searchResult-tableRow_foldSpan hidden-xs hidden-lg hidden-sm">Крат-сть</span>
+											</div>
+										</div>
+										<!--Ожидаемый срок доставки-->
+										<div class="cell_wrap delivery_time col-xs-4 col-sm-2 col-md-2 col-lg-2">
+											<div class="title light_title"><span class="hidden-md">Ожидаемый 	<br>срок поставки</span><span class="hidden-xs hidden-sm hidden-lg searchResult-tableRow_srok">срок поставки</span>
+											</div>
+										</div>
+										<!--Цена с НДС-->
+										<div class="cell_wrap price col-xs-5 col-sm-3 col-md-3 col-lg-3">
+											<div class="title">
+												<div class="search-tableContent_titleL priceBuylWithNds">Цена покупки</div>
+												<div class="search-tableContent_titleR priceSelllWithNds">Цена продажи</div>
+											</div>
+										</div>
+										<!--количество-->
+										<div class="cell_wrap quantity_ col-xs-7 col-sm-3 col-md-3 col-lg-3">
+											<div class="title light_title">Количество</div>
+										</div>
+									</div>
+
+									<!--ряд таблицы для репита-->
+									<div class="import-repeatRow row">
+										<!--Город-->
+										<div class="cell_wrap town col-xs-6 col-sm-2 col-md-2 col-lg-2">
+											<div class="title hidden-sm hidden-md hidden-lg">Город</div>
+											<div class="content">
+												<div class="top_cell podolskStatus"><a href="#"><span>Подольск</span></a></div>
+											</div>
+										</div>
+
+										<!--Наличие-->
+										<div class="col-xs-6 col-sm-2 col-md-1 col-lg-1 cell_wrap availability">
+											<div class="content">
+												<div class="title hidden-sm hidden-md hidden-lg">Наличие</div>
+
+												<div class="top_cell podolskStatus">
+													<span data-toggle="tooltip" data-placement="right" title="Возврат возможен" class="tooltipImport returnes-table_true" aria-hidden="true">В</span>
+													<span>12</span>
+												</div>
+
+											</div>
+										</div>
+
+										<!--Кратность продажи-->
+										<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
+											<div class="content">
+												<div class="top_cell podolskStatus"></div>
+											</div>
+										</div>
+
+										<!--Ожидаемый срок доставки-->
+										<div class="cell_wrap delivery_time hidden-xs col-sm-2 col-md-2 col-lg-2">
+											<div class="title hidden-sm hidden-md hidden-lg"><span>Ожидаемый</span>
+												<br>срок поставки</div>
+											<div class="content">
+												<div class="top_cell podolskStatus"><span>На складе</span></div>
+											</div>
+										</div>
+
+										<!--Цена с НДС-->
+										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-3 col-lg-3">
+											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
+											<div class="content podolskStatus">
+												<div class="search-tableContent_priceLeft priceBuylWithNds podolskStatus">
+													<div class="wrap">
+														<span>84 500</span> <span>руб.</span>
+													</div>
+												</div>
+												<div class="search-tableContent_priceRight priceSelllWithNds podolskStatus">
+													<div class="wrap">
+														<span>84 500</span> <span>руб.</span>
+														<div class="recomend">
+															<i data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport fa fa-balance-scale" aria-hidden="true" data-original-title="" title=""></i>
+															<span>84 500</span> <span>руб.</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!--количество-->
+										<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
+											<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
+											<div class="content">
+												<div class="top_cell podolskStatus">
+													<span class="hidden_span">Нал</span>
+													<div class="action" action="post">
+														<input class="checkbox_result" type="checkbox" title="Оплата наличными">
+														<div class="checked_box">
+															<div class="inner">
+																<div class="green"></div>
+															</div>
+														</div>
+														<div class="input-group spinner">
+															<input type="text" class="form-control" value="10">
+															<div class="input-group-btn-vertical">
+																<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+																<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+															</div>
+														</div>
+														<button class="waitImport btn_form" type="submit btn" name="button"><i class="fa fa-hourglass-end" aria-hidden="true"></i></button>
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+									</div>
+									<!--конец ряд таблицы для репита white-->
+
+									<!--ряд таблицы для репита-->
+									<div class="import-repeatRow row">
+										<!--Город-->
+										<div class="cell_wrap town col-xs-6 col-sm-2 col-md-2 col-lg-2">
+											<div class="title hidden-sm hidden-md hidden-lg">Город</div>
+											<div class="content">
+												<div class="top_cell privolniyStatus"><a href="#"><span>Привольный</span></a></div>
+											</div>
+										</div>
+
+										<!--Наличие-->
+										<div class="col-xs-6 col-sm-2 col-md-1 col-lg-1 cell_wrap availability">
+											<div class="content">
+												<div class="title hidden-sm hidden-md hidden-lg">Наличие</div>
+
+												<div class="top_cell privolniyStatus">
+													<span data-toggle="tooltip" data-placement="right" title="Возврат возможен" class="tooltipImport returnes-table_true" aria-hidden="true">В</span>
+													<span>12</span>
+												</div>
+
+											</div>
+										</div>
+
+										<!--Кратность продажи-->
+										<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
+											<div class="content">
+												<div class="top_cell privolniyStatus">
+													<sapn></sapn>
+												</div>
+											</div>
+										</div>
+
+										<!--Ожидаемый срок доставки-->
+										<div class="cell_wrap delivery_time hidden-xs col-sm-2 col-md-2 col-lg-2">
+											<div class="title hidden-sm hidden-md hidden-lg"><span>Ожидаемый</span>
+												<br>срок поставки</div>
+											<div class="content">
+												<div class="top_cell privolniyStatus"><span>На складе</span></div>
+											</div>
+										</div>
+
+										<!--Цена с НДС-->
+										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-3 col-lg-3">
+											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
+											<div class="content privolniyStatus">
+												<div class="search-tableContent_priceLeft priceBuylWithNds privolniyStatus">
+													<div class="wrap">
+														<span>84 500</span> <span>руб.</span>
+													</div>
+												</div>
+												<div class="search-tableContent_priceRight priceSelllWithNds privolniyStatus">
 													<div class="wrap">
 														<span>84 500</span> <span>руб.</span>
 														<div class="recomend">
@@ -1112,12 +1359,12 @@
 										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-3 col-lg-3">
 											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 											<div class="content podolskStatus">
-												<div class="search-tableContent_priceLeft priceBuylWithNds">
+												<div class="search-tableContent_priceLeft priceBuylWithNds podolskStatus">
 													<div class="wrap">
 														<span>84 500</span> <span>руб.</span>
 													</div>
 												</div>
-												<div class="search-tableContent_priceRight priceSelllWithNds">
+												<div class="search-tableContent_priceRight priceSelllWithNds podolskStatus">
 													<div class="wrap">
 														<span>84 500</span> <span>руб.</span>
 														<div class="recomend">
@@ -1204,12 +1451,12 @@
 										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-3 col-lg-3">
 											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 											<div class="content privolniyStatus">
-												<div class="search-tableContent_priceLeft priceBuylWithNds">
+												<div class="search-tableContent_priceLeft priceBuylWithNds privolniyStatus">
 													<div class="wrap">
 														<span>84 500</span> <span>руб.</span>
 													</div>
 												</div>
-												<div class="search-tableContent_priceRight priceSelllWithNds">
+												<div class="search-tableContent_priceRight priceSelllWithNds privolniyStatus">
 													<div class="wrap">
 														<span>84 500</span> <span>руб.</span>
 														<div class="recomend">
@@ -1361,261 +1608,12 @@
 										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-3 col-lg-3">
 											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 											<div class="content podolskStatus">
-												<div class="search-tableContent_priceLeft priceBuylWithNds">
+												<div class="search-tableContent_priceLeft priceBuylWithNds podolskStatus">
 													<div class="wrap">
 														<span>84 500</span> <span>руб.</span>
 													</div>
 												</div>
-												<div class="search-tableContent_priceRight priceSelllWithNds">
-													<div class="wrap">
-														<span>84 500</span> <span>руб.</span>
-														<div class="recomend">
-															<i data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport fa fa-balance-scale" aria-hidden="true" data-original-title="" title=""></i>
-															<span>84 500</span> <span>руб.</span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!--количество-->
-										<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
-											<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
-											<div class="content">
-												<div class="top_cell podolskStatus">
-													<span class="hidden_span">Нал</span>
-													<div class="action" action="post">
-														<input class="checkbox_result" type="checkbox" title="Оплата наличными">
-														<div class="checked_box">
-															<div class="inner">
-																<div class="green"></div>
-															</div>
-														</div>
-														<div class="input-group spinner">
-															<input type="text" class="form-control" value="10">
-															<div class="input-group-btn-vertical">
-																<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-																<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-															</div>
-														</div>
-														<button class="waitImport btn_form" type="submit btn" name="button"><i class="fa fa-hourglass-end" aria-hidden="true"></i></button>
-													</div>
-												</div>
-
-											</div>
-										</div>
-
-									</div>
-									<!--конец ряд таблицы для репита white-->
-
-									<!--ряд таблицы для репита-->
-									<div class="import-repeatRow row">
-										<!--Город-->
-										<div class="cell_wrap town col-xs-6 col-sm-2 col-md-2 col-lg-2">
-											<div class="title hidden-sm hidden-md hidden-lg">Город</div>
-											<div class="content">
-												<div class="top_cell privolniyStatus"><a href="#"><span>Привольный</span></a></div>
-											</div>
-										</div>
-
-										<!--Наличие-->
-										<div class="col-xs-6 col-sm-2 col-md-1 col-lg-1 cell_wrap availability">
-											<div class="content">
-												<div class="title hidden-sm hidden-md hidden-lg">Наличие</div>
-
-												<div class="top_cell privolniyStatus">
-													<i data-toggle="tooltip" data-placement="right" title="" class="alert-info tooltipImport fa fa-exclamation-triangle" aria-hidden="true" data-original-title="Возврат невозможен! Время размещения заказа до 17:00"></i>
-													<span>12</span>
-												</div>
-
-											</div>
-										</div>
-
-										<!--Кратность продажи-->
-										<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
-											<div class="content">
-												<div class="top_cell privolniyStatus">
-													<sapn></sapn>
-												</div>
-											</div>
-										</div>
-
-										<!--Ожидаемый срок доставки-->
-										<div class="cell_wrap delivery_time hidden-xs col-sm-2 col-md-2 col-lg-2">
-											<div class="title hidden-sm hidden-md hidden-lg"><span>Ожидаемый</span>
-												<br>срок поставки</div>
-											<div class="content">
-												<div class="top_cell privolniyStatus"><span>На складе</span></div>
-											</div>
-										</div>
-
-										<!--Цена с НДС-->
-										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-3 col-lg-3">
-											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
-											<div class="content privolniyStatus">
-												<div class="search-tableContent_priceLeft priceBuylWithNds">
-													<div class="wrap">
-														<span>84 500</span> <span>руб.</span>
-													</div>
-												</div>
-												<div class="search-tableContent_priceRight priceSelllWithNds">
-													<div class="wrap">
-														<span>84 500</span> <span>руб.</span>
-														<div class="recomend">
-															<i data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport fa fa-balance-scale" aria-hidden="true" data-original-title="" title=""></i>
-															<span>84 500</span> <span>руб.</span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!--количество-->
-										<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
-											<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
-											<div class="content">
-												<div class="top_cell privolniyStatus">
-													<span class="hidden_span">Нал</span>
-													<div class="action" action="post">
-														<input class="checkbox_result" type="checkbox" title="Оплата наличными">
-														<div class="checked_box">
-															<div class="inner">
-																<div class="green"></div>
-															</div>
-														</div>
-														<div class="input-group spinner">
-															<input type="text" class="form-control" value="10">
-															<div class="input-group-btn-vertical">
-																<button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-																<button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-															</div>
-														</div>
-														<button class="waitImport btn_form" type="submit btn" name="button"><i class="fa fa-hourglass-end" aria-hidden="true"></i></button>
-													</div>
-												</div>
-
-											</div>
-										</div>
-
-									</div>
-									<!--конец ряд таблицы для репита white-->
-								</div>
-							</div>
-
-
-							<!--ряд таблицы-->
-							<div class="row table_search_goods_result">
-								<!--Бренд-->
-								<div class="cell_wrap brand plr0 col-xs-12 col-sm-7 col-md-2 col-lg-2">
-									<div class="title">
-										<div class="checkbox">
-											<div class="inner"></div>
-										</div>
-										<input class="checkbox_brand" type="checkbox" name="checkBrand">
-										<span>Бренд</span>
-									</div>
-									<div class="content">
-										<a href="#">Purfix</a>
-										<p>Артикул</p>
-										<a class="import_brandArticle" href="#">AHC2991</a>
-										<a href="#" data-toggle="tooltip" data-placement="bottom" class="tooltipImport info" title="информация  о товаре"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-									</div>
-								</div>
-								<!--Описание-->
-								<div class="cell_wrap descr plr0 col-xs-12 col-sm-5 col-md-2 col-lg-2">
-									<div class="title">Описание</div>
-									<div class="content">
-										<h4>ФИЛЬТР салона</h4>
-										<p class="tooltipImport" data-toggle="tooltip" data-placement="bottom" title="Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02--угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02">Угольный BMW: X5 00-, X5 007-\ LAND ROVER: RANGE ROVER III 02--</p>
-									</div>
-								</div>
-
-								<!--ряды таблицы для репита-->
-								<div class="col-sm-12 col-md-8 col-lg-8 plr0">
-									<!--шапка таблицы-->
-									<div class="hidden-xs col-sm-12 col-md-12 col-lg-12 import-tableheader plr0">
-										<!--Город-->
-										<div class="cell_wrap town col-xs-4 col-sm-2 col-md-2 col-lg-2">
-											<div class="title">Город</div>
-										</div>
-										<!--Наличие-->
-										<div class="cell_wrap availability col-xs-4 col-sm-2 col-md-1 col-lg-1">
-											<div class="title light_title">Наличие</div>
-										</div>
-										<!--Кратность продажи-->
-										<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
-											<div class="title">
-												<span class="hidden-md">Кратность<br>продажи</span>
-												<span class="searchResult-tableRow_foldSpan hidden-xs hidden-lg hidden-sm">Крат-сть</span>
-											</div>
-										</div>
-										<!--Ожидаемый срок доставки-->
-										<div class="cell_wrap delivery_time col-xs-4 col-sm-2 col-md-2 col-lg-2">
-											<div class="title light_title"><span class="hidden-md">Ожидаемый 	<br>срок поставки</span><span class="hidden-xs hidden-sm hidden-lg searchResult-tableRow_srok">срок поставки</span>
-											</div>
-										</div>
-										<!--Цена с НДС-->
-										<div class="cell_wrap price col-xs-5 col-sm-3 col-md-3 col-lg-3">
-											<div class="title">
-												<div class="search-tableContent_titleL priceBuylWithNds">Цена покупки</div>
-												<div class="search-tableContent_titleR priceSelllWithNds">Цена продажи</div>
-											</div>
-										</div>
-										<!--количество-->
-										<div class="cell_wrap quantity_ col-xs-7 col-sm-3 col-md-3 col-lg-3">
-											<div class="title light_title">Количество</div>
-										</div>
-									</div>
-
-									<!--ряд таблицы для репита-->
-									<div class="import-repeatRow row">
-										<!--Город-->
-										<div class="cell_wrap town col-xs-6 col-sm-2 col-md-2 col-lg-2">
-											<div class="title hidden-sm hidden-md hidden-lg">Город</div>
-											<div class="content">
-												<div class="top_cell podolskStatus"><a href="#"><span>Подольск</span></a></div>
-											</div>
-										</div>
-
-										<!--Наличие-->
-										<div class="col-xs-6 col-sm-2 col-md-1 col-lg-1 cell_wrap availability">
-											<div class="content">
-												<div class="title hidden-sm hidden-md hidden-lg">Наличие</div>
-
-												<div class="top_cell podolskStatus">
-													<i data-toggle="tooltip" data-placement="right" title="" class="alert-info tooltipImport fa fa-exclamation-triangle" aria-hidden="true" data-original-title="Возврат невозможен! Время размещения заказа до 17:00"></i>
-													<span>12</span>
-												</div>
-
-											</div>
-										</div>
-
-										<!--Кратность продажи-->
-										<div class="cell_wrap fold hidden-sm hidden-xs col-md-1 col-lg-1">
-											<div class="content">
-												<div class="top_cell podolskStatus"></div>
-											</div>
-										</div>
-
-										<!--Ожидаемый срок доставки-->
-										<div class="cell_wrap delivery_time hidden-xs col-sm-2 col-md-2 col-lg-2">
-											<div class="title hidden-sm hidden-md hidden-lg"><span>Ожидаемый</span>
-												<br>срок поставки</div>
-											<div class="content">
-												<div class="top_cell podolskStatus"><span>На складе</span></div>
-											</div>
-										</div>
-
-										<!--Цена с НДС-->
-										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-3 col-lg-3">
-											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
-											<div class="content podolskStatus">
-												<div class="search-tableContent_priceLeft priceBuylWithNds">
-													<div class="wrap">
-														<span>84 500</span> <span>руб.</span>
-													</div>
-												</div>
-												<div class="search-tableContent_priceRight priceSelllWithNds">
+												<div class="search-tableContent_priceRight priceSelllWithNds podolskStatus">
 													<div class="wrap">
 														<span>84 500</span> <span>руб.</span>
 														<div class="recomend">
@@ -1702,12 +1700,12 @@
 										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-3 col-lg-3">
 											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 											<div class="content privolniyStatus">
-												<div class="search-tableContent_priceLeft priceBuylWithNds">
+												<div class="search-tableContent_priceLeft priceBuylWithNds privolniyStatus">
 													<div class="wrap ">
 														<span>84 500</span> <span>руб.</span>
 													</div>
 												</div>
-												<div class="search-tableContent_priceRight priceSelllWithNds">
+												<div class="search-tableContent_priceRight priceSelllWithNds privolniyStatus">
 													<div class="wrap ">
 														<span>84 500</span> <span>руб.</span>
 														<div class="recomend">
@@ -1881,7 +1879,7 @@
 												</div>
 												<div class="search-tableContent_priceRight priceSelllWithNds">
 													<div class="wrap">
-														<span>84 500</span> <span>руб.</span>
+														<span>84 501</span> <span>руб.</span>
 														<div class="recomend">
 															<i data-toggle="tooltip" data-placement="bottom" title="Рекомендованная цена" class="tooltipImport fa fa-balance-scale" aria-hidden="true" data-original-title="" title=""></i>
 															<span>84 500</span> <span>руб.</span>
@@ -1973,7 +1971,7 @@
 														<span>84 500</span> <span>руб.</span>
 													</div>
 												</div>
-												<div class="search-tableContent_priceRight priceSelllWithNds">
+												<div class="search-tableContent_priceRight priceSelllWithNds ">
 													<div class="wrap">
 														<span>84 500</span> <span>руб.</span>
 														<div class="recomend">
@@ -4509,6 +4507,32 @@
 		</div>
 	</div>
 
+
+
+
+		<!--popUp нашли несовпадение?-->
+	<div class="generalPopUp generalPopUp-statusChenge">
+		<div class="generalPopUp-window">
+			<div class="generalPopUp-window_close"></div>
+			<div class="generalPopUp-window_header">
+				<h2>Форма обратной связи</h2>
+			</div>
+			<div class="generalPopUp-window_body generalPopUp-body_statusChenge">
+				sdsdsd
+
+			</div>
+
+			<div class="generalPopUp-window_buttongroup clerfix">
+				<button class="red_btn">отправить в службу поддержки</button>
+				</form>
+			</div>
+
+		</div>
+	</div>
+	<!--конец popUp нашли несовпадение?-->
+
+
+
 	<!--popUp нашли несовпадение?-->
 	<div class="generalPopUp generalPopUp-searchresult">
 		<div class="generalPopUp-window">
@@ -4563,6 +4587,40 @@
 		</div>
 	</div>
 	<!--конец popUp нашли несовпадение?-->
+
+
+
+	<!--pop-Up дОБАВИТЬ ПОЗИЦИЮ В ЛИСТ ОЖИДАНИЯ-->
+	<div class="generalPopUp  generalPopUp-generalPopUp">
+		<div class="generalPopUp-window generalPopUp-generalPopUp_window">
+			<div class="generalPopUp-window_close"></div>
+			<div class="generalPopUp-window_header">
+				<h2>Добавление позиции в лист ожидания</h2>
+			</div>
+			<div class="generalPopUp-window_body generalPopUp-generalPopUp_cutePricrBody">
+				<form action="post">
+					<div class="addToWaitlist_body">
+						<div class="addToWaitlist_body-wrap">
+							<h5>Бренд:</h5> <span>NGK</span>
+						</div>
+						<div class="addToWaitlist_body-wrap">
+							<h5>Артикул:</h5> <span>V-line9</span>
+						</div>
+						<div class="addToWaitlist_body-wrap">
+							<h5>Количество:</h5></h5>
+							<input type="text" value="1">
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="generalPopUp-window_buttongroup  generalPopUp-window_cutepriceButtongroup clerfix">
+				<button class="gray_btn hidden-xs">Отмена</button>
+				<button class="red_btn closePopUp modalImportRedBtn">Добавить позицию</button>
+				</form>
+			</div>
+		</div>
+	</div>
 
 
 	<!--прилоадер-->

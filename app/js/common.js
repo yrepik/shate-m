@@ -1,8 +1,32 @@
 $(function() {
 
+
+$('.popup-modal').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		modal: true
+	});
+	$(document).on('click', '.popup-modal-dismiss, .modal-close', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+
+	
+/////////////////////////
+///форма обратной связи//
+$('.reportProblemFromUser').click(function(){
+	var vol = $(this).val();
+	if(vol != 0){
+		$('.generalPopUp-window-innerWrapper').slideUp(200)
+	}else{
+		$('.generalPopUp-window-innerWrapper').slideDown(200)
+	}
+})
+
+
+
 /////////////////////////
 //опросы////////////////
-
 $('.pools-newPools_item button').click(function(){[
 	$('.generalPopUp-pools').fadeIn(200)
 ]})
@@ -84,7 +108,9 @@ $('.pools-newPools_item button').click(function(){[
 		type: 'image'
 	});
 	//конецуцененные товары//
-
+	$('.tree-image_wrap').magnificPopup({//попАп на странице уцененные товары
+		type: 'image'
+	});
 
 	//результаты поиска//
 function slideUpAllElementstable(){//
@@ -186,7 +212,7 @@ function slideUpAllElementstable(){//
 
 	//полет товара в корзину//
 	$('.tree-addToCart, .addcart').on('click', function() {
-		var t = $(this).parents('.tree-tabWrap_content-table, .table_search_goods_result'),
+		var t = $(this).parents('.tree-tabWrap_content-table, .table_search_goods_result, .cutePrice-table'),
 			e = t.clone(),
 			b = $('.top-quantity'),
 			bo = b.offset(),
@@ -222,7 +248,7 @@ function slideUpAllElementstable(){//
 
 
 
-		$(this).parents('.tree-tabWrap_content-table').slideUp(200);
+		$(this).parents('.tree-tabWrap_content-table, .cutePrice-table').slideUp(200);
 	});
 	//конец полет товара в корзину//
 
@@ -553,8 +579,7 @@ function slideUpAllElementstable(){//
 	/////скрипты страницы поиска по дереву/////
 	///////////////////////////////////////////
 	$('.waitImport').click(function(){
-		console.log('1212');
-		$('.tree-addToWaitlist').fadeIn(300)
+		$('.generalPopUp-generalPopUp').fadeIn(300)
 	})
 
 	$('.tree-tabWrap_content-tableSpinner').find('.yellow').click(function() { //показать попАп Добавления позиции в лист ожидания
@@ -664,7 +689,7 @@ function slideUpAllElementstable(){//
 			'top': ''
 		});
 	}
-	$('.returnes-popUpgoods_close, .returnes-popUpgoods_cancell, .returnes-popUpgoods').click(returnesClosePopUpArticle)
+	$('.returnes-popUpgoods_close, .returnes-popUpgoods_cancell').click(returnesClosePopUpArticle)
 
 	function onController() { //измение положения переключателя свернуть/развернуть все
 		var x = $('.returnes-table').children('.row:visible').length;
@@ -1356,6 +1381,9 @@ function slideUpAllElementstable(){//
 	}
 	$('.tree-filter_searchField').on('keyup', searchFieldT);
 
+$('.treeDetailsBtn').click(function(){
+	$('.generalPopUp-details').fadeIn(200)
+})
 	//скрывать выпадающее меню при клике в любой области//
 	$(document).mouseup(function(e) {
 		var container = $(".drop_down_search_list, .drop_down_search_listTree");
@@ -1477,7 +1505,11 @@ function slideUpAllElementstable(){//
 			var $p = $(this).parents('.table_stock_selection').children().filter('.past');
 			$img.attr('src', 'img/v_dot_g.png')
 			$p.append(block)
+
+			$('.not_in_stock').slideDown(200);
 		} else {
+			$('.not_in_stock').slideUp(200);
+
 			$(this).parents('.table_stock_selection').children().filter('.tr_xs').removeClass('active_status')
 			var $status = $(this).parents('.table_stock_selection').children().filter('.past').children().filter('.status');
 			$status.remove()
@@ -1485,6 +1517,7 @@ function slideUpAllElementstable(){//
 		}
 	}
 	$('.ios-switch').on('click', checkBox);
+
 	////////////////////////////////////
 	//появление зоны служебных сообщений при загрузке
 
@@ -1952,61 +1985,63 @@ function slideUpAllElementstable(){//
 			}
 
 		})
-		if ($(window).width() < 768) {
+		if ($(window).width() < 768)  {
 			$('.mob_logo img').attr('src', 'img/logo.png');
 
 			$('#hamburger-icon').click(function() {
+
 				$(this).toggleClass('flag');
+
+
 				if ($(this).hasClass('flag')) {
-					$('.hidemenuR').animate({
-						left: '215px'
-					}, 400)
+					$('.hidemenuR').addClass('menuActiveTo');
+					$('.hidemenuR').removeClass('menuActiveFrom');
 				} else {
-					$('.hidemenuR').animate({
-						left: ''
-					}, 400)
-				}
+					$('.hidemenuR').removeClass('menuActiveTo');
+					$('.hidemenuR').addClass('menuActiveFrom');
+				 }
+
 			})
+
 		} else if ($(window).width() >= 768 && $(window).width() <= 1400) {
 			$('.mob_logo img').attr('src', 'img/moblogo.png');
 
 			$('#hamburger-icon').click(function() {
 				$(this).toggleClass('flag');
 				if ($(this).hasClass('flag')) {
+					$('.hidemenuR').addClass('tabletSmenuActiveTo');
+					$('.hidemenuR').removeClass('tabletSmenuActiveFrom');
 					$('.mob_logo img').attr('src', 'img/logo.png');
-					$('.hidemenuR').animate({
-						left: '215px'
-					}, 400);
 				} else {
-					$('.hidemenuR').animate({
-						left: '48px'
-					}, 400);
+					$('.hidemenuR').removeClass('tabletSmenuActiveTo');
+					$('.hidemenuR').addClass('tabletSmenuActiveFrom');
 					$('.mob_logo img').attr('src', 'img/moblogo.png');
-				}
+				 }
 			})
 		} else if ($(window).width() > 1400) {
 			$('.mob_logo img').attr('src', 'img/logo.png')
 
 			$('#hamburger-icon').click(function() {
 				$(this).toggleClass('flag');
-				if ($(this).hasClass('flag')) {
-					$('.mob_logo img').attr('src', 'img/moblogo.png'),
-						$('.hidemenuR').animate({
-							left: '48px',
-							paddingRight: '55px'
-						}, 400)
-				} else {
-					$('.mob_logo img').attr('src', 'img/logo.png')
-					$('.hidemenuR').animate({
-						left: '216px',
-						paddingRight: '228px'
-					}, 400)
-				}
+				  if ($(this).hasClass('flag')) {
+				 	$('.mob_logo img').attr('src', 'img/moblogo.png'),
+				 		$('.hidemenuR').animate({
+				 			left: '48px',
+				 			paddingRight: '55px'
+				 		}, 400)
+				 } else {
+				  	$('.mob_logo img').attr('src', 'img/logo.png')
+				  	$('.hidemenuR').animate({
+				  		left: '216px',
+				  		paddingRight: '228px'
+				  	}, 400)
+				  }
+
 			})
 
 		}
 	}
-	$(window).on('load', mobMnu);
+	$(window).load(mobMnu);
 
 
 

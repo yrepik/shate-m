@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/fonts.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="libs/Magnific-Popup/dist/magnific-popup.css">
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" charset="utf-8">
 
 </head>
@@ -89,7 +90,7 @@
 							<div class="top-search">
 								<form>
 									<input class="serch_field" type="search" name="search" placeholder="Поиск" autocomplete="off">
-									<button  class="search_btn"  alt="ok"><i class="fa fa-search" aria-hidden="true"></i></button>
+									<button class="search_btn" alt="ok"><i class="fa fa-search" aria-hidden="true"></i></button>
 									<div class="drop_down_search_list">
 										<ul>
 											<li>
@@ -126,29 +127,28 @@
 
 							<!--баланс-->
 							<div class="top-balance">
-
-								<a class="">
+								<div class="top-balance_wrapper">
 									<span class="balance-tooltip">
 											<span>Баланс устарел</span>
 									<span class="balance-tooltip_triangle"></span>
 									</span>
-									<i class="fa fa-money" aria-hidden="true"></i>
-									<span class="balance_count">Баланс </span><span class="hidden-xs hidden-sm hidden-md">- 13.03.2016 - </span>
-									<span class="totall">198 365 489 руб.</span>
-									<span class="top-balance_update">
+									<div class="top-balance_update">
 										<i class="fa fa-refresh" aria-hidden="true"></i>
-									</span>
-								</a>
-
+									</div>
+									<div class="totall">198 365 489 руб.</div>
+									<div class="hidden-xs hidden-sm hidden-md">- 13.03.2016 - </div>
+									<div class="balance_count">Баланс </div>
+									<i class="fa fa-money" aria-hidden="true"></i>
+								</div>
 							</div>
 
 
 							<!--корзина-->
 							<div class="top-cart">
 								<a href="shate-m_b2b_user_cabinet_cart.html">
-								<span class="totall">(0 руб.)</span>
-								<span class="top-quantity">0</span>
-								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+									<span class="totall">(0 руб.)</span>
+									<span class="top-quantity">0</span>
+									<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 								</a>
 							</div>
 
@@ -195,106 +195,106 @@
 
 					<div class="container-fluid pools">
 
-					<div class="row pools-h2">
-						<h2>
-							<i class="fa fa-check-square-o" aria-hidden="true"></i>
-							<span>Опросы</span>
-						</h2>
-					</div>
-
-					<div class="row pools-newPools">
-						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-							<h3>новые опросы</h3>
-							<!--опрос 1-->
-							<div class="pools-newPools_item clearfix">
-								<span>Название <br /> опроса</span>
-								<div class="wrap_btn"><button>Пройти опрос</button></div>
-							</div>
-
-							<!--опрос 2-->
-							<div class="pools-newPools_item clearfix">
-								<span>Название <br /> опроса</span>
-								<div class="wrap_btn"><button>Пройти опрос</button></div>
-							</div>
-
-							<!--опрос 3-->
-							<div class="pools-newPools_item clearfix">
-								<span>Название <br /> опроса</span>
-								<div class="wrap_btn"><button>Пройти опрос</button></div>
-							</div>
-
+						<div class="row pools-h2">
+							<h2>
+								<i class="fa fa-check-square-o" aria-hidden="true"></i>
+								<span>Опросы</span>
+							</h2>
 						</div>
-					</div>
 
-					<!--пройденные опросы-->
-					<div class="row pools-pastPools">
-						<h3>Пройденные опросы</h3>
+						<div class="row pools-newPools">
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<h3>новые опросы</h3>
+								<!--опрос 1-->
+								<div class="pools-newPools_item clearfix">
+									<span>Название <br /> опроса</span>
+									<div class="wrap_btn"><a href="#modal-pools1" class="popup-modal">Пройти опрос</a></div>
+								</div>
 
-						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-							<div class="pools-pastPools_item clearfix">
-								<span>Название <br /> опроса</span>
-								<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+								<!--опрос 2-->
+								<div class="pools-newPools_item clearfix">
+									<span>Название <br /> опроса</span>
+									<div class="wrap_btn"><a href="#modal-pools2" class="popup-modal">Пройти опрос</a></div>
+								</div>
+
+								<!--опрос 3-->
+								<div class="pools-newPools_item clearfix">
+									<span>Название <br /> опроса</span>
+									<div class="wrap_btn"><a href="#modal-pools3" class="popup-modal">Пройти опрос</a></div>
+								</div>
+
 							</div>
 						</div>
 
-						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-							<div class="pools-pastPools_item clearfix">
-								<span>Название <br /> опроса</span>
-								<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+						<!--пройденные опросы-->
+						<div class="row pools-pastPools">
+							<h3>Пройденные опросы</h3>
+
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="pools-pastPools_item clearfix">
+									<span>Название <br /> опроса</span>
+									<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+								</div>
 							</div>
-						</div>
 
-						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-							<div class="pools-pastPools_item clearfix">
-								<span>Название <br /> опроса</span>
-								<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="pools-pastPools_item clearfix">
+									<span>Название <br /> опроса</span>
+									<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+								</div>
 							</div>
-						</div>
 
-						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-							<div class="pools-pastPools_item clearfix">
-								<span>Название <br /> опроса</span>
-								<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="pools-pastPools_item clearfix">
+									<span>Название <br /> опроса</span>
+									<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+								</div>
 							</div>
-						</div>
 
-						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-							<div class="pools-pastPools_item clearfix">
-								<span>Название <br /> опроса</span>
-								<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="pools-pastPools_item clearfix">
+									<span>Название <br /> опроса</span>
+									<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+								</div>
 							</div>
-						</div>
 
-						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-							<div class="pools-pastPools_item clearfix">
-								<span>Название <br /> опроса</span>
-								<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="pools-pastPools_item clearfix">
+									<span>Название <br /> опроса</span>
+									<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+								</div>
 							</div>
-						</div>
 
-						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-							<div class="pools-pastPools_item clearfix">
-								<span>Название <br /> опроса</span>
-								<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="pools-pastPools_item clearfix">
+									<span>Название <br /> опроса</span>
+									<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+								</div>
 							</div>
-						</div>
 
-						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-							<div class="pools-pastPools_item clearfix">
-								<span>Название <br /> опроса</span>
-								<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="pools-pastPools_item clearfix">
+									<span>Название <br /> опроса</span>
+									<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+								</div>
 							</div>
-						</div>
 
-						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-							<div class="pools-pastPools_item clearfix">
-								<span>Название <br /> опроса</span>
-								<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="pools-pastPools_item clearfix">
+									<span>Название <br /> опроса</span>
+									<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+								</div>
 							</div>
+
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="pools-pastPools_item clearfix">
+									<span>Название <br /> опроса</span>
+									<div class="wrap_btn"><button class="gray_btn">Результаты опроса</button></div>
+								</div>
+							</div>
+
+
 						</div>
-
-
-					</div>
 
 					</div>
 
@@ -393,59 +393,108 @@
 	</section>
 
 
-	<!--модалка помощь по разделу-->
-	<!--popUp диапазон наценки-->
-	<div class="generalPopUp generalPopUp-pools">
-		<div class="generalPopUp-window generalPopUp-poolsWindow">
-			<div class="generalPopUp-window_close"></div>
-			<div class="generalPopUp-window_header generalPopUp-poolsHeader">
-				<h2>Название опроса</h2>
-			</div>
-			<div class="generalPopUp-window_body generalPopUp-poolsBody">
-
-				<label>
-					<input type="radio" name="name" value="">
-					<span class="overlayCheckBoxDiv"><span></span></span>
-					<span>Вариант ответа</span>
-				</label>
-
-				<label>
-					<input type="radio" name="name" value="">
-					<span class="overlayCheckBoxDiv"><span></span></span>
-					<span>Вариант ответа</span>
-				</label>
-
-				<label>
-					<input type="radio" name="name" value="">
-					<span class="overlayCheckBoxDiv"><span></span></span>
-					<span>Вариант ответа</span>
-				</label>
-
-				<label>
-					<input type="radio" name="name" value="">
-					<span class="overlayCheckBoxDiv"><span></span></span>
-					<span>Вариант ответа</span>
-				</label>
-
-
-			</div>
-
-			<div class="generalPopUp-window_buttongroup clerfix">
-				<button class="gray_btn">Отмена</button>
-				<button class="red_btn confirm">Сохранить</button>
-
-
-
-				</form>
-			</div>
-
-		</div>
-	</div>
 
 	<!--прилоадер-->
 	<div class="overlaypreloader">
 		<img class="preloader" src="img/preloader.gif" alt="" />
 	</div>
+
+
+	<!-- модалка опросы 1-->
+	<div id="modal-pools1" class="popup-block mfp-hide">
+		<h2>Пройти опрос</h2>
+		<div class="modal-body clearfix">
+			<!--тело модалки-->
+			<img class="modal-pools_image" src="img/map1b.jpg" alt="">
+			<h3>Тема опроса</h3>
+			<label>
+					<input type="radio" name="name" value="">
+					<span class="overlayCheckBoxDiv"><span></span></span>
+					<span>Вариант ответа</span>
+				</label>
+
+			<label>
+					<input type="radio" name="name" value="">
+					<span class="overlayCheckBoxDiv"><span></span></span>
+					<span>Вариант ответа</span>
+				</label>
+
+			<label>
+					<input type="radio" name="name" value="">
+					<span class="overlayCheckBoxDiv"><span></span></span>
+					<span>Вариант ответа</span>
+				</label>
+
+			<label>
+					<input type="radio" name="name" value="">
+					<span class="overlayCheckBoxDiv"><span></span></span>
+					<span>Вариант ответа</span>
+				</label>
+
+			<p class="pools-iteration">Вопрос <b>1</b> из <b>3</b></p>
+			<!--конец тело модалки-->
+		</div>
+		<span class="popup-modal-dismiss"></span>
+		<div class="modal-btnWrap">
+			<button class="gray_btn modal-close">Закрыть</button>
+			<button class="red_btn">Ответить</button>
+		</div>
+	</div>
+
+
+
+	<!-- модалка опросы 2-->
+	<div id="modal-pools2" class="popup-block mfp-hide">
+		<h2>Пройти опрос</h2>
+		<div class="modal-body clearfix">
+			<!--тело модалки-->
+			<h4>Благодарим вас за прохождение опроса!</h4>
+			<!--конец тело модалки-->
+		</div>
+		<span class="popup-modal-dismiss"></span>
+		<div class="modal-btnWrap">
+			<button class="gray_btn modal-close">Закрыть</button>
+			<button class="red_btn hidden">Ответить</button>
+		</div>
+	</div>
+
+	<!-- модалка опросы 2-->
+	<div id="modal-pools3" class="popup-block mfp-hide">
+		<h2>Статистика</h2>
+		<div class="modal-body clearfix">
+			<!--тело модалки-->
+			<h3>точно?</h3>
+			<span>Да:</span>
+			<div class="progress">
+				<div class="progress-bar" style="width: 60%;">
+					60%
+				</div>
+			</div>
+
+			<span>Нет:</span>
+			<div class="progress">
+				<div class="progress-bar" style="width: 20%;">
+					20%
+				</div>
+			</div>
+
+			<span>Может быть:</span>
+			<div class="progress">
+				<div class="progress-bar" style="width: 20%;">
+					20%
+				</div>
+			</div>
+			<!--конец тело модалки-->
+		</div>
+		<span class="popup-modal-dismiss"></span>
+		<div class="modal-btnWrap">
+			<button class="gray_btn modal-close">Закрыть</button>
+			<button class="red_btn hidden">Ответить</button>
+		</div>
+	</div>
+
+
+
 
 	<script src="js/add.js" charset="utf-8"></script>
 	<script src="js/common.js" charset="utf-8"></script>

@@ -125,21 +125,19 @@
 
 							<!--баланс-->
 							<div class="top-balance">
-
-								<a class="">
+								<div class="top-balance_wrapper">
 									<span class="balance-tooltip">
 											<span>Баланс устарел</span>
-									<span class="balance-tooltip_triangle"></span>
+											<span class="balance-tooltip_triangle"></span>
 									</span>
-									<i class="fa fa-money" aria-hidden="true"></i>
-									<span class="balance_count">Баланс </span><span class="hidden-xs hidden-sm hidden-md">- 13.03.2016 - </span>
-									<span class="totall">198 365 489 руб.</span>
-									<span class="top-balance_update">
+									<div class="top-balance_update">
 										<i class="fa fa-refresh" aria-hidden="true"></i>
-									</span>
-
-								</a>
-
+									</div>
+									<div class="totall">198 365 489 руб.</div>
+									<div class="hidden-xs hidden-sm hidden-md">- 13.03.2016 - </div>
+									<div class="balance_count">Баланс </div>
+									<i class="fa fa-money" aria-hidden="true"></i>
+								</div>
 							</div>
 
 
@@ -413,7 +411,7 @@
 							</div>
 
 							<!--загрузка вайлов -->
-							<div class="add_file row hidden-xs hidden-sm">
+							<div class="add_file row">
 								<form action="post">
 									<div class="col-md-5">
 										<div class="file-input cf">
@@ -423,7 +421,7 @@
 										</div>
 									</div>
 									<div class="add_tmpl col-md-7">
-										<span>Для оформления данных загрузки <br>воспользуйтесь шаблоном</span>
+										<span>Для оформления данных загрузки <br class="hidden-xs"> воспользуйтесь шаблоном</span>
 										<button class="gray_btn btn" type="submit" name="button"><i class="fa fa-download" aria-hidden="true"></i> Загрузить шаблон в .XLS</button>
 									</div>
 								</form>
@@ -431,14 +429,32 @@
 
 							<!--найденные товары-->
 							<div class="row search_goods">
-								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
 									<h3>Найденные товары</h3>
+									<!--
 									<button type="button" class="importFound importActiveBtn gray_btn btn">Найденные товары</button>
 									<button type="button" class="importAbsent gray_btn btn">Отсутствующие <span class="hidden-sm">товары</span></button>
+								-->
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
+
 									<div class="search_goods-rightBtn">
+
 										<button type="button" class="addAllImport gray_btn btn">Выбрать все</button>
 										<button type="button" class="importREmoveMarckAll gray_btn btn">Снять выделение</button>
 										<button type="button" class="green_btn btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Добавить в корзину</button>
+
+										<div class="labelwrap">
+											<span>отсутствующие на <br> вашем складе</span>
+											<label>
+												<input type="checkbox" class="ios-switch green	bigswitch ios-switchShow">
+												<div>
+													<div></div>
+												</div>
+											</label>
+										</div>
+
+
 									</div>
 								</div>
 							</div>
@@ -550,7 +566,7 @@
 										</div>
 
 										<!--Цена с НДС-->
-										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-2 col-lg-2">
+										<div class="cell_wrap price col-xs-5 col-sm-3 col-md-2 col-lg-2">
 											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 											<div class="content">
 												<div class="top_cell privolniyStatus"><span>84 500</span> <span>руб.</span></div>
@@ -559,7 +575,7 @@
 										</div>
 
 										<!--количество-->
-										<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
+										<div class="cell_wrap quantity_ col-xs-7 col-sm-3 col-md-3 col-lg-3">
 											<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
 											<div class="content">
 												<div class="top_cell privolniyStatus light_top">
@@ -624,7 +640,7 @@
 										</div>
 
 										<!--Цена с НДС-->
-										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-2 col-lg-2">
+										<div class="cell_wrap price col-xs-5 col-sm-3 col-md-2 col-lg-2">
 											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 											<div class="content">
 												<div class="bottom_cell podolskStatus"><span>84 500</span> <span>руб.</span></div>
@@ -633,7 +649,7 @@
 										</div>
 
 										<!--количество-->
-										<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
+										<div class="cell_wrap quantity_ col-xs-7 col-sm-3 col-md-3 col-lg-3">
 											<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
 											<div class="content">
 												<div class="bottom_cell podolskStatus light_bottom">
@@ -706,7 +722,7 @@
 										</div>
 
 										<!--Цена с НДС-->
-										<div class="cell_wrap price col-xs-6 col-sm-3 col-md-2 col-lg-2">
+										<div class="cell_wrap price col-xs-5 col-sm-3 col-md-2 col-lg-2">
 											<div class="title hidden-sm hidden-md hidden-lg">Цена с ндс</div>
 											<div class="content">
 												<div class="top_cell privolniyStatus"><span>84 500</span> <span>руб.</span></div>
@@ -715,7 +731,7 @@
 										</div>
 
 										<!--количество-->
-										<div class="cell_wrap quantity_ col-xs-6 col-sm-3 col-md-3 col-lg-3">
+										<div class="cell_wrap quantity_ col-xs-7 col-sm-3 col-md-3 col-lg-3">
 											<div class="title hidden-sm hidden-md hidden-lg">Количество</div>
 											<div class="content">
 												<div class="top_cell privolniyStatus light_top">
@@ -3187,31 +3203,34 @@
 
 
 	<!--pop-Up дОБАВИТЬ ПОЗИЦИЮ В ЛИСТ ОЖИДАНИЯ-->
-	<div class="tree-addToWaitlist">
-		<div class="tree-addToWaitlist-wrapper">
-			<div class="tree-addToWaitlist_header">
-				<h2><span class="hidden-sm hidden-md hidden-lg">Добавить в лист ожидания</span><span class="hidden-xs">Добавление позиции в лист ожидания</span></h2>
-				<div class="tree-addToWaitlist_header-close"></div>
+	<div class="generalPopUp  generalPopUp-generalPopUp">
+		<div class="generalPopUp-window generalPopUp-generalPopUp_window">
+			<div class="generalPopUp-window_close"></div>
+			<div class="generalPopUp-window_header">
+				<h2>Добавление позиции в лист ожидания</h2>
 			</div>
-			<form action="post">
-				<div class="tree-addToWaitlist_body">
-					<div class="tree-addToWaitlist_body-wrap">
-						<h5>Бренд:</h5> <span>NGK</span>
+			<div class="generalPopUp-window_body generalPopUp-generalPopUp_cutePricrBody">
+				<form action="post">
+					<div class="addToWaitlist_body">
+						<div class="addToWaitlist_body-wrap">
+							<h5>Бренд:</h5> <span>NGK</span>
+						</div>
+						<div class="addToWaitlist_body-wrap">
+							<h5>Артикул:</h5> <span>V-line9</span>
+						</div>
+						<div class="addToWaitlist_body-wrap">
+							<h5>Количество:</h5></h5>
+							<input type="text" value="1">
+						</div>
 					</div>
-					<div class="tree-addToWaitlist_body-wrap">
-						<h5>Артикул:</h5> <span>V-line9</span>
-					</div>
-					<div class="tree-addToWaitlist_body-wrap">
-						<h5>Количество:</h5></h5>
-						<input type="text" value="1">
-					</div>
-				</div>
-				<div class="tree-addToWaitlist_fotter">
-					<a class="gray_btn treeCancell">Нет, спасибо</a>
-					<button class="red_btn"><span class="hidden-xs">Добавить позицию</span><span class="hidden-sm hidden-md hidden-lg">Добавить</span></button>
-				</div>
+				</form>
+			</div>
 
-			</form>
+			<div class="generalPopUp-window_buttongroup  generalPopUp-window_cutepriceButtongroup clerfix">
+				<button class="gray_btn hidden-xs">Отмена</button>
+				<button class="red_btn closePopUp modalImportRedBtn">Добавить позицию</button>
+				</form>
+			</div>
 		</div>
 	</div>
 

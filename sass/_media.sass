@@ -161,6 +161,7 @@ $base-font-size: 13px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+
 	.dashboardSell .dashboardSell-image button
 		padding: 10px 5px
 	.orders-info_popUp-inner
@@ -326,6 +327,8 @@ $base-font-size: 13px
 		height: 427px
 	.order-list_buttons
 		margin-bottom: 20px
+	.top-balance .top-balance_wrapper
+	  float: none
 
 @media only screen and (max-width : 560px)
 	.orders_list_changes_wrap_r
@@ -434,6 +437,9 @@ $base-font-size: 13px
 		padding-right: 0
 
 @media only screen and (min-width : 768px)
+	.hidemenuR
+		left: 48px
+		padding-right: 55px
 	.table_for_xs
 		margin: 0 !important
 	.vertical_line
@@ -573,9 +579,14 @@ $base-font-size: 13px
 				margin-top: 5px	!important
 				float: left
 				margin: 0
-	.hidemenuR
-		left: 48px
-		padding-right: 64px
+	 .hidemenuR
+	 	left: 48px
+	 	padding-right: 64px
+@media only screen and (width : 768px)
+	.manager .manager-regional .manager-info_body span,
+	.manager .manager-self .manager-info_body span
+		font-size: 1em
+
 	/*min-width 768*/
 
 @media only screen and (min-width : 993px)
@@ -907,6 +918,15 @@ $base-font-size: 13px
 				font-size: em(13px)
 
 @media only screen and (max-width : 992px)
+	.add_file
+		.file-input
+			margin-bottom: 20px
+			.btn
+				float: left
+			div
+				@include calc(width, "100% - 157px")
+	.search_goods-rightBtn .labelwrap
+		margin-right: 10px
 	.search_goods
 		button
 			margin-right: 10px
@@ -917,7 +937,9 @@ $base-font-size: 13px
 			.bottom_cell
 				padding-left: 15px !important
 	.table_search_goods_result
-		margin-bottom: 25px
+		margin-bottom: 0
+	.searchResult-result
+		margin-top: 25px
 
 
 	.import
@@ -935,6 +957,12 @@ $base-font-size: 13px
 					font-size: em(10px)
 
 @media only screen and (max-width : 768px)
+	.add_file .add_tmpl span
+		text-align: center
+		display: block
+		margin-bottom: 10px
+	.search_goods-rightBtn .labelwrap
+		float: right
 	.not_in_stock
 		h2
 			font-size: em(18px)
@@ -1006,6 +1034,24 @@ $base-font-size: 13px
 
 			i
 				margin-right: 15px
+
+@media only screen and (max-width : 560px)
+	.add_file
+		padding-bottom: 20px
+		.add_tmpl span
+			width: 100%
+			text-align: left
+			margin-bottom: 20px
+	.add_file .add_tmpl button
+		margin: 0
+		width: 100%
+
+@media only screen and (max-width : 430px)
+	.add_file .file-input
+		.btn,
+		div
+			width: 100%
+			margin-bottom: 15px
 
 @media only screen and (min-width : 320px)
 	.import
@@ -1263,6 +1309,13 @@ $base-font-size: 13px
 	/**/
 
 @media only screen and (max-width : 992px)
+	.returnes-popUpgoods
+		.returnes-popUpgoods_wrap
+			width: 90%
+			height: 90%
+			.returnes-popUpgoods_body
+    		padding: 16px
+
 	.returnes-table_content-summ
 		span
 			font-size: em(12px) !important
@@ -1302,6 +1355,20 @@ $base-font-size: 13px
 	/**/
 
 @media only screen and (max-width : 767px)
+	.returnes-popUpgoods_body
+		margin-top: 10px
+		.table_returnes
+			height: auto
+			.content
+				padding: 10px
+				select
+					top: 0
+				input
+					top: 10px
+	.returnes-popUpgoods .returnes-popUpgoods_wrap label
+			width: 100%
+			display: block
+			margin-bottom: 5px
 	.returnes
 		.wrapper_tabs
 			.returnes-table
@@ -1312,23 +1379,6 @@ $base-font-size: 13px
 @media only screen and (max-width : 768px)
 	.wrapper_tabs-wrapRemote-file
 		padding: 6px
-	.returnes-popUpgoods
-		.returnes-popUpgoods_wrap
-			width: 90%
-			padding: 10px
-			height: 190px
-			h2
-				font-size: em(14px)
-				margin-top: 20px
-			input
-				width: 53%
-			label
-				width: 25%
-			button
-				width: 20%
-				padding: 7px 5px
-				font-size: em(10px)
-
 	.returnes-table_shortcontent
 		.returnes-table_shortcontent-price
 			font-size: em(14px) !important
@@ -1358,6 +1408,9 @@ $base-font-size: 13px
 				.table_returnes
 					.content
 						padding: 5px
+					.comment
+						.content
+							padding-top: 9px
 			.tab
 				font-size: em(14px)
 				padding: 10px
@@ -1423,6 +1476,20 @@ $base-font-size: 13px
 			font-size: em(15px)
 		span, p
 			font-size: em(13px)
+
+@media only screen and (max-height : 480px)
+	.returnes-popUpgoods_body
+		height: 53% !important
+@media only screen and (max-height : 568px)
+	.returnes-popUpgoods_body
+		margin-top: 15px !important
+		height: 53% !important
+@media only screen and (max-height : 320px)
+	.returnes-popUpgoods .returnes-popUpgoods_wrap h2
+		margin-bottom: 0
+	.returnes-popUpgoods_body
+		margin-top: 15px !important
+		height: 40% !important
 //конец
 
 
@@ -1469,6 +1536,13 @@ $base-font-size: 13px
 	/**/
 
 @media only screen and (max-width : 768px)
+	.generalPopUp-details_rightPhoto
+		padding-left: 0
+		padding-right: 0
+	.generalPopUp-details_left
+		padding-right: 0
+	.generalPopUp-details_rightTitle
+		margin-top: 20px
 	.tree-addToWaitlist-wrapper
 		h2
 			font-size: em(16px)
@@ -2186,9 +2260,23 @@ $base-font-size: 13px
 
 //результаты поиска//
 @media only screen and (max-width : 460px)
+	.table_search_goods_result .quantity_ .content .bottom_cell, .table_search_goods_result .quantity_ .content .top_cell
+		padding: 0 !important
+		padding-top: 20px !important
+
 	.priceSellWithNds-recomendidPrice
 		margin-top: 0 !important
+	.table_search_goods_result .quantity_ .content .bottom_cell, .table_search_goods_result .quantity_ .content .top_cell
+		padding-left: 5px
+@media only screen and (width : 768px)
+	.import-repeatRow
+		height: auto !important
+	.table_search_goods_result .cell_wrap .content .light_top
+		padding: 0
+
 @media only screen and (max-width : 768px)
+	.searchResultShowAllRow span, .searchResultShowAllRow_anyDeliv span
+		font-size: em(10px)
 	.import-repeatRow
 		.content
 			height: auto !important
@@ -2208,6 +2296,48 @@ $base-font-size: 13px
 			padding-right: 10px !important
 //конец акции//
 
+//акции внутренняя страница//
+@media only screen and (max-width : 1800px)
+	.fullAction-wrapper_content
+		span
+			margin-top: 10px
+@media only screen and (max-width : 1400px)
+	.fullAction-wrapper_content
+		p
+			font-size: em(50px)
+@media only screen and (max-width : 992px)
+	.fullAction-wrapper
+		.pl0,
+		.pr0
+			padding: 0
+@media only screen and (max-width : 543px)
+	.fullAction-wrapper_title
+		height: 60px
+		span
+			display: inline-block
+			width: 100%
+	.fullAction-wrapper_content
+		h1
+			text-align: center
+			line-height: em(16px)
+			font-size: em(20px)
+		.toEnd
+			text-align: left
+			display: inline-block
+			width: 100%
+			padding-left: 20px
+			margin-bottom: 20px
+		p
+			text-align: left
+			padding-left: 20px
+			font-size: em(25px)
+
+
+
+
+//конец акции внутренняя страница//
+
+
 //обратная связь//
 @media only screen and (max-width : 768px)
 	.report-h2
@@ -2221,6 +2351,14 @@ $base-font-size: 13px
 @media only screen and (max-width : 768px)
 	.generalPopUp-window
 		width: 90% !important
+		h2
+			font-size: em(16px)
+			line-height: em(18px)
+		.generalPopUp-window_body
+			font-size: em(12px)
+			line-height: em(20px)
+			p
+				margin: 0
 @media only screen and (max-width : 440px)
 	.confirm
 		margin-top: 20px
@@ -2248,6 +2386,9 @@ $base-font-size: 13px
 		font-size: em(16px)
 	.generalPopUp-window_body
 		height: calc(100% - 160px) !important
+	.generalPopUpCengePass-body
+		height: 220px !important
+		border: 1px solid red
 @media only screen and (max-height : 640px)
 	.generalPopUp-window
 		height: 90% !important
