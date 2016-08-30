@@ -161,7 +161,6 @@ $base-font-size: 13px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-
 	.dashboardSell .dashboardSell-image button
 		padding: 10px 5px
 	.orders-info_popUp-inner
@@ -194,6 +193,18 @@ $base-font-size: 13px
 				height: 65px !important
 				padding: 10px 15px
 				font-size: em(10px)
+				i
+					font-size: em(17px)
+					border: 1px solid gray
+					background-color: #fff
+					display: block
+					height: 20px
+					width: 20px
+					line-height: 20px
+					text-align: center
+					position: relative
+					bottom: 20px
+
 		.orders_list_changes_wrap
 			float: left
 			margin-left: 15px
@@ -2275,6 +2286,18 @@ $base-font-size: 13px
 		padding: 0
 
 @media only screen and (max-width : 768px)
+	.searchResult-h2 h2
+		margin-bottom: 20px !important
+		font-size: em(18px)
+	.generalPopUp-searchresult_selectwrap
+		select
+			width: 100% !important
+			margin: 0
+			margin-bottom: 10px
+	.generalPopUp-addField
+		position: absolute
+		top: 5px
+		right: 30px
 	.searchResultShowAllRow span, .searchResultShowAllRow_anyDeliv span
 		font-size: em(10px)
 	.import-repeatRow
@@ -2518,7 +2541,6 @@ $base-font-size: 13px
 		overflow-y: scroll
 		max-height: 92%
 @media only screen and (max-width : 768px)
-
 	.extraCharge-settings_title
 		font-size: em(12px)
 		line-height: em(18px)
@@ -2526,8 +2548,8 @@ $base-font-size: 13px
 			width: 100%
 			margin-bottom: 15px
 	.extraCharge-addSettings_btns
-		button
-			width: 100%
+		text-align: center
+		a
 			&:first-child
 				margin-bottom: 20px
 	.extraCharge-settings_checkBoxes
@@ -2580,6 +2602,22 @@ $base-font-size: 13px
 
 //настройки пользователя//
 @media only screen and (max-width : 768px)
+	.widget-settings_wrap span
+		font-size: em(10px)
+		display: inline-block
+	.widget-settings
+		.col-xs-12
+			margin: 0 !important
+
+	.widget-settings_wrap
+		margin-bottom: 0px !important
+	.generalUserSettings-settingsField
+		.save
+			margin: 0
+			margin-bottom: 15px
+			padding: 5px
+		h3
+			font-size: em(16px)
 	.generalUserSettings-settingsField_content
 		div
 			&:first-child

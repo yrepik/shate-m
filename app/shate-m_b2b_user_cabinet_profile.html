@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/fonts.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="libs/Magnific-Popup/dist/magnific-popup.css">
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" charset="utf-8">
 
 </head>
@@ -222,7 +223,7 @@
 								<div class="userinfo-leftSide">
 									<span>Логин:</span>
 									<input name="pass" class="readonly userinfo-leftSide_login" value="TEST23" readonly="readonly">
-									<a class="gray_btn">Изменить пароль</a>
+									<a href="#chengePass" class="gray_btn popup-modal">Изменить пароль</a>
 
 									<span>Email:*</span>
 									<input name="email" value="mail@yourmail.com" required="required">
@@ -469,7 +470,25 @@
 		</div>
 	</div>
 
-
+	<!--Быстрое добавление наценки-->
+	<div id="chengePass" class="popup-block mfp-hide">
+		<h2>Изменение пароля</h2>
+		<div class="modal-body clearfix"><!--тело модалки-->
+			<div class="generalPopUp-window_body">
+				<span>Текущий пароль:</span>
+				<input type="text" name="">
+				<span class="second">Новый пароль:</span>
+				<input type="text" name="">
+				<span class="second">Повторите новый пароль:</span>
+				<input type="text" name="">
+			</div>
+		</div><!--конец тело модалки-->
+		<span class="popup-modal-dismiss"></span>
+		<div class="modal-btnWrap">
+			<button class="gray_btn modal-close">Отмена</button>
+			<button class="red_btn">Отправить</button>
+		</div>
+	</div>
 	<!--прилоадер-->
 	<div class="overlaypreloader">
 		<img class="preloader" src="img/preloader.gif" alt="" />

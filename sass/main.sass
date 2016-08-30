@@ -48,7 +48,13 @@ input, select, textarea, option
 	&:focus, &:active
 		border-color: $green
 		box-shadow: 0 0 2px $green
-
+a
+	outline: none
+	&:hover, &:focus, &:active
+		outline: none
+	&:focus
+		text-decoration: none
+		color: inherit
 textarea
 	resize: none
 html
@@ -142,6 +148,13 @@ body
 #selectOrders
 	appearance: none
 
+
+button.mfp-close
+	opacity: 0
+	height: 25px
+	width: 25px
+	&:hover
+		opacity: 0
 .selectOrdersLabel
 	position: absolute
 	i
@@ -187,10 +200,16 @@ body
 	font-family: 'osb', sans-serif
 	padding: 10px 15px
 	border: 1px solid $red
+	outline: none
 	&:hover
 		box-shadow: inset 3px 3px 3px rgba(0,0,0,.3)
+		text-decoration: none
+		color: #fff
 	&:focus, &:active
 		background-color: $active
+		text-decoration: none
+		color: #fff
+		outline: none
 
 .nonActive
 	cursor: default
@@ -227,6 +246,50 @@ body
 	width: -webkit-calc(100% + 15px)
 	width: calc(100% + 15px)
 
+.dashboard-slidedownSettingsAll
+	margin: 0
+	display: none
+	position: absolute
+	right: 470px
+	top: 55px
+	z-index: 10
+	height: auto
+	width: 310px
+.dashboard-slidedownSettings_wrapper
+	padding: 15px
+	margin: 0
+	background-color: rgba(0,0,0,.6)
+	margin-top: 20px
+	width: 100%
+	textarea
+		width: 100%
+		margin-bottom: 10px
+		height: 50px
+		padding: 5px 10px
+		display: none
+	span
+		color: #fff
+		display: block
+		margin-bottom: 5px
+		text-align: left
+		font-family: 'osb', sans-serif
+	select
+		margin-bottom: 15px
+		padding: 5px 10px
+		text-transform: uppercase
+		width: 100%
+	button
+		margin-right: 10px
+		padding: 7px 7px !important
+		line-height: 1.5em
+		font-family: 'osr', sans-serif
+		border: none
+		float: left
+		border: none !important
+	.green_btn
+		padding: 6px 7px !important
+	.last
+		margin: 0
 .dashboardSell-largeBlock_controls
 	position: absolute
 	right: 0
@@ -566,7 +629,7 @@ body
     display: inline-block
     float: right
 
-		
+
 .top-cart
 	width: 17%
 	display: inline-block
@@ -638,7 +701,7 @@ body
 
 
 
-.alert
+.alert, .alert_succes
 	display: none
 	background-color: #f0ffeb
 	border-bottom: 2px solid #a2cba3
@@ -1471,6 +1534,8 @@ body
  height: auto
  .modal-btnWrap
 	 text-align: center
+.mfp-bg
+	opacity: .4 !important
 .modal-body
 	margin-bottom: 20px
 .popup-block
@@ -1704,7 +1769,7 @@ body
 			font-style: italic
 			line-height: em(12px)
 	.orders-tableLg_content-brand
-		word-break: break-all
+		word-wrap: break-word
 		padding: 5px
 		a
 			display: inline-block
@@ -2389,6 +2454,8 @@ body
 		top: 25px
 		display: none
 
+
+
 .orders_container
 	margin-bottom: 20px
 	.number_order
@@ -2469,7 +2536,7 @@ body
 	.inner_wrap
 		padding: 15px
 		a
-			font-size: em(16px)
+			font-size: em(12px)
 			font-family: 'OSB', sans-serif
 			color: #3366cc
 			text-decoration: underline
@@ -2875,7 +2942,7 @@ input
 	width: auto
 	right: 30px
 	z-index: 2
-	top: 70px
+	top: 73px
 	background-color: #e9e9e9
 	display: none
 	font-size: em(14px)
@@ -4366,7 +4433,7 @@ input[type=checkbox]
 			.returnes-table_shortcontent-status
 				padding: 5px 10px
 				line-height: em(13px)
-				word-wrap: break-all
+				word-wrap: break-word
 				i
 					position: absolute
 					top: 20px
@@ -5794,6 +5861,17 @@ input[type=checkbox]
 			position: relative
 			top: 4px
 			margin-right: 10px
+#chengePass
+	span
+		font-family: 'osb', sans-serif
+	span, input
+		display: block
+	input
+		padding: 5px 10px
+		width: 100%
+		margin-bottom: 15px
+		&:nth-last-child(1)
+			margin: 0
 .userinfo-h2
 	padding-top: 30px
 	padding-bottom: 20px
@@ -6136,6 +6214,19 @@ input[type=checkbox]
 
 
 //опросы//
+.red_ActionsInArchive_btn
+  background-color: #dd3737
+  border: none
+  text-transform: uppercase
+  color: #fff
+  font-family: 'osb', sans-serif
+  padding: 10px 15px
+  border: 1px solid #dd3737
+  &:hover
+    -webkit-box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.3)
+    box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.3)
+  &:focus, &:active
+    background-color: #dd3737
 .pools-iteration
 		text-align: right
 		color: #333
@@ -6273,6 +6364,9 @@ input[type=checkbox]
 					text-transform: uppercase
 					display: inline-block
 					line-height: em(14px)
+					&:hover,
+						color: inherit
+						text-decoration: none
 			span
 				font-family: 'osb', sans-serif
 				font-size: em(16px)
@@ -7574,6 +7668,12 @@ input[type=checkbox]
 
 
 //результаты поиска//
+.modal-noSolve_select
+	width: 40% !important
+	text-align: center
+.modal-noSolve_center
+	width: 10% !important
+	margin: 0 2%
 .searchResult-h2_btn
 	button
 		float: right
@@ -7670,6 +7770,8 @@ input[type=checkbox]
 			font-size: em(18px)
 			position: relative
 			top: 2px
+		h2
+			margin: 0
 	.searchResult-result
 		background-color: #eaeaea
 		margin-left: 15px
@@ -7754,46 +7856,38 @@ input[type=checkbox]
 		right: 10px
 		top: 10px
 
-.generalPopUp-searchresult
-	.generalPopUp-searchresult_selectwrap
-		.center
-			font-size: em(25px)
-			padding: 0 5px
-			width: 60px
-			text-align: center
-			display: inline-block
-			position: relative
-			margin-left: 10px
-			margin-right: 10px
-		select
-			width: 30%
-			padding: 10px
-			margin-bottom: 0
-			float: left
-			&:last-child
-				float: left
-		i
-			color: $green
-			font-size: em(23px)
-			cursor: pointer
-			float: right
-			position: relative
-			top: 10px
-			right: 10px
-	.generalPopUp-window_commentToError
+.findBug
+	outline: none
+	display: inline-block
+	float: right
+
+
+.generalPopUp-searchresult_selectwrap
+	margin-top: 20px
+.generalPopUp-addField
+	color: $green
+	font-size: em(23px) !important
+	line-height: 0
+	cursor: pointer
+	float: right
+	position: relative
+	top: 5px
+	right: 0px
+
+.generalPopUp-window_commentToError
+	display: inline-block
+	width: 100%
+	margin-top: 10px
+	textarea
+		height: 70px
+.themeMail
+	margin-bottom: 20px
+	span
 		display: inline-block
 		width: 100%
-		margin-top: 10px
-		textarea
-			height: 70px
-	.themeMail
-		margin-bottom: 20px
-		span
-			display: inline-block
-			width: 100%
-		input
-			width: 100%
-			padding: 10px
+	input
+		width: 100%
+		padding: 10px
 
 
 
@@ -8139,6 +8233,8 @@ h3
 
 
 //обратная связь//
+.reportProblemFromUser
+	margin-bottom: 20px
 .report
 	min-height: 90vh
 	padding-top: 20px
@@ -8528,8 +8624,9 @@ h3
 .extraCharge-addSettings_btns
 	background-color: #f0f0f0
 	padding: 20px
-	button
+	a
 		margin-right: 20px
+		display: inline-block
 		i
 			margin-right: 10px
 			font-size: em(14px)
@@ -8559,14 +8656,22 @@ h3
 	padding: 10px 0
 	border-bottom: 1px solid lightgray
 	background-color: #f0f0f0
-	button
+	a
 		float: right
 		height: 25px
 		width: 25px
 		padding: 0
+		display: block
+		text-align: center
+		line-height: 25px
+		outline: none
+		color: #fff
 		i
 			margin: 0
 			font-size: em(12px)
+		&:hover
+			color: #fff
+			outline: none
 .extraCharge-addSettings_tableRowProduct
 	margin: 0
 	background-color: #f0f0f0
@@ -8578,7 +8683,7 @@ h3
 		position: relative
 		top: 2px
 .extraCharge-addSettings_tableRowProduct
-	button
+	button, a
 		height: 25px
 		width: 25px
 		padding: 0
@@ -8607,66 +8712,17 @@ h3
 .markupOnGroupProducts
 	display: none
 
-.extraCharge-edite
-	position: fixed
-	top: 0
-	left: 0
-	bottom: 0
-	right: 0
-	background-color: rgba(0,0,0,.4)
-	z-index: 300
-	display: none
-	.window
-		width: 320px
-		height: 200px
-		background-color: #fff
-		position: absolute
-		top: 0
-		left: 0
-		bottom: 0
-		right: 0
-		margin: auto
-		padding: 20px
-		.close
-			cursor: pointer
-			height: 25px
-			width: 25px
-			position: absolute
-			right: 0
-			top: 0
-			background-color: $red
-			&::after,
-			&::before
-				position: absolute
-				width: 90%
-				content: ''
-				left: 0
-				right: 0
-				bottom: 0
-				top: 0
-				height: 2px
-				background-color: #fff
-				margin: auto
-			&::before
-				transform: rotate(45deg)
-			&::after
-				transform: rotate(-45deg)
-		h2
-			margin: 0
-			font-size: em(14px)
-			margin-bottom: 20px
-		span
-			display: inline-block
-			width: 100%
-			font-family: 'osb', sans-serif
-			margin-bottom: 5px
-		input
-			width: 100%
-			padding: 5px 10px
-			margin-bottom: 20px
-		button
-			float: right
-			padding: 6px 10px
+#modal-extraCharge-edite
+	span
+		display: inline-block
+		width: 100%
+		font-family: 'osb', sans-serif
+		margin-bottom: 5px
+	input
+		width: 100%
+		padding: 5px 10px
+		margin-bottom: 20px
+
 
 
 .generalPopUp-extraCharge,
@@ -8689,6 +8745,7 @@ h3
 	.productGroup-window
 		width: 80% !important
 		height: 78% !important
+
 .productGroup-windowBody
 	margin-top: 20px
 	input
@@ -8763,6 +8820,26 @@ h3
 						padding-left: 60px
 						&:nth-child(even)
 							background-color: #e4e4e4
+#modal-diapasonedite
+	span
+		display: block
+		font-family: 'osb', sans-serif
+	input
+		display: inline-block
+		width: 100%
+		margin-bottom: 15px
+		padding: 5px 10px
+#modal-addFastCutePrice
+	span
+		display: block
+		font-family: 'osb', sans-serif
+		margin-bottom: 5px
+	.second
+		margin-top: 20px
+	input
+		width: 100%
+		padding: 5px 10px
+
 //конец наценка//
 
 
@@ -8827,16 +8904,40 @@ h3
 		width: 100%
 		padding: 5px 10px
 		text-transform: uppercase
-		margin-bottom: 20px
 	.generalPopUp-window-textarea
 		display: none
 		height: 90px
+
 .generalPopUp-window-cloneElement
 	background-color: #f0f0f0
 	padding: 20px
 	margin-bottom: 20px
 	border-radius: 2px
 	box-shadow: 1px 1px 3px rgba(0,0,0,.3)
+	position: relative
+	.closeclone
+		position: absolute
+		right: 5px
+		top: 5px
+		height: 20px
+		width: 20px
+		cursor: pointer
+		&:before, &::after
+			position: absolute
+			width: 90%
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			margin: auto
+			height: 2px
+			background-color: gray
+			content: ''
+		&::after
+			transform: rotate(45deg)
+		&:before
+			transform: rotate(-45deg)
+
 .generalPopUp-window-innerWrapper
 	.item
 		margin-bottom: 25px
@@ -8852,7 +8953,7 @@ h3
 			font-family: 'osb', sans-serif
 			cursor: no-drop
 .generalPopUp-window_commentToError
-	margin-top: 35px
+	margin-top: 20px
 	textarea
 		height: 150px
 		margin-top: 5px
@@ -8871,7 +8972,6 @@ h3
 		border: none
 		float: right
 		padding: 10px 30px
-
 ////////////////////////////
 
 
@@ -8917,18 +9017,37 @@ h3
 	padding: 20px
 	button
 		float: right
-		margin-top: 20px
 	span
 		font-family: 'osb',		sans-serif
 		text-transform: uppercase
 		font-size: em(16px)
 		position: relative
 		top: 5px
+	h3
+		margin: 0
+		line-height: em(16px)
 
+
+.generalUserSettings-settingsField_textarea
+	display: none
+	textarea
+		width: 100%
+		margin-top: 20px
+		margin-bottom: 10px
+		padding: 5px 10px
+	button
+		float: right
 .generalUserSettings-settingsField_content
 	background-color: #f0f0f0
 	margin: 0
 	padding: 20px
+	margin-bottom: 20px
+	.remotePanel
+		margin: 0 !important
+		select
+			width: 100%
+			padding: 5px 10px
+			text-transform: uppercase
 	.title
 		font-family: 'osb', sans-serif
 		text-transform: uppercase
@@ -8947,6 +9066,73 @@ h3
 			+ .overlayCheckBox
 				&::after
 					background-color: $green
+	.widget-settings
+		padding: 0
+		margin: 0
+		text-transform: uppercase
+		.col-xs-12
+			padding-left: 5px
+			padding-right: 5px
+		li
+			list-style-type: none
+			display: block
+			margin-bottom: 10px
+			.widget-settings_wrap
+				border: 1px solid lightgray
+				display: inline-block
+				padding: 10px 15px
+				background-color: #eaeaea
+				box-shadow: 0 2px 2px rgba(0,0,0,.3)
+				position: relative
+				width: 100%
+				i
+					font-size: em(18px)
+					margin-right: 8px
+					position: relative
+					line-height: 0
+					display: block
+					float: left
+					width: 25px
+					text-align: center
+					height: 25px
+					line-height: 25px
+				span
+					line-height: em(12px)
+
+
+.settings_swich
+	i
+		width: auto
+	input:checked
+		+ .swich span
+				background-color: $green
+				left: 16px
+				box-shadow: inset 0 2px 0 rgba(0,0,0,.2)
+
+	.swich
+		width: 40px
+		height: 20px
+		border: 1px solid lightgray
+		padding: 2px
+		float: right
+		margin-left: 10px
+		border-radius: 999px
+		background-color: #fff
+		box-shadow: inset 1px 1px 0px rgba(0,0,0,.2)
+		cursor: pointer
+		span
+			display: block
+			height: 20px
+			width: 20px
+			border: 1px solid lightgray
+			border-radius: 50%
+			background-color: gray
+			position: relative
+			top: -3px
+			left: -3px
+			transition: .3s
+
+
 //конец настройки пользователя//
 
 .overlaypreloader
