@@ -339,7 +339,7 @@ $base-font-size: 13px
 	.order-list_buttons
 		margin-bottom: 20px
 	.top-balance .top-balance_wrapper
-	  float: none
+		float: none
 
 @media only screen and (max-width : 560px)
 	.orders_list_changes_wrap_r
@@ -889,11 +889,6 @@ $base-font-size: 13px
 ///////////////////////////////////////////////////////
 /////////медиазапросы для страницы импорта/////////////
 ///////////////////////////////////////////////////////
-@media only screen and (max-width : 1440px)
-	.table_search_goods_result .quantity_ .content .bottom_cell span,
-	.table_search_goods_result .quantity_ .content .top_cell span
-		display: none
-
 @media only screen and (max-width : 1400px)
 	.search_goods
 		button
@@ -910,6 +905,9 @@ $base-font-size: 13px
 			padding: 10px
 
 @media only screen and (max-width : 1200px)
+	.import
+		.hidden_span
+			top: -3px
 	.managmentFilterlabelwrap label
 		margin-bottom: 10px
 		line-height: em(12px)
@@ -929,6 +927,9 @@ $base-font-size: 13px
 				font-size: em(13px)
 
 @media only screen and (max-width : 992px)
+	.import
+		.hidden_span
+			top: 10px !important
 	.add_file
 		.file-input
 			margin-bottom: 20px
@@ -1063,6 +1064,9 @@ $base-font-size: 13px
 		div
 			width: 100%
 			margin-bottom: 15px
+	.import
+		.hidden_span
+			display: none !important
 
 @media only screen and (min-width : 320px)
 	.import
@@ -1090,10 +1094,20 @@ $base-font-size: 13px
 				font-size: em(26px)
 			h2
 				font-size: em(22px)
+	.table_search_goods_result .cell_wrap .content .top_cell .hidden_span,
+	.table_search_goods_result .cell_wrap .content .bottom_cell .hidden_span
+		position: static
+		margin-top: -3px
 
-	/**/
+@media only screen and (min-width : 830px)
+	.table_search_goods_result .cell_wrap .content .top_cell .hidden_span,
+	.table_search_goods_result .cell_wrap .content .bottom_cell .hidden_span
+		margin-top: 12px
 
 @media only screen and (min-width : 992px)
+	.table_search_goods_result .cell_wrap .content .top_cell .hidden_span,
+	.table_search_goods_result .cell_wrap .content .bottom_cell .hidden_span
+		margin-top: -5px
 	.search_goods .green_btn
 		padding-left: 8px
 		padding-right: 8px
@@ -1126,9 +1140,11 @@ $base-font-size: 13px
 				float: left
 	input[type=checkbox].bigswitch.ios-switch+div
 		margin-right: 20px
-	/**/
 
 @media only screen and (min-width : 1200px)
+	.table_search_goods_result .cell_wrap .content .top_cell .hidden_span,
+	.table_search_goods_result .cell_wrap .content .bottom_cell .hidden_span
+		position: relative
 	.search_goods .green_btn
 		padding: 11px 22px
 		i
@@ -1308,6 +1324,15 @@ $base-font-size: 13px
 					i
 						margin-right: 10px
 	/**/
+
+@media only screen and (min-width : 992px)
+	.wait_list_table .table_search_goods_result .fold .content button span
+		float: none
+		font-size: 10px
+@media only screen and (min-width : 1200px)
+	.wait_list_table .table_search_goods_result .fold .content button span
+		font-size: 1em !important
+
 /////////////*end*/////////////////
 
 
@@ -1320,21 +1345,10 @@ $base-font-size: 13px
 	/**/
 
 @media only screen and (max-width : 992px)
-	.returnes-popUpgoods
-		.returnes-popUpgoods_wrap
-			width: 90%
-			height: 90%
-			.returnes-popUpgoods_body
-    		padding: 16px
-
-	.returnes-table_content-summ
-		span
-			font-size: em(12px) !important
 	.returnes-table_content-status
 		text-align: center
 		font-size: em(12px)
 	.returnes-table_content
-		padding: 5px	!important
 		.left
 			div
 				top: -5px !important
@@ -1366,20 +1380,6 @@ $base-font-size: 13px
 	/**/
 
 @media only screen and (max-width : 767px)
-	.returnes-popUpgoods_body
-		margin-top: 10px
-		.table_returnes
-			height: auto
-			.content
-				padding: 10px
-				select
-					top: 0
-				input
-					top: 10px
-	.returnes-popUpgoods .returnes-popUpgoods_wrap label
-			width: 100%
-			display: block
-			margin-bottom: 5px
 	.returnes
 		.wrapper_tabs
 			.returnes-table
@@ -1388,12 +1388,16 @@ $base-font-size: 13px
 					border-bottom: none
 
 @media only screen and (max-width : 768px)
+	.returnesAddGoods
+		width: 100%
 	.wrapper_tabs-wrapRemote-file
 		padding: 6px
 	.returnes-table_shortcontent
 		.returnes-table_shortcontent-price
 			font-size: em(14px) !important
 	.returnes
+		textarea
+			width: 100% !important
 		.TTN
 			.data_for_returne_ttn
 				form
@@ -1487,20 +1491,6 @@ $base-font-size: 13px
 			font-size: em(15px)
 		span, p
 			font-size: em(13px)
-
-@media only screen and (max-height : 480px)
-	.returnes-popUpgoods_body
-		height: 53% !important
-@media only screen and (max-height : 568px)
-	.returnes-popUpgoods_body
-		margin-top: 15px !important
-		height: 53% !important
-@media only screen and (max-height : 320px)
-	.returnes-popUpgoods .returnes-popUpgoods_wrap h2
-		margin-bottom: 0
-	.returnes-popUpgoods_body
-		margin-top: 15px !important
-		height: 40% !important
 //конец
 
 
@@ -1680,9 +1670,7 @@ $base-font-size: 13px
 			font-size: em(11px)
 		.finances-table
 			font-size: em(11px)
-		.finances-act_tableBody
-			button
-				padding: 6px 30px
+
 @media only screen and (max-width : 768px)
 	.finances
 		padding: 0
@@ -1690,12 +1678,21 @@ $base-font-size: 13px
 			button
 				margin-top: 25px
 @media only screen and (max-width : 480px)
+	.finances-act_tableBody
+		padding-top: 10px !important
+		padding-bottom: 10px !important
+		font-size: 0.75em
+		button
+			width: 100%
+			margin-right: 0 !important
+			margin-top: 15px !important
+			font-size: em(14px)
+
 	.finances
 		.finances-h2
 			h2
 				font-size: em(16px)
 		.finances-bill_balance-body
-			padding: 20px
 			b
 				top: -10px
 				font-size: em(14px)
@@ -1721,9 +1718,6 @@ $base-font-size: 13px
 			strong
 				font-size: em(16px)
 				float: right
-		.finances-act_tableBody
-			text-align: center
-			font-size: em(12px)
 			button
 				margin-top: 25px
 				display: inline-block
@@ -2077,15 +2071,14 @@ $base-font-size: 13px
 			font-size: em(10px)
 	.cart-quantity_span
 		display: none !important
-	.cart-beznal
-		.cart-beznal_table
-			.row
-				.cart-quantity
-					.top_cell
-						.cart-quantity_check
-							width: 30px
-						.input-group
-							@include calc(width, "100% - 30px")
+	.cart-beznal_table, .cart-nalTable
+		.row
+			.cart-quantity
+				.top_cell
+					.cart-quantity_check
+						width: 30px
+					.input-group
+						@include calc(width, "100% - 35px")
 //конец корзина
 
 
@@ -2601,6 +2594,9 @@ $base-font-size: 13px
 
 
 //настройки пользователя//
+@media only screen and (max-width : 1440px)
+	.widget-settings_wrap span
+		font-size: 12px
 @media only screen and (max-width : 768px)
 	.widget-settings_wrap span
 		font-size: em(10px)
@@ -2608,6 +2604,21 @@ $base-font-size: 13px
 	.widget-settings
 		.col-xs-12
 			margin: 0 !important
+	.extraCharge-addSettings_tableRowProduct
+		.fa-arrow-down
+			font-size: em(10px)
+			top: 2px
+			display: inline-block
+			float: left
+			margin-right: 5px
+
+		.text
+			display: inline-block
+			float: left
+			line-height: em(14px)
+			width: 80%
+			font-size: em(12px)
+
 
 	.widget-settings_wrap
 		margin-bottom: 0px !important
@@ -2618,10 +2629,6 @@ $base-font-size: 13px
 			padding: 5px
 		h3
 			font-size: em(16px)
-	.generalUserSettings-settingsField_content
-		div
-			&:first-child
-				margin-bottom: 30px
 	.generalUserSettings-h2
 		h2
 			i
@@ -2642,6 +2649,10 @@ $base-font-size: 13px
 				width: 100%
 				.title
 					line-height: em(16px)
+@media only screen and (max-width : 419px)
+	.extraCharge-addSettings_tableRowProduct
+		.gray_btn
+			margin-top: 3px
 //конец настройки пользователя//
 
 
