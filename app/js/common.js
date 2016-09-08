@@ -1,6 +1,7 @@
 $(function() {
 
 
+
 $('.popup-modal').magnificPopup({
 		type: 'inline',
 		preloader: false,
@@ -308,6 +309,10 @@ $('#slidedownSettingsAll').click(function(){
 
 
 	//корзина//
+	$('.datapicker-cart').find('[class*=triangle]').click(function(){
+		$('.datapicker-cart').find('[class*=triangle]').toggleClass('rotate');
+		$('.datapicker-cart_inner, .datapicker_filter_wrap').slideToggle(200);
+	});
 	$(".refreshBtn").on('click', function() { //кнопка обнавления баланса анимация переворота стрелки
 		$(this).children().addClass('finReloadd');
 		$(this).children().delay(2000);
@@ -332,6 +337,7 @@ $('#slidedownSettingsAll').click(function(){
 		start: function() {
 			$('.cart-tableRow').css('borderColor', '#f1f1f1');
 			$('.cart-nalTable').css('backgroundColor', '#edfaff');
+			$('.cart-nal_table').css('minHeight','160px');
 		},
 		stop: function() {
 			$('.cart-tableRow').css('borderColor', '');
@@ -341,6 +347,8 @@ $('#slidedownSettingsAll').click(function(){
 			$(this).find('.cartRowCheckbox').removeAttr("checked");
 			$(this).find('.overlay').css('backgroundColor','');
 			$(this).find('.inner span').css('backgroundColor','');
+			$(this).find('.overlay').removeAttr('style');
+			$(this).find('.inner span').removeAttr('style');
 		}
 	})
 
@@ -357,6 +365,8 @@ $('#slidedownSettingsAll').click(function(){
 		start: function() {
 			$('.cart-tableRow').css('borderColor', '#f1f1f1');
 			$('.cart-beznal_lightbleu').css('backgroundColor', '#edfaff');
+			$('.cart-beznal_table').css('minHeight','160px');
+
 		},
 		stop: function() {
 			$('.cart-tableRow').removeAttr('style');
@@ -369,64 +379,66 @@ $('#slidedownSettingsAll').click(function(){
 		}
 	});
 
-$('.cart-beznal .cartRowCheckbox').click(function(){
+$('.cartRowCheckbox').click(function(){
 	if($(this).prop('checked')){
 		var clone = $(this).parents('.cart-tableRow');
 		clone.find('.cartRowCheckbox').attr('checked','checked')
-		clone.prependTo('.cart-nalTable').addClass('replace');
-		$('.overlay').removeAttr('style');
-		$('.inner span').removeAttr('style');
+		clone.prependTo('.cart-nal_table');
 	}else{
 		var clone = $(this).parents('.cart-tableRow');
-		clone.find('.cartRowCheckbox').removeAttr('checked')
-		clone.appendTo('.cart-beznal_table').addClass('replace');
+		clone.appendTo('.cart-beznal_table');
+		clone.find('.cartRowCheckbox').removeAttr('checked');
+		clone.find('.overlay').removeAttr('style');
+		clone.find('.inner span').removeAttr('style');
 	}
 })
 
-	function cartDellMarkNall() { //удалить выделленные в поле наличного расчета
-		var $input = $('.cart-nal_table').find('.cart-beznal_brand').find('input:checked');
-		$input.parents('.cart-tableRow').slideUp(200)
-	}
-	$('.cart-dellMarkNall').click(cartDellMarkNall)
 
-	function cartDellAllNal() { //снять выделение с чекбоксов в поле наличного расчета
-		var $input = $('.cart-nal_table').find('.cart-beznal_brand').find('input');
-		$input.removeAttr('checked');
-		$input.next().css('backgroundColor', '')
+function cartCheckBox() { //стилизация checkBox в корзине
+	if ($(this).prop('checked')) {
+		$(this).next().css('backgroundColor', '#50b74e')
+		$(this).attr('checked','checked');
+	} else {
+		$(this).next().css('backgroundColor', '#fff')
+		$(this).removeAttr('checked');
 	}
-	$('.cart-dellAllNall').click(cartDellAllNal)
+}
+$('.cart-checkbox').children('input').click(cartCheckBox)
 
-	function сartMarkAllNall() { //выбрать все товары в поле наличного расчета
-		var $input = $('.cart-nal_table').find('.cart-beznal_brand').find('input');
+
+	function cartDellMarkNall() { //удалить выделленные
+		var $input = $('.cart-beznal, .cart-nalTable').find('.cart-checkbox_input:checked');
+			$input.parents('.cart-tableRow').slideUp(200)
+	}
+	$('.cart-dellMark').click(cartDellMarkNall)
+
+
+	function сartMarkAll() { //выбрать все товары
+		var $input = $('.cart-beznal, .cart-nalTable').find('.cart-checkbox_input');
 		$input.attr('checked', 'checked');
 		$input.next().css('backgroundColor', '#50b74e')
 	}
-	$('.cart-MarkAllNall').click(сartMarkAllNall)
+	$('.cart-MarkAll').click(сartMarkAll)
 
-	function cartdellAllMarcked() { //снять выделение со всех чекбоксов в таблице безнала
-		var $input = $('.cart-beznal_table').find('.cart-beznal_brand').find('input');
+
+	function cartdellAllMarcked() { //снять выделение со всех чекбоксов
+		var $input = $('.cart-beznal, .cart-nalTable').find('.cart-checkbox_input');
 		$input.removeAttr('checked');
 		$input.next().css('backgroundColor', '')
 	}
 	$('.cart-dellAll').click(cartdellAllMarcked);
 
-	function cartMarkAll() { //выбрать все товары в поле безнала
-		var $input = $('.cart-beznal_table').find('.cart-beznal_brand').find('input');
-		$input.attr('checked', 'checked');
-		$input.next().css('backgroundColor', '#7cc97a')
-	}
-	$('.cart-MarkAll').click(cartMarkAll)
 
-	function cartdellMark() { //удалить выбраныые ряды таблицы в поле безнала
-		var $input = $('.cart-beznal_table').find('input:checked');
-		$input.parents('.cart-tableRow').slideUp(200)
-	}
-	$('.cart-dellMark').click(cartdellMark)
+
+
+
 
 	function cartDellRow() { //удалить ряд таблицы
 		$(this).parents('.cart-tableRow, .cart-rowTableNal').slideUp(200)
 	}
 	$('.cart-dellRow').click(cartDellRow)
+
+
 
 	function cartAvailableDeliveryColored() { //окраска ряда таблицы в соответствии со складом
 		var z = $('.cart-availableDeliveryRow').find('input');
@@ -483,14 +495,7 @@ $('.cart-beznal .cartRowCheckbox').click(function(){
 	$('.counrDown').click(countDown)
 
 
-	function cartCheckBox() { //стилизация checkBox в корзине
-		if ($(this).prop('checked')) {
-			$(this).next().css('backgroundColor', '#50b74e')
-		} else {
-			$(this).next().css('backgroundColor', '#fff')
-		}
-	}
-	$('.cart-checkbox').children('input').click(cartCheckBox)
+
 		//конец корзина//
 
 
@@ -622,8 +627,8 @@ $('.cart-beznal .cartRowCheckbox').click(function(){
 	}
 
 	if ($(window).width() > 768) {
-		$('.top-balance .totall').mouseover(balanceToolTip);
-		$('.top-balance .totall').mouseout(balanceToolTipHide);
+		$('.top-balance .totall span').mouseover(balanceToolTip);
+		$('.top-balance .totall span').mouseout(balanceToolTipHide);
 	}
 
 
@@ -1557,7 +1562,8 @@ $('.treeDetailsBtn').click(function(){
 
 	//закрытие окна с информационными сообщениями
 	function alertClose() {
-		var $a = $(this).parent().parent().slideUp(200);
+		console.log('12121');
+		$('.alert').hide(100);
 	}
 	$('.cross_alert').on('click', alertClose)
 
@@ -1611,13 +1617,13 @@ $('.treeDetailsBtn').click(function(){
 		//////////////////////////////
 
 	// переворот стреки
-	$(".top-balance_update").on('click', function() {
+	$(".top-balance_update, .finReloaddFinances").on('click', function() {
 		var $alertZone = $('.alert');
 		$alertZone.slideDown(200);
 		$alertZone.delay(3000).slideUp(200)
 		$(this).children().addClass('finReloadd');
 		$(this).children().delay(2000);
-		$('.top-balance .totall').css({
+		$('.top-balance .totall span').css({
 			'color': '#48b746'
 		});
 		$('.balance-tooltip_triangle').css({
@@ -1641,7 +1647,7 @@ $('.treeDetailsBtn').click(function(){
 	////////////////////////////////////
 
 	//стилизация чекбокс
-	function radioFilter() { //на главной
+	function radioFilter() { //на главной и в корзине
 		$('.datapicker_checkbox_wrap').css({
 			'borderColor': ''
 		}).find('input').removeAttr('checked');
@@ -2087,7 +2093,9 @@ $('.treeDetailsBtn').click(function(){
 
 /////////////////
 //общие скрипты//
-$('.tooltipImport').tooltip()//тултип
+if($(window).width()>768){
+	$('.tooltipImport').tooltip()//тултип
+}
 
 	$('.mob_mnu_left').find('li').click(function() {//переход по страницам
 		$(this).addClass('active');
@@ -2142,14 +2150,6 @@ function closeCloneElem(){
 
 
 $('.overlaypreloader').hide()//убрать прелоадер
-
-
-
-
-
-
-
-
 
 
 

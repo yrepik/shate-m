@@ -66,7 +66,6 @@ $base-font-size: 13px
 		a
 			text-align: center
 
-/* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	.top-closeMnu
 		width: 7%
@@ -158,9 +157,30 @@ $base-font-size: 13px
 		padding: 10px 12px
 	.top_serch .search_btn
 		right: 3%
-
+@media only screen and (width : 768px)
+	.orders_container .name .inner_wrap i
+		position: absolute !important
+		top: 20px
+		right: 3px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.dashboard-action_a
+		float: right !important
+		top: 0
+		padding: 5px 8px
+
+	.large_block .title i
+		left: 0
+		margin-right: 5px
+	.large_block .title span
+		font-size: em(12px)
+		margin-right: 5px !important
+	.history_request
+		a
+			float: right
+			padding: 5px 8px
+			top: 0px
+			font-size: em(12px)
 	.dashboardSell .dashboardSell-image button
 		padding: 10px 5px
 	.orders-info_popUp-inner
@@ -308,6 +328,8 @@ $base-font-size: 13px
 			width: 25%
 
 @media only screen and (width : 768px)
+	.dashboard_small .content__item .content__item-right span i a
+		font-size: em(18px)
 	.orders-info_popUp-inner-close
 		right: 5% !important
 		top: 15% !important
@@ -789,9 +811,10 @@ $base-font-size: 13px
 		line-height: em(14px)
 		position: relative
 		top: -7px
+		text-align: right
+		padding-right: 20px
 	.history .tr .td
 		padding-top: 5px
-		text-align: center
 	.history .thead
 		.th:last-child
 			width: 30%
@@ -1537,6 +1560,8 @@ $base-font-size: 13px
 	/**/
 
 @media only screen and (max-width : 768px)
+	#tree .tree-h2 .tree-selectCar
+		top: 25px
 	.generalPopUp-details_rightPhoto
 		padding-left: 0
 		padding-right: 0
@@ -1624,6 +1649,13 @@ $base-font-size: 13px
 				float: left
 			button
 				margin-left: 0 !important
+@media only screen and (width : 768px)
+	.tree-tabWrap_content
+		padding-top: 0 !important
+	.generalPopUp-details_rightTitle
+		margin-top: 0
+	.generalPopUp-details_right, .generalPopUp-details_rightPhoto
+		padding-left: 15px
 /*конец*/
 
 
@@ -1677,6 +1709,12 @@ $base-font-size: 13px
 		.finances-act_tableBody
 			button
 				margin-top: 25px
+@media only screen and (width : 768px)
+	.finances .finances-bill_balance-body b
+		top: 0
+		font-size: 1.2em
+	.finances-bill_history-head h3
+		font-size: 1.2em
 @media only screen and (max-width : 480px)
 	.finances-act_tableBody
 		padding-top: 10px !important
@@ -1905,26 +1943,9 @@ $base-font-size: 13px
 
 //карзина//
 @media only screen and (max-width : 1200px)
+	.datapicker-cart button
+		margin-top: 15px !important
 	.cart-beznal
-		.cart-beznal_remote
-			.left
-				width: 100%
-				margin-bottom: 20px
-				button
-					float: right
-			.right
-				width: 100%
-				button
-					padding: 7px 10px
-					margin-left: 10px
-					i
-						margin-right: 10px
-				.cart-downloadInFile
-					float: left
-					margin-left: 0
-					padding: 7px 10px
-					i
-						margin-right: 10px
 		.cart-beznal_brand
 			.content
 				font-size: em(10px)
@@ -1934,7 +1955,19 @@ $base-font-size: 13px
 	.cart-availableDeliveryThead
 		font-size: em(13px)
 		line-height: em(13px)
-
+	.cart-beznal_remote .right
+			width: 100% !important
+			button
+				padding: 7px 10px
+				margin-left: 10px
+				i
+					margin-right: 10px
+			.cart-downloadInFile
+				float: left
+				margin-left: 0
+				padding: 7px 10px
+				i
+					margin-right: 10px
 @media only screen and (max-width : 992px)
 	.cart-availableDeliveryThead,
 	.cart-availableDeliveryRow
@@ -1946,7 +1979,7 @@ $base-font-size: 13px
 	.cart-exist
 		.content
 			background-color: #fff !important
-	.cart-beznal_table
+	.cart-beznal_table, .cart-nal_table
 		.row
 			.cart-shipment,
 			.cart-fold,
@@ -1962,6 +1995,26 @@ $base-font-size: 13px
 					background-color: #666 !important
 
 @media only screen and (max-width : 768px)
+	.cart-beznal_remote .right
+		.cart-MarkAll, .cart-dellAll, .cart-dellMark
+			@include calc(width, "33.33333% - 10px")
+		.cart-MarkAll
+			margin: 0
+			float: left
+	.cart-downloadInFile
+		width: 100%
+		margin-bottom: 20px
+	.dashboard_small .content__item .content__item-right span i a
+		font-size: em(18px)
+	.datapicker-cart_inner, .datapicker_filter_wrap
+		display: none
+	.top-userCabinet,
+	.datapicker-cart
+		.triangle, .triangleR
+			border-top: 10px solid gray !important
+			border-bottom: none !important
+	.datapicker-cart_inner
+		padding-left: 30px
 	.cart-availableDeliveryThead
 		font-family: 'osr', sans-serif
 		font-weight: normal
@@ -2031,7 +2084,7 @@ $base-font-size: 13px
 			background-color: #ebeeef	!important
 
 @media only screen and (max-width : 722px)
-	.cart-beznal
+	.cart-beznal, .cart-nal
 		.cart-beznal_remote
 			.right
 				button
@@ -2042,6 +2095,10 @@ $base-font-size: 13px
 						display: none
 
 @media only screen and (max-width : 480px)
+	.cart-beznal_remote .right
+		button
+			width: 100% !important
+			margin-bottom: 20px
 	.cart-commentToOrder
 		button
 			width: 100%
@@ -2079,6 +2136,13 @@ $base-font-size: 13px
 						width: 30px
 					.input-group
 						@include calc(width, "100% - 35px")
+	.cart-availableDeliveryRow label
+		span
+			width: 77%
+			float: right
+		.overlay
+			margin-right: 0
+			top: 7px
 //конец корзина
 
 
@@ -2121,6 +2185,7 @@ $base-font-size: 13px
 	.searchToVin1-searchfield
 		input
 			@include calc(width, "100% - 75px")
+			border-radius: 0 !important
 		button
 			width: auto
 			padding: 8px 15px
@@ -2362,7 +2427,9 @@ $base-font-size: 13px
 		i
 			margin-right: 5px
 			top: 0
-
+@media only screen and (max-height : 768px)
+	.report, .generalUserSettings, .pools
+		min-height: 150vh
 //конец обратная связь//
 @media only screen and (max-width : 768px)
 	.generalPopUp-window

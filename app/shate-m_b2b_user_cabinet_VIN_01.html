@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="css/main.min.css">
 	<link rel="stylesheet" href="libs/owlcarousel/owl.carousel.css">
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" charset="utf-8">
+	<link rel="stylesheet" href="libs/bootstrap-tour-0.11.0/css/bootstrap-tour-standalone.css" media="screen" title="no title">
 
 </head>
 <!--[if lt IE 9]>
@@ -201,7 +202,7 @@
 									<i class="fa fa-search" aria-hidden="true"></i>
 									<span>Поиск по VIN</span>
 								</h2>
-								<button class="btn gray_btn hidden-xs helperBtn" type="button" name="button">
+								<button id="helper" class="btn gray_btn hidden-xs helperBtn" type="button" name="button">
 									<i class="fa fa-life-ring" aria-hidden="true"></i> Помощь <span class="hidden-xs">по разделу</span>
 								</button>
               </div>
@@ -213,12 +214,12 @@
               </div>
 							<!--поле поиска-->
 							<div class="searchToVin1-searchfield col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<input type="search" name="searchToVin1" value="">
+								<input id="tour-3" type="search" name="searchToVin1" value="">
 								<button title="поиск" class="red_btn"><i class="hidden-sm hidden-md hidden-lg fa fa-search" aria-hidden="true"></i><span class="hidden-xs">Поиск</span></button>
               </div>
             </div>
 
-						<div class="row searchToVin1BrandField">
+						<div class="row searchToVin1BrandField" id="searchToVin1BrandField">
 							<!--блок-сылка на бренд-->
 							<div class="searchToVin1-brand col-xs-12 col-sm-4 col-md-3 col-lg-3">
 								<a href="shate-m_b2b_user_cabinet_VIN_02.html" class="clearfix">
@@ -233,7 +234,7 @@
 							<div class="searchToVin1-brand col-xs-12 col-sm-4 col-md-3 col-lg-3">
 								<a href="shate-m_b2b_user_cabinet_VIN_02.html" class="clearfix">
 									<span class="searchToVin1-brand_image">
-										<img src="img/brands/dacia.png" alt="" />
+										<img src="img/brands/Dacia.png" alt="" />
 									</span>
 									<span class="searchToVin1-brand_brandTitle">Dacia</span>
 								</a>
@@ -263,7 +264,7 @@
 							<div class="searchToVin1-brand col-xs-12 col-sm-4 col-md-3 col-lg-3">
 								<a href="shate-m_b2b_user_cabinet_VIN_02.html" class="clearfix">
 									<span class="searchToVin1-brand_image">
-										<img src="img/brands/Alfa_romeo.png" alt="" />
+										<img src="img/brands/Alfa_Romeo.png" alt="" />
 									</span>
 									<span class="searchToVin1-brand_brandTitle">Alfa Romeo</span>
 								</a>
@@ -634,9 +635,11 @@
 	</div>
 
 
-	<scrip  scr="libs/owlcarousel/owl.carousel.min.js"></scrip>
 	<script  src="js/add.js" charset="utf-8"></script>
 	<script  src="libs/Magnific-Popup/dist/jquery.magnific-popup.min.js" charset="utf-8"></script>
+
+	<script src="libs/bootstrap-tour-0.11.0/js/bootstrap-tour-standalone.min.js" charset="utf-8"></script>
+	<script src="js/toure.js" charset="utf-8"></script>
 
 	<script  src="js/common.js" charset="utf-8"></script>
 
