@@ -1,5 +1,4 @@
 @import "bourbon"
-@import "bourbon"
 @import "vars.sass"
 
 
@@ -85,6 +84,40 @@ body
 	padding: 0
 
 
+.tooltipMnu
+	position: absolute !important
+	border: 1px solid #000
+	background-color: #000
+	opacity: .9
+	font-family: 'osr', sans-serif
+	font-size: em(7px)
+	text-align: center
+	text-transform: uppercase
+	display: inline-block
+	padding: 3px
+	width: 150px
+	left: 130% !important
+	top: 30%
+	z-index: 9999
+	border-radius: 3px
+	opacity: 0
+	display: none
+	transition: .2s
+	&::before
+		position: absolute
+		content: ''
+		@include triangle(8px 5px, #000, left)
+		left: -6px
+		top: 0
+		bottom: 0
+		margin: auto
+
+.mob_mnu_left i
+	&:hover
+		.tooltipMnu
+			opacity: 1
+			left: 110% !important
+
 .mfp-img-mobile
 	.mfp-content
 		background-color: transparent
@@ -97,7 +130,7 @@ body
 	0%
 		transform: translate(0px, 0px)
 	100%
-		transform: translate(215px, 0px)
+		transform: translate(171px, 0px)
 
 .menuActiveFrom
 	animation: menuActiveFrom ease-in .3s
@@ -106,9 +139,31 @@ body
 	animation-fill-mode: forwards
 @keyframes menuActiveFrom
 	0%
+		transform: translate(171px, 0px)
+	100%
+		transform: translate(0px, 0px)
+.menuActiveToxs
+	animation: menuActiveToxs ease-in .3s
+	animation-iteration-count: 1
+	transform-origin: 50% 50%
+	animation-fill-mode: forwards
+@keyframes menuActiveToxs
+	0%
+		transform: translate(0px, 0px)
+	100%
+		transform: translate(215px, 0px)
+
+.menuActiveFromxs
+	animation: menuActiveFromxs ease-in .3s
+	animation-iteration-count: 1
+	transform-origin: 50% 50%
+	animation-fill-mode: forwards
+@keyframes menuActiveFromxs
+	0%
 		transform: translate(215px, 0px)
 	100%
 		transform: translate(0px, 0px)
+
 
 
 .tabletSmenuActiveTo
@@ -201,6 +256,7 @@ button.mfp-close
 #right_side
 	min-height: 80vh
 	padding-bottom: 20px
+	padding-top: 40px
 
 
 .red_btn
@@ -243,6 +299,94 @@ button.mfp-close
 	&:focus, &:active
 		background-color: lighten(#2196f3, 10%)
 
+.dashboard--requestHistory_action
+	margin-top: 7px
+.dashboard--requestHistory_wrapper
+	background-color: #eaeaea
+	border-radius: 3px
+	padding: 15px
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4)
+	a
+		float: right
+		display: block
+		padding: 5px
+		&:hover
+			color: inherit
+	.wrapper
+		float: left
+		i
+			display: block
+			float: left
+			font-size: em(25px)
+			margin-right: 10px
+			position: relative
+			top: 5px
+			color: #959595
+		span
+			display: inline-block
+			float: left
+			font-size: em(15px)
+			font-family: 'osb', sans-serif
+			text-transform: uppercase
+			line-height: em(13px)
+.dashboard--requestHistory_header
+	margin-top: 13px
+.dashboard--requestHistory_history
+	position: relative
+	margin-top: 20px
+	width: 100%
+	.th
+		float: left
+		display: table-cell
+		text-align: left
+		padding: 5px
+		line-height: 20px
+		color: #fff
+		background-color: #ababab
+		height: 30px
+		font-size: em(12px)
+		&:last-child
+			width: 33.3333%
+		&:nth-child(1)
+			width: 33.3333%
+		&:nth-child(2)
+			width: 33.3333%
+	.table_content
+		width: 100%
+		overflow-y: auto
+		overflow-x: hidden
+		height: 350px
+		position: relative !important
+		a
+			padding: 0
+		.tr
+			width: 100%
+			cursor: pointer
+			color: #666
+			&:nth-child(even)
+				background-color: #d2d2d2
+			&:hover
+				background-color: #999
+				color: #fff
+				text-decoration: none
+			.td
+				display: block
+				float: left
+				text-align: left
+				padding: 5px
+				font-size: em(11px)
+				padding-top: 10px
+				padding-bottom: 10px
+				line-height: em(13px)
+				&:last-child
+					width: 33.3333%
+				&:nth-child(1)
+					width: 33.3333%
+				&:nth-child(2)
+					color: #ec5b5f
+					width: 33.3333%
+					text-transform: uppercase
+					text-decoration: underline
 
 .dashboardSell .dashboardSell-content_ActionsInArchive_date
 	position: absolute
@@ -254,18 +398,18 @@ button.mfp-close
 	font-size: 0.83333em
 	line-height: 1em
 	color: #fff
-	width: -webkit-calc(100% + 15px)
-	width: calc(100% + 15px)
+	@include calc(width, "100% + 15px")
 
 .dashboard-slidedownSettingsAll
 	margin: 0
 	display: none
-	position: absolute
+	position: fixed
 	right: 470px
-	top: 55px
+	top: 20px
 	z-index: 10
 	height: auto
 	width: 310px
+	right: 250px
 .dashboard-slidedownSettings_wrapper
 	padding: 15px
 	margin: 0
@@ -315,7 +459,7 @@ button.mfp-close
 	padding: 10px
 	.dashboardSell-wrapper
 		background-color: #fff
-		padding: 15px
+		padding: 10px
 		box-shadow: 0 3px 3px rgba(0,0,0,.3)
 		position: relative
 	.dashboardSell-image
@@ -335,8 +479,8 @@ button.mfp-close
 		padding: 0
 	.dashboardSell-content_date
 		position: absolute
-		top: -15px
-		right: -15px
+		top: -10px
+		right: -10px
 		padding: 10px 5px
 		background-color: $red
 		text-align: center
@@ -347,15 +491,16 @@ button.mfp-close
 	.dashboardSell-content_text
 		h4
 			color: #333
-			font-size: em(14px)
+			font-size: 1em
 			line-height: 1.2em
-			margin-top: 30px
+			margin-top: 38px
 			margin-bottom: 10px
 		p
 			font-size: em(12px)
 			line-height: em(14px)
 			margin-bottom: 0
 			word-break: normal
+			margin-top: 0
 .dashboardSell-h2
 	margin-bottom: 20px
 
@@ -519,7 +664,7 @@ button.mfp-close
 
 .topLine
 	box-shadow: 0px 3px 2px rgba(0,0,0,.3)
-	padding: 20px
+	padding: 15px 20px
 	width: 100%
 	background-color: #eaeaea
 .top-closeMnu,
@@ -530,10 +675,13 @@ button.mfp-close
 .top-cart
 	float: left
 	padding: 0 15px
+.top-cart
+	height: 34px
 .top-closeMnu
 	width: 4%
+	text-align: left
 	padding: 4px 10px
-	#hamburger-icon
+	.hamburger-icon
 		width: 25px
 		height: 20px
 		position: relative
@@ -568,7 +716,8 @@ button.mfp-close
 	input
 		opacity: 1
 .top-search
-	width: 23%
+	width: 31%
+	margin-right: 2%
 	form
 		position: relative
 		width: 100%
@@ -576,8 +725,8 @@ button.mfp-close
 			width: 100%
 			border-radius: 999px
 			border: 1px solid lightgray
-			padding: 4px 4%
-			left: -4%
+			padding: 4px 15px
+			left: -2%
 			position: relative
 			text-transform: uppercase
 			&:hover
@@ -608,6 +757,7 @@ button.mfp-close
 
 
 .top-balance
+	text-align: center
 	width: 25%
 	border-right: 1px solid gray
 	border-left: 1px solid gray
@@ -624,11 +774,10 @@ button.mfp-close
 		div
 			float: right
 		i
-			margin-right: 10px
+			margin-right: 5px
 		.top-balance_update
-			margin-left: 10px
+			margin-left: 7px
 			text-align: center
-			padding: 3px 6px
 			cursor: pointer
 			&:hover
 				background-color: #686868
@@ -636,6 +785,9 @@ button.mfp-close
 				margin: auto
 				display: inline-block
 				color: #fff
+				position: relative
+				top: 1px
+
 		div
 			margin-top: 4px
 		.fa-money
@@ -643,28 +795,41 @@ button.mfp-close
 			float: right
 			margin-top: 9px
 		.top-balance_update
-			margin-top: 0
-			height: 30px
-			width: 30px
+			margin-top: 3px
+			height: 25px
+			width: 25px
 			background-color: #959595
 			display: inline-block
-			-webkit-border-radius: 999px
 			border-radius: 999px
 		display: inline-block
 		float: right
 
+.top-balance_curency
+	padding-left: 5px
+	position: relative
+	margin-right: 10px
+	&::after
+		position: absolute !important
+		content: ''
+		@include triangle(8px 5px, gray, down)
+		top: 8px
+		right: -10px
 .top-balance
 	.top-balance_wrapper
+		float: none
 		.totall
 			span
 				color: gray
-
+.balance_count
+	margin-right: 5px
+.balance-tooltip_date
+	float: left !important
 .top-cart
 	width: 17%
 	display: inline-block
 	text-align: center
 	text-transform: uppercase
-	padding: 4px 0
+	padding: 0
 	border-right: 1px solid gray
 	a
 		color: gray
@@ -718,7 +883,7 @@ button.mfp-close
 	z-index: 999
 	border-radius: 3px
 	right: 0
-	right: 15%
+	right: 38%
 	top: 110%
 	display: none
 	.balance-tooltip_triangle
@@ -729,8 +894,81 @@ button.mfp-close
 		left: 0
 		margin: auto
 
-
-
+.top-balance_wrapper
+	strong
+		color: $red !important
+		font-weight: 100
+		position: relative
+.totall--debt
+	&::after
+		position: absolute
+		top: -8px
+		left: 0
+		right: 0
+		bottom: auto
+		margin: auto
+		content: ''
+		@include triangle(12px 8px, gray, up)
+	border: 1px solid lightgray
+	box-shadow: 0px 2px 3px rgba(0,0,0,.2)
+	position: absolute
+	z-index: 999
+	background-color: #fff
+	display: none
+	padding: 10px 20px
+	min-width: 300px
+	text-align: left
+	top: 35px
+	right: 30px
+	h5
+		margin-top: 0
+		margin-bottom: 0px
+	a
+		float: right
+		margin-top: 10px
+		font-family: 'osb', sans-serif
+		color: $blue
+		&:hover
+			color: lighten($blue, 5%)
+.totall--debt_close
+	padding: 5px !important
+	font-size: em(9px) !important
+	margin-top: 6px
+.totall--debt_row
+	display: block
+	&:nth-last-child(2)
+		border-bottom: 1px solid lightgray
+.totall--debt_tottal
+	display: block
+	width: 100%
+	margin-bottom: 5px
+	color: #333 !important
+	font-family: 'osb', sans-serif
+	font-size: em(13px)
+	b
+		float: right
+.totall--debt_table
+	hr
+		margin: 0
+		background-color: #999
+		height: 1px
+	display: block
+	position: relative
+	text-transform: none
+	font-size: em(10px)
+	&:nth-last-child(1)
+		margin-top: 15px
+.totall--debt_itogo
+	color: #333 !important
+	display: block
+	float: left
+.totall--debt_coun
+	span
+		float: right
+		display: inline-block
+.totall--overdue_table
+	span
+		color: $red !important
 .alert, .alert_succes
 	display: none
 	background-color: #f0ffeb
@@ -769,6 +1007,65 @@ button.mfp-close
 			top: 15px
 			left: 20px
 			position: absolute
+
+//фиксированная шапка
+
+.slideDownNav
+	position: fixed
+	top: 0
+	right: 0
+	left: 63px
+	z-index: 1000
+	width: 100%
+	padding-right: 30px
+	.top-cart
+		height: auto
+	.totall--debt
+		top: 27px
+		h5
+			margin-bottom: 10px
+		.totall--debt_row
+			margin-bottom: 3px
+		.totall--overdue_table
+	.topLine
+		z-index: 1 !important
+	.top-balance
+		margin-top: 4px
+		border-left: none !important
+		padding: 0
+		line-height: em(12px)
+		i
+			margin-top: 4px !important
+	.topLine
+		padding-top: 5px
+		padding-bottom: 5px
+		.top-cart
+			line-height: em(23px)
+			margin-top: 4px
+			a
+				line-height: em(12px)
+				display: inline-block
+				margin-top: -2px
+	.top-balance_curency
+		&::after
+			border: none
+	.top-balance_update
+		margin: 0 !important
+		height: 22px !important
+		width: 22px !important
+		i
+			font-size: em(10px) !important
+	.user_name
+		top: 41px
+.slideDownNav--fixed
+	.alert
+		position: fixed
+		top: 50px
+		width: 100%
+		z-index: 999
+		opacity: .9
+
+
 
 #selectvin
 	margin-top: 17px
@@ -1005,66 +1302,6 @@ button.mfp-close
 				background-color: #dd3737
 				color: #fff
 
-.history
-	display: table
-	width: 100%
-	.thead
-		font-family: 'OSB', sans-serif
-		.th
-			display: table-cell
-			border-collapse: collapse
-			float: left
-			display: table-cell
-			text-align: left
-			padding-left: 20px
-			line-height: 40px
-			color: #fff
-			background-color: #ababab
-			height: 40px
-			font-size: em(13px)
-			&:last-child
-				width: 40%
-			&:nth-child(1)
-				width: 30%
-			&:nth-child(2)
-				width: 20%
-			&:nth-child(3)
-				width: 10%
-				padding-left: 20px
-	.table_content
-		width: 100%
-		overflow-y: scroll
-		height: 300px
-	.tr
-		display: table
-		width: 100%
-		cursor: pointer
-		color: #666
-		&:nth-child(even)
-			background-color: #d2d2d2
-		&:last-child
-			box-shadow: inset 0 -20px 25px #d2d2d2
-		&:hover
-			background-color: #999
-			color: #fff
-			text-decoration: none
-		.td
-			display: table-cell
-			text-align: left
-			padding-left: 20px
-			font-size: em(13px)
-			line-height: 40px
-			&:nth-child(1)
-				width: 30%
-			&:nth-child(3)
-				width: 10%
-			&:nth-child(2)
-				color: #ec5b5f
-				width: 20%
-				text-decoration: underline
-			&:nth-child(3)
-				text-transform: uppercase
-				font-weight: bold
 
 
 .content
@@ -1418,7 +1655,11 @@ button.mfp-close
 	@include clearfix
 	span
 		margin-bottom: 15px
-
+.social_pages
+	.social_wrap
+		float: left
+		padding-right: 0 !important
+		left: 25px !important
 .copiright
 	.licence
 		text-align: center
@@ -1452,15 +1693,12 @@ button.mfp-close
 	padding-bottom: 22px
 	box-shadow: 0 -2px 2px rgba(0,0,0,.2)
 	position: relative
-	height: 140px
 	.datapicker-triangleLeft,
 	.datapicker-triangleRight
-		@include triangle(15px 12px, #b2b2b2, up)
+		@include triangle(15px 12px, #b2b2b2, down)
 		bottom: 12px
 		position: absolute
 		cursor: pointer
-		&:hover
-			@include triangle(15px 12px, gray, up)
 	.datapicker-triangleRight
 		right: 30px
 	.datapicker-triangleLeft
@@ -1555,7 +1793,8 @@ button.mfp-close
 	color: #666666
 	&:active
 		background-color: lighten(#d2d2d2, 10%)
-
+.rotate
+	transform: rotate(180deg)
 
 //лист заказов страница заказов		user_cabinet_orders_list
 
@@ -1617,6 +1856,61 @@ button.mfp-close
 	.gray_btn
 		float: left
 //конец стили модального окна
+
+.hamburger
+	margin: 0 !important
+.hamburger
+	top: 3px
+	left: 7px
+	>
+		div
+			width: 20px
+			height: 3px
+			background: #959595
+			margin: 4px 0
+			transition: .5s transform
+			top: 3px
+			&:nth-child(2)
+				transition: 10s left
+		.arrow
+			&:first-child
+				position: relative
+				top: 3px
+				left: 5px
+				width: 12px
+				transform: rotate(40deg)
+				border-radius: 3px
+			&:nth-child(3)
+				position: relative
+				top: -3px
+				left: 5px
+				width: 12px
+				transform: rotate(-40deg)
+				border-radius: 3px
+			&:nth-child(2)
+				position: relative
+				left: -3px
+				top: 0px
+				position: relative
+				border-radius: 3px
+	position: relative
+	display: inline-block
+	cursor: pointer
+	margin-top: 4px
+	margin-left: 4px
+	transition: .5s transform
+	&.rotate
+		transform: rotate(180deg)
+
+
+
+
+
+
+
+
+
+
 
 .modal-infoAboutProduct
 	min-height: 95% !important
@@ -1722,12 +2016,12 @@ button.mfp-close
 	background-color: #ecdeff !important
 .orders-removeStatus
 	background-color: #d2d2d2 !important
-
 .orders-tableLg
 	border: 1px solid gray
 	margin-right: 0
 	margin-left: 0
-	margin-bottom: 15px
+	overflow: hidden
+	margin-bottom: 7px
 	box-shadow: 0 2px 2px rgba(0,0,0,.3)
 	.row
 		margin-right: 0
@@ -1774,7 +2068,7 @@ button.mfp-close
 	.orders-tableLg_content
 		padding: 5px 10px
 		text-align: left
-		height: 83px
+		height: 65px
 		word-wrap: break-word
 		overflow-wrap: break-word
 		.orders-tableLg_content-top
@@ -1788,7 +2082,6 @@ button.mfp-close
 					text-decoration: none
 		.orders-tableLg_content-bottom
 			left: -10px
-			bottom: -5px
 			position: relative
 			@include calc(width, "100% + 20px")
 			display: inline-block
@@ -1797,13 +2090,13 @@ button.mfp-close
 				&:first-child
 					text-transform: uppercase
 					font-family: 'osb', sans-serif
-					font-size: em(9px)
+					font-size: em(8px)
 				&:last-child
 					display: inline-block
 					width: 100%
 					text-transform: uppercase
 					color: $red
-					font-size: em(13px)
+					font-size: em(10px)
 					text-decoration: underline
 					font-family: 'osb', sans-serif
 					position: relative
@@ -1818,14 +2111,28 @@ button.mfp-close
 		word-wrap: break-word
 		overflow-wrap: break-word
 		padding: 5px
+		padding-right: 27px
 		a
 			display: inline-block
 			width: 100%
 			font-family: 'osb', sans-serif
 			font-size: em(12px)
+			&:nth-last-child(1)
+				display: block
+				border: 1px solid lightgray
+				width: 20px
+				height: 20px
+				background-color: #fff
+				color: gray
+				text-align: center
+				line-height: 18px
+				position: absolute
+				right: 5px
+				bottom: 14px
 		span
 			display: inline-block
-			line-height: em(14px)
+			line-height: em(12px)
+			font-size: em(10px)
 	.orders-tableLg_content-name
 		a
 			text-transform: uppercase
@@ -1849,6 +2156,8 @@ button.mfp-close
 				color: #000
 	.orders-tableLg_content-arr
 		text-align: center
+		span
+			display: block
 	.orders-tableLg_content-order
 		span
 			font-family: 'osb', sans-serif
@@ -1864,8 +2173,8 @@ button.mfp-close
 			font-size: em(10px)
 		i
 			position: absolute
-			right: 10px
-			bottom: 10px
+			right: 5px
+			bottom: 5px
 			color: gray
 			&:hover
 				color: #000
@@ -1913,9 +2222,21 @@ button.mfp-close
 			.orders-tableLg-title
 				background-color: #ccc
 				color: #666
-
 .generalCheckBox
 	opacity: 1
+
+
+.datapicker_orderlist-filterblock
+	display: none
+.datapicker_orderlist--uncolapse
+	position: absolute
+	bottom: 0px
+	padding-bottom: 5px
+	width: 100%
+	text-align: center
+	cursor: pointer
+	color: gray
+	background-color: #eaeaea
 .orders_list
 	padding: 25px 15px 20px 15px
 	.orders_list-wrapControl
@@ -2085,7 +2406,6 @@ button.mfp-close
 									border-right: 1px solid lightgray
 					&:first-child
 						display: block
-
 .info-table
 	margin-bottom: 15px
 	.table
@@ -2123,9 +2443,6 @@ button.mfp-close
 		font-size: em(10px)
 	.content-info
 		padding: 5px
-
-
-
 .orders_list_changes_wrap
 	background-color: #d2d2d2
 	margin-top: 25px
@@ -2174,9 +2491,6 @@ button.mfp-close
 			&:hover
 				button
 					background-color: #fff
-
-
-
 .orders_list_changes_wrap_r
 	float: right
 	color: #a7a7a7
@@ -2191,9 +2505,17 @@ button.mfp-close
 		&:focus, &:active
 			border-color: #50b74e
 			box-shadow: inset 0 0 2px rgba(80,183,78,.5)
-
-
+.orders-table_saveToExel
+	float: left
+	padding: 5px 10px !important
+	margin-left: 15px
+	i
+		font-size: em(16px)
+		position: relative
+		top: 3px
+		margin-right: 8px
 ///////////////////////////////
+
 .pading_plas
 	padding-left: 15px
 	padding-right: 15px
@@ -2248,6 +2570,8 @@ button.mfp-close
 			height: 18px
 		.inner_wrap
 			padding: 15px
+			padding-left: 5px
+			padding-right: 5px
 
 	.status_of_delivery
 		.status_of_delivery_title
@@ -2662,7 +2986,6 @@ button.mfp-close
 	padding: 7px 5px
 	background-color: #d2d2d2
 	border: 1px solid #959595
-	margin-top: 15px
 	span
 		float: right
 		display: inline-block
@@ -2825,12 +3148,12 @@ input
 
 .orders_list h2
 	font-size: em(17px)
+	margin-bottom: 0
 // стили мобильноо меню
 .mob_mnu_left
 	height: 100% !important
 	overflow: auto
 	left: 0
-	z-index: 0
 	position: absolute
 	background-color: #8d8d8d
 	text-align: center
@@ -3082,7 +3405,7 @@ input
 	.content__item_toll
 		padding: 15px
 		background-color: #eaeaea
-		height: 450px
+		height: 451px
 		box-shadow: 0 3px 2px rgba(0,0,0,.3)
 		color: #4d4d4d
 		.wrapper_icon_and_h2
@@ -3202,6 +3525,24 @@ input
 ////стили страницы импорта заказов////
 //////////////////////////////////////
 
+.orders-tableLgcontent_cancell
+	display: inline-block
+	margin-top: 5px
+	button
+		height: 20px
+		line-height: 0px
+		display: block
+		padding: 0
+		width: 20px
+		i
+			font-size: em(10px)
+	input
+		width: 35px
+		text-align: center
+		height: 20px
+		margin: 0
+		display: block
+		float: left
 .acceptedcheckbox
 	background-color: #50b74e !important
 
@@ -3380,8 +3721,8 @@ input
 		color: #4d4d4d
 		text-transform: uppercase
 		h3
-			margin-top: 40px
-			margin-bottom: 30px
+			margin-top: 15px
+			margin-bottom: 10px
 			font-size: 1.41667em
 			color: #4d4d4d
 	.table_stock_selection
@@ -3448,6 +3789,8 @@ input
 .green_btn
 	line-height: 1em
 	font-size: 1.08333em
+	&:focus
+		color: #fff !important
 
 .search_goods
 	.green_btn, button
@@ -3545,8 +3888,9 @@ input
 	h3
 		text-transform: uppercase
 		color: #4d4d4d
-		margin-top: 0
 		font-size: 1.5em
+		margin: 0
+		line-height: em(14px)
 	button
 		margin-right: 20px
 
@@ -3600,7 +3944,8 @@ input
 		background-color: $activeg
 
 .table_search_goods_result
-	border: 1px solid #8d8d8d
+	border: 1px solid #b2b2b2
+	border-top: none
 	margin-left: 15px
 	margin-right: 15px
 	.availability .title
@@ -3615,29 +3960,9 @@ input
 	.brand
 		.title
 			padding-top: 7px !important
-			input
-				position: absolute
-				left: 2px
-				top: 2px
-				opacity: 0
-				height: 20px
-				width: 20px
-			.checkbox
-				height: 16px
-				width: 16px
-				position: absolute
-				background-color: #fff
-				left: 4px
-				top: 4px
-				cursor: pointer
-				.inner
-					height: 10px
-					width: 10px
-					left: 3px
-					top: 3px
-					position: absolute
+			padding-left: 15px
 		.content
-			padding: 30px 0 5px 15px
+			padding: 10px 0 5px 10px
 			position: relative
 	.descr .title, .price .title, .quantity_ .title
 		padding-top: 7px !important
@@ -3681,7 +4006,7 @@ input
 		h4
 			font-family: OSR,sans-serif
 			font-size: 1.08333em
-			margin-top: 30px
+			margin-top: 10px
 		p
 			line-height: 15px
 			color: #999
@@ -3768,7 +4093,7 @@ input
 				padding: 5px
 				span, .alert-info
 					position: relative
-					top: 20px
+					top: 13px
 				.hidden_span
 					float: left
 					position: relative
@@ -3786,7 +4111,6 @@ input
 				.alert-info
 					color: #fbaf5d
 					font-size: em(14px)
-
 		.title
 			height: 25px
 			background-color: #666
@@ -3794,7 +4118,7 @@ input
 			font-size: .66667em
 			font-family: OSR,sans-serif
 			text-transform: uppercase
-			padding-left: 25px
+			padding-left: 5px
 			display: inline-block
 			vertical-align: middle
 			padding-top: 2px
@@ -3849,7 +4173,7 @@ input
 			background-color: #8d8d8d
 	.quantity_ .content
 		.bottom_cell, .top_cell
-			padding: 15px 10px !important
+			padding: 10px !important
 		font-size: 1.08333em
 		color: #333
 		.bottom_cell a i
@@ -4049,7 +4373,7 @@ input[type=checkbox]
 	padding: 12px 20px!important
 	height: 55px
 .import-repeatRow
-	height: 65px
+	height: 55px !important
 	margin: 0
 	.bottom_cell, .top_cell
 		height: 100% !important
@@ -4076,7 +4400,8 @@ input[type=checkbox]
 				position: relative
 				top: 5px
 				float: right
-
+.warhauseClaime-h2
+	margin-top: 0
 ///конец стилей страницы импорта заказов//
 
 
@@ -4186,7 +4511,6 @@ input[type=checkbox]
 					margin-top: 9px
 					color: #666
 					font-size: em(12px)
-
 		.descr
 			.content
 				span
@@ -4208,15 +4532,19 @@ input[type=checkbox]
 					font-size: em(13px)
 					font-family: 'OSB', sans-serif
 		.date_update
+			text-align: center
 			.title
-				padding-left: 15px
+				padding-left: 0px
+				padding-top: 7px
 			.content
 				text-align: center
 				span
-					display: inline-block
-					margin-top: 10px
+					display: inline
 					font-size: em(13px)
 					font-family: 'OSB', sans-serif
+					display: block
+					line-height: em(16px)
+
 		.fold
 			.title
 				padding-left: 15px
@@ -4311,739 +4639,772 @@ input[type=checkbox]
 ///////////////////////////////////////////////////////////////
 /////////////////Стили для страницы возвратов/////////////////
 ///////////////////////////////////////////////////////////////
+.returnes_remoteOnXs
+	margin-bottom: 20px
+	.returnesPage
+		float: right
+		height: 37px
+		padding: 5px
 .returnes-table_true
-  height: 20px
-  width: 20px
-  background-color: #6baf63
-  display: inline-block
-  line-height: 20px
-  color: #fff
-  -webkit-border-radius: 50%
-  border-radius: 50%
-
+	height: 20px
+	width: 20px
+	color: #6baf63 !important
+	display: inline-block
+	line-height: 20px
+	-webkit-border-radius: 50%
+	border-radius: 50%
+.wrapper_tabs-slideButton
+	border: 1px solid transparent
+	margin-top: 15px
 .returnes-wrapTable
-  margin-top: 0 !important
+	margin-top: 0 !important
 
 .breadcrumbs_bottom-row .breadcrumbs_bottom
-  left: 0 !important
+	left: 0 !important
 
 .alert_returnes .alert_returnes-close
-  height: 20px
-  width: 20px
-  position: absolute
-  top: 15px
-  right: 15px
-  cursor: pointer
-  &:before, &::after
-    position: absolute
-    content: ''
-    height: 2px
-    background-color: #6B9F6C
-    width: 70%
-    top: 10px
-    left: 5px
-  &::before
-    -webkit-transform: rotate(45deg)
-    -ms-transform: rotate(45deg)
-    transform: rotate(45deg)
-  &::after
-    -webkit-transform: rotate(-45deg)
-    -ms-transform: rotate(-45deg)
-    transform: rotate(-45deg)
+	height: 20px
+	width: 20px
+	position: absolute
+	top: 15px
+	right: 15px
+	cursor: pointer
+	&:before, &::after
+		position: absolute
+		content: ''
+		height: 2px
+		background-color: #6B9F6C
+		width: 70%
+		top: 10px
+		left: 5px
+	&::before
+		-webkit-transform: rotate(45deg)
+		-ms-transform: rotate(45deg)
+		transform: rotate(45deg)
+	&::after
+		-webkit-transform: rotate(-45deg)
+		-ms-transform: rotate(-45deg)
+		transform: rotate(-45deg)
 
 .wrapper_tabs-wrapRemote
-  right: 15px
-  top: -60px
-  width: 200px
-  position: absolute
-  float: right
-  z-index: 1
-  .wrapper_tabs-wrapRemote-file
-    width: 100%
-    margin-top: 20px
-  .wrapper_tabs-slideButton
-    float: left
-    border: 1px solid #b0b0b0
-    background-color: #e9e9e9
-    padding: 5px
-    -webkit-box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.1)
-    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.1)
-    button
-      -webkit-box-shadow: 1px 2px 0px gray
-      box-shadow: 1px 2px 0px gray
-      border: 1px solid #b2b2b2
-      &:active
-        background-color: #fff
-        -webkit-box-shadow: inset 1px 2px 0px gray
-        box-shadow: inset 1px 2px 0px gray
-    buttonfocus, .active
-      background-color: #fff
-      -webkit-box-shadow: inset 1px 2px 0px gray
-      box-shadow: inset 1px 2px 0px gray
-  select
-    float: right
-    height: 38px
-    font-size: 1.16667em
-    width: 65px
-    padding: 0 10px
-    border: 1px solid #a7a7a7
-    color: #a7a7a7
-    &:hover
-      border: 1px solid gray
-    &:focus, &:active
-      border: 1px solid #50b74e
-      -webkit-box-shadow: inset 0 0 2px #50b74e
-      box-shadow: inset 0 0 2px #50b74e
+	right: 15px
+	top: -60px
+	width: auto
+	position: absolute
+	float: right
+	z-index: 1
+	.wrapper_tabs-wrapRemote-file
+		width: auto
+		padding: 7px 10px
+		margin-right: 15px
+	.wrapper_tabs--inner
+		float: right
+		border: 1px solid #b0b0b0
+		background-color: #e9e9e9
+		padding: 5px
+		width: 71px
+		box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.1)
+		button
+			-webkit-box-shadow: 1px 2px 0px gray
+			box-shadow: 1px 2px 0px gray
+			border: 1px solid #b2b2b2
+			&:active
+				background-color: #fff
+				-webkit-box-shadow: inset 1px 2px 0px gray
+				box-shadow: inset 1px 2px 0px gray
+		buttonfocus, .active
+			background-color: #fff
+			-webkit-box-shadow: inset 1px 2px 0px gray
+			box-shadow: inset 1px 2px 0px gray
+	select
+		float: right
+		height: 38px
+		font-size: 1.16667em
+		width: 71px
+		padding: 0 10px
+		border: 1px solid #a7a7a7
+		color: #a7a7a7
+		&:hover
+			border: 1px solid gray
+		&:focus, &:active
+			border: 1px solid #50b74e
+			-webkit-box-shadow: inset 0 0 2px #50b74e
+			box-shadow: inset 0 0 2px #50b74e
 
 .returnes
-  margin-bottom: 30px
-  .orders_list
-    margin-top: 15px
-  .wrapper_tabs
-    .wrapper_tabs-wrap
-      float: right
-      display: none
-      button
-        color: #666
-        margin-left: 25px
-        position: relative
-        bottom: -5px
-      i
-        margin-right: 10px
-    .tab
-      cursor: pointer
-      font-family: 'OSB', sans-serif
-      font-size: 1.16667em
-      text-transform: uppercase
-      padding: 15px 50px
-      color: #d3d3d3
-      text-align: center
-      border: 1px solid #d3d3d3
-      position: relative
-      bottom: -4px
-      background-color: #fff
-      z-index: 2
-      &.active
-        background-color: #d2d2d2
-        color: #666
-    .tab_content
-      border-top: 4px solid #d3d3d3
-      .breadcrumbs_bottom
-        margin: 0
-        position: relative
-        left: -15px
-        margin-top: 30px
-      .tab_item
-        display: none
-        .wrap_table
-          margin-top: 30px
-        &:first-child
-          display: block
-    .returnes-table
-      border: 1px solid #e2e2e2
-      -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1)
-      box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1)
-      margin-bottom: 10px
-      .returnes-table_title, .returnes-table_titleL
-        padding-left: 15px
-        height: 17px
-        background-color: #666
-        border-bottom: 1px solid #8d8d8d
-        color: #fff
-        font-family: 'osb', sans-serif
-        font-size: 0.75em
-        line-height: 16px
-        text-transform: uppercase
-      .returnes-table_title .floatRight, .returnes-table_titleL .floatRight
-        float: right
-        padding-right: 15px
-      .returnes-table_title .returnes-table_triangle, .returnes-table_titleL .returnes-table_triangle
-        height: 0
-        width: 0
-        border-left: 5px solid transparent
-        border-right: 5px solid transparent
-        border-top: 9px solid #fff
-        float: left
-        position: absolute
-        top: 4px
-        left: 3px
-        cursor: pointer
-      .returnes-table_shortcontent
-        overflow: hidden
-        word-wrap: break-word
-        overflow-wrap: break-word
-        height: 44px
-        padding: 5px 15px
-        font-size: 1em
-        font-family: 'osr', sans-serif
-        a
-          font-family: 'osb', sans-serif
-          color: #3366cc
-          font-size: 1.16667em
-        i
-          float: right
-          position: relative
-          top: 5px
-          color: #333
-        .returnes-table_shortcontent-price-i
-          top: 3px
-          position: relative
-          &:hover i
-            color: #666
-        .returnes-table_shortcontent-comment
-          line-height: 12px
-          display: inline-block
-          font-style: italic
-          font-size: 0.91667em
-          color: #3366cc
-          text-decoration: underline
-          font-family: 'osr', sans-serif
-          cursor: pointer
-        .returnes-table_shortcontent-price
-          font-size: 1.33333em
-          font-family: 'osb', sans-serif
-          color: #323232
-      .returnes-table_shortcontent-status
-        padding: 5px 10px
-        line-height: 1.08333em
-        word-wrap: break-word
-        overflow-wrap: break-word
-        a
-          position: absolute
-          top: 20px
-          right: 5px
-          i
-            font-size: 0.83333em
+	margin-bottom: 30px
+	.orders_list
+		margin-top: 15px
+	.wrapper_tabs
+		.wrapper_tabs-wrap
+			float: right
+			display: none
+			button
+				color: #666
+				margin-left: 25px
+				position: relative
+				bottom: -5px
+			i
+				margin-right: 10px
+		.tab
+			cursor: pointer
+			font-family: 'OSB', sans-serif
+			font-size: 1.16667em
+			text-transform: uppercase
+			padding: 15px 50px
+			color: #d3d3d3
+			text-align: center
+			border: 1px solid #d3d3d3
+			position: relative
+			bottom: -4px
+			background-color: #fff
+			z-index: 2
+			&.active
+				background-color: #d2d2d2
+				color: #666
+		.tab_content
+			border-top: 4px solid #d3d3d3
+			.breadcrumbs_bottom
+				margin: 0
+				position: relative
+				left: -15px
+				margin-top: 30px
+			.tab_item
+				display: none
+				.wrap_table
+					margin-top: 30px
+				&:first-child
+					display: block
+		.returnes-table
+			border: 1px solid #e2e2e2
+			-webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1)
+			box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1)
+			margin-bottom: 10px
+			.returnes-table_title, .returnes-table_titleL
+				padding-left: 15px
+				height: 17px
+				background-color: #666
+				border-bottom: 1px solid #8d8d8d
+				color: #fff
+				font-family: 'osb', sans-serif
+				font-size: 0.75em
+				line-height: 16px
+				text-transform: uppercase
+			.returnes-table_titleL
+				padding-left: 5px
+			.returnes-table_title .floatRight, .returnes-table_titleL .floatRight
+				float: right
+				padding-right: 5px
+			.returnes-table_title .returnes-table_triangle, .returnes-table_titleL .returnes-table_triangle
+				height: 0
+				width: 0
+				border-left: 5px solid transparent
+				border-right: 5px solid transparent
+				border-top: 9px solid #fff
+				float: left
+				position: absolute
+				top: 4px
+				left: 3px
+				cursor: pointer
+			.returnes-table_shortcontent
+				overflow: hidden
+				word-wrap: break-word
+				overflow-wrap: break-word
+				height: 44px
+				padding: 5px
+				font-size: 1em
+				font-family: 'osr', sans-serif
+				a
+					font-family: 'osb', sans-serif
+					color: #3366cc
+					font-size: 1.16667em
+				i
+					float: right
+					position: relative
+					top: 5px
+					color: #333
+				.returnes-table_shortcontent-price-i
+					top: 3px
+					position: relative
+					&:hover i
+						color: #666
+				.returnes-table_shortcontent-comment
+					line-height: 12px
+					display: inline-block
+					font-style: italic
+					font-size: 0.91667em
+					color: #3366cc
+					text-decoration: underline
+					font-family: 'osr', sans-serif
+					cursor: pointer
+				.returnes-table_shortcontent-price
+					font-size: 1.33333em
+					font-family: 'osb', sans-serif
+					color: #323232
+			.returnes-table_shortcontent-status
+				padding: 5px 10px
+				line-height: 1.08333em
+				word-wrap: break-word
+				overflow-wrap: break-word
+				a
+					position: absolute
+					top: 20px
+					right: 5px
+					i
+						font-size: 0.83333em
 
 .table_returnes
-  height: 80px
-  border: 1px solid #8d8d8d
-  margin-bottom: 15px
-  overflow: hidden
-  .title
-    background-color: #666666
-    color: #fff
-    font-size: 0.83333em
-    font-family: 'OSB', sans-serif
-    padding-left: 15px
-    text-transform: uppercase
-  .text_comments
-    word-wrap: break-word
-    overflow-wrap: break-word
-    overflow: hidden
-    a
-      font-style: italic
-      font-size: 0.83333em !important
-      font-family: 'osr', sans-serif !important
-      margin-left: 0 !important
-  .content
-    height: 52px
-    padding: 10px 15px
-    color: #666
-    position: relative
-    word-wrap: break-word
-    overflow-wrap: break-word
-    .gray_btn
-      padding: 4px
-      span
-        font-family: 'osr', sans-serif
-        text-transform: none
-      i
-        color: #888
-    .trash
-      padding: 4px 10px
-      float: right
-      margin-right: 15px
-    .over, input
-      -webkit-border-radius: 0
-      border-radius: 0
-      left: 15px
-      top: 15px
-    .over .inner
-      -webkit-border-radius: 0
-      border-radius: 0
-    input
-      .inner
-        -webkit-border-radius: 0
-        border-radius: 0
-      opacity: 0
-      z-index: 2
-      position: absolute
-    span
-      font-family: 'osb', sans-serif
-      text-transform: uppercase
-      font-size: 1em
-    p
-      font-family: 'osr', sans-serif
-      font-size: 0.91667em
-      margin: 0
-      line-height: 0.91667em
-    a
-      color: #3366cc
-      font-family: 'osb', sans-serif
-      font-size: 1.25em
-      text-decoration: underline
-      &:hover
-        text-decoration: none
-        &:focus, &:active
-          color: #dd3737
+	height: 80px
+	border: 1px solid #8d8d8d
+	margin-bottom: 15px
+	overflow: hidden
+	.title
+		background-color: #666666
+		color: #fff
+		font-size: 0.83333em
+		font-family: 'OSB', sans-serif
+		padding-left: 15px
+		text-transform: uppercase
+	.text_comments
+		word-wrap: break-word
+		overflow-wrap: break-word
+		overflow: hidden
+		a
+			font-style: italic
+			font-size: 0.83333em !important
+			font-family: 'osr', sans-serif !important
+			margin-left: 0 !important
+	.content
+		height: 52px
+		padding: 10px 15px
+		color: #666
+		position: relative
+		word-wrap: break-word
+		overflow-wrap: break-word
+		.gray_btn
+			padding: 4px
+			span
+				font-family: 'osr', sans-serif
+				text-transform: none
+			i
+				color: #888
+		.trash
+			padding: 4px 10px
+			float: right
+			margin-right: 15px
+		.over, input
+			-webkit-border-radius: 0
+			border-radius: 0
+			left: 15px
+			top: 15px
+		.over .inner
+			-webkit-border-radius: 0
+			border-radius: 0
+		input
+			.inner
+				-webkit-border-radius: 0
+				border-radius: 0
+			opacity: 0
+			z-index: 2
+			position: absolute
+		span
+			font-family: 'osb', sans-serif
+			text-transform: uppercase
+			font-size: 1em
+		p
+			font-family: 'osr', sans-serif
+			font-size: 0.91667em
+			margin: 0
+			line-height: 0.91667em
+		a
+			color: #3366cc
+			font-family: 'osb', sans-serif
+			font-size: 1.25em
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+				&:focus, &:active
+					color: #dd3737
 
 .returnes .wrapper_tabs .returnes-table
-  .row
-    margin-left: 0
-    margin-right: 0
-  .returnes-table_title
-    .returnes-table_title-triangleR, .returnes-table_title-triangle
-      height: 0
-      width: 0
-      border-left: 5.5px solid transparent
-      border-right: 5.5px solid transparent
-      border-top: 9px solid #fff
-      position: absolute
-      right: 3px
-      top: 4px
-      cursor: pointer
-  .returnes-table_content
-    word-wrap: break-word
-    overflow-wrap: break-word
-    padding: 10px
-    height: 80px
-    a
-      color: #3366cc
-      font-family: 'osb', sans-serif
-      text-decoration: underline
-      margin-bottom: 5px
-      display: inline-block
-      &:hover
-        text-decoration: none
-    span
-      font-family: 'osr',sans-serif
-      font-size: 1em
-      display: inline-block
-      line-height: 14px
-      text-align: left
-    .left
-      width: 50%
-      float: left
-      padding: 0 0
-    .right
-      width: 50%
-      float: left
-      padding: 0 0
-      span
-        font-size: 0.83333em
-        margin-top: 5px
-        font-style: italic
-        line-height: 14px
-        display: inline-block
-        font-family: 'osr', sans-serif
-        text-decoration: underline
-    .left div
-      margin: 0
-      position: relative
-      left: -10px
-      top: -10px
-      display: block
-      width: 100%
-      span, a
-        display: inline-block
-        padding: 5px 0 0 15px
-        text-transform: uppercase
-        font-family: 'osb', sans-serif
-      span
-        font-size: 0.83333em
-      a
-        font-size: 1.16667em
-        color: #dd3737
-        padding-top: 0
-        padding-bottom: 5px
-  .returnes-table_content-names
-    padding: 5px
-    overflow: hidden
-    word-wrap: break-word
-    overflow-wrap: break-word
-    a
-      text-transform: uppercase
-      font-size: 0.83333em
-      word-wrap: break-word
-      overflow-wrap: break-word
-  .returnes-table_titleL
-    background-color: #ccc
-    border-bottom: none
-    color: #333
-    font-family: 'osr', sans-serif
-    i
-      margin-left: 45%
-  .returnes-table_content-exch
-    text-align: center
-  .returnes-table_content-status
-    span
-      margin-right: 10px
-    a
-      float: right
-    i
-      color: #363636
-      float: right
-      position: relative
-      top: 3px
-  .returnes-table_content-comment
-    a
-      font-size: 0.91667em
-      font-family: 'osr', sans-serif
-      font-style: italic
-      line-height: 1em
-    button
-      width: 100%
-      padding: 5px 3px
-      font-size: 0.83333em
-      text-transform: none
-  .returnes-table_content-summ
-    span
-      display: block
-    .tottal
-      font-size: 1.25em
-      font-family: 'osb', sans-serif
-      float: left
-      margin-right: 5px
-    .currency
-      font-size: 1.25em
-      font-family: 'osb', sans-serif
-      float: left
-      margin-right: 5px
-      float: none
-    .docs
-      margin-top: 10px
-      float: left
-      margin-right: 10px
-    a
-      i
-        margin-top: 10px
-        color: #4b4b4b
-      &:hover i
-        color: gray
-  .returnes-table_single
-    .returnes-table_title
-      padding-left: 10px
-      &:first-child
-        padding-left: 15px
-    .returnes-table_content
-      height: 100px
-      .docs
-        font-size: 1em !important
-      .left
-        .left-articul
-          font-size: 1.25em
-          line-height: 20px
-          text-decoration: none
-          width: 100%
-          height: 27px
-          position: relative
-          top: -5px
-          &:hover
-            text-decoration: underline
-        div
-          top: 4px
-    .returnes-table_content-status i
-      position: absolute !important
-      top: 20px !important
-      right: 5px !important
-    .returnes-table_content-delivery span
-      display: block
-      &:first-child
-        margin-bottom: 13px
-      &:nth-child(2)
-        font-family: 'osb', sans-serif
-        text-transform: uppercase
-        margin-bottom: 6px
-        font-size: 0.83333em
-    .returnes-table_title-exch
-      text-align: center
-    .returnes-table_title
-      .returnes-table_title-triangleL
-        height: 0
-        width: 0
-        border-left: 5.5px solid transparent
-        border-right: 5.5px solid transparent
-        border-top: 9px solid #fff
-        cursor: pointer !important
-        position: absolute
-        left: 2px
-        top: 4px
-        cursor: pointer
-      .returnes-table_title-triangleR
-        height: 0
-        width: 0
-        border-left: 5.5px solid transparent
-        border-right: 5.5px solid transparent
-        border-top: 9px solid #fff
-        cursor: pointer !important
-        position: absolute
-        left: 2px
-        top: 4px
-        cursor: pointer
-        right: 3px
-        left: auto
-        cursor: pointer !important
-      span:nth-child(2)
-        margin-left: 7px
-    .returnes-table_content-summ
-      font-size: 1em
-      color: #323232
-      .docs
-        font-size: 0.83333em
-    .returnes-table_single-warehouse .returnes-table_content
-      padding-left: 15px
-      .left div
-        left: -15px
-        top: 2px
-
+	.row
+		margin-left: 0
+		margin-right: 0
+	.returnes-table_title
+		.returnes-table_title-triangleR, .returnes-table_title-triangle
+			height: 0
+			width: 0
+			border-left: 5.5px solid transparent
+			border-right: 5.5px solid transparent
+			border-top: 9px solid #fff
+			position: absolute
+			right: 3px
+			top: 4px
+			cursor: pointer
+	.returnes-table_content
+		word-wrap: break-word
+		padding: 5px
+		height: 70px
+		a
+			color: #3366cc
+			font-family: 'osb', sans-serif
+			text-decoration: underline
+			display: inline-block
+			&:hover
+				text-decoration: none
+		span
+			font-family: 'osr',sans-serif
+			font-size: 1em
+			display: inline-block
+			line-height: 14px
+			text-align: left
+		.left
+			width: 50%
+			float: left
+			padding: 0 0
+			word-break: break-all
+		.right
+			width: 50%
+			float: left
+			padding: 0 0
+			span
+				font-size: 0.83333em
+				font-style: italic
+				line-height: 14px
+				display: inline-block
+				font-family: 'osr', sans-serif
+				text-decoration: underline
+		.left div
+			margin: 0
+			position: relative
+			left: -5px
+			top: -5px
+			display: block
+			width: 100%
+			span, a
+				display: inline-block
+				text-transform: uppercase
+				font-family: 'osb', sans-serif
+				padding-left: 5px
+				padding-right: 5px
+			span
+				font-size: 0.83333em
+			a
+				font-size: em(10px)
+				color: #dd3737
+				padding-top: 0
+				padding-bottom: 5px
+				display: block
+				line-height: em(16px)
+	.returnes-table_content-names
+		padding: 5px
+		overflow: hidden
+		word-wrap: break-word
+		overflow-wrap: break-word
+		a
+			text-transform: uppercase
+			font-size: 0.83333em
+			word-wrap: break-word
+			overflow-wrap: break-word
+	.returnes-table_titleL
+		background-color: #ccc
+		border-bottom: none
+		color: #333
+		font-family: 'osr', sans-serif
+		i
+			margin-left: 45%
+	.returnes-table_content-exch
+		text-align: center
+	.returnes-table_content-status
+		span
+			margin-right: 10px
+		a
+			float: right
+		i
+			color: #363636
+			float: right
+			position: relative
+			top: 3px
+	.returnes-table_content-summ
+		span
+			display: block
+		.tottal
+			font-size: 1.25em
+			font-family: 'osb', sans-serif
+			float: left
+			margin-right: 5px
+		.currency
+			font-size: 1.25em
+			font-family: 'osb', sans-serif
+			float: left
+			margin-right: 5px
+			float: none
+		.docs
+			margin-top: 10px
+			float: left
+			margin-right: 10px
+		a
+			i
+				margin-top: 10px
+				color: #4b4b4b
+			&:hover i
+				color: gray
+	.returnes-table_single
+		.returnes-table_title
+			padding-left: 5px
+		.returnes-table_content
+			height: 75px
+			.docs
+				font-size: 1em !important
+			.left
+				.left-articul
+					font-size: 1.25em
+					line-height: 20px
+					text-decoration: none
+					width: 100%
+					height: 27px
+					position: relative
+					top: -5px
+					&:hover
+						text-decoration: underline
+				div
+					top: 4px
+		.returnes-table_content-status i
+			position: absolute !important
+			top: 20px !important
+			right: 5px !important
+		.returnes-table_content-delivery span
+			display: block
+			&:first-child
+				margin-bottom: 13px
+			&:nth-child(2)
+				font-family: 'osb', sans-serif
+				text-transform: uppercase
+				font-size: 0.83333em
+		.returnes-table_title-exch
+			text-align: center
+		.returnes-table_title
+			.returnes-table_title-triangleL
+				height: 0
+				width: 0
+				border-left: 5.5px solid transparent
+				border-right: 5.5px solid transparent
+				border-top: 9px solid #fff
+				cursor: pointer !important
+				position: absolute
+				left: 2px
+				top: 4px
+				cursor: pointer
+			.returnes-table_title-triangleR
+				height: 0
+				width: 0
+				border-left: 5.5px solid transparent
+				border-right: 5.5px solid transparent
+				border-top: 9px solid #fff
+				cursor: pointer !important
+				position: absolute
+				left: 2px
+				top: 4px
+				cursor: pointer
+				right: 3px
+				left: auto
+				cursor: pointer !important
+			span:nth-child(2)
+				margin-left: 7px
+		.returnes-table_content-summ
+			font-size: 1em
+			color: #323232
+			.docs
+				font-size: 0.83333em
+		.returnes-table_single-warehouse
+			.returnes-table_content
+				padding-left: 15px
+				.left div
+					left: -15px
+					top: 2px
+.returnes-table_warehouse
+	float: right
+	margin-top: 17px
+	span
+		&:last-child
+			border: 1px solid lightgray
+			height: 20px
+			width: 20px
+		&:first-child
+			position: relative
+			top: -8px
+			margin-right: 5px
+.status-Minsk
+	background-color: #86fe83
+.status-Podolsk
+	background-color: #fbda89
+.status-Astana
+	background-color: #e49dfb
+.status-Ect
+	background-color: #bbc2fd
+.returnes-table_content-comment
+	text-align: center
+	a
+		font-size: 0.91667em
+		font-style: italic
+		line-height: 1em
+		font-family: 'osr', sans-serif !important
+		text-align: left
+	button
+		padding: 5px 3px
+		font-size: 0.83333em
+		text-transform: none
+		margin-left: auto
+		margin-right: auto
+		position: relative
+		margin-top: 14px
 .returnes-popUpgoods
-  display: none
-  position: fixed
-  height: 100%
-  width: 100%
-  background-color: rgba(0, 0, 0, 0.3)
-  top: 0
-  left: 0
-  z-index: 300
-  width: auto
-  background-color: #fff
-  padding-top: 5px
-  float: right
-  position: absolute
-  left: 20px
-  bottom: 20px
-  right: 20px
-  .returnes-popUpgoods_cancell
-    float: left
-    padding-left: 20px
-    padding-right: 20px
-  .red_btn
-    float: right
-    padding-left: 20px
-    padding-right: 20px
-    h2
-      margin-top: 0
-      text-transform: uppercase
-    input
-      width: 58%
-      border: 1px solid #ccc
-      padding: 5px 10px
-      float: left
-      margin-right: 2%
-    label
-      width: 20%
-      float: left
-      position: relative
-      top: 5px
-    button
-      padding: 5px
-  input
-    border: 1px solid lightgray
-    opacity: 1
-    text-align: center
-  select
-    width: 100%
-    padding: 6px 10px
-    position: relative
-    top: 5px
+	display: none
+	position: fixed
+	height: 100%
+	width: 100%
+	background-color: rgba(0, 0, 0, 0.3)
+	top: 0
+	left: 0
+	z-index: 300
+	width: auto
+	background-color: #fff
+	padding-top: 5px
+	float: right
+	position: absolute
+	left: 20px
+	bottom: 20px
+	right: 20px
+	.returnes-popUpgoods_cancell
+		float: left
+		padding-left: 20px
+		padding-right: 20px
+	.red_btn
+		float: right
+		padding-left: 20px
+		padding-right: 20px
+		h2
+			margin-top: 0
+			text-transform: uppercase
+		input
+			width: 58%
+			border: 1px solid #ccc
+			padding: 5px 10px
+			float: left
+			margin-right: 2%
+		label
+			width: 20%
+			float: left
+			position: relative
+			top: 5px
+		button
+			padding: 5px
+	input
+		border: 1px solid lightgray
+		opacity: 1
+		text-align: center
+	select
+		width: 100%
+		padding: 6px 10px
+		position: relative
+		top: 5px
 
 .lightyellow-status
-  background-color: #fffdd7
+	background-color: #fffdd7
 
 .lightblue-status
-  background-color: #d7fef9
+	background-color: #d7fef9
 
 .marine-status
-  background-color: #deffea
+	background-color: #deffea
 
 .TTN
-  margin-top: 45px
-  button
-    width: 100%
-  p
-    display: inline-block
-    float: right
-    font-size: 1.08333em
-    font-family: 'OSR', sans-serif
-    color: #b2b2b2
-    margin-top: 0px
-  .returnesAddGoods
-    display: inline-block
-    i
-      position: relative
-      top: 2px
-      margin-right: 5px
+	margin-top: 45px
+	button
+		width: 100%
+	p
+		display: inline-block
+		float: right
+		font-size: 1.08333em
+		font-family: 'OSR', sans-serif
+		color: #b2b2b2
+		margin-top: 0px
+	.returnesAddGoods
+		display: inline-block
+		i
+			position: relative
+			top: 2px
+			margin-right: 5px
 
 .dataForReturnesTtn
-  display: block
-  &:hover, &:focus, &:active
-    color: inherit
-    text-decoration: none
+	display: block
+	&:hover, &:focus, &:active
+		color: inherit
+		text-decoration: none
 
 .data_for_returne_ttn form
-  left: 0
-  right: 0
-  top: 0
-  bottom: 0
-  background-color: #fff
-  margin: auto
-  h2
-    font-size: 1.5em
-    font-family: 'OSB', sans-serif
-    text-transform: uppercase
-  span
-    font-family: 'OSB', sans-serif
-    font-size: 1.16667em
-    margin-bottom: 10px
-    display: inline-block
-  select
-    width: 100%
-    padding: 5px 10px
-  .refresh_data
-    width: 100%
-    .refresh_data-date
-      float: left
-      margin-top: 5px
-      span
-        font-family: 'OSR', sans-serif
-        font-size: 1.16667em
-        line-height: 40px
-        &:last-child
-          margin-left: 10px
-          color: #2c94d1
-          font-family: 'OSB', sans-serif
-  .table
-    margin-top: 20px
-    border: 1px solid #d9d9d9
-    .tablerow
-      width: 100%
-      position: relative
-      padding: 0
-      border-bottom: 1px solid #d9d9d9
-      &:last-child
-        border-bottom: none
-      .td
-        width: 50%
-        float: left
-        padding: 5px 10px
-        &:first-child
-          background-color: #f5f5f5
-          border-right: 1px solid #d9d9d9
-  .closePopUpReturnesePage
-    position: absolute
-    top: 0px
-    right: 0
-    background: #dd3737
-    width: 30px
-    height: 30px
-    padding: 1px
-    cursor: pointer
-    span
-      height: 2px
-      background-color: #fff
-      -webkit-transform: rotate(45deg)
-      -ms-transform: rotate(45deg)
-      transform: rotate(45deg)
-      width: 100%
-      display: block
-      position: relative
-      top: 12px
-      &::after
-        position: absolute
-        content: ''
-        height: 2px
-        -webkit-transform: rotate(90deg)
-        -ms-transform: rotate(90deg)
-        transform: rotate(90deg)
-        display: block
-        width: 100%
-        background-color: #fff
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	background-color: #fff
+	margin: auto
+	h2
+		font-size: 1.5em
+		font-family: 'OSB', sans-serif
+		text-transform: uppercase
+	span
+		font-family: 'OSB', sans-serif
+		font-size: 1.16667em
+		margin-bottom: 10px
+		display: inline-block
+	select
+		width: 100%
+		padding: 5px 10px
+	.refresh_data
+		width: 100%
+		.refresh_data-date
+			float: left
+			margin-top: 5px
+			span
+				font-family: 'OSR', sans-serif
+				font-size: 1.16667em
+				line-height: 40px
+				&:last-child
+					margin-left: 10px
+					color: #2c94d1
+					font-family: 'OSB', sans-serif
+	.table
+		margin-top: 20px
+		border: 1px solid #d9d9d9
+		.tablerow
+			width: 100%
+			position: relative
+			padding: 0
+			border-bottom: 1px solid #d9d9d9
+			&:last-child
+				border-bottom: none
+			.td
+				width: 50%
+				float: left
+				padding: 5px 10px
+				&:first-child
+					background-color: #f5f5f5
+					border-right: 1px solid #d9d9d9
+	.closePopUpReturnesePage
+		position: absolute
+		top: 0px
+		right: 0
+		background: #dd3737
+		width: 30px
+		height: 30px
+		padding: 1px
+		cursor: pointer
+		span
+			height: 2px
+			background-color: #fff
+			-webkit-transform: rotate(45deg)
+			-ms-transform: rotate(45deg)
+			transform: rotate(45deg)
+			width: 100%
+			display: block
+			position: relative
+			top: 12px
+			&::after
+				position: absolute
+				content: ''
+				height: 2px
+				-webkit-transform: rotate(90deg)
+				-ms-transform: rotate(90deg)
+				transform: rotate(90deg)
+				display: block
+				width: 100%
+				background-color: #fff
 
 .lightgeen-status
-  background-color: #e8ffcb
+	background-color: #e8ffcb
 
 #modal-addGoods
-  form
-    margin-bottom: 20px
-    span
-      font-family: 'osb', sans-serif !important
-      display: block
-      text-transform: uppercase
-    button, input
-      padding: 5px 10px
-  .table_returnes input
-    padding: 5px 10px
-    width: 100px
-    position: static
-    text-align: center
-    color: #333
-    opacity: 1
-  .row
-    margin: 0
-  .table_returnes
-    height: auto
-    margin-bottom: 10px
-    select
-      width: 100%
-      padding: 5px 10px
-    &:nth-last-child(1)
-      margin-bottom: 0
+	form
+		margin-bottom: 20px
+		span
+			font-family: 'osb', sans-serif !important
+			display: block
+			text-transform: uppercase
+		button, input
+			padding: 5px 10px
+	.table_returnes input
+		padding: 5px 10px
+		width: 100px
+		position: static
+		text-align: center
+		color: #333
+		opacity: 1
+	.row
+		margin: 0
+	.table_returnes
+		height: auto
+		margin-bottom: 10px
+		select
+			width: 100%
+			padding: 5px 10px
+		&:nth-last-child(1)
+			margin-bottom: 0
 
 #ttn_form
-  text-align: left
-  color: #666
-  margin-top: 30px
-  padding-left: 0
-  button
-    width: 200px
-    margin-top: 20px
-  span
-    display: inline-block
-    width: 100%
-    font-family: 'osb', sans-serif
-    font-size: 1.16667em
-    margin-bottom: 10px
-  input, select
-    margin-bottom: 20px
-    width: 50%
-    padding: 8px 10px
-    font-size: 1.08333em
-    font-family: 'osr', sans-serif
-    border: solid 1px lightgray
-  input:hover, select:hover
-    border: solid 1px gray
-  input
-    &:active, &:focus
-      -webkit-box-shadow: inset 0 0 2px rgba(80, 183, 78, 0.8)
-      box-shadow: inset 0 0 2px rgba(80, 183, 78, 0.8)
-      border-color: #50b74e
-  select
-    &:active, &:focus
-      -webkit-box-shadow: inset 0 0 2px rgba(80, 183, 78, 0.8)
-      box-shadow: inset 0 0 2px rgba(80, 183, 78, 0.8)
-      border-color: #50b74e
-    cursor: pointer
-  h3
-    display: inline-block
-    font-size: 1.33333em
-    text-transform: uppercase
-    font-family: 'osb', sans-serif
-  .textfield
-    min-height: 70px
-    padding: 10px
-    display: block
-    width: 50%
-    resize: none
-    outline: none
-    border: 1px solid lightgray
-    &:hover
-      border: solid 1px gray
-    &:active, &:focus
-      -webkit-box-shadow: inset 0 0 2px rgba(80, 183, 78, 0.8)
-      box-shadow: inset 0 0 2px rgba(80, 183, 78, 0.8)
-      border-color: #50b74e
-			
+	text-align: left
+	color: #666
+	margin-top: 30px
+	padding-left: 0
+	button
+		width: 200px
+		margin-top: 20px
+	span
+		display: inline-block
+		width: 100%
+		font-family: 'osb', sans-serif
+		font-size: 1.16667em
+		margin-bottom: 10px
+	input, select
+		margin-bottom: 20px
+		width: 50%
+		padding: 8px 10px
+		font-size: 1.08333em
+		font-family: 'osr', sans-serif
+		border: solid 1px lightgray
+	input:hover, select:hover
+		border: solid 1px gray
+	input
+		&:active, &:focus
+			-webkit-box-shadow: inset 0 0 2px rgba(80, 183, 78, 0.8)
+			box-shadow: inset 0 0 2px rgba(80, 183, 78, 0.8)
+			border-color: #50b74e
+	select
+		&:active, &:focus
+			-webkit-box-shadow: inset 0 0 2px rgba(80, 183, 78, 0.8)
+			box-shadow: inset 0 0 2px rgba(80, 183, 78, 0.8)
+			border-color: #50b74e
+		cursor: pointer
+	h3
+		display: inline-block
+		font-size: 1.33333em
+		text-transform: uppercase
+		font-family: 'osb', sans-serif
+	.textfield
+		min-height: 70px
+		padding: 10px
+		display: block
+		width: 50%
+		resize: none
+		outline: none
+		border: 1px solid lightgray
+		&:hover
+			border: solid 1px gray
+		&:active, &:focus
+			-webkit-box-shadow: inset 0 0 2px rgba(80, 183, 78, 0.8)
+			box-shadow: inset 0 0 2px rgba(80, 183, 78, 0.8)
+			border-color: #50b74e
+
 .data_for_returne_ttn
 	form
 		left: 0
@@ -5214,6 +5575,32 @@ input[type=checkbox]
 ///////////////////////////////////////////////////////////////
 ///////Стили для страницы поиска по дереву tree.html///////////
 ///////////////////////////////////////////////////////////////
+.tree_infoAboutCar
+	margin-bottom: 20px
+	margin-top: 20px
+.tree_addAnyCar
+	button
+		float: right
+		margin-right: 15px
+	a
+		display: inline-block
+		float: right
+		text-align: center
+		img
+			margin-right: 15px
+		&:hover
+			color: #fff
+
+
+.tree_infoAboutCar-wrapper
+	background-color: #dcefe2
+	padding: 10px 20px
+	text-transform: uppercase
+	font-size: em(13px)
+	b
+		font-family: 'osb', sans-serif
+		font-size: em(13.5px)
+		margin-right: 10px
 .generalPopUp-details
 	.tree-tabWrap_content
 		padding: 0 !important
@@ -5300,22 +5687,21 @@ input[type=checkbox]
 
 		i
 			position: absolute
+			right: 5px
+			top: 5px
 			left: 0
-			right: 0
-			top: 0
 			bottom: 0
+			text-align: right
 			margin: auto
-			width: 130px
-			height: 130px
 			font-size:
-			text-align: center
-			line-height: 130px
 			font-size: em(25px)
 			color: lightgray
 			transition: .2s
 			&:hover
-				color: #fff
-				transform: scale(1.5)
+				color: gray
+				transform: scale(1.2)
+				top: 15px
+				right: 15px
 .generalPopUp-details_body
 	height: 95%
 	overflow-y: scroll
@@ -5902,8 +6288,7 @@ input[type=checkbox]
 		margin-right: 0
 		font-size: em(14px)
 		text-transform: uppercase
-		margin-top: 10px
-		padding-top: 30px
+		padding-top: 25px
 		padding-bottom: 25px
 		.helperBtn
 			float: right
@@ -6059,13 +6444,13 @@ input[type=checkbox]
 		text-align: center
 		padding: 30px 0
 		background-color: #e5e5e5
+		font-weight: bolder
 		button
 			float: right
 			margin-right: 35px
 			padding: 6px 30px
 			i
 				margin-right: 20px
-
 ///////////Конец стилей для страницы финанасов reconciliation.html///////////////
 
 
@@ -6712,6 +7097,10 @@ input[type=checkbox]
 
 
 //корзина//
+.cart-nal_table
+	.cart-beznal_brand
+		.content
+			font-size: em(10px)
 .cart-filter
 	background-color: #e9e9e9
 	i
@@ -6806,7 +7195,7 @@ input[type=checkbox]
 .cart-beznal
 	margin-left: 0px
 	margin-right: 0
-	margin-top: 30px !important
+	margin-top: 15px !important
 .cart-beznal, .cart-nal
 	border: 1px dashed gray
 	margin-top: 50px
@@ -6842,7 +7231,9 @@ input[type=checkbox]
 .cart-tableRow
 	margin-left: 15px
 	margin-right: 15px
-	margin-bottom: 15px
+	margin-bottom: 5px
+	height: 106px
+	overflow: hidden
 	span
 		font-weight: normal
 	.cart-comment
@@ -6859,7 +7250,8 @@ input[type=checkbox]
 	.cart-shipment,
 	.cart-fold,
 	.cart-daterefresh,
-	.cart-price
+	.cart-price,
+	.cart-summ
 		.content
 			font-weight: normal
 			text-align: center
@@ -6901,6 +7293,7 @@ input[type=checkbox]
 			background-color: #eaeaea
 			padding: 5px
 			padding-top: 10px
+
 	.cart-shipment,
 	.cart-daterefresh,
 	.cart-price
@@ -6966,6 +7359,8 @@ input[type=checkbox]
 		.content
 			background-color: #fff
 	.cart-quantity
+		.title
+			background-color: #8d8d8d
 		.top_cell
 			.cart-quantity_check
 				margin: 0
@@ -6992,7 +7387,6 @@ input[type=checkbox]
 							.inner
 								span
 									background-color: $green
-
 				span
 					display: inline-block
 					float: left
@@ -7128,10 +7522,12 @@ input[type=checkbox]
 	margin-top: 35px
 
 .cart-nalTable
-	margin-top: 10px
+	margin: 15px
 	padding-bottom: 10px
 	min-height: 150px
 	padding-top: 20px
+	padding-left: 0
+	padding-right: 0
 	border: 1px dashed gray
 
 
@@ -7174,42 +7570,47 @@ input[type=checkbox]
 	background-color: #f0f0f0
 	font-weight: normal
 	padding: 30px 20px
-	.wrap-radio
-		float: left
-		label
-			height: 25px
+.wrap-radio
+	float: left
+	&:nth-last-child(1)
+		margin-left: 15px
+	label
+		display: block
+		position: relative
+		padding-left: 20px
+		input
+			float: left
+			opacity: 0
+			margin: 0
+			position: absolute
+		.inner
+			height: 16px
+			width: 16px
+			position: absolute
+			top: 3px
+			left: 0
+			border: 1px solid lightgray
 			display: block
-			input
-				float: left
-				opacity: 0
-			.inner
-				height: 16px
-				width: 16px
-				position: relative
-				top: 3px
-				border: 1px solid lightgray
+			background-color: #fff
+			float: left
+			margin-right: 5px
+			cursor: pointer
+			span
+				height: 10px
+				width: 10px
 				display: block
-				background-color: #fff
-				float: left
-				margin-right: 5px
-				cursor: pointer
-				span
-					height: 10px
-					width: 10px
-					display: block
-					left: 2px
-					top: 2px
-					position: absolute
-					&:hover
-						border: 1px solid lightgray
-
-			input:checked
-				+ .inner span
-						background-color: $green
-						&::after
-							left: 27px
-						.on
-							right: 0
+				left: 2px
+				top: 2px
+				position: absolute
+				&:hover
+					border: 1px solid lightgray
+		input:checked
+			+ .inner span
+					background-color: $green
+					&::after
+						left: 27px
+					.on
+						right: 0
 
 .cart-deliveryOptions_leftSide
 	margin-top: 35px
@@ -7427,6 +7828,7 @@ input[type=checkbox]
 	.triangle, .triangleR
 		@include triangle(16px 10px, gray, up)
 		position: absolute
+		cursor: pointer
 	.triangle
 		left: 30px
 		bottom: 10px
@@ -7440,6 +7842,17 @@ input[type=checkbox]
 	.datapicker_filter_wrap
 		margin: 0
 		margin-top: 20px
+.cart_controls
+	margin: 0
+	margin-top: 40px
+	h3
+		margin: 0
+	.cart_controls--buttons
+		float: right
+		button
+			padding: 5px 10px
+			&:nth-child(1)
+			margin-left: 20px
 //конец корзина//
 
 
@@ -7519,12 +7932,9 @@ input[type=checkbox]
 .searchToVin1-h2
 	margin: 20px 0
 	line-height: 0
-	padding-top: 20px
-	padding-bottom: 15px
 	h2
 		display: inline-block
 		position: relative
-		top: -3px
 	i
 		color: #959595
 		margin-right: 20px
@@ -7643,6 +8053,7 @@ input[type=checkbox]
 			width: 200px
 			text-align: center
 			cursor: pointer
+			text-transform: uppercase
 	.search
 		background-color: #f0f0f0
 		padding: 20px 25px
@@ -7887,11 +8298,26 @@ input[type=checkbox]
 		position: absolute
 		z-index: 999
 		bottom: 5px
-//конец поиск по ВИН//
+.selectToVin07_options--block
+	span
+		display: block
+		font-family: 'osb', sans-serif
+	select
+		width: 100%
+		margin-bottom: 15px
+		padding: 5px 10px
+.selectToVin07_options--btn
+	margin-top: 20px
+	display: inline-block
+.selectToVin07_options--hide
+	display: none
+//конец поиск по ВИН и вин07//
 
 
 
 //поиск по ВИН 03//
+.vin_selectCar
+	float: right
 .searchToVin3-factory
 	text-align: center
 	.searchToVin3-factory_inner
@@ -7909,16 +8335,19 @@ input[type=checkbox]
 	h3
 		margin: 0
 		font-size: em(15px)
+		display: inline-block
+		line-height: em(30px)
 .searchToVin3-searchfield
 	padding: 20px
 	margin-bottom: 0
 	span
 		text-transform: uppercase
 		font-size: em(15px)
-	button
+	a
 		float: right
 		width: auto
 		font-size: em(10px)
+		display: inline-block
 	.searchToVin3-model
 		position: relative
 		top: 5px
@@ -8084,6 +8513,22 @@ input[type=checkbox]
 
 
 //результаты поиска//
+.searchResult-cartInformer
+	position: absolute
+	background-color: $green
+	padding: 7px 6px
+	line-height: 6px
+	border-radius: 8px
+	font-size: em(10px)
+	font-family: Arial, sans-serif
+	right: -10px
+	top: -12px
+	z-index: 999
+	i
+		color: #fff
+		font-style: normal
+		position: relative
+
 .modal-noSolve_select
 	width: 40% !important
 	text-align: center
@@ -8106,6 +8551,13 @@ input[type=checkbox]
 			.title
 				padding-left: 3px
 				padding-right: 3px
+		.descr
+			.content
+				p
+					margin: 0
+				h4
+					margin-top: 15px
+					margin-bottom: 10px
 .search-tableContent_titleL
 	width: 45%
 	float: left
@@ -8117,9 +8569,8 @@ input[type=checkbox]
 	width: 55%
 	float: left
 	.wrap
-		height: 63px
 		padding: 5px
-		padding-top: 15px
+		padding-top: 10px
 		font-size: em(11px)
 		.recomend
 			margin-top: 8px
@@ -8131,7 +8582,7 @@ input[type=checkbox]
 	width: 45%
 
 .managmentAllFilter
-	padding: 20px
+	padding: 15px
 	background-color: #eaeaea
 	.managmentFilterlabelwrap
 		position: relative
@@ -8186,7 +8637,7 @@ input[type=checkbox]
 	padding: 0
 	min-height: 70vh
 	.searchResult-h2
-		margin: 20px 0
+		margin: 15px 0
 		i
 			color: #959595
 			margin-right: 20px
@@ -8202,7 +8653,7 @@ input[type=checkbox]
 		font-family: 'osb', sans-serif
 		text-transform: uppercase
 		font-size: em(9px)
-		padding: 10px
+		padding: 5px
 		padding-left: 20px
 		color: #333
 	.searchResult-aimed
@@ -8348,11 +8799,25 @@ input[type=checkbox]
 			margin-left: 20px
 		.actions-controls
 			padding: 0
+			a
+				display: inline-block
+				width: auto
+				float: right
+				padding: 6px 25px
+				&:hover
+					color: inherit
 	.dashboardSell .dashboardSell-image button
 		padding: 10px 5px
 .actions-content
 	.dashboardSell-wrapper
 		background-color: #eaeaea
+.traveled-action
+	.dashboardSell-content_date
+		background-color: gray
+	.dashboardSell-image
+		a
+			background-color: #e37f7f
+			border: 1px solid #e37f7f
 //конец акции/
 
 //акции внутрення страница//
@@ -8557,7 +9022,7 @@ h3
 //tooltiops//
 .tooltip
 	position: absolute
-	z-index: 999
+	z-index: 9999
 	display: block
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 	font-style: normal
@@ -9337,11 +9802,13 @@ h3
 			margin-top: 20px
 			@include calc(height, "100% - 120px")
 			overflow-y: auto
+
 .generalPopUp-window-reportForm
 	select, textarea
 		width: 100%
 		padding: 5px 10px
 		text-transform: uppercase
+		margin-bottom: 15px
 	select
 		height: 33px
 	.generalPopUp-window-textarea
@@ -9441,7 +9908,6 @@ h3
 .generalUserSettings
 	min-height: 90vh
 	padding-top: 20px
-	padding-bottom: 20px
 .generalUserSettings-h2
 	margin: 0
 	i
@@ -9481,7 +9947,8 @@ h3
 	background-color: #f0f0f0
 	margin: 0
 	padding: 20px
-	margin-bottom: 20px
+	&:nth-child(3)
+		margin-bottom: 20px
 	.remotePanel
 		margin: 0 !important
 		select
@@ -9582,7 +10049,7 @@ h3
 	right: 0
 	top: 0
 	bottom: 0
-	z-index: 999
+	z-index: 9999
 .preloader
 	position: fixed
 	left: 0
@@ -9799,5 +10266,31 @@ h3
 	right: 20px
 	left: 20px
 
+.searchResultsList
+	padding-top: 20px
+	a
+		color: $red
+		text-transform: uppercase
+		font-size: em(10px)
+		display: block
+		&:hover
+			font-weight: 700
+	.queryHistory-thead
+		line-height: em(12px)
+		padding: 5px
+		div
+			padding: 5px
+	.queryHistory-row
+		border-bottom: 1px solid lightgray
+		border-left: 1px solid lightgray
+		border-right: 1px solid lightgray
+		padding: 0
+		padding: 5px 0px
+		line-height: em(12px)
+		&:hover
+			background-color: lightgray
+			color: #222
+		div
+			padding: 5px
 
 @import "media"

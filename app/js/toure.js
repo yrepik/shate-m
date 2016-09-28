@@ -5,7 +5,7 @@ $(function () {
     steps: [{
       element: ".helper_btn",
       title: "Кнопка Помощь по разделу",
-      content: "Текст описывающий порядок работы с элементами интерфейса сайиа. Текст описывающий порядок работы с элементами интерфейса сайиа. Текст описывающий порядок работы с элементами интерфейса сайиа",
+      content: "Текст описывающий порядок работы с элементами интерфейса сайта. Текст описывающий порядок работы с элементами интерфейса сайта. Текст описывающий порядок работы с элементами интерфейса сайта",
       placement: "bottom",
     }, {
         element: ".sort",
@@ -31,7 +31,7 @@ $(function () {
     backdrop: true,
     backdropContainer: 'body',
     template: "<div class='popover tour'><div class='arrow'></div><h3 class='popover-title'></h3> <div class='popover-content'></div><div class='popover-navigation'><button class='gray_btn' data-role='prev'>Назад</button><button class='green_btn' data-role='next'>Вперед</button></div><button class='closepropover' data-role='end'></button></div>",
-    
+
   });
 
   tourImport.init();
@@ -53,20 +53,20 @@ $(function () {
     steps: [{
       element: "#helper",
       title: "Кнопка Помощь по разделу",
-      content: "Текст описывающий порядок работы с элементами интерфейса сайиа. Текст описывающий порядок работы с элементами интерфейса сайиа. Текст описывающий порядок работы с элементами интерфейса сайиа",
+      content: "Текст описывающий порядок работы с элементами интерфейса сайта. Текст описывающий порядок работы с элементами интерфейса сайта. Текст описывающий порядок работы с элементами интерфейса сайта",
       placement: "bottom",
     }, {
         element: "#searchToVin1BrandField",
         title: "Область с поиском по брэнду",
         placement: "top",
-        content: "Текст описывающий порядок работы с элементами интерфейса сайиа. Текст описывающий порядок работы с элементами интерфейса сайиа. Текст описывающий порядок работы с элементами интерфейса сайиа",
+        content: "Текст описывающий порядок работы с элементами интерфейса сайта. Текст описывающий порядок работы с элементами интерфейса сайта. Текст описывающий порядок работы с элементами интерфейса сайта",
 
       },
       {
         element: "#tour-3",
         title: "Форма поиска",
         placement: "bottom",
-        content: "Текст описывающий порядок работы с элементами интерфейса сайиа. Текст описывающий порядок работы с элементами интерфейса сайиа. Текст описывающий порядок работы с элементами интерфейса сайиа",
+        content: "Текст описывающий порядок работы с элементами интерфейса сайта. Текст описывающий порядок работы с элементами интерфейса сайта. Текст описывающий порядок работы с элементами интерфейса сайта",
 
       }],
     container: "body",
@@ -74,7 +74,7 @@ $(function () {
     backdrop: true,
     backdropContainer: 'body',
     template: "<div class='popover tour'><div class='arrow'></div><h3 class='popover-title'></h3> <div class='popover-content'></div><div class='popover-navigation'><button class='gray_btn' data-role='prev'>Назад</button><button class='green_btn' data-role='next'>Вперед</button></div><button class='closepropover' data-role='end'></button></div>",
-    
+
   });
 
   tourSearchToVin.init();

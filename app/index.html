@@ -3,26 +3,25 @@
 
 <head>
 
-  <meta charset="utf-8">
+		<meta charset="utf-8">
 
-  <title>Кабинет пользователя Шате-М</title>
-  <meta name="description" content="">
+		<title>Кабинет пользователя Шате-М</title>
+		<meta name="description" content="">
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  <meta property="og:image" content="path/to/image.jpg">
+		<meta property="og:image" content="path/to/image.jpg">
 
-  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+		<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/fonts.min.css">
-  <link rel="stylesheet" href="css/main.min.css">
-  <link rel="stylesheet" href="libs/owlcarousel/owl.carousel.css">
-  <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" charset="utf-8">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+		<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" charset="utf-8">
 </head>
 <!--[if lt IE 9]>
 <script src="libs/html5shiv/es5-shim.min.js"></script>
@@ -33,1091 +32,1193 @@
 
 
 <body>
-  <section>
-
-    <div class="container-fluid">
-
-      <div class="row">
-
-        <!--мобильное меню-->
-        <nav class="mob_mnu_left">
-          <ul>
-            <li class="mob_logo"><img class="mob" src="img/moblogo.png" alt="логотип"></li>
-            <li class="active"><a href="index.html"><i class="fa fa-tachometer " aria-hidden="true"></i><span>Панель управления</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_tree.html"><i class="fa fa-sitemap" aria-hidden="true"></i><span >Поиск по дереву</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_VIN_01.html"><i class="fa fa-search" aria-hidden="true"></i><span >Поиск по VIN</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_import.html"><i class="fa fa-upload" aria-hidden="true"></i><span>Импорт заказов</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_orders_list.html"><i class="fa fa-list-alt" aria-hidden="true"></i><span>Заказы</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_returnes_list_new_return.html"><i class="fa fa-reply" aria-hidden="true"></i><span>Возвраты</span></a></li>
-            <li>
-              <a href="shate-m_b2b_user_cabinet_wait_list.html">
-                <i class="fa fa-bookmark-o" aria-hidden="true"></i>
-                <span>Лист ожидания</span>
-                <div class="countInfo" data-bind="visible: cartInfoModel.lineCount">
-                  <span class="tooltipImport" data-toggle="tooltip" data-placement="right" title="всего позиций - 13000 " data-bind="text: cartInfoModel.lineCount()">381</span>
-                </div>
-              </a>
-            </li>
-            <li><a href="shate-m_b2b_user_cabinet_reconciliation.html"><i class="fa fa-money" aria-hidden="true"></i><span>Финансы</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_profile.html"><i class="fa fa-user" aria-hidden="true"></i><span>Персональные данные</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_salesperson.html"><i class="fa fa-phone" aria-hidden="true"></i><span>Ваш менеджер</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_user_docs.html"><i class="fa fa-stack-1x fa-file-word-o"></i><span>Документы</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_history.html"><i class="fa fa-history" aria-hidden="true"></i><span>История запросов</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_rest_managment.html"><i class="fa fa-cloud-upload" aria-hidden="true"></i><span>Управление остатками</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_action.html"><i class="fa fa-percent" aria-hidden="true"></i><span>Акции</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_cutprice_Items.html"><i class="fa fa-cart-arrow-down " aria-hidden="true"></i><span>Уцененные товары</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_extra_charge_settings.html"><i class="fa fa-cart-plus " aria-hidden="true"></i><span>Наценки</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_polls.html"><i class="fa fa-check-square-o " aria-hidden="true"></i><span>Опросы</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_report.html"><i class="fa fa-support" aria-hidden="true"></i><span>Форма обратной связи</span></a></li>
-            <li><a href="shate-m_b2b_user_cabinet_user_settings.html"><i class="fa fa-cog" aria-hidden="true"></i><span>Настройки</span></a></li>
-          </ul>
-        </nav>
-
-
-        <!--      шапка сайта     -->
-        <div id="right_side" class="white hidemenuR col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-          <div class="row ">
-            <div class="topLine col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-
-              <div class="top-closeMnu">
-                <a id="hamburger-icon" href="#" title="Menu">
-                  <span class="line line-1"></span>
-                  <span class="line line-2"></span>
-                  <span class="line line-3"></span>
-                </a>
-              </div>
-
-              <!-- форма поиска-->
-              <div class="top-search">
-                <form>
-                  <input class="serch_field" type="search" name="search" placeholder="Поиск" autocomplete="off">
-                  <button class="search_btn" alt="ok"><i class="fa fa-search" aria-hidden="true"></i></button>
-                  <div class="drop_down_search_list">
-                    <ul>
-                      <li>
-                        <a href="shate-m_b2b_user_cabinet_search_result.html"><span>Kneht</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
-                      </li>
-                      <li>
-                        <a href="shate-m_b2b_user_cabinet_search_result.html"><span>Mahle Filter</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
-                      </li>
-                      <li>
-                        <a href="shate-m_b2b_user_cabinet_search_result.html"><span>Mahle Original</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
-                      </li>
-                      <li>
-                        <a href="shate-m_b2b_user_cabinet_search_result.html"><span>PUROLATOR</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
-                      </li>
-                    </ul>
-                  </div>
-                </form>
-              </div>
-
-              <!--выбор параметров поиска-->
-              <div class="hidden-xs top-selectVin">
-                <select name="vin">
-                  <option value="2">по артикулу</option>
-                  <option value="1">по VIN</option>
-                </select>
-              </div>
-
-              <!--кабинет пользователя-->
-              <div class="top-userCabinet top-firstUserCabinet">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <a href="#">Имя Пользователя</a>
-                <div class="triangle"></div>
-              </div>
-
-              <!--баланс-->
-              <div class="top-balance">
-                <div class="top-balance_wrapper">
-                  <span class="balance-tooltip">
-                      <span>Баланс устарел</span>
-                  <span class="balance-tooltip_triangle"></span>
-                  </span>
-                  <div class="top-balance_update">
-                    <i class="fa fa-refresh" aria-hidden="true"></i>
-                  </div>
-                  <div class="totall"><span>198 365 489</span> руб.</div>
-                  <div class="hidden-xs hidden-sm hidden-md">- 13.03.2016 - </div>
-                  <div class="balance_count">Баланс </div>
-                  <i class="fa fa-money" aria-hidden="true"></i>
-                </div>
-              </div>
-
-
-              <!--корзина-->
-              <div class="top-cart">
-                <a href="shate-m_b2b_user_cabinet_cart.html">
-                  <span class="totall">(0 руб.)</span>
-                  <span class="top-quantity">0</span>
-                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                </a>
-              </div>
-
-              <!--кабинет пользователя-->
-              <div class="top-userCabinet top-SecondUserCabinet">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <a href="#">Имя Пользователя</a>
-                <div class="triangle"></div>
-              </div>
-
-
-              <div class="user_name">
-                <ul>
-                  <li><i class="fa fa-user" aria-hidden="true"></i>Фамилия Имя Отчество</li>
-                  <li>
-                    <a href="shate-m_b2b_user_cabinet_user_settings.html"><i class="fa fa-cog" aria-hidden="true"></i>Настройки пользователя</a>
-                  </li>
-                  <li class="settings">
-                    <label class="dashboardSettings">
-                      <input class="dashboardSettings-input" type="checkbox">
-                      <span class="overlay">
-                      </span>
-                      <span>Изменить интерфейс</span>
-                    </label>
-                  </li>
-                  <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Выход</a></li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-          <!--выпадающее меню с информацией о пользователе-->
-          <div class="row togglemnu">
-            <ul>
-              <li>Фамилия Имя Отчество</li>
-              <li>
-                <a href="#">Настройки пользователя</a>
-              </li>
-              <li><a href="#">Выход</a></li>
-            </ul>
-          </div>
-
-          <div class="dashboard-slidedownSettingsAll clearfix hidden-xs hidden-sm hidden-md">
-            <div class="dashboard-slidedownSettings_wrapper clearfix">
-              <span>Тема оформления:</span>
-              <select name="" id="slidedownSettingsAll">
-                  <option value="0">По умолчанию</option>
-                  <option value="1">Максимальная</option>
-                  <option value="2">Минимальная</option>
-                  <option value="3">Своя</option>
-                </select>
-
-              <textarea name="" id="slidedownSettingsAll_select" placeholder="Введите название темы оформления"></textarea>
-
-
-              <button class="green_btn dashboard-slidedownSettingsAll_save">Сохранить</button>
-              <button class="gray_btn">Вернуть</button>
-              <button class="gray_btn last dashboard-slidedownSettingsAll_close">Отменить</button>
-            </div>
-          </div>
-
-
-          <div class="row alert">
-            <!--зона служебных сообщений-->
-            <div class="col-xs-12">
-              <div class="cross_alert">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-              <div class="alert_zone">
-                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                <span>Информация: запрос на обновление баланса отправлен.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="row alert_succes">
-            <!--зона служебных сообщений-->
-            <div class="col-xs-12">
-              <div class="cross_alert">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-              <div class="alert_zone">
-                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                <span>Информация: настройки применены.</span>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-
-
-          <!-- Контент сайта -->
-          <div class="plr0 tools connect col-xs-12 col-sm-6 col-md-6 col-lg-3">
-
-            <!--Информация по доставке со склада в Екатеринбурге-->
-            <div class="dashboard_small dashboard_small-call col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <span class="content__item">
-                <span class="content__item-left">
-                  <i class="fa fa-info" aria-hidden="true"></i>
-                </span>
-              <span class="content__item-right">
-                  <span>Информация по доставке со склада в Екатеринбурге: <i><a href="tel:+79826045884">7 982 604-58-84</a></i></span>
-              </span>
-              </span>
-
-            </div>
-
-            <!--Информация по доставке со склада в Москве-->
-            <div class="dashboard_small dashboard_small-call col-xs-12 hidden-sm hidden-md hidden-lg">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <span class="content__item">
-                <span class="content__item-left">
-                  <i class="fa fa-info" aria-hidden="true"></i>
-                </span>
-              <span class="content__item-right">
-                  <span>Информация по доставке со склада в Москве: <i><a href="tel:+79269188101">7 926 918-81-01</a></i></span>
-              </span>
-              </span>
-
-            </div>
-
-            <!--поиск по дереву-->
-            <div class="dashboard_small col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_tree.html" class="content__item">
-                <span class="content__item-left">
-                      <i class="fa fa-sitemap" aria-hidden="true"></i>
-                    </span>
-                <span class="content__item-right">
-                      <span>Поиск по дереву</span>
-                </span>
-              </a>
-
-            </div>
-
-            <!--поиск по по вин-->
-            <div class="dashboard_small col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_VIN_01.html" class="content__item">
-                <span class="content__item-left">
-                      <i class="fa fa-search" aria-hidden="true"></i>
-                    </span>
-                <span class="content__item-right">
-                      <span>Поиск по VIN</span>
-                </span>
-              </a>
-
-            </div>
-
-            <!--Лист ожидания-->
-            <div class="dashboard_small col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_wait_list.html" class="content__item">
-
-                <span class="content__item-left">
-                      <i class="fa fa-bookmark-o" aria-hidden="true"></i>
-                    </span>
-                <span class="content__item-right">
-                      <span>Лист ожидания</span>
-                <div class="countInfo countInfo-dashboardWidget" data-bind="visible: cartInfoModel.lineCount">
-                  <span data-bind="text: cartInfoModel.lineCount()">381</span>
-                </div>
-                </span>
-
-              </a>
-            </div>
-
-            <!--Импорт заказов-->
-            <div class="dashboard_small col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_import.html" class="content__item">
-                <span class="content__item-left">
-                      <i class="fa fa-upload" aria-hidden="true"></i>
-                    </span>
-                <span class="content__item-right">
-                      <span>Импорт заказов</span>
-                </span>
-              </a>
-
-            </div>
-
-            <!--Заказы-->
-            <div class="dashboard_small col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_orders_list.html" class="content__item">
-                <span class="content__item-left">
-                      <i class="fa fa-list-alt" aria-hidden="true"></i>
-                    </span>
-                <span class="content__item-right">
-                      <span>Заказы</span>
-                </span>
-              </a>
-
-            </div>
-
-            <!--Возвраты-->
-            <div class="dashboard_small col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_returnes_list_new_return.html" class="content__item">
-                <span class="content__item-left">
-                      <i class="fa fa-reply" aria-hidden="true"></i>
-                    </span>
-                <span class="content__item-right">
-                      <span>Возвраты</span>
-                </span>
-              </a>
-
-            </div>
-
-            <!--Финансы-->
-            <div class="dashboard_small col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_reconciliation.html" class="content__item">
-                <span class="content__item-left">
-                      <i class="fa fa-money" aria-hidden="true"></i>
-                    </span>
-                <span class="content__item-right">
-                      <span>Финансы</span>
-                </span>
-              </a>
-
-            </div>
-
-            <!--управление остатками-->
-            <div class="dashboard_small col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_rest_managment.html" class="content__item">
-                <span class="content__item-left">
-                  <i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                </span>
-                <span class="content__item-right">
-                  <span>Управление остатками</span>
-                </span>
-              </a>
-
-            </div>
-
-
-            <!--Документы-->
-            <div class="dashboard_small col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_user_docs.html" class="content__item">
-                <span class="content__item-left">
-                  <i class="fa fa-stack-1x fa-file-word-o"></i>
-                </span>
-                <span class="content__item-right">
-                  <span>Документы</span>
-                </span>
-              </a>
-
-            </div>
-
-
-
-
-            <!--Персональные данные-->
-            <div class="dashboard_small col-xs-12 hidden-sm hidden-md hidden-lg">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_profile.html" class="content__item">
-                <span class="content__item-left">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                  </span>
-                <span class="content__item-right">
-                    <span>Персональные данные</span>
-                </span>
-              </a>
-
-            </div>
-
-            <!--Опросы-->
-            <div class="dashboard_small col-xs-12 hidden-sm hidden-md hidden-lg">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_polls.html" class="content__item">
-                <span class="content__item-left">
-                  <i class="fa fa-check-square-o " aria-hidden="true"></i>
-                  </span>
-                <span class="content__item-right">
-                    <span>Опросы</span>
-                </span>
-              </a>
-
-            </div>
-
-            <!--Ваш менеджер-->
-            <div class="dashboard_small col-xs-12 hidden-sm hidden-md hidden-lg">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_reconciliation.html" class="content__item">
-                <span class="content__item-left">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                  </span>
-                <span class="content__item-right">
-                    <span>Ваш менеджер</span>
-                </span>
-              </a>
-
-            </div>
-
-            <!--Уцененные товары-->
-            <div class="dashboard_small col-xs-12 hidden-sm hidden-md hidden-lg">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_cutprice_Items.html" class="content__item">
-                <span class="content__item-left">
-                  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                </span>
-                <span class="content__item-right">
-                  <span>Уцененные товары</span>
-                </span>
-              </a>
-
-            </div>
-
-          </div>
-
-
-          <div class="markup connect plr0 col-xs-12 col-sm-6 col-md-6 col-lg-3">
-
-            <!--Информация по доставке со склада в Москве-->
-            <div class="dashboard_small dashboard_small-call hidden-xs col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <span class="content__item">
-                <span class="content__item-left">
-                  <i class="fa fa-info" aria-hidden="true"></i>
-                </span>
-              <span class="content__item-right">
-                  <span>Информация по доставке со склада в Москве: <i><a href="tel:+79269188101">7 926 918-81-01</a></i></span>
-              </span>
-              </span>
-
-            </div>
-
-
-
-
-            <!--пользовательская наценка-->
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wrap_item_block wrap_item_block-toll">
-              <div class="arrows content__item_toll-arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-              <div class="content__item_toll">
-
-                <div class="wrapper_icon_and_h2 clearfix">
-                  <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                  <h2>
-                    <span class="show-1400">Пользовательская <br>наценка</span>
-                    <span class="hide-1200">Наценка</span>
-                  </h2>
-                </div>
-
-
-                <form class="priceform" name="price" action="post">
-                  <span>Отображать цену:</span>
-                  <select>
-                    <option>Покупки</option>
-                    <option>Пункт 2</option>
-                  </select>
-                  <span>Тип наценки:</span>
-                  <div class="radogrup">
-                    <div class="wrap">
-                      <input name="dzen" class="checkbox" type="radio" value="goods"><span>Наценка на товары</span>
-                      <div class="over">
-                        <div class="inner"></div>
-                      </div>
-                    </div>
-
-                    <div class="wrap">
-                      <input name="dzen" class="checkbox" type="radio" value="diapazon"><span>Наценка по диапазону цен</span>
-                      <div class="over">
-                        <div class="inner"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="curency">
-                    <span>Валюта наценки:</span>
-                    <select>
-                      <option>BYR</option>
-                      <option>USD</option>
-                    </select>
-                  </div>
-                  <input class="submit_button btn" type="submit">
-                </form>
-              </div>
-            </div>
-
-
-            <!--Ваш менеджер-->
-            <div class="dashboard_small col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_salesperson.html" class="content__item">
-                <span class="content__item-left">
-                  <i class="fa fa-phone" aria-hidden="true"></i>
-                </span>
-                <span class="content__item-right">
-                  <span>Ваш менеджер</span>
-                </span>
-              </a>
-
-            </div>
-
-
-            <!--Уцененные товары-->
-            <div class="dashboard_small col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_cutprice_Items.html" class="content__item">
-                <span class="content__item-left">
-                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-              </span>
-                <span class="content__item-right">
-                <span>Уцененные товары</span>
-                </span>
-              </a>
-
-            </div>
-
-            <!--Уцененные товары-->
-            <div class="dashboard_small col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_extra_charge_settings.html" class="content__item">
-                <span class="content__item-left">
-                <i class="fa fa-cart-plus " aria-hidden="true"></i>
-              </span>
-                <span class="content__item-right">
-                <span>Наценки</span>
-                </span>
-              </a>
-
-            </div>
-
-            <!--Персональные данные-->
-            <div class="dashboard_small col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_salesperson.html" class="content__item">
-                <span class="content__item-left">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                </span>
-                <span class="content__item-right">
-                  <span>Персональные данные</span>
-                </span>
-              </a>
-
-            </div>
-
-
-            <!--Опросы-->
-            <div class="dashboard_small col-xs-12 col-sm-12">
-
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-
-              <a href="shate-m_b2b_user_cabinet_polls.html" class="content__item">
-                <span class="content__item-left">
-                  <i class="fa fa-check-square-o " aria-hidden="true"></i>
-                  </span>
-                <span class="content__item-right">
-                    <span>Опросы</span>
-                </span>
-              </a>
-
-            </div>
-
-
-
-          </div>
-
-
-
-          <!--история запросов -->
-          <div class="history_request large_connect col-xs-12 col-sm-12 col-md-12 col-lg-6">
-            <div class="content__item">
-              <div class="cross_close">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-              <div class="arrows">
-                <i class="fa fa-arrows" aria-hidden="true"></i>
-              </div>
-              <div class="large_block toll">
-                <div class="title">
-                  <i class="fa fa-history" aria-hidden="true"></i>
-                  <span>История <br>запросов</span>
-                  <a href="shate-m_b2b_user_cabinet_history.html" class="gray_btn">Все запросы</a>
-                </div>
-
-                <div class="history">
-                  <div class="thead">
-                    <div class="th">Дата</div>
-                    <div class="th">Товар</div>
-                    <div class="th">Бренд</div>
-                    <div class="th hidden-xs">Описание</div>
-                  </div>
-
-                  <div class="table_content">
-
-                    <a href="#" class="tr">
-                      <div class="td">07.04.16 13:21</div>
-                      <div class="td">OC100</div>
-                      <div class="td">Knecht</div>
-                      <div class="td description hidden-xs">Фильтр масляный</div>
-                    </a>
-
-                    <a href="#" class="tr">
-                      <div class="td">07.04.16 13:21</div>
-                      <div class="td">OC100</div>
-                      <div class="td">Knecht</div>
-                      <div class="td description hidden-xs">Фильтр масляный</div>
-                    </a>
-
-                    <a href="#" class="tr">
-                      <div class="td">07.04.16 13:21</div>
-                      <div class="td">OC100</div>
-                      <div class="td">Knecht</div>
-                      <div class="td description hidden-xs">Фильтр масляный</div>
-                    </a>
-                    <a href="#" class="tr">
-                      <div class="td">07.04.16 13:21</div>
-                      <div class="td">OC100</div>
-                      <div class="td">Knecht</div>
-                      <div class="td description hidden-xs">Фильтр масляный</div>
-                    </a>
-                    <a href="#" class="tr">
-                      <div class="td">07.04.16 13:21</div>
-                      <div class="td">OC100</div>
-                      <div class="td">Knecht</div>
-                      <div class="td description hidden-xs">Фильтр масляный</div>
-                    </a>
-                    <a href="#" class="tr">
-                      <div class="td">07.04.16 13:21</div>
-                      <div class="td">OC100</div>
-                      <div class="td">Knecht</div>
-                      <div class="td description hidden-xs">Фильтр масляный</div>
-                    </a>
-                    <a href="#" class="tr">
-                      <div class="td">07.04.16 13:21</div>
-                      <div class="td">OC100</div>
-                      <div class="td">Knecht</div>
-                      <div class="td description hidden-xs">Фильтр масляный</div>
-                    </a>
-                    <a href="#" class="tr">
-                      <div class="td">07.04.16 13:21</div>
-                      <div class="td">OC100</div>
-                      <div class="td">Knecht</div>
-                      <div class="td description hidden-xs">Фильтр масляный</div>
-                    </a>
-                    <a href="#" class="tr">
-                      <div class="td">07.04.16 13:21</div>
-                      <div class="td">OC100</div>
-                      <div class="td">Knecht</div>
-                      <div class="td description hidden-xs">Фильтр масляный</div>
-                    </a>
-                  </div>
-
-
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="connect plr0 col-xs-12 col-sm-6 col-lg-3">
-          </div>
-
-          <!--блок акции-->
-          <div class="sell_request large_connect col-xs-12 col-sm-12 col-md-12 col-lg-6">
-
-            <div class="content__item clearfix dashboardSell-largeBlock">
-
-              <div class="dashboardSell-largeBlock_controls">
-                <div class="cross_close">
-                  <i class="fa fa-plus" aria-hidden="true"></i>
-                </div>
-
-                <div class="arrows">
-                  <i class="fa fa-arrows" aria-hidden="true"></i>
-                </div>
-              </div>
-
-              <div class="dashboardSell-h2 col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="percent_wrap">
-                  <i class="fa fa-percent" aria-hidden="true"></i>
-                  <h2>Акции</h2>
-                </div>
-                <a href="shate-m_b2b_user_cabinet_action.html" class="gray_btn dashboard-action_a">Все акции</a>
-              </div>
-
-              <!--товар на скидке-->
-              <div class="dashboardSell col-xs-12 col-sm-6 col-md-4 col-lg-6">
-                <div class="dashboardSell-wrapper clearfix">
-                  <div class="dashboardSell-image col-xs-6 col-md-6 col-sm-6 col-lg-5">
-                    <img src="img/1.jpg" alt="">
-                    <button class="red_btn">Узнать больше</button>
-                  </div>
-                  <div class="dashboardSell-content col-xs-6 col-mde-6 col-sm-6 col-lg-7">
-                    <div class="dashboardSell-content_date">
-                      <sapn><b>12</b> дек <b>2015</b> - <b>12</b> дек <b>2016</b></sapn>
-                    </div>
-                    <div class="dashboardSell-content_text">
-                      <h4>Комплект специальной одежды</h4>
-                      <p>Комплект специальной одежды для механика в подарок</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!--товар на скидке-->
-              <div class="dashboardSell col-xs-12 col-sm-6 col-md-4 col-lg-6">
-                <div class="dashboardSell-wrapper clearfix">
-                  <div class="dashboardSell-image col-xs-6 col-md-6 col-sm-6 col-lg-5">
-                    <img src="img/1.jpg" alt="">
-                    <button class="red_btn">Узнать больше</button>
-                  </div>
-                  <div class="dashboardSell-content col-xs-6 col-mde-6 col-sm-6 col-lg-7">
-                    <div class="dashboardSell-content_date">
-                      <sapn><b>12</b> дек <b>2015</b> - <b>12</b> дек <b>2016</b></sapn>
-                    </div>
-                    <div class="dashboardSell-content_text">
-                      <h4>Комплект специальной одежды</h4>
-                      <p>Комплект специальной одежды для механика в подарок</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!--товар на скидке-->
-              <div class="dashboardSell col-xs-12 col-sm-6 col-md-4 col-lg-6">
-                <div class="dashboardSell-wrapper clearfix">
-                  <div class="dashboardSell-image col-xs-6 col-md-6 col-sm-6 col-lg-5">
-                    <img src="img/1.jpg" alt="">
-                    <button class="red_btn">Узнать больше</button>
-                  </div>
-                  <div class="dashboardSell-content col-xs-6 col-mde-6 col-sm-6 col-lg-7">
-                    <div class="dashboardSell-content_date">
-                      <sapn><b>12</b> дек <b>2015</b> - <b>12</b> дек <b>2016</b></sapn>
-                    </div>
-                    <div class="dashboardSell-content_text">
-                      <h4>Комплект специальной одежды</h4>
-                      <p>Комплект специальной одежды для механика в подарок</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!--товар на скидке-->
-              <div class="dashboardSell col-xs-12 col-sm-6 hidden-md col-lg-6">
-                <div class="dashboardSell-wrapper clearfix">
-                  <div class="dashboardSell-image col-xs-6 col-md-6 col-sm-6 col-lg-5">
-                    <img src="img/1.jpg" alt="">
-                    <button class="red_btn">Узнать больше</button>
-                  </div>
-                  <div class="dashboardSell-content col-xs-6 col-mde-6 col-sm-6 col-lg-7">
-                    <div class="dashboardSell-content_date">
-                      <sapn><b>12</b> дек <b>2015</b> - <b>12</b> дек <b>2016</b></sapn>
-                    </div>
-                    <div class="dashboardSell-content_text">
-                      <h4>Комплект специальной одежды</h4>
-                      <p>Комплект специальной одежды для механика в подарок</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-
-
-
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <!--footer-->
-      <!--социальнные сети и геокоординаты-->
-      <div class="row bottom_mnu hidden-xs">
-        <div class="hidden-xs hidemenuR col-md-12 col-sm-12 col-lg-12">
-          <ul>
-            <li><a href="#">Компания</a></li>
-            <li><a href="#">Автозапчасти <br>и оборудование</a></li>
-            <li><a href="#">Автозапчасти <br> патрон</a></li>
-            <li><a href="#">Розница <br>и сто</a></li>
-            <li><a href="#">Шины и <br> диски</a></li>
-            <li><a href="#">Масла <br>и автохимия</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="p0 social_pages row">
-        <div class="plr0 col-sm-12 hidemenuR col-md-12 col-lg-12 col-xs-12">
-          <div class="pr0 col-xs-12 col-sm-5 col-md-5 col-lg-6">
-            <div class="social_wrap hidemenuR">
-              <span class="hidden-sm hidden-md hidden-lg">Мы в соцсетях</span>
-              <span class="hidden-xs">Мы в социальных сетях</span>
-
-              <a href="#">
-                <div class="container_for_i"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-              </a>
-              <a href="#">
-                <div class="container_for_i"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-              </a>
-              <a href="#">
-                <div class="container_for_i"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-              </a>
-              <a href="#">
-                <div class="container_for_i"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-3 col-lg-3">
-            <ul class="location">
-              <li><i class="fa fa-map-marker" aria-hidden="true"></i> 223062,</li>
-              <li>Минский р-н,</li>
-              <li>пос. Привольный,</li>
-              <li>ул. Мира 2А</li>
-            </ul>
-          </div>
-
-          <div class="col-xs-12 hidden-md hidden-sm hidden-lg">
-            <ul class="phones">
-              <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
-              <li><i class="fa fa-fax" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
-              <li><i class="fa fa-envelope" aria-hidden="true"></i><a class="mail" href="mailto:info@shate-m.com">info@shate-m.com</a></li>
-            </ul>
-          </div>
-
-          <div class="hidden-xs pr0 col-sm-3 col-lg-3">
-            <ul class="phones_sm clearfix">
-              <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
-              <li><i class="fa fa-fax" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
-              <li><i class="fa fa-envelope" aria-hidden="true"></i><a class="mail" href="mailto:info@shate-m.com">info@shate-m.com</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="row copiright">
-
-        <div class="hidemenuR plr0 col-sm-12 col-md-12 col-lg-12 col-xs-12">
-          <div class="col-xs-12 col-sm-5 col-md-5 col-lg-6">
-            <div class="licence">
-              <span>
-              Copiright &copy; 2001-2016 Частное предприятие &laquo; ШАТЕ-М ПЛЮС &raquo;
-            </span>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 bottom_logo ">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <a href="#"><img src="img/groupauto.png" alt="шате-м"></a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <a href="#"><img src="img/logo.png" alt="шате-м"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-  </section>
-
-  <div class="generalPopUp">
-    <div class="generalPopUp-window">
-      <div class="generalPopUp-window_close"></div>
-      <div class="generalPopUp-window_header">
-        <h2>Форма обратной связи</h2>
-      </div>
-      <div class="generalPopUp-window_body">
-        <form class="generalPopUp-window-reportForm" action="post">
-
-          <select name="reportProblem" class="generalPopUp-window-select">
-            <option value="0">Ошибка в кроссе</option>
-            <option value="1">вариант ошибки номер 2</option>
-            <option value="2">вариант ошибки номер 3</option>
-            <option value="3">Другое</option>
-          </select>
-          <textarea class="generalPopUp-window-textarea" maxlength="250" name="anyerror" placeholder="Опишите ошибку"></textarea>
-
-          <div class="generalPopUp-window-innerWrapper">
-            <div class="item">
-              <span>Параметр 1:</span>
-              <input value="GDB1330 TRW" name="article" disabled>
-            </div>
-            <div class="item">
-              <span>Параметр 2:</span>
-              <input value="HP3010 HSB" name="analog" disabled>
-            </div>
-          </div>
-
-          <div class="generalPopUp-window_commentToError">
-            <span>Коментарий к ошибке:</span>
-            <textarea type="text" name="commentToError"></textarea>
-          </div>
-
-      </div>
-
-      <div class="generalPopUp-window_buttongroup clerfix">
-        <a href="#" class="gray_btn">отмена</a>
-        <button class="red_btn">отправить</button>
-        </form>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="overlaypreloader">
-    <img class="preloader" src="img/preloader.gif" alt="" />
-  </div>
-
-  <script src="js/add.js" charset="utf-8"></script>
-  <script src="js/common.js" charset="utf-8"></script>
-  <script src="js/tooltip.min.js" charset="utf-8"></script>
-  <script src="libs/Magnific-Popup/dist/jquery.magnific-popup.min.js" charset="utf-8"></script>
-
+		<section>
+
+				<div class="container-fluid">
+
+						<div class="row">
+
+								<!--мобильное меню-->
+								<nav class="mob_mnu_left">
+										<ul>
+												<li class="mob_logo"><img class="mob" src="img/moblogo.png" alt="логотип"></li>
+												<li class="active"><a href="index.html"><i class="fa fa-tachometer"><span class="tooltipMnu">Панель управления</span></i><span>Панель управления</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_tree.html"><i class="fa fa-sitemap" aria-hidden="true"><span class="tooltipMnu">Поиск по дереву</span></i><span >Поиск по дереву</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_VIN_01.html"><i class="fa fa-search" aria-hidden="true"><span class="tooltipMnu">Поиск по VIN</span></i><span >Поиск по VIN</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_import.html"><i class="fa fa-upload" aria-hidden="true"><span class="tooltipMnu">Импорт заказов</span></i><span>Импорт заказов</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_orders_list.html"><i class="fa fa-list-alt" aria-hidden="true"><span class="tooltipMnu">Заказы</span></i><span>Заказы</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_returnes_list_new_return.html"><i class="fa fa-reply" aria-hidden="true"><span class="tooltipMnu">Заказы</span></i><span>Возвраты</span></a></li>
+												<li>
+														<a href="shate-m_b2b_user_cabinet_wait_list.html">
+																<i class="fa fa-bookmark-o" aria-hidden="true"><span class="tooltipMnu">Лист ожидания</span></i>
+																<span>Лист ожидания</span>
+																<div class="countInfo" data-bind="visible: cartInfoModel.lineCount">
+																		<span class="tooltipImport" data-toggle="tooltip" data-placement="right" title="всего позиций - 13000 " data-bind="text: cartInfoModel.lineCount()">381</span>
+																</div>
+														</a>
+												</li>
+												<li><a href="shate-m_b2b_user_cabinet_reconciliation.html"><i class="fa fa-money" aria-hidden="true"><span class="tooltipMnu">Финансы</span></i><span>Финансы</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_profile.html"><i class="fa fa-user" aria-hidden="true"><span class="tooltipMnu">Персональные данные</span></i><span>Персональные данные</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_salesperson.html"><i class="fa fa-phone" aria-hidden="true"><span class="tooltipMnu">Ваш менеджер</span></i><span>Ваш менеджер</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_user_docs.html"><i class="fa fa-stack-1x fa-file-word-o"><span class="tooltipMnu">Документы</span></i><span>Документы</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_history.html"><i class="fa fa-history" aria-hidden="true"><span class="tooltipMnu">История запросов</span></i><span>История запросов</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_rest_managment.html"><i class="fa fa-cloud-upload" aria-hidden="true"><span class="tooltipMnu">Управление остатками</span></i><span>Управление остатками</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_action.html"><i class="fa fa-percent" aria-hidden="true"><span class="tooltipMnu">Акции</span></i><span>Акции</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_cutprice_Items.html"><i class="fa fa-cart-arrow-down " aria-hidden="true"><span class="tooltipMnu">Уцененные товары</span></i><span>Уцененные товары</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_extra_charge_settings.html"><i class="fa fa-cart-plus " aria-hidden="true"><span class="tooltipMnu">Наценки</span></i><span>Наценки</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_polls.html"><i class="fa fa-check-square-o " aria-hidden="true"><span class="tooltipMnu">Опросы</span></i><span>Опросы</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_report.html"><i class="fa fa-support" aria-hidden="true"><span class="tooltipMnu">Форма обратной связи</span></i><span>Форма обратной связи</span></a></li>
+												<li><a href="shate-m_b2b_user_cabinet_user_settings.html"><i class="fa fa-cog" aria-hidden="true"><span class="tooltipMnu">Настройки</span></i><span>Настройки</span></a></li>
+										</ul>
+								</nav>
+
+
+
+								<!--		фиксированная	шапка сайта		 -->
+								<div class="row slideDownNav hidden-xs">
+									<div class="topLine col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+										<div class="top-closeMnu">
+
+											<div class="hamburger rotate">
+												<div class="arrow"></div>
+												<div class="arrow"></div>
+												<div class="arrow"></div>
+											</div>
+
+										</div>
+
+										<!-- форма поиска-->
+										<div class="top-search">
+											<form>
+												<input class="serch_field" type="search" name="search" placeholder="Поиск" autocomplete="off">
+												<button type="button" onclick="location.href='shate-m_b2b_user_search.html'" class="search_btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+												<div class="drop_down_search_list">
+													<ul>
+														<li>
+															<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Kneht</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+														</li>
+														<li>
+															<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Mahle Filter</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+														</li>
+														<li>
+															<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Mahle Original</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+														</li>
+														<li>
+															<a href="shate-m_b2b_user_cabinet_search_result.html"><span>PUROLATOR</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+														</li>
+													</ul>
+												</div>
+											</form>
+										</div>
+
+											<!--кабинет пользователя-->
+										<div class="top-userCabinet top-firstUserCabinet">
+											<i class="fa fa-user" aria-hidden="true"></i>
+											<a href="#">Имя Пользователя</a>
+										</div>
+
+										<!--баланс-->
+										<div class="top-balance">
+											<div class="top-balance_wrapper">
+												<span class="balance-tooltip">
+												<span>Баланс устарел</span>
+												<span class="balance-tooltip_triangle"></span>
+												</span>
+												<div class="top-balance_update">
+													<i class="fa fa-refresh" aria-hidden="true"></i>
+												</div>
+												<div class="totall">
+													<span class="totall_wiev">1000 000</span><b> / </b>
+													<strong>1120,100</strong>
+													<span class="top-balance_curency">руб.</span>
+
+													<!--Таблица с задолженностью-->
+													<span class="totall--debt hidden-xs hidden-sm">
+														<h5>Нормальная задолженность</h5>
+															<span class="totall--debt_table">
+																<!--ряд таблицы-->
+																<span class="totall--debt_row clearfix">
+																	<span class="plr0 col-md-6 col-lg-6">0 дней</span>
+																	<span class="totall--debt_coun plr0 col-md-6 col-lg-6"><span><b>1000 руб.</b></span></span>
+																</span>
+																<!--сумма по нормальной задолженности-->
+																<span class="totall--debt_tottal clearfix"><b>1000 руб.</b></span>
+
+															</span>
+
+
+															<!--просроченная задолженность-->
+															<h5>Просроченная задолженность</h5>
+															<span class="totall--debt_table totall--overdue_table">
+																<!--ряд таблицы-->
+																<span class="totall--debt_row clearfix">
+																	<span class="plr0 col-md-6 col-lg-6">0 дней</span>
+																	<span class="totall--debt_coun plr0 col-md-6 col-lg-6"><span><b>1001 руб.</b></span></span>
+																</span>
+
+																<!--ряд таблицы-->
+																<span class="totall--debt_row clearfix">
+																	<span class="plr0 col-md-6 col-lg-6">0 дней</span>
+																	<span class="totall--debt_coun plr0 col-md-6 col-lg-6"><span><b>1002 руб.</b></span></span>
+																</span>
+
+																<!--ряд таблицы-->
+																<span class="totall--debt_row clearfix">
+																	<span class="plr0 col-md-6 col-lg-6">0 дней</span>
+																	<span class="totall--debt_coun plr0 col-md-6 col-lg-6"><span><b>1003 руб.</b></span></span>
+																</span>
+
+																<!--ряд таблицы-->
+																<span class="totall--debt_row clearfix">
+																	<span class="plr0 col-md-6 col-lg-6">0 дней</span>
+																	<span class="totall--debt_coun plr0 col-md-6 col-lg-6"><span><b>1004 руб.</b></span></span>
+																</span>
+																<!--сумма по просроченной задолженности-->
+																<span class="totall--debt_tottal clearfix"><b>1010 руб.</b></span>
+
+															</span>
+
+
+															<span class="totall--debt_table clearfix">
+																<hr>
+																<span class="totall--debt_row clearfix">
+																</span>
+																<span class="totall--debt_itogo">Итого:</span>
+																<span class="totall--debt_tottal clearfix"><b>1010 руб.</b></span>
+															</span>
+														<button class="gray_btn totall--debt_close" type="button">Закрыть</button>
+														<a href="shate-m_b2b_user_cabinet_reconciliation.html">График платежей</a>
+													</span><!--Конец Таблица с задолженностью-->
+												</div>
+												<div class="balance_count">Баланс </div>
+												<i class="fa fa-money hidden-xs" aria-hidden="true"></i>
+											</div>
+										</div>
+
+										<!--корзина-->
+										<div class="top-cart">
+											<a href="shate-m_b2b_user_cabinet_cart.html">
+												<span class="totall">(0 руб.)</span>
+												<span class="top-quantity">0</span>
+												<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+											</a>
+										</div>
+
+										<!--кабинет пользователя-->
+										<div class="top-userCabinet top-SecondUserCabinet">
+											<i class="fa fa-user" aria-hidden="true"></i>
+											<a href="#">Имя Пользователя</a>
+											<div class="triangle"></div>
+										</div>
+
+
+										<div class="user_name">
+												<ul>
+														<li><i class="fa fa-user" aria-hidden="true"></i>Фамилия Имя Отчество</li>
+														<li>
+																<a href="shate-m_b2b_user_cabinet_user_settings.html"><i class="fa fa-cog" aria-hidden="true"></i>Настройки пользователя</a>
+														</li>
+														<li class="settings">
+																<label class="dashboardSettings">
+																	<input class="dashboardSettings-input" type="checkbox">
+																		<span class="overlay">
+																		</span>
+																	<span>Изменить интерфейс</span>
+																</label>
+														</li>
+														<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Выход</a></li>
+												</ul>
+										</div>
+
+									</div>
+								</div>
+
+
+
+								<div id="right_side" class="white slideDownNav--fixed hidemenuR col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+									<!--			шапка сайта		 -->
+									<div class="row hidden-sm hidden-md hidden-lg">
+										<div class="topLine col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+											<div class="top-closeMnu">
+												<a class="hamburger-icon" href="#" title="Menu">
+													<span class="line line-1"></span>
+													<span class="line line-2"></span>
+													<span class="line line-3"></span>
+												</a>
+											</div>
+
+											<!-- форма поиска-->
+											<div class="top-search">
+												<form>
+													<input class="serch_field" type="search" name="search" placeholder="Поиск" autocomplete="off">
+													<button type="button" onclick="location.href='shate-m_b2b_user_search.html'" class="search_btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+													<div class="drop_down_search_list">
+														<ul>
+															<li>
+																<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Kneht</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+															</li>
+															<li>
+																<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Mahle Filter</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+															</li>
+															<li>
+																<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Mahle Original</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+															</li>
+															<li>
+																<a href="shate-m_b2b_user_cabinet_search_result.html"><span>PUROLATOR</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+															</li>
+														</ul>
+													</div>
+												</form>
+											</div>
+
+											<!--выбор параметров поиска-->
+											<div class="hidden-xs top-selectVin">
+												<select name="vin">
+													<option value="2">по артикулу</option>
+													<option value="1">по VIN</option>
+												</select>
+											</div>
+
+											<!--кабинет пользователя-->
+											<div class="top-userCabinet top-firstUserCabinet">
+												<i class="fa fa-user" aria-hidden="true"></i>
+												<a href="#">Имя Пользователя</a>
+												<div class="triangle"></div>
+											</div>
+
+											<!--баланс-->
+											<div class="top-balance">
+												<div class="top-balance_wrapper">
+													<span class="balance-tooltip">
+															<span>Баланс устарел</span>
+													<span class="balance-tooltip_triangle"></span>
+													</span>
+													<div class="top-balance_update">
+														<i class="fa fa-refresh" aria-hidden="true"></i>
+													</div>
+													<div class="totall">198 365 489 руб.</div>
+													<div class="hidden-xs hidden-sm hidden-md">- 13.03.2016 - </div>
+													<div class="balance_count">Баланс </div>
+													<i class="fa fa-money" aria-hidden="true"></i>
+												</div>
+											</div>
+
+
+											<!--корзина-->
+											<div class="top-cart">
+												<a href="shate-m_b2b_user_cabinet_cart.html">
+													<span class="totall">(0 руб.)</span>
+													<span class="top-quantity">0</span>
+													<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+												</a>
+											</div>
+
+											<!--кабинет пользователя-->
+											<div class="top-userCabinet top-SecondUserCabinet">
+												<i class="fa fa-user" aria-hidden="true"></i>
+												<a href="#">Имя Пользователя</a>
+												<div class="triangle"></div>
+											</div>
+
+
+											<div class="user_name">
+													<ul>
+															<li><i class="fa fa-user" aria-hidden="true"></i>Фамилия Имя Отчество</li>
+															<li>
+																	<a href="shate-m_b2b_user_cabinet_user_settings.html"><i class="fa fa-cog" aria-hidden="true"></i>Настройки пользователя</a>
+															</li>
+															<li class="settings">
+																	<label class="dashboardSettings">
+																		<input class="dashboardSettings-input" type="checkbox">
+																			<span class="overlay">
+																			</span>
+																		<span>Изменить интерфейс</span>
+																	</label>
+															</li>
+															<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Выход</a></li>
+													</ul>
+											</div>
+
+										</div>
+									</div>
+
+
+
+										<!--выпадающее меню с информацией о пользователе-->
+										<div class="row togglemnu">
+												<ul>
+														<li>Фамилия Имя Отчество</li>
+														<li>
+																<a href="#">Настройки пользователя</a>
+														</li>
+														<li><a href="#">Выход</a></li>
+												</ul>
+										</div>
+
+										<div class="dashboard-slidedownSettingsAll clearfix hidden-xs hidden-sm hidden-md">
+												<div class="dashboard-slidedownSettings_wrapper clearfix">
+														<span>Тема оформления:</span>
+														<select name="" id="slidedownSettingsAll">
+														<option value="0">По умолчанию</option>
+														<option value="1">Максимальная</option>
+														<option value="2">Минимальная</option>
+														<option value="3">Своя</option>
+														</select>
+
+														<textarea name="" id="slidedownSettingsAll_select" placeholder="Введите название темы оформления"></textarea>
+
+
+														<button class="green_btn dashboard-slidedownSettingsAll_save">Сохранить</button>
+														<button class="gray_btn">Вернуть</button>
+														<button class="gray_btn last dashboard-slidedownSettingsAll_close">Отменить</button>
+												</div>
+										</div>
+
+
+										<div class="row alert">
+												<!--зона служебных сообщений-->
+												<div class="col-xs-12">
+														<div class="cross_alert">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+														<div class="alert_zone">
+																<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+																<span>Информация: запрос на обновление баланса отправлен.</span>
+														</div>
+												</div>
+										</div>
+
+										<div class="row alert_succes">
+												<!--зона служебных сообщений-->
+												<div class="col-xs-12">
+														<div class="cross_alert">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+														<div class="alert_zone">
+																<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+																<span>Информация: настройки применены.</span>
+														</div>
+												</div>
+										</div>
+
+
+
+
+
+
+
+
+
+
+										<!--вертикальный столбец для виджетов 1-->
+										<div class="plr0 tools connect col-xs-12 col-sm-6 col-md-6 col-lg-3">
+
+												<!--Информация по доставке со склада в Екатеринбурге-->
+												<div class="dashboard_small dashboard_small-call col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<span class="content__item">
+										<span class="content__item-left">
+											<i class="fa fa-info" aria-hidden="true"></i>
+										</span>
+														<span class="content__item-right">
+												<span>Информация по доставке со склада в Екатеринбурге: <i><a href="tel:+79826045884">7 982 604-58-84</a></i></span>
+														</span>
+														</span>
+
+												</div>
+
+												<!--Информация по доставке со склада в Москве-->
+												<div class="dashboard_small dashboard_small-call col-xs-12 hidden-sm hidden-md hidden-lg">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<span class="content__item">
+								<span class="content__item-left">
+									<i class="fa fa-info" aria-hidden="true"></i>
+								</span>
+														<span class="content__item-right">
+									<span>Информация по доставке со склада в Москве: <i><a href="tel:+79269188101">7 926 918-81-01</a></i></span>
+														</span>
+														</span>
+
+												</div>
+
+												<!--поиск по дереву-->
+												<div class="dashboard_small col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_tree.html" class="content__item">
+																<span class="content__item-left">
+											<i class="fa fa-sitemap" aria-hidden="true"></i>
+										</span>
+																<span class="content__item-right">
+											<span>Поиск по дереву</span>
+																</span>
+														</a>
+
+												</div>
+
+												<!--поиск по по вин-->
+												<div class="dashboard_small col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_VIN_01.html" class="content__item">
+																<span class="content__item-left">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</span>
+																<span class="content__item-right">
+											<span>Поиск по VIN</span>
+																</span>
+														</a>
+
+												</div>
+
+												<!--Лист ожидания-->
+												<div class="dashboard_small col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_wait_list.html" class="content__item">
+
+																<span class="content__item-left">
+											<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+										</span>
+																<span class="content__item-right">
+											<span>Лист ожидания</span>
+																<div class="countInfo countInfo-dashboardWidget" data-bind="visible: cartInfoModel.lineCount">
+																		<span data-bind="text: cartInfoModel.lineCount()">381</span>
+																</div>
+																</span>
+
+														</a>
+												</div>
+
+												<!--Импорт заказов-->
+												<div class="dashboard_small col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_import.html" class="content__item">
+																<span class="content__item-left">
+											<i class="fa fa-upload" aria-hidden="true"></i>
+										</span>
+																<span class="content__item-right">
+											<span>Импорт заказов</span>
+																</span>
+														</a>
+
+												</div>
+
+												<!--Заказы-->
+												<div class="dashboard_small col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_orders_list.html" class="content__item">
+																<span class="content__item-left">
+											<i class="fa fa-list-alt" aria-hidden="true"></i>
+										</span>
+																<span class="content__item-right">
+											<span>Заказы</span>
+																</span>
+														</a>
+
+												</div>
+
+												<!--Возвраты-->
+												<div class="dashboard_small col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_returnes_list_new_return.html" class="content__item">
+																<span class="content__item-left">
+											<i class="fa fa-reply" aria-hidden="true"></i>
+										</span>
+																<span class="content__item-right">
+											<span>Возвраты</span>
+																</span>
+														</a>
+
+												</div>
+
+												<!--Персональные данные-->
+												<div class="dashboard_small col-xs-12 hidden-sm hidden-md hidden-lg">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_profile.html" class="content__item">
+																<span class="content__item-left">
+										<i class="fa fa-user" aria-hidden="true"></i>
+									</span>
+																<span class="content__item-right">
+										<span>Персональные данные</span>
+																</span>
+														</a>
+
+												</div>
+
+												<!--Опросы-->
+												<div class="dashboard_small col-xs-12 hidden-sm hidden-md hidden-lg">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_polls.html" class="content__item">
+																<span class="content__item-left">
+									<i class="fa fa-check-square-o " aria-hidden="true"></i>
+									</span>
+																<span class="content__item-right">
+										<span>Опросы</span>
+																</span>
+														</a>
+
+												</div>
+
+												<!--Ваш менеджер-->
+												<div class="dashboard_small col-xs-12 hidden-sm hidden-md hidden-lg">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_reconciliation.html" class="content__item">
+																<span class="content__item-left">
+										<i class="fa fa-phone" aria-hidden="true"></i>
+									</span>
+																<span class="content__item-right">
+										<span>Ваш менеджер</span>
+																</span>
+														</a>
+
+												</div>
+
+												<!--Уцененные товары-->
+												<div class="dashboard_small col-xs-12 hidden-sm hidden-md hidden-lg">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_cutprice_Items.html" class="content__item">
+																<span class="content__item-left">
+									<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+								</span>
+																<span class="content__item-right">
+									<span>Уцененные товары</span>
+																</span>
+														</a>
+
+												</div>
+
+										</div>
+
+
+										<!--вертикальный столбец для виджетов 2-->
+										<div class="markup connect plr0 col-xs-12 col-sm-6 col-md-6 col-lg-3">
+
+												<!--Информация по доставке со склада в Москве-->
+												<div class="dashboard_small dashboard_small-call hidden-xs col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<span class="content__item">
+								<span class="content__item-left">
+									<i class="fa fa-info" aria-hidden="true"></i>
+								</span>
+														<span class="content__item-right">
+									<span>Информация по доставке со склада в Москве: <i><a href="tel:+79269188101">7 926 918-81-01</a></i></span>
+														</span>
+														</span>
+
+												</div>
+
+
+
+
+												<!--пользовательская наценка-->
+												<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wrap_item_block wrap_item_block-toll">
+														<div class="arrows content__item_toll-arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+														<div class="content__item_toll">
+
+																<div class="wrapper_icon_and_h2 clearfix">
+																		<i class="fa fa-cart-plus" aria-hidden="true"></i>
+																		<h2>
+										<span class="show-1400">Пользовательская <br>наценка</span>
+										<span class="hide-1200">Наценка</span>
+									</h2>
+																</div>
+
+
+																<form class="priceform" name="price" action="post">
+																		<span>Отображать цену:</span>
+																		<select>
+										<option>Покупки</option>
+										<option>Пункт 2</option>
+									</select>
+																		<span>Тип наценки:</span>
+																		<div class="radogrup">
+																				<div class="wrap">
+																						<input name="dzen" class="checkbox" type="radio" value="goods"><span>Наценка на товары</span>
+																						<div class="over">
+																								<div class="inner"></div>
+																						</div>
+																				</div>
+
+																				<div class="wrap">
+																						<input name="dzen" class="checkbox" type="radio" value="diapazon"><span>Наценка по диапазону цен</span>
+																						<div class="over">
+																								<div class="inner"></div>
+																						</div>
+																				</div>
+																		</div>
+																		<div class="curency">
+																				<span>Валюта наценки:</span>
+																				<select>
+											<option>BYR</option>
+											<option>USD</option>
+										</select>
+																		</div>
+																		<input class="submit_button btn" type="submit">
+																</form>
+														</div>
+												</div>
+
+
+												<!--Ваш менеджер-->
+												<div class="dashboard_small col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_salesperson.html" class="content__item">
+																<span class="content__item-left">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+								</span>
+																<span class="content__item-right">
+									<span>Ваш менеджер</span>
+																</span>
+														</a>
+
+												</div>
+
+
+												<!--Уцененные товары-->
+												<div class="dashboard_small col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_cutprice_Items.html" class="content__item">
+																<span class="content__item-left">
+								<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+							</span>
+																<span class="content__item-right">
+								<span>Уцененные товары</span>
+																</span>
+														</a>
+
+												</div>
+
+										</div>
+
+										<!--вертикальный столбец для виджетов 3-->
+										<div class="markup connect plr0 col-xs-12 col-sm-6 col-md-6 col-lg-3 ui-sortable">
+
+												<!--история запросов -->
+												<div class="dashboard--requestHistory dashboard_small col-xs-12 col-sm-12 col-md-12 col-lg-12">
+														<div class="dashboard--requestHistory_wrapper">
+																<!--переместить блок-->
+																<div class="arrows ui-sortable-handle">
+																		<i class="fa fa-arrows" aria-hidden="true"></i>
+																</div>
+																<!--закрыть блок-->
+																<div class="cross_close">
+																		<i class="fa fa-plus" aria-hidden="true"></i>
+																</div>
+																<div class="dashboard--requestHistory_header clearfix">
+																		<div class="wrapper ">
+																				<i class="fa fa-history" aria-hidden="true"></i>
+																				<span>История <br>запросов</span>
+																		</div>
+																		<a href="shate-m_b2b_user_cabinet_history.html" class="gray_btn">Все запросы</a>
+																</div>
+
+																<div class="dashboard--requestHistory_history">
+
+
+																		<div class="table_content">
+																				<div class="thead clearfix">
+																						<div class="th">Товар</div>
+																						<div class="th">Бренд</div>
+																						<div class="th">Описание</div>
+																				</div>
+
+																				<a href="#" class="tr">
+																						<div class="td">OC100</div>
+																						<div class="td">Knecht</div>
+																						<div class="td description">Фильтр масляный</div>
+																				</a>
+
+																				<a href="#" class="tr">
+																						<div class="td">OC100</div>
+																						<div class="td">Knecht</div>
+																						<div class="td description">Фильтр масляный</div>
+																				</a>
+
+																				<a href="#" class="tr">
+																						<div class="td">OC100</div>
+																						<div class="td">Knecht</div>
+																						<div class="td description">Фильтр масляный</div>
+																				</a>
+																				<a href="#" class="tr">
+																						<div class="td">OC100</div>
+																						<div class="td">Knecht</div>
+																						<div class="td description">Фильтр масляный</div>
+																				</a>
+																				<a href="#" class="tr">
+																						<div class="td">OC100</div>
+																						<div class="td">Knecht</div>
+																						<div class="td description">Фильтр масляный</div>
+																				</a>
+																				<a href="#" class="tr">
+																						<div class="td">OC100</div>
+																						<div class="td">Knecht</div>
+																						<div class="td description">Фильтр масляный</div>
+																				</a>
+																				<a href="#" class="tr">
+																						<div class="td">OC100</div>
+																						<div class="td">Knecht</div>
+																						<div class="td description">Фильтр масляный</div>
+																				</a>
+																				<a href="#" class="tr">
+																						<div class="td">OC100</div>
+																						<div class="td">Knecht</div>
+																						<div class="td description">Фильтр масляный</div>
+																				</a>
+																				<a href="#" class="tr">
+																						<div class="td">OC100</div>
+																						<div class="td">Knecht</div>
+																						<div class="td description">Фильтр масляный</div>
+																				</a>
+																		</div>
+
+
+																</div>
+														</div>
+												</div>
+
+												<!--Уцененные товары-->
+												<div class="dashboard_small col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_extra_charge_settings.html" class="content__item">
+																<span class="content__item-left">
+								<i class="fa fa-cart-plus " aria-hidden="true"></i>
+							</span>
+																<span class="content__item-right">
+								<span>Наценки</span>
+																</span>
+														</a>
+
+												</div>
+
+												<!--Персональные данные-->
+												<div class="dashboard_small col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_salesperson.html" class="content__item">
+																<span class="content__item-left">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</span>
+																<span class="content__item-right">
+									<span>Персональные данные</span>
+																</span>
+														</a>
+
+												</div>
+
+
+												<!--Опросы-->
+												<div class="dashboard_small col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_polls.html" class="content__item">
+																<span class="content__item-left">
+									<i class="fa fa-check-square-o " aria-hidden="true"></i>
+									</span>
+																<span class="content__item-right">
+										<span>Опросы</span>
+																</span>
+														</a>
+
+												</div>
+
+
+										</div>
+
+
+										<!--вертикальный столбец для виджетов 4-->
+										<div class="markup connect plr0 col-xs-12 col-sm-6 col-md-6 col-lg-3 ui-sortable">
+												<!--блок акции-->
+												<div class="dashboard--requestHistory dashboard_small col-xs-12 col-sm-12 col-md-12 col-lg-12">
+														<div class="dashboard--requestHistory_wrapper">
+																<!--переместить блок-->
+																<div class="arrows ui-sortable-handle">
+																		<i class="fa fa-arrows" aria-hidden="true"></i>
+																</div>
+																<!--закрыть блок-->
+																<div class="cross_close">
+																		<i class="fa fa-plus" aria-hidden="true"></i>
+																</div>
+																<div class="dashboard--requestHistory_header clearfix">
+																		<div class="wrapper ">
+																				<i class="fa fa-percent" aria-hidden="true"></i>
+																				<span class="dashboard--requestHistory_action">Акции</span>
+																		</div>
+																		<a href="shate-m_b2b_user_cabinet_action.html" class="gray_btn">Все акции</a>
+																</div>
+
+																<div class="dashboard--requestHistory_history clearfix">
+
+																		<!--товар на скидке-->
+																		<div class="dashboardSell col-xs-12 col-sm-12 col-md-12 col-lg-12">
+																				<div class="dashboardSell-wrapper clearfix">
+																						<div class="dashboardSell-image col-xs-6 col-md-6 col-sm-6 col-lg-5">
+
+																								<img src="img/1.jpg" alt="">
+																								<button class="red_btn">Узнать больше</button>
+																						</div>
+																						<div class="dashboardSell-content col-xs-6 col-mde-6 col-sm-6 col-lg-7">
+																								<div class="dashboardSell-content_date">
+																										<sapn><b>12</b> дек <b>2015</b> - <b>12</b> дек <b>2016</b></sapn>
+																								</div>
+																								<div class="dashboardSell-content_text">
+																										<h4>Комплект специальной одежды</h4>
+																										<p>Комплект специальной одежды для механика в подарок</p>
+																								</div>
+																						</div>
+																				</div>
+																		</div>
+
+																		<!--товар на скидке-->
+																		<div class="dashboardSell col-xs-12 col-sm-12 col-md-12 col-lg-12">
+																				<div class="dashboardSell-wrapper clearfix">
+																						<div class="dashboardSell-image col-xs-6 col-md-6 col-sm-6 col-lg-5">
+																								<img src="img/1.jpg" alt="">
+																								<button class="red_btn">Узнать больше</button>
+																						</div>
+																						<div class="dashboardSell-content col-xs-6 col-mde-6 col-sm-6 col-lg-7">
+																								<div class="dashboardSell-content_date">
+																										<sapn><b>12</b> дек <b>2015</b> - <b>12</b> дек <b>2016</b></sapn>
+																								</div>
+																								<div class="dashboardSell-content_text">
+																										<h4>Комплект специальной одежды</h4>
+																										<p>Комплект специальной одежды для механика в подарок</p>
+																								</div>
+																						</div>
+																				</div>
+																		</div>
+
+																</div>
+														</div>
+												</div>
+
+												<!--Финансы-->
+												<div class="dashboard_small col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_reconciliation.html" class="content__item">
+																<span class="content__item-left">
+											<i class="fa fa-money" aria-hidden="true"></i>
+										</span>
+																<span class="content__item-right">
+											<span>Финансы</span>
+																</span>
+														</a>
+
+												</div>
+
+												<!--управление остатками-->
+												<div class="dashboard_small col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_rest_managment.html" class="content__item">
+																<span class="content__item-left">
+									<i class="fa fa-cloud-upload" aria-hidden="true"></i>
+								</span>
+																<span class="content__item-right">
+									<span>Управление остатками</span>
+																</span>
+														</a>
+
+												</div>
+
+
+												<!--Документы-->
+												<div class="dashboard_small col-xs-12 col-sm-12">
+
+														<div class="arrows">
+																<i class="fa fa-arrows" aria-hidden="true"></i>
+														</div>
+														<div class="cross_close">
+																<i class="fa fa-plus" aria-hidden="true"></i>
+														</div>
+
+														<a href="shate-m_b2b_user_cabinet_user_docs.html" class="content__item">
+																<span class="content__item-left">
+									<i class="fa fa-stack-1x fa-file-word-o"></i>
+								</span>
+																<span class="content__item-right">
+									<span>Документы</span>
+																</span>
+														</a>
+
+												</div>
+
+										</div>
+
+
+
+
+
+
+								</div>
+						</div>
+
+
+
+
+						<!--footer-->
+						<!--социальнные сети и геокоординаты-->
+						<div class="row bottom_mnu hidden-xs">
+								<div class="hidden-xs hidemenuR col-md-12 col-sm-12 col-lg-12">
+										<ul>
+												<li><a href="#">Компания</a></li>
+												<li><a href="#">Автозапчасти <br>и оборудование</a></li>
+												<li><a href="#">Автозапчасти <br> патрон</a></li>
+												<li><a href="#">Розница <br>и сто</a></li>
+												<li><a href="#">Шины и <br> диски</a></li>
+												<li><a href="#">Масла <br>и автохимия</a></li>
+												<li><a href="#">Контакты</a></li>
+										</ul>
+								</div>
+						</div>
+
+						<!--социалки, адреса, телефоны-->
+						<div class="plr0 social_pages row">
+								<div class="plr0 col-sm-12 hidemenuR col-md-12 col-lg-12 col-xs-12">
+
+										<div class="pl0 col-xs-12 col-sm-5 col-md-5 col-lg-6">
+												<div class="social_wrap hidemenuR">
+
+														<div class="footer--innerWrap">
+																<span class="hidden-sm hidden-md hidden-lg">Мы в соцсетях</span>
+																<span class="hidden-xs">Мы в социальных сетях</span>
+
+																<a href="#">
+																		<div class="container_for_i"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+																</a>
+																<a href="#">
+																		<div class="container_for_i"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+																</a>
+																<a href="#">
+																		<div class="container_for_i"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+																</a>
+																<a href="#">
+																		<div class="container_for_i"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
+																</a>
+																<a href="https://www.instagram.com/shatemplus/">
+																		<div class="container_for_i"> <i class="fa fa-instagram"></i></div>
+																</a>
+														</div>
+
+												</div>
+										</div>
+
+										<div class="col-xs-12 col-sm-3 col-lg-3">
+												<ul class="location">
+														<li><i class="fa fa-map-marker" aria-hidden="true"></i> 223062,</li>
+														<li>Минский р-н,</li>
+														<li>пос. Привольный,</li>
+														<li>ул. Мира 2А</li>
+												</ul>
+										</div>
+
+										<div class="col-xs-12 hidden-md hidden-sm hidden-lg">
+												<ul class="phones">
+														<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
+														<li><i class="fa fa-fax" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
+														<li><i class="fa fa-envelope" aria-hidden="true"></i><a class="mail" href="mailto:info@shate-m.com">info@shate-m.com</a></li>
+												</ul>
+										</div>
+
+										<div class="hidden-xs pr0 col-sm-3 col-lg-3">
+												<ul class="phones_sm clearfix">
+														<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
+														<li><i class="fa fa-fax" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
+														<li><i class="fa fa-envelope" aria-hidden="true"></i><a class="mail" href="mailto:info@shate-m.com">info@shate-m.com</a></li>
+												</ul>
+										</div>
+
+										<div class="footer--payment_logos col-lg-12 col-md-12 col-sm-12 hidden-xs">
+												<a href="#">
+														<img src="img/payment_logos.png" alt="">
+												</a>
+										</div>
+								</div>
+						</div>
+
+						<!--копирайт-->
+						<div class="row copiright">
+
+								<div class="hidemenuR plr0 col-sm-12 col-md-12 col-lg-12 col-xs-12">
+										<div class="col-xs-12 col-sm-5 col-md-5 col-lg-6">
+												<div class="licence">
+														<span>
+							Copiright &copy; 2001-2016 Частное предприятие <br class="hidden-sm hidden-md hidden-lg" />&laquo; ШАТЕ-М ПЛЮС &raquo;
+						</span>
+												</div>
+										</div>
+										<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 bottom_logo ">
+												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+														<a href="#"><img src="img/groupauto.png" alt="шате-м"></a>
+												</div>
+												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+														<a href="#"><img src="img/logo.png" alt="шате-м"></a>
+												</div>
+										</div>
+								</div>
+						</div>
+						<!--конец footer-->
+
+				</div>
+		</section>
+
+
+
+
+		<div class="overlaypreloader">
+				<img class="preloader" src="img/preloader.gif" alt="" />
+		</div>
+
+		<script src="js/add.js" charset="utf-8"></script>
+		<script src="js/tooltip.min.js" charset="utf-8"></script>
+		<script src="libs/Magnific-Popup/dist/jquery.magnific-popup.min.js" charset="utf-8"></script>
+
+
+		<script src="js/common.js" charset="utf-8"></script>
 
 </body>
 

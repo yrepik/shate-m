@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="css/main.min.css">
 	<link rel="stylesheet" href="libs/Magnific-Popup/dist/magnific-popup.css">
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" charset="utf-8">
+	<link rel="stylesheet" href="libs/animate/animate.css">
 
 </head>
 <!--[if lt IE 9]>
@@ -45,40 +46,194 @@
 				<nav class="mob_mnu_left">
 					<ul>
 						<li class="mob_logo"><img class="mob" src="img/moblogo.png" alt="логотип"></li>
-						<li><a href="index.html"><i class="fa fa-tachometer " aria-hidden="true"></i><span>Панель управления</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_tree.html"><i class="fa fa-sitemap" aria-hidden="true"></i><span >Поиск по дереву</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_VIN_01.html"><i class="fa fa-search" aria-hidden="true"></i><span >Поиск по VIN</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_import.html"><i class="fa fa-upload" aria-hidden="true"></i><span>Импорт заказов</span></a></li>
-						<li class="active"><a href="shate-m_b2b_user_cabinet_orders_list.html"><i class="fa fa-list-alt" aria-hidden="true"></i><span>Заказы</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_returnes_list_new_return.html"><i class="fa fa-reply" aria-hidden="true"></i><span>Возвраты</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_wait_list.html"><i class="fa fa-bookmark-o" aria-hidden="true"></i><span>Лист ожидания</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_reconciliation.html"><i class="fa fa-money" aria-hidden="true"></i><span>Финансы</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_profile.html"><i class="fa fa-user" aria-hidden="true"></i><span>Персональные данные</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_salesperson.html"><i class="fa fa-phone" aria-hidden="true"></i><span>Ваш менеджер</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_user_docs.html"><i class="fa fa-stack-1x fa-file-word-o"></i><span>Документы</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_history.html"><i class="fa fa-history" aria-hidden="true"></i><span>История запросов</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_rest_managment.html"><i class="fa fa-cloud-upload" aria-hidden="true"></i><span>Управление остатками</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_action.html"><i class="fa fa-percent" aria-hidden="true"></i><span>Акции</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_cutprice_Items.html"><i class="fa fa-cart-arrow-down " aria-hidden="true"></i><span>Уцененные товары</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_extra_charge_settings.html"><i class="fa fa-cart-plus " aria-hidden="true"></i><span>Наценки</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_polls.html"><i class="fa fa-check-square-o " aria-hidden="true"></i><span>Опросы</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_report.html"><i class="fa fa-support" aria-hidden="true"></i><span>Форма обратной связи</span></a></li>
-						<li><a href="shate-m_b2b_user_cabinet_user_settings.html"><i class="fa fa-cog" aria-hidden="true"></i><span>Настройки</span></a></li>
-
+						<li><a href="index.html"><i class="fa fa-tachometer " aria-hidden="true"></i><span class="tooltipMnu">Панель управления</span><span>Панель управления</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_tree.html"><i class="fa fa-sitemap" aria-hidden="true"><span class="tooltipMnu">Поиск по дереву</span></i><span >Поиск по дереву</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_VIN_01.html"><i class="fa fa-search" aria-hidden="true"><span class="tooltipMnu">Поиск по VIN</span></i><span >Поиск по VIN</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_import.html"><i class="fa fa-upload" aria-hidden="true"><span class="tooltipMnu">Импорт заказов</span></i><span>Импорт заказов</span></a></li>
+						<li class="active"><a href="shate-m_b2b_user_cabinet_orders_list.html"><i class="fa fa-list-alt" aria-hidden="true"><span class="tooltipMnu">Заказы</span></i><span>Заказы</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_returnes_list_new_return.html"><i class="fa fa-reply" aria-hidden="true"><span class="tooltipMnu">Возвраты</span></i><span>Возвраты</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_wait_list.html"><i class="fa fa-bookmark-o" aria-hidden="true"><span class="tooltipMnu">Лист ожидания</span></i><span>Лист ожидания</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_reconciliation.html"><i class="fa fa-money" aria-hidden="true"><span class="tooltipMnu">Финансы</span></i><span>Финансы</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_profile.html"><i class="fa fa-user" aria-hidden="true"><span class="tooltipMnu">Персональные данные</span></i><span>Персональные данные</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_salesperson.html"><i class="fa fa-phone" aria-hidden="true"><span class="tooltipMnu">Ваш менеджер</span></i><span>Ваш менеджер</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_user_docs.html"><i class="fa fa-stack-1x fa-file-word-o"><span class="tooltipMnu">Документы</span></i><span>Документы</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_history.html"><i class="fa fa-history" aria-hidden="true"><span class="tooltipMnu">История запросов</span></i><span>История запросов</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_rest_managment.html"><i class="fa fa-cloud-upload" aria-hidden="true"><span class="tooltipMnu">Управление остатками</span></i><span>Управление остатками</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_action.html"><i class="fa fa-percent" aria-hidden="true"><span class="tooltipMnu">Акции</span></i><span>Акции</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_cutprice_Items.html"><i class="fa fa-cart-arrow-down " aria-hidden="true"><span class="tooltipMnu">Уцененные товары</span></i><span>Уцененные товары</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_extra_charge_settings.html"><i class="fa fa-cart-plus " aria-hidden="true"><span class="tooltipMnu">Наценки</span></i><span>Наценки</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_polls.html"><i class="fa fa-check-square-o " aria-hidden="true"><span class="tooltipMnu">Опросы</span></i><span>Опросы</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_report.html"><i class="fa fa-support" aria-hidden="true"><span class="tooltipMnu">Форма обратной связи</span></i><span>Форма обратной связи</span></a></li>
+						<li><a href="shate-m_b2b_user_cabinet_user_settings.html"><i class="fa fa-cog" aria-hidden="true"><span class="tooltipMnu">Настройки</span></i><span>Настройки</span></a></li>
 					</ul>
 				</nav>
 
+				<!--		фиксированная	шапка сайта		 -->
+				<div class="row slideDownNav hidden-xs">
+					<div class="topLine col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
+
+						<div class="top-closeMnu">
+
+							<div class="hamburger rotate ">
+								<div class="arrow"></div>
+								<div class="arrow"></div>
+								<div class="arrow"></div>
+							</div>
+
+						</div>
+
+						<!-- форма поиска-->
+						<div class="top-search">
+							<form>
+								<input class="serch_field" type="search" name="search" placeholder="Поиск" autocomplete="off">
+								<button type="button" onclick="location.href='shate-m_b2b_user_search.html'" class="search_btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+								<div class="drop_down_search_list">
+									<ul>
+										<li>
+											<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Kneht</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+										</li>
+										<li>
+											<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Mahle Filter</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+										</li>
+										<li>
+											<a href="shate-m_b2b_user_cabinet_search_result.html"><span>Mahle Original</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+										</li>
+										<li>
+											<a href="shate-m_b2b_user_cabinet_search_result.html"><span>PUROLATOR</span> <span class="searchfieldA"></span> <span>-фильтр масляный</span></a>
+										</li>
+									</ul>
+								</div>
+							</form>
+						</div>
+
+							<!--кабинет пользователя-->
+						<div class="top-userCabinet top-firstUserCabinet">
+							<i class="fa fa-user" aria-hidden="true"></i>
+							<a href="#">Имя Пользователя</a>
+						</div>
+
+						<!--баланс-->
+						<div class="top-balance">
+							<div class="top-balance_wrapper">
+								<span class="balance-tooltip">
+								<span>Баланс устарел</span>
+								<span class="balance-tooltip_triangle"></span>
+								</span>
+								<div class="top-balance_update">
+									<i class="fa fa-refresh" aria-hidden="true"></i>
+								</div>
+								<div class="totall">
+									<span class="totall_wiev">1000 000</span><b> / </b>
+									<strong>1120,100</strong>
+									<span class="top-balance_curency">руб.</span>
+
+									<!--Таблица с задолженностью-->
+									<span class="totall--debt hidden-xs hidden-sm">
+										<h5>Нормальная задолженность</h5>
+											<span class="totall--debt_table">
+												<!--ряд таблицы-->
+												<span class="totall--debt_row clearfix">
+													<span class="plr0 col-md-6 col-lg-6">0 дней</span>
+													<span class="totall--debt_coun plr0 col-md-6 col-lg-6"><span><b>1000 руб.</b></span></span>
+												</span>
+												<!--сумма по нормальной задолженности-->
+												<span class="totall--debt_tottal clearfix"><b>1000 руб.</b></span>
+
+											</span>
+
+
+											<!--просроченная задолженность-->
+											<h5>Просроченная задолженность</h5>
+											<span class="totall--debt_table totall--overdue_table">
+												<!--ряд таблицы-->
+												<span class="totall--debt_row clearfix">
+													<span class="plr0 col-md-6 col-lg-6">0 дней</span>
+													<span class="totall--debt_coun plr0 col-md-6 col-lg-6"><span><b>1001 руб.</b></span></span>
+												</span>
+
+												<!--ряд таблицы-->
+												<span class="totall--debt_row clearfix">
+													<span class="plr0 col-md-6 col-lg-6">0 дней</span>
+													<span class="totall--debt_coun plr0 col-md-6 col-lg-6"><span><b>1002 руб.</b></span></span>
+												</span>
+
+												<!--ряд таблицы-->
+												<span class="totall--debt_row clearfix">
+													<span class="plr0 col-md-6 col-lg-6">0 дней</span>
+													<span class="totall--debt_coun plr0 col-md-6 col-lg-6"><span><b>1003 руб.</b></span></span>
+												</span>
+
+												<!--ряд таблицы-->
+												<span class="totall--debt_row clearfix">
+													<span class="plr0 col-md-6 col-lg-6">0 дней</span>
+													<span class="totall--debt_coun plr0 col-md-6 col-lg-6"><span><b>1004 руб.</b></span></span>
+												</span>
+												<!--сумма по просроченной задолженности-->
+												<span class="totall--debt_tottal clearfix"><b>1010 руб.</b></span>
+
+											</span>
+
+
+											<span class="totall--debt_table clearfix">
+												<hr>
+												<span class="totall--debt_row clearfix">
+												</span>
+												<span class="totall--debt_itogo">Итого:</span>
+												<span class="totall--debt_tottal clearfix"><b>1010 руб.</b></span>
+											</span>
+										<button class="gray_btn totall--debt_close" type="button">Закрыть</button>
+										<a href="shate-m_b2b_user_cabinet_reconciliation.html">График платежей</a>
+									</span><!--Конец Таблица с задолженностью-->
+								</div>
+								<div class="balance_count">Баланс </div>
+								<i class="fa fa-money hidden-xs" aria-hidden="true"></i>
+							</div>
+						</div>
+
+						<!--корзина-->
+						<div class="top-cart">
+							<a href="shate-m_b2b_user_cabinet_cart.html">
+								<span class="totall">(0 руб.)</span>
+								<span class="top-quantity">0</span>
+								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+							</a>
+						</div>
+
+						<!--кабинет пользователя-->
+						<div class="top-userCabinet top-SecondUserCabinet">
+							<i class="fa fa-user" aria-hidden="true"></i>
+							<a href="#">Имя Пользователя</a>
+							<div class="triangle"></div>
+						</div>
+
+
+						<div class="user_name">
+							<ul>
+								<li><i class="fa fa-user" aria-hidden="true"></i>Фамилия Имя Отчество</li>
+								<li>
+									<a href="shate-m_b2b_user_cabinet_user_settings.html"><i class="fa fa-cog" aria-hidden="true"></i>Настройки пользователя</a>
+								</li>
+								<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Выход</a></li>
+							</ul>
+						</div>
+
+					</div>
+
+
+
+
+				</div>
 
 				<!--			шапка сайта		 -->
-				<div id="right_side" class="white hidemenuR col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div id="right_side" class="slideDownNav--fixed white hidemenuR col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-					<div class="row ">
+					<div class="row hidden-sm hidden-md hidden-lg">
 						<div class="topLine col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
 
 							<div class="top-closeMnu">
-								<a id="hamburger-icon" href="#" title="Menu">
+								<a class="hamburger-icon" href="#" title="Menu">
 									<span class="line line-1"></span>
 									<span class="line line-2"></span>
 									<span class="line line-3"></span>
@@ -89,7 +244,7 @@
 							<div class="top-search">
 								<form>
 									<input class="serch_field" type="search" name="search" placeholder="Поиск" autocomplete="off">
-									<button class="search_btn" alt="ok"><i class="fa fa-search" aria-hidden="true"></i></button>
+									<button type="button" onclick="location.href='shate-m_b2b_user_search.html'" class="search_btn"><i class="fa fa-search" aria-hidden="true"></i></button>
 									<div class="drop_down_search_list">
 										<ul>
 											<li>
@@ -180,17 +335,15 @@
 
 
 					<!--сортировка товаров-->
-					<div class="row datapicker">
-						<div class="datapicker-triangleLeft"></div>
-						<div class="datapicker-triangleRight"></div>
+					<div class="row datapicker orderList--datapicker">
 
-						<div class="hidden-xs col-sm-1 col-md-1 col-lg-1">
+						<div class="hidden-xs col-sm-1 col-md-1 col-lg-1 datapicker_orderlist-filterblock">
 							<div class="datapicker_filter_wrap">
 								<i class="fa fa-filter" aria-hidden="true"></i>
 							</div>
 						</div>
 
-						<div class="col-xs-12 col-sm-11 col-lg-11">
+						<div class="col-xs-12 col-md-11 col-sm-11 col-lg-11 datapicker_orderlist-filterblock">
 
 							<form action="post" id="ordersFilter" name="datapicker">
 								<!--календарь дата начала-->
@@ -380,6 +533,13 @@
 								</div>
 
 							</form>
+
+						</div>
+						<div class="datapicker_orderlist--uncolapse clearfix">
+							<i class="fa fa-filter" aria-hidden="true"></i>
+							<span>Показать фильтры</span>
+							<div class="datapicker-triangleLeft"></div>
+							<div class="datapicker-triangleRight"></div>
 						</div>
 					</div>
 
@@ -403,7 +563,7 @@
 						<div class="orders_list-h2 col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<i class="fa fa-list-alt" aria-hidden="true"></i>
 							<h2>Заказы</h2>
-							<button class="btn gray_btn hidden-xs helperBtn" type="button" name="button">
+							<button class="btn gray_btn hidden-xs helperBtn hidden" type="button" name="button">
 								<i class="fa fa-life-ring" aria-hidden="true"></i> Помощь <span class="hidden-xs">по разделу</span>
 							</button>
 						</div>
@@ -411,8 +571,11 @@
 						<div class="pl0 col-sm-12 col-md-12 col-lg-12">
 							<div class="wrap">
 
+
 								<div class="orders_list-wrapControl">
-									<button id="assembly" class="orders_list_changes_btn green_btn btn" type="button" name="button"><i class="hidden-xs fa fa-paper-plane" aria-hidden="true"></i><span>Отправить </span>на сборку</button>
+
+									<button id="assembly" class="orders_list_changes_btn green_btn btn" type="button" name="button">
+										<i class="hidden-xs fa fa-paper-plane" aria-hidden="true"></i><span>Отправить </span>на сборку</button>
 
 									<div class="orders_list_changes_wrap">
 										<ul>
@@ -425,6 +588,7 @@
 										</ul>
 									</div>
 
+
 									<div class="orders_list_changes_wrap_r">
 										<select class="orders_list_select" name="orders_list_select">
 											<option value="1">1</option>
@@ -434,11 +598,17 @@
 										</select>
 									</div>
 
+
+
 								</div>
 
 								<div class="order-list_buttons clearfix">
-									<button type="button" class="ordersCancellMarckAll add_all gray_btn btn">Снять выделеие</button>
+									<button type="button" class="ordersCancellMarckAll add_all gray_btn btn">Снять выделение</button>
 									<button type="button" id="markAll" class="add_all gray_btn btn">Выбрать все</button>
+									<button type="button" class="gray_btn orders-table_saveToExel">
+										<i class="hidden-xs fa fa-file-excel-o" aria-hidden="true"></i>
+										Сохранить в EXCEL
+									</button>
 								</div>
 
 
@@ -1201,6 +1371,10 @@
 											<div class="name_title"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 											<div class="inner_wrap">
 												<span>10/0/0</span>
+												<div class="orders-tableLgcontent_cancell">
+													<input type="text" value="0">
+													<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -1313,6 +1487,10 @@
 											<div class="name_title"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 											<div class="inner_wrap">
 												<span>10/0/0</span>
+												<div class="orders-tableLgcontent_cancell">
+													<input type="text" value="0">
+													<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -1497,6 +1675,10 @@
 											<div class="name_title"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 											<div class="inner_wrap">
 												<span>10/0/0</span>
+												<div class="orders-tableLgcontent_cancell">
+													<input type="text" value="0">
+													<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -1609,6 +1791,10 @@
 											<div class="name_title"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 											<div class="inner_wrap">
 												<span>10/0/0</span>
+												<div class="orders-tableLgcontent_cancell">
+													<input type="text" value="0">
+													<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -1793,6 +1979,10 @@
 											<div class="name_title"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 											<div class="inner_wrap">
 												<span>10/0/0</span>
+												<div class="orders-tableLgcontent_cancell">
+													<input type="text" value="0">
+													<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -1905,6 +2095,10 @@
 											<div class="name_title"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 											<div class="inner_wrap">
 												<span>10/0/0</span>
+												<div class="orders-tableLgcontent_cancell">
+													<input type="text" value="0">
+													<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -2089,6 +2283,10 @@
 											<div class="name_title"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 											<div class="inner_wrap">
 												<span>10/0/0</span>
+												<div class="orders-tableLgcontent_cancell">
+													<input type="text" value="0">
+													<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -2201,6 +2399,10 @@
 											<div class="name_title"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 											<div class="inner_wrap">
 												<span>10/0/0</span>
+												<div class="orders-tableLgcontent_cancell">
+													<input type="text" value="0">
+													<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -2289,18 +2491,12 @@
 											<span>13.07.2016</span>
 										</div>
 									</div>
-									<!--Дата доставки-->
-									<div class="plr0 col-lg-1">
-										<div class="orders-tableLg-title">Доставка</div>
-										<div class="orders-tableLg_content">
-											<span>25.08.2016</span>
-										</div>
-									</div>
+
 									<!--Статус-->
 									<div class="plr0 col-lg-1">
 										<div class="orders-tableLg-title">Статус</div>
 										<div class="orders-tableLg_content orders-tableLg_content-status orders-cancellStatus">
-											<span>Отказ поставщика</span>
+											<span>От&shy;каз пос&shy;тав&shy;щика</span>
 											<a class="popup-modal" href="#modal-historyStatus" title="Просмотреть историю"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 											<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 										</div>
@@ -2310,10 +2506,11 @@
 										<div class="orders-tableLg-title">Примечание</div>
 										<div class="orders-tableLg_content orders-tableLg_content-comment">
 											<a href="#modal-overviewComment" class="popup-modal">Текст примечания</a>
+
 										</div>
 									</div>
 									<!--Сумма с НДС-->
-									<div class="plr0 col-lg-2">
+									<div class="plr0 col-lg-3">
 										<div class="orders-tableLg-title">
 											<sapn>Сумма с НДС</sapn>
 											<div class="orders-tableLg_triangle"></div>
@@ -2352,26 +2549,24 @@
 										</div>
 									</div>
 									<!--Бренд-->
-									<div class="plr0 col-lg-1">
+									<div class="plr0 col-lg-2">
 										<div class="orders-tableLg-title">Бренд</div>
 										<div class="orders-tableLg_content orders-tableLg_content-brand">
 											<a href="#">THK</a>
-											<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-										</div>
-									</div>
-									<!--Наименование-->
-									<div class="plr0 col-lg-2">
-										<div class="orders-tableLg-title">Наименование</div>
-										<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
-											<a href="#">THK 10w40 magnum motor plus/53</a>
+											<span>Мас­ло мо­тор­ное по­лу­син­те­ти­чес­кое</span>
 											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
+
 									<!--Стрелки-->
 									<div class="plr0 col-lg-1">
 										<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 										<div class="orders-tableLg_content orders-tableLg_content-arr">
 											<span>10/0/0</span>
+											<div class="orders-tableLgcontent_cancell">
+												<input type="text" value="0">
+												<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+											</div>
 										</div>
 									</div>
 									<!--Дата заказа-->
@@ -2405,7 +2600,7 @@
 										</div>
 									</div>
 									<!--Сумма с НДС-->
-									<div class="plr0 col-lg-2">
+									<div class="plr0 col-lg-3">
 										<div class="orders-tableLg-title">Сумма с НДС</div>
 										<div class="orders-tableLg_content orders-tableLg_content-summ">
 											<div class="orders-tableLg_content-summ_left">
@@ -2440,26 +2635,24 @@
 										</div>
 									</div>
 									<!--Бренд-->
-									<div class="plr0 col-lg-1">
+									<div class="plr0 col-lg-2">
 										<div class="orders-tableLg-title">Бренд</div>
 										<div class="orders-tableLg_content orders-tableLg_content-brand">
 											<a href="#">THK</a>
-											<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
+											<span>Мас­ло мо­тор­ное по­лу­син­те­ти­чес­кое</span>
+											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
-									<!--Наименование-->
-									<div class="plr0 col-lg-2">
-										<div class="orders-tableLg-title">Наименование</div>
-										<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
-											<a href="#">THK 10w40 magnum motor plus/5</a>
-											<a href="#"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
-										</div>
-									</div>
+
 									<!--Стрелки-->
 									<div class="plr0 col-lg-1">
 										<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 										<div class="orders-tableLg_content orders-tableLg_content-arr">
 											<span>10/0/0</span>
+											<div class="orders-tableLgcontent_cancell">
+												<input type="text" value="0">
+												<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+											</div>
 										</div>
 									</div>
 									<!--Дата заказа-->
@@ -2493,7 +2686,7 @@
 										</div>
 									</div>
 									<!--Сумма с НДС-->
-									<div class="plr0 col-lg-2">
+									<div class="plr0 col-lg-3">
 										<div class="orders-tableLg-title">Сумма с НДС</div>
 										<div class="orders-tableLg_content orders-tableLg_content-summ">
 											<div class="orders-tableLg_content-summ_left">
@@ -2534,18 +2727,12 @@
 											<span>13.07.2016</span>
 										</div>
 									</div>
-									<!--Дата доставки-->
-									<div class="plr0 col-lg-1">
-										<div class="orders-tableLg-title">Доставка</div>
-										<div class="orders-tableLg_content">
-											<span>25.08.2016</span>
-										</div>
-									</div>
+
 									<!--Статус-->
 									<div class="plr0 col-lg-1">
 										<div class="orders-tableLg-title">Статус</div>
 										<div class="orders-tableLg_content orders-tableLg_content-status orders-cancellStatus">
-											<span>Отказ поставщика</span>
+											<span>От&shy;каз пос&shy;тав&shy;щика</span>
 											<a class="popup-modal" href="#modal-historyStatus" title="Просмотреть историю"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 											<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 										</div>
@@ -2558,7 +2745,7 @@
 										</div>
 									</div>
 									<!--Сумма с НДС-->
-									<div class="plr0 col-lg-2">
+									<div class="plr0 col-lg-3">
 										<div class="orders-tableLg-title">
 											<sapn>Сумма с НДС</sapn>
 											<div class="orders-tableLg_triangle"></div>
@@ -2596,18 +2783,11 @@
 										</div>
 									</div>
 									<!--Бренд-->
-									<div class="plr0 col-lg-1">
+									<div class="plr0 col-lg-2">
 										<div class="orders-tableLg-title">Бренд</div>
 										<div class="orders-tableLg_content orders-tableLg_content-brand">
 											<a href="#">THK</a>
-											<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-										</div>
-									</div>
-									<!--Наименование-->
-									<div class="plr0 col-lg-2">
-										<div class="orders-tableLg-title">Наименование</div>
-										<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
-											<a href="#">THK 10w40 magnum motor plus/5</a>
+											<span>Мас­ло мо­тор­ное по­лу­син­те­ти­чес­кое</span>
 											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
@@ -2616,6 +2796,10 @@
 										<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 										<div class="orders-tableLg_content orders-tableLg_content-arr">
 											<span>10/0/0</span>
+											<div class="orders-tableLgcontent_cancell">
+												<input type="text" value="0">
+												<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+											</div>
 										</div>
 									</div>
 									<!--Дата заказа-->
@@ -2649,7 +2833,7 @@
 										</div>
 									</div>
 									<!--Сумма с НДС-->
-									<div class="plr0 col-lg-2">
+									<div class="plr0 col-lg-3">
 										<div class="orders-tableLg-title">Сумма с НДС</div>
 										<div class="orders-tableLg_content orders-tableLg_content-summ">
 											<div class="orders-tableLg_content-summ_left">
@@ -2684,26 +2868,24 @@
 										</div>
 									</div>
 									<!--Бренд-->
-									<div class="plr0 col-lg-1">
+									<div class="plr0 col-lg-2">
 										<div class="orders-tableLg-title">Бренд</div>
 										<div class="orders-tableLg_content orders-tableLg_content-brand">
 											<a href="#">THK</a>
-											<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-										</div>
-									</div>
-									<!--Наименование-->
-									<div class="plr0 col-lg-2">
-										<div class="orders-tableLg-title">Наименование</div>
-										<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
-											<a href="#">THK 10w40 magnum motor plus/55</a>
+											<span>Мас­ло мо­тор­ное по­лу­син­те­ти­чес­кое</span>
 											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
+
 									<!--Стрелки-->
 									<div class="plr0 col-lg-1">
 										<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 										<div class="orders-tableLg_content orders-tableLg_content-arr">
 											<span>10/0/0</span>
+											<div class="orders-tableLgcontent_cancell">
+												<input type="text" value="0">
+												<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+											</div>
 										</div>
 									</div>
 									<!--Дата заказа-->
@@ -2737,7 +2919,7 @@
 										</div>
 									</div>
 									<!--Сумма с НДС-->
-									<div class="plr0 col-lg-2">
+									<div class="plr0 col-lg-3">
 										<div class="orders-tableLg-title">Сумма с НДС</div>
 										<div class="orders-tableLg_content orders-tableLg_content-summ">
 											<div class="orders-tableLg_content-summ_left">
@@ -2778,18 +2960,19 @@
 											<span>13.07.2016</span>
 										</div>
 									</div>
-									<!--Дата доставки-->
+									<!--Дата доставки
 									<div class="plr0 col-lg-1">
 										<div class="orders-tableLg-title">Доставка</div>
 										<div class="orders-tableLg_content">
 											<span>25.08.2016</span>
 										</div>
 									</div>
+									-->
 									<!--Статус-->
 									<div class="plr0 col-lg-1">
 										<div class="orders-tableLg-title">Статус</div>
 										<div class="orders-tableLg_content orders-tableLg_content-status orders-cancellStatus">
-											<span>Отказ поставщика</span>
+											<span>От&shy;каз пос&shy;тав&shy;щика</span>
 											<a class="popup-modal" href="#modal-historyStatus" title="Просмотреть историю"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 											<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 										</div>
@@ -2802,7 +2985,7 @@
 										</div>
 									</div>
 									<!--Сумма с НДС-->
-									<div class="plr0 col-lg-2">
+									<div class="plr0 col-lg-3">
 										<div class="orders-tableLg-title">
 											<sapn>Сумма с НДС</sapn>
 											<div class="orders-tableLg_triangle"></div>
@@ -2840,18 +3023,11 @@
 										</div>
 									</div>
 									<!--Бренд-->
-									<div class="plr0 col-lg-1">
+									<div class="plr0 col-lg-2">
 										<div class="orders-tableLg-title">Бренд</div>
 										<div class="orders-tableLg_content orders-tableLg_content-brand">
 											<a href="#">THK</a>
-											<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-										</div>
-									</div>
-									<!--Наименование-->
-									<div class="plr0 col-lg-2">
-										<div class="orders-tableLg-title">Наименование</div>
-										<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
-											<a href="#">THK 10w40 magnum motor plus/5</a>
+											<span>Мас­ло мо­тор­ное по­лу­син­те­ти­чес­кое</span>
 											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
@@ -2860,6 +3036,10 @@
 										<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 										<div class="orders-tableLg_content orders-tableLg_content-arr">
 											<span>10/0/0</span>
+											<div class="orders-tableLgcontent_cancell">
+												<input type="text" value="0">
+												<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+											</div>
 										</div>
 									</div>
 									<!--Дата заказа-->
@@ -2893,7 +3073,7 @@
 										</div>
 									</div>
 									<!--Сумма с НДС-->
-									<div class="plr0 col-lg-2">
+									<div class="plr0 col-lg-3">
 										<div class="orders-tableLg-title">Сумма с НДС</div>
 										<div class="orders-tableLg_content orders-tableLg_content-summ">
 											<div class="orders-tableLg_content-summ_left">
@@ -2928,18 +3108,11 @@
 										</div>
 									</div>
 									<!--Бренд-->
-									<div class="plr0 col-lg-1">
+									<div class="plr0 col-lg-2">
 										<div class="orders-tableLg-title">Бренд</div>
 										<div class="orders-tableLg_content orders-tableLg_content-brand">
 											<a href="#">THK</a>
-											<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-										</div>
-									</div>
-									<!--Наименование-->
-									<div class="plr0 col-lg-2">
-										<div class="orders-tableLg-title">Наименование</div>
-										<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
-											<a href="#">THK 10w40 magnum motor plus/5</a>
+											<span>Мас­ло мо­тор­ное по­лу­син­те­ти­чес­кое</span>
 											<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 										</div>
 									</div>
@@ -2948,6 +3121,10 @@
 										<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 										<div class="orders-tableLg_content orders-tableLg_content-arr">
 											<span>10/0/0</span>
+											<div class="orders-tableLgcontent_cancell">
+												<input type="text" value="0">
+												<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+											</div>
 										</div>
 									</div>
 									<!--Дата заказа-->
@@ -2981,7 +3158,7 @@
 										</div>
 									</div>
 									<!--Сумма с НДС-->
-									<div class="plr0 col-lg-2">
+									<div class="plr0 col-lg-3">
 										<div class="orders-tableLg-title">Сумма с НДС</div>
 										<div class="orders-tableLg_content orders-tableLg_content-summ">
 											<div class="orders-tableLg_content-summ_left">
@@ -3027,27 +3204,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -3081,7 +3254,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -3124,27 +3297,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -3165,7 +3334,7 @@
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title">Статус</div>
 									<div class="orders-tableLg_content orders-tableLg_content-status orders-greatestatus">
-										<span>Ожидает обработки</span>
+										<span>Ожи&shy;дает об&shy;ра&shy;бот&shy;ки</span>
 										<a class="popup-modal" href="#modal-historyStatus" title="Просмотреть историю"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 										<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 									</div>
@@ -3178,7 +3347,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -3221,27 +3390,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-inJobStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -3275,7 +3440,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -3317,18 +3482,11 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-greatestatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -3338,6 +3496,10 @@
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -3371,7 +3533,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -3413,27 +3575,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-inJobStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -3467,7 +3625,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -3481,7 +3639,6 @@
 									</div>
 								</div>
 							</div>
-
 
 							<!--седьмой ряд-->
 							<div class="orders-tableLg row hiddex-xs hidden-sm hidden-md">
@@ -3510,27 +3667,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-inJobStatus">
-										<a href="#">THK 10w40 magnum motor plus/56</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -3551,7 +3704,7 @@
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title">Статус</div>
 									<div class="orders-tableLg_content orders-tableLg_content-status orders-inJobStatus">
-										<span>Подтвержден поставщиком</span>
+										<span>Под&shy;твер&shy;жден пос&shy;тав&shy;щи&shy;ком</span>
 										<a class="popup-modal" href="#modal-historyStatus" title="Просмотреть историю"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 										<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 									</div>
@@ -3564,7 +3717,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -3578,7 +3731,6 @@
 									</div>
 								</div>
 							</div>
-
 
 							<!--седьмой ряд-->
 							<div class="orders-tableLg row hiddex-xs hidden-sm hidden-md">
@@ -3607,27 +3759,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-inJobStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -3648,7 +3796,7 @@
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title">Статус</div>
 									<div class="orders-tableLg_content orders-tableLg_content-status orders-inJobStatus">
-										<span>Подтвержден поставщиком</span>
+										<span>Под&shy;твер&shy;жден пос&shy;тав&shy;щи&shy;ком</span>
 										<a class="popup-modal" href="#modal-historyStatus" title="Просмотреть историю"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 										<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 									</div>
@@ -3661,7 +3809,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -3703,27 +3851,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-toWarehouseStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -3744,7 +3888,7 @@
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title">Статус</div>
 									<div class="orders-tableLg_content orders-tableLg_content-status orders-toWarehouseStatus">
-										<span>Отправлено на центральный склад ШМ+</span>
+										<span>От&shy;прав&shy;ле&shy;но на цен&shy;траль&shy;ный склад ШМ+</span>
 										<a class="popup-modal" href="#modal-historyStatus" title="Просмотреть историю"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 										<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 									</div>
@@ -3757,7 +3901,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -3771,7 +3915,6 @@
 									</div>
 								</div>
 							</div>
-
 
 							<!--девятый ряд-->
 							<div class="orders-tableLg row hiddex-xs hidden-sm hidden-md">
@@ -3800,27 +3943,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-cancellStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -3841,7 +3980,7 @@
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title">Статус</div>
 									<div class="orders-tableLg_content orders-tableLg_content-status orders-cancellStatus">
-										<span>Отказ поставщика</span>
+										<span>От&shy;каз пос&shy;тав&shy;щика</span>
 										<a class="popup-modal" href="#modal-historyStatus" title="Просмотреть историю"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 										<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 									</div>
@@ -3854,7 +3993,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -3868,7 +4007,6 @@
 									</div>
 								</div>
 							</div>
-
 
 							<!--десятый ряд-->
 							<div class="orders-tableLg row hiddex-xs hidden-sm hidden-md">
@@ -3897,27 +4035,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-cancellStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -3938,7 +4072,7 @@
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title">Статус</div>
 									<div class="orders-tableLg_content orders-tableLg_content-status orders-cancellStatus">
-										<span>Не удалось зарезервировать позицию</span>
+										<span>Не уда&shy;лось за&shy;ре&shy;зер&shy;ви&shy;ро&shy;вать по&shy;зи&shy;цию</span>
 										<a class="popup-modal" href="#modal-historyStatus" title="Просмотреть историю"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 										<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 									</div>
@@ -3951,7 +4085,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -3965,7 +4099,6 @@
 									</div>
 								</div>
 							</div>
-
 
 							<!--одинадцатый ряд-->
 							<div class="orders-tableLg row hiddex-xs hidden-sm hidden-md">
@@ -3994,27 +4127,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-reservStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -4035,7 +4164,7 @@
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title">Статус</div>
 									<div class="orders-tableLg_content orders-tableLg_content-status orders-reservStatus">
-										<span>Частичное резервирование</span>
+										<span>Час&shy;тич&shy;ное ре&shy;зер&shy;ви&shy;ро&shy;ва&shy;ние</span>
 										<a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
 										<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 									</div>
@@ -4048,7 +4177,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -4062,7 +4191,6 @@
 									</div>
 								</div>
 							</div>
-
 
 							<!--одинадцатый ряд-->
 							<div class="orders-tableLg row hiddex-xs hidden-sm hidden-md">
@@ -4091,27 +4219,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-reservStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -4132,7 +4256,7 @@
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title">Статус</div>
 									<div class="orders-tableLg_content orders-tableLg_content-status orders-reservStatus">
-										<span>Минимальная сумма доставки</span>
+										<span>Ми&shy;ни&shy;маль&shy;ная сум&shy;ма дос&shy;тав&shy;ки</span>
 										<a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
 										<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 									</div>
@@ -4145,7 +4269,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -4159,7 +4283,6 @@
 									</div>
 								</div>
 							</div>
-
 
 							<!--двенадцатый ряд-->
 							<div class="orders-tableLg row hiddex-xs hidden-sm hidden-md">
@@ -4188,27 +4311,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-toWarehouseStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -4242,7 +4361,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -4256,7 +4375,6 @@
 									</div>
 								</div>
 							</div>
-
 
 							<!--тринадцатый ряд-->
 							<div class="orders-tableLg row hiddex-xs hidden-sm hidden-md">
@@ -4285,27 +4403,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-toWarehouseStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -4339,7 +4453,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -4353,7 +4467,6 @@
 									</div>
 								</div>
 							</div>
-
 
 							<!--четырнадцатый ряд-->
 							<div class="orders-tableLg row hiddex-xs hidden-sm hidden-md">
@@ -4382,27 +4495,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-toWarehouseStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -4436,7 +4545,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -4450,7 +4559,6 @@
 									</div>
 								</div>
 							</div>
-
 
 							<!--четырнадцатый ряд-->
 							<div class="orders-tableLg row hiddex-xs hidden-sm hidden-md">
@@ -4479,27 +4587,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-deliveredStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -4520,7 +4624,7 @@
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title">Статус</div>
 									<div class="orders-tableLg_content orders-tableLg_content-status orders-deliveredStatus">
-										<span>Доставлено</span>
+										<span>Дос&shy;тав&shy;ле&shy;но</span>
 										<a class="popup-modal" href="#modal-historyStatus" title="Просмотреть историю"><i class="bottom_position fa fa-question-circle" aria-hidden="true"></i></a>
 										<i class="orders-tableLg_toCreate fa fa-paper-plane" aria-hidden="true"></i>
 									</div>
@@ -4533,7 +4637,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -4542,12 +4646,11 @@
 										</div>
 										<div class="orders-tableLg_content-summ_right">
 											<i class="fa fa-male" aria-hidden="true"></i>
-											<span>Доставлено</span>
+											<span>Дос&shy;тав&shy;ле&shy;но</span>
 										</div>
 									</div>
 								</div>
 							</div>
-
 
 							<!--пятнадцатый ряд-->
 							<div class="orders-tableLg row hiddex-xs hidden-sm hidden-md">
@@ -4576,27 +4679,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-deliveredStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -4630,7 +4729,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -4644,8 +4743,6 @@
 									</div>
 								</div>
 							</div>
-
-
 
 							<!--шестнадцатый ряд-->
 							<div class="orders-tableLg row hiddex-xs hidden-sm hidden-md">
@@ -4674,27 +4771,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-removeStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -4728,7 +4821,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -4742,7 +4835,6 @@
 									</div>
 								</div>
 							</div>
-
 
 							<!--десятый ряд-->
 							<div class="orders-tableLg row hiddex-xs hidden-sm hidden-md">
@@ -4771,27 +4863,23 @@
 									</div>
 								</div>
 								<!--Бренд-->
-								<div class="plr0 col-lg-1">
+								<div class="plr0 col-lg-2">
 									<div class="orders-tableLg-title">Бренд</div>
 									<div class="orders-tableLg_content orders-tableLg_content-brand">
 										<a href="#">THK</a>
 										<span>Мас&shy;ло мо&shy;тор&shy;ное по&shy;лу&shy;син&shy;те&shy;ти&shy;чес&shy;кое</span>
-									</div>
-								</div>
-								<!--Наименование-->
-								<div class="plr0 col-lg-2">
-									<div class="orders-tableLg-title">Наименование</div>
-									<div class="orders-tableLg_content orders-tableLg_content-name orders-cancellStatus">
-										<a href="#">THK 10w40 magnum motor plus/5</a>
 										<a class="popup-modal" href="#modal-infoAboutProduct"><i data-toggle="tooltip" data-placement="right" title="информация о таваре" class="fa fa-info-circle" aria-hidden="true"></i></a>
 									</div>
 								</div>
-
 								<!--Стрелки-->
 								<div class="plr0 col-lg-1">
 									<div class="orders-tableLg-title orders-tableLg-arr"><i class="fa fa-exchange" aria-hidden="true"></i></div>
 									<div class="orders-tableLg_content orders-tableLg_content-arr">
 										<span>10/0/0</span>
+										<div class="orders-tableLgcontent_cancell">
+											<input type="text" value="0">
+											<button class="red_btn"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+										</div>
 									</div>
 								</div>
 								<!--Дата заказа-->
@@ -4825,7 +4913,7 @@
 									</div>
 								</div>
 								<!--Сумма с НДС-->
-								<div class="plr0 col-lg-2">
+								<div class="plr0 col-lg-3">
 									<div class="orders-tableLg-title">Сумма с НДС</div>
 									<div class="orders-tableLg_content orders-tableLg_content-summ">
 										<div class="orders-tableLg_content-summ_left">
@@ -4867,90 +4955,107 @@
 
 
 			<!--footer-->
-			<!--социальнные сети и геокоординаты-->
-			<div class="row bottom_mnu hidden-xs">
-				<div class="hidden-xs hidemenuR col-md-12 col-sm-12 col-lg-12">
-					<ul>
-						<li><a href="#">Компания</a></li>
-						<li><a href="#">Автозапчасти <br>и оборудование</a></li>
-						<li><a href="#">Автозапчасти <br> патрон</a></li>
-						<li><a href="#">Розница <br>и сто</a></li>
-						<li><a href="#">Шины и <br> диски</a></li>
-						<li><a href="#">Масла <br>и автохимия</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
-				</div>
-			</div>
+      <!--социальнные сети и геокоординаты-->
+      <div class="row bottom_mnu hidden-xs">
+        <div class="hidden-xs hidemenuR col-md-12 col-sm-12 col-lg-12">
+          <ul>
+            <li><a href="#">Компания</a></li>
+            <li><a href="#">Автозапчасти <br>и оборудование</a></li>
+            <li><a href="#">Автозапчасти <br> патрон</a></li>
+            <li><a href="#">Розница <br>и сто</a></li>
+            <li><a href="#">Шины и <br> диски</a></li>
+            <li><a href="#">Масла <br>и автохимия</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
 
-			<div class="p0 social_pages row">
-				<div class="plr0 col-sm-12 hidemenuR col-md-12 col-lg-12 col-xs-12">
-					<div class="pr0 col-xs-12 col-sm-5 col-md-5 col-lg-6">
-						<div class="social_wrap">
-							<span class="hidden-sm hidden-md hidden-lg">Мы в соцсетях</span>
-							<span class="hidden-xs">Мы в социальных сетях</span>
+      <!--социалки, адреса, телефоны-->
+      <div class="plr0 social_pages row">
+        <div class="plr0 col-sm-12 hidemenuR col-md-12 col-lg-12 col-xs-12">
 
-							<a href="#">
-								<div class="container_for_i"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-							</a>
-							<a href="#">
-								<div class="container_for_i"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-							</a>
-							<a href="#">
-								<div class="container_for_i"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-							</a>
-							<a href="#">
-								<div class="container_for_i"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
-							</a>
-						</div>
-					</div>
+          <div class="pl0 col-xs-12 col-sm-5 col-md-5 col-lg-6">
+            <div class="social_wrap hidemenuR">
 
-					<div class="col-xs-12 col-sm-3 col-lg-3">
-						<ul class="location">
-							<li><i class="fa fa-map-marker" aria-hidden="true"></i> 223062,</li>
-							<li>Минский р-н,</li>
-							<li>пос. Привольный,</li>
-							<li>ул. Мира 2А</li>
-						</ul>
-					</div>
+              <div class="footer--innerWrap">
+                <span class="hidden-sm hidden-md hidden-lg">Мы в соцсетях</span>
+                <span class="hidden-xs">Мы в социальных сетях</span>
 
-					<div class="col-xs-12 hidden-md hidden-sm hidden-lg">
-						<ul class="phones">
-							<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
-							<li><i class="fa fa-fax" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
-							<li><i class="fa fa-envelope" aria-hidden="true"></i><a class="mail" href="mailto:info@shate-m.com">info@shate-m.com</a></li>
-						</ul>
-					</div>
+                <a href="#">
+                  <div class="container_for_i"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                </a>
+                <a href="#">
+                  <div class="container_for_i"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                </a>
+                <a href="#">
+                  <div class="container_for_i"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                </a>
+                <a href="#">
+                  <div class="container_for_i"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
+                </a>
+                <a href="https://www.instagram.com/shatemplus/">
+                    <div class="container_for_i">  <i class="fa fa-instagram"></i></div>
+                </a>
+              </div>
 
-					<div class="hidden-xs pr0 col-sm-3 col-lg-3">
-						<ul class="phones_sm clearfix">
-							<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
-							<li><i class="fa fa-fax" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
-							<li><i class="fa fa-envelope" aria-hidden="true"></i><a class="mail" href="mailto:info@shate-m.com">info@shate-m.com</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+            </div>
+          </div>
 
-			<div class="row copiright">
+          <div class="col-xs-12 col-sm-3 col-lg-3">
+            <ul class="location">
+              <li><i class="fa fa-map-marker" aria-hidden="true"></i> 223062,</li>
+              <li>Минский р-н,</li>
+              <li>пос. Привольный,</li>
+              <li>ул. Мира 2А</li>
+            </ul>
+          </div>
 
-				<div class="hidemenuR plr0 col-sm-12 col-md-12 col-lg-12 col-xs-12">
-					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-6">
-						<div class="licence">
-							<span>
-							Copiright &copy; 2001-2016 Частное предприятие &laquo; ШАТЕ-М ПЛЮС &raquo;
-						</span>
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 bottom_logo ">
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-							<a href="#"><img src="img/groupauto.png" alt="шате-м"></a>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-							<a href="#"><img src="img/logo.png" alt="шате-м"></a>
-						</div>
-					</div>
-				</div>
-			</div>
+          <div class="col-xs-12 hidden-md hidden-sm hidden-lg">
+            <ul class="phones">
+              <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
+              <li><i class="fa fa-fax" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
+              <li><i class="fa fa-envelope" aria-hidden="true"></i><a class="mail" href="mailto:info@shate-m.com">info@shate-m.com</a></li>
+            </ul>
+          </div>
+
+          <div class="hidden-xs pr0 col-sm-3 col-lg-3">
+            <ul class="phones_sm clearfix">
+              <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
+              <li><i class="fa fa-fax" aria-hidden="true"></i><a href="tel:+1234567890">8(017) 500-66-00 </a></li>
+              <li><i class="fa fa-envelope" aria-hidden="true"></i><a class="mail" href="mailto:info@shate-m.com">info@shate-m.com</a></li>
+            </ul>
+          </div>
+
+          <div class="footer--payment_logos col-lg-12 col-md-12 col-sm-12 hidden-xs">
+            <a href="#">
+              <img src="img/payment_logos.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!--копирайт-->
+      <div class="row copiright">
+
+        <div class="hidemenuR plr0 col-sm-12 col-md-12 col-lg-12 col-xs-12">
+          <div class="col-xs-12 col-sm-5 col-md-5 col-lg-6">
+            <div class="licence">
+              <span>
+              Copiright &copy; 2001-2016 Частное предприятие <br class="hidden-sm hidden-md hidden-lg" />&laquo; ШАТЕ-М ПЛЮС &raquo;
+            </span>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 bottom_logo ">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <a href="#"><img src="img/groupauto.png" alt="шате-м"></a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <a href="#"><img src="img/logo.png" alt="шате-м"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--конец footer-->
 
 		</div>
 	</section>

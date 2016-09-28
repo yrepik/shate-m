@@ -8,8 +8,9 @@ $base-font-size: 13px
 @media only screen and (max-width : 1600px)
 	.top-closeMnu
 	.top-search
-		width: 24%
+		width: 32%
 		margin-left: 2%
+		margin-right: 2%
 	.top-selectVin
 	.top-userCabinet
 		width: 6%
@@ -19,11 +20,22 @@ $base-font-size: 13px
 			margin-right: 10px
 	.top-balance
 		width: 37%
-
 @media only screen and (max-width : 1200px)
+	#right_side
+		padding-top: 70px
+	.slideDownNav--fixed .alert
+		top: 70px
+	.slideDownNav
+		.top-balance_update
+			margin-right: 30px !important
+		.user_name
+			top: 70px
+	.totall--debt
+		right: 0px !important
 	.top-closeMnu
+		padding: 0
 	.top-search
-		width: 60%
+		width: 78%
 	.top-selectVin
 		width: 20%
 		padding-left: 20px
@@ -47,13 +59,11 @@ $base-font-size: 13px
 		margin-top: 20px
 	.top-SecondUserCabinet
 		display: none
-
-/* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 	.top-closeMnu
 		width: 7%
 	.top-search
-		width: 75%
+		width: 73%
 		margin-left: 4%
 	.top-userCabinet
 		width: 14%
@@ -65,6 +75,16 @@ $base-font-size: 13px
 		text-align: center
 		a
 			text-align: center
+@media only screen and (max-width : 768px)
+	#right_side
+		padding-top: 0px
+	.top-search
+		form
+			input
+				padding: 4px 8px
+	.top-search form button
+		right: 0
+	
 
 @media only screen and (max-width : 480px)
 	.top-closeMnu
@@ -75,18 +95,44 @@ $base-font-size: 13px
 	.top-userCabinet
 		width: 16%
 		padding-left: 1%
-
-/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1400px)
+	.slideDownNav
+		left: 63px
+	.topLine_fixed
+		padding-right: 60px !important
 @media only screen and (min-width : 1201px)
 	.top-firstUserCabinet
 		display: none
+	.top-closeMnu
+		padding: 0
 
+@media only screen and (min-width : 1400px)
+	.tabletSmenuActiveToShape
+		padding-right: 160px
+	.tabletSmenuActiveTo
+		animation: tabletSmenuActiveTo ease-in .3s
+		animation-iteration-count: 1
+		transform-origin: 50% 50%
+		animation-fill-mode: forwards
+	@keyframes tabletSmenuActiveTo
+		0%
+			transform: translate(0px, 0px)
+			padding-right: 0
+		100%
+			transform: translate(167px, 0px)
+			padding-right: 215px
+
+@media only screen and (width : 768px
+	#right_side
+		padding-top: 67px
 /*конец шапка сайта*/
 
 
 @media only screen and (max-width : 1650px)
 	.dashboardSell .dashboardSell-content_text h4
 		font-size: em(13px)
+	.dashboard--requestHistory_history .table_content .tr .td
+		font-size: em(11px)
 @media only screen and (max-width : 1842px)
 	.orders_list_changes_btn
 		span
@@ -96,9 +142,19 @@ $base-font-size: 13px
 	.user_name
 		top: 123px
 @media only screen and (max-width : 1400px)
+	.dashboard--requestHistory_history .th
+		font-size: em(11px)
+		text-transform: uppercase
 	.user_name ul .settings
 		display: none
+	.dashboard--requestHistory_wrapper .wrapper span
+		font-size: em(13px)
+		margin-top: 3px
 @media only screen and (max-width : 1200px)
+	.top-balance_wrapper
+		float: right !important
+	.datapicker_orderlist-filterblock
+		padding-bottom: 13px
 	.history_request
 		margin-top: 17px
 		.content__item
@@ -127,8 +183,6 @@ $base-font-size: 13px
 			width: 100%
 	.cross_close
 		display: none
-	.datapicker
-		height: 234px
 	.hide-1200
 		display: none
 	.licence
@@ -157,13 +211,45 @@ $base-font-size: 13px
 		padding: 10px 12px
 	.top_serch .search_btn
 		right: 3%
+
+@media only screen and (max-width : 900px)
+	.orders-tableLgcontent_cancell
+		input
+			width: 25px
+		button
+			width: 15px
+			font-size: em(9px)
 @media only screen and (width : 768px)
 	.orders_container .name .inner_wrap i
 		position: absolute !important
 		top: 20px
 		right: 3px
-/* Small Devices, Tablets */
+	.social_pages
+		.social_wrap
+			a
+				margin-right: 5px !important
 @media only screen and (max-width : 768px)
+	.social_pages
+		.social_wrap
+			left: 0 !important
+			width: 100%
+			padding-left: 0
+			margin-right: 25px !important
+			a
+				margin-right: 0px
+	.top-balance_wrapper
+		float: none !important
+	.order-list_buttons
+		margin-bottom: 20px
+		@include clearfix
+		padding-right: 20px
+	.datapicker_orderlist-filterblock
+		display: none
+	.datapicker
+		.datapicker-triangleLeft,
+		.datapicker-triangleRight
+			border-top: 12px solid #b2b2b2 !important
+			border-bottom: none
 	.dashboard-action_a
 		float: right !important
 		top: 0
@@ -199,8 +285,7 @@ $base-font-size: 13px
 			margin: 0
 			display: inline-block
 			line-height: em(14px)
-	.order-list_buttons
-		margin-bottom: 0px !important
+
 	.orders_container .status_order .inner_wrap a i
 		bottom: 20px
 	.inner_wrap,
@@ -312,20 +397,6 @@ $base-font-size: 13px
 		margin-top: 19px
 	.orders_list_changes_wrap_r
 		margin-top: 25px
-	.history .tr .td
-		&:nth-child(1)
-			width: 50%
-		&:nth-child(2)
-			width: 25%
-		&:nth-child(3)
-			width: 25%
-	.history .thead
-		.th:nth-child(1)
-			width: 50%
-		.th:nth-child(2)
-			width: 25%
-		.th:nth-child(3)
-			width: 25%
 
 @media only screen and (width : 768px)
 	.dashboard_small .content__item .content__item-right span i a
@@ -356,8 +427,6 @@ $base-font-size: 13px
 		position: absolute
 		left: 2px
 		top: 2px
-	.datapicker
-		height: 427px
 	.order-list_buttons
 		margin-bottom: 20px
 	.top-balance .top-balance_wrapper
@@ -367,13 +436,17 @@ $base-font-size: 13px
 	.orders_list_changes_wrap_r
 		width: 56px
 	.order-list_buttons
-		padding-right: 15px
 		button
 			width: 100%
-			padding: 10px !important
-			margin-bottom: 20px !important
+		.ordersCancellMarckAll,
+		#markAll
+			margin-bottom: 20px
+
+
 
 @media only screen and (max-width : 480px)
+	.cart-deliveryOptions .wrap-radio
+		margin: 0
 	.orders_container
 		.tottal_price
 			.inner_wrap
@@ -406,23 +479,7 @@ $base-font-size: 13px
 		font-size: em(12px)
 		width: 100px
 
-@media only screen and (max-width : 360px)
-	.breadcrumbs_bottom ul li a
-		padding: 6px 10px
-	.history .tr .td
-		&:nth-child(1)
-			padding-left: 5px
-		&:nth-child(2)
-			padding-left: 5px
-		&:nth-child(3)
-			padding-left: 5px
-	.history .thead
-		.th:nth-child(1)
-			padding-left: 5px
-		.th:nth-child(2)
-			padding-left: 5px
-		.th:nth-child(3)
-			padding-left: 5px
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 400px)
 	.top_serch .search_btn
@@ -434,8 +491,7 @@ $base-font-size: 13px
 	#checkator_
 		height: 13px
 		width: 13px
-	.history .tr .td
-		font-size: em(12px)
+
 
 @media only screen and (max-width : 339px)
 	.datapicker
@@ -450,10 +506,6 @@ $base-font-size: 13px
 		height: 40px
 
 @media only screen and (width : 768px)
-	.history .thead .th:last-child, .history .thead .th:nth-child(1), .history .tr .td:nth-child(1)
-			width: 25%
-	.history .tr .td:nth-child(3)
-		padding-left: 20px
 	.orders_list_changes_wrap ul li button
 		padding: 0 !important
 	.orders_list_changes_wrap ul li
@@ -580,7 +632,9 @@ $base-font-size: 13px
 		font-family: 'OSR', sans-serif
 		font-size: em(13px)
 		a
-			margin-right: 10px
+			margin-right: 8px
+			&:nth-last-child(1)
+				margin-right: 0
 			i
 				font-size: 30px
 	.social_pages .location
@@ -807,41 +861,12 @@ $base-font-size: 13px
 		word-wrap: break-word
 	.large_block .title
 		padding-top: 0
-	.history .tr .description
-		line-height: em(14px)
-		position: relative
-		top: -7px
-		text-align: right
-		padding-right: 20px
-	.history .tr .td
-		padding-top: 5px
-	.history .thead
-		.th:last-child
-			width: 30%
-		.th:nth-child(3)
-			width: 20%
 
-
-@media only screen and (min-width : 1288px)
-	.history .tr .description
-		line-height: em(16px)
-		position: relative
-		top: 0px
-	.history .tr .td
-		padding-top: 5px
-		.orders_container
-			.tottal_price
-				.inner_wrap
-					.bottom_docs
-						a
-							span
-								i
-									font-size: em(18px)
 
 @media only screen and (min-width : 1400px)
-	.hidemenuR
-		left: 216px
-		padding-right: 228px
+	.footer--innerWrap, .footer--payment_logos img
+		position: relative
+		left: 146px
 	.orders_list_changes_wrap_r
 		width: 71px
 	.priceform select
@@ -931,9 +956,16 @@ $base-font-size: 13px
 	.import
 		.hidden_span
 			top: -3px
-	.managmentFilterlabelwrap label
-		margin-bottom: 10px
-		line-height: em(12px)
+	.managmentFilterlabelwrap
+		top: 0 !important
+		label
+			margin-bottom: 10px
+			line-height: em(12px)
+			display: block
+			width: 100%
+			&:nth-last-child(1)
+				margin-bottom: 0
+
 	.search_goods
 		button
 			font-size: em(10px)
@@ -1018,7 +1050,7 @@ $base-font-size: 13px
 		height: 100px
 		.top_cell, .bottom_cell
 			line-height: 13px
-			height: 75px !important
+			height: 65px !important
 			padding-left: 15px !important
 	.managmentFilterlabelwrap label
 		margin-bottom: 10px
@@ -1120,7 +1152,8 @@ $base-font-size: 13px
 	.table_search_goods_result .cell_wrap .content .top_cell .hidden_span,
 	.table_search_goods_result .cell_wrap .content .bottom_cell .hidden_span
 		position: static
-		margin-top: -3px
+		margin-bottom: 2px
+		font-size: em(10px)
 
 @media only screen and (min-width : 830px)
 	.table_search_goods_result .cell_wrap .content .top_cell .hidden_span,
@@ -1221,8 +1254,9 @@ $base-font-size: 13px
 				button
 					i
 						display: none
-
 @media only screen and (max-width : 1200px)
+	.wait_list_table .table_search_goods_result .date_update .content span
+		font-size: em(11px)
 	.wait_list
 		h2
 			margin-bottom: 30px
@@ -1270,6 +1304,12 @@ $base-font-size: 13px
 	/**/
 
 @media only screen and (max-width : 768px)
+	.searchResultsList
+		.queryHistory-row, .queryHistory-thead
+			padding: 5px
+	.slideDownNav--fixed
+		.datapicker
+			margin-top: 0px
 	.wait_list_table
 		.table_search_goods_result
 			.fold
@@ -1368,6 +1408,10 @@ $base-font-size: 13px
 	/**/
 
 @media only screen and (max-width : 992px)
+	.returnes-table_single
+		.returnes-table_single-warehouse
+			.returnes-table_content
+				padding-left: 5px !important
 	.returnes-table_content-status
 		text-align: center
 		font-size: em(12px)
@@ -1411,10 +1455,26 @@ $base-font-size: 13px
 					border-bottom: none
 
 @media only screen and (max-width : 768px)
+	.orders_list
+		margin-bottom: 0
 	.returnesAddGoods
 		width: 100%
 	.wrapper_tabs-wrapRemote-file
-		padding: 6px
+		width: auto
+		padding: 5px !important
+		line-height: em(14px)
+		font-size: em(10px) !important
+	.returnes_remoteOnXs
+		select
+			height: 35px !important
+	.wrapper_tabs-slideButton
+		margin-top: 0
+		margin-right: 5px
+		width: 71px
+		padding: 3px
+		background-color: #eaeaea
+		border: 1px solid lightgray
+		float: right
 	.returnes-table_shortcontent
 		.returnes-table_shortcontent-price
 			font-size: em(14px) !important
@@ -1551,6 +1611,8 @@ $base-font-size: 13px
 	/**/
 
 @media only screen and (max-width : 992px)
+	.tree_infoAboutCar-wrapper
+		font-size: em(12px)
 	#tree
 		.tree-filter
 			.wrap-filter
@@ -1560,6 +1622,13 @@ $base-font-size: 13px
 	/**/
 
 @media only screen and (max-width : 768px)
+	.tree_infoAboutCar
+		margin-top: 10px
+	.tree_infoAboutCar-wrapper
+		font-size: em(11px)
+	.tree_infoAboutCar
+		button
+			margin-top: 15px
 	#tree .tree-h2 .tree-selectCar
 		top: 25px
 	.generalPopUp-details_rightPhoto
@@ -1623,7 +1692,14 @@ $base-font-size: 13px
 		.tree-selectCar
 			width: 100%
 			margin-bottom: 30px
-
+@media only screen and (max-width : 456px)
+	.tree_addAnyCar
+		button,
+		a
+			width: 100%
+			margin: 0
+		button
+			margin-top: 15px
 @media only screen and (max-width : 480px)
 	#tree
 		.tree-filter
@@ -1656,6 +1732,10 @@ $base-font-size: 13px
 		margin-top: 0
 	.generalPopUp-details_right, .generalPopUp-details_rightPhoto
 		padding-left: 15px
+@media only screen and (min-width : 1200px)
+	.tree_infoAboutCar
+		button
+			width: 290px
 /*конец*/
 
 
@@ -1906,25 +1986,25 @@ $base-font-size: 13px
 
 
 /////////истрия заказов history//////////////
-@media only screen and (max-width : 768px)
-	.queryHistory
-		.queryHistory-row_descr
-			line-height: em(14px)
-@media only screen and (max-width : 480px)
-	.queryHistory
-		.queryHistory-h2
-			h2
-				width: 100%
-				span
-					font-size: em(12px)
-			.selectNumber
-				margin-top: 0
-				margin-bottom: 20px
-		.queryHistory-row_descr
-			line-height: em(14px)
-		.queryHistory-row
-			font-size: em(12px)
-	/**/
+// @media only screen and (max-width : 768px)
+// 	.queryHistory
+// 		.queryHistory-row_descr
+// 			line-height: em(14px)
+// @media only screen and (max-width : 480px)
+// 	.queryHistory
+// 		.queryHistory-h2
+// 			h2
+// 				width: 100%
+// 				span
+// 					font-size: em(12px)
+// 			.selectNumber
+// 				margin-top: 0
+// 				margin-bottom: 20px
+// 		.queryHistory-row_descr
+// 			line-height: em(14px)
+// 		.queryHistory-row
+// 			font-size: em(12px)
+// 	/**/
 //истрия заказов history////////////////////
 
 
@@ -1943,6 +2023,9 @@ $base-font-size: 13px
 
 //карзина//
 @media only screen and (max-width : 1200px)
+	.cart-shipment
+		.title
+			padding-top: 8px !important
 	.datapicker-cart button
 		margin-top: 15px !important
 	.cart-beznal
@@ -1950,7 +2033,6 @@ $base-font-size: 13px
 			.content
 				font-size: em(10px)
 		.cell_wrap
-			height: 120px
 			padding: 0
 	.cart-availableDeliveryThead
 		font-size: em(13px)
@@ -1969,6 +2051,14 @@ $base-font-size: 13px
 				i
 					margin-right: 10px
 @media only screen and (max-width : 992px)
+	.cart-tableRow .cell_wrap
+		height: 100px
+	.cart_controls h3
+		line-height: 1em
+	.cart_controls .cart_controls--buttons button
+		margin-left: 10px
+	.cart-tableRow
+		height: auto
 	.cart-availableDeliveryThead,
 	.cart-availableDeliveryRow
 		padding: 10px
@@ -1981,20 +2071,51 @@ $base-font-size: 13px
 			background-color: #fff !important
 	.cart-beznal_table, .cart-nal_table
 		.row
-			.cart-shipment,
 			.cart-fold,
 			.cart-daterefresh,
 			.cart-price,
 			.cart-fold,
 			.cart-comment,
-			.cart-quantity
+			.cart-quantity,
+			.cart-summ
 				.title
-					background-color: #b6b6b6 !important
+					background-color: #b6b6b6
+			.cart-shipment
+				.title
+					background-color: #666
+				.content
+					background-color: #fff
 			.cart-name
 				.title
 					background-color: #666 !important
+	.cart-shipment
+		.title
+			padding-top: 4px !important
 
 @media only screen and (max-width : 768px)
+	.cartForm
+		display: block
+		width: 215px
+	.cart-quantity
+		.content
+			text-align: center
+			.top_cell
+				display: inline-block
+			.botton_cell
+				span
+					position: relative
+					top: -8px
+					display: inline-block
+	.cart-quantity .top_cell .input-group .wrap
+		width: 100px !important
+	.cart_controls--buttons
+		float: left !important
+		margin-top: 20px
+		button
+			&:first-child
+				margin-left: 0
+	.cart_controls
+		margin-top: 30px
 	.cart-beznal_remote .right
 		.cart-MarkAll, .cart-dellAll, .cart-dellMark
 			@include calc(width, "33.33333% - 10px")
@@ -2002,8 +2123,6 @@ $base-font-size: 13px
 			margin: 0
 			float: left
 	.cart-downloadInFile
-		width: 100%
-		margin-bottom: 20px
 	.dashboard_small .content__item .content__item-right span i a
 		font-size: em(18px)
 	.datapicker-cart_inner, .datapicker_filter_wrap
@@ -2058,10 +2177,16 @@ $base-font-size: 13px
 
 	.cart-beznal_table
 		.row
-			.cart-name,
-			.cart-exist
+			.cart-exist,
+			.cart-shipment
 				.title
 					background-color: #b7b7b7 !important
+				.content
+					background-color: #eaeaea
+	.cart-name
+		.content
+			background-color: #fff !important
+			text-align: center
 	.cart-filter
 		.cart-filter_wrapSelect
 			select
@@ -2078,10 +2203,9 @@ $base-font-size: 13px
 			font-size: em(12px)
 			i
 				margin-right: 5px !important
-	.cart-name,
 	.cart-exist
 		.content
-			background-color: #ebeeef	!important
+			background-color: #eaeaea	!important
 
 @media only screen and (max-width : 722px)
 	.cart-beznal, .cart-nal
@@ -2094,6 +2218,16 @@ $base-font-size: 13px
 					i
 						display: none
 
+@media only screen and (max-width : 508px)
+	.cart_controls--buttons
+		padding: 0
+		width: 100%
+		button
+			margin: 0 !important
+			margin-bottom: 15px !important
+			width: 100%
+			&:nth-last-child(1)
+				margin-bottom: 0 !important
 @media only screen and (max-width : 480px)
 	.cart-beznal_remote .right
 		button
@@ -2126,16 +2260,6 @@ $base-font-size: 13px
 			margin-right: 5px
 		span
 			font-size: em(10px)
-	.cart-quantity_span
-		display: none !important
-	.cart-beznal_table, .cart-nalTable
-		.row
-			.cart-quantity
-				.top_cell
-					.cart-quantity_check
-						width: 30px
-					.input-group
-						@include calc(width, "100% - 35px")
 	.cart-availableDeliveryRow label
 		span
 			width: 77%
@@ -2294,6 +2418,9 @@ $base-font-size: 13px
 
 
 //поиск VIN03
+@media only screen and (max-width : 1650px)
+	.searchToVin3-brand a span
+		font-size: 1em
 @media only screen and (max-width : 768px)
 	.searchToVin3-model
 		display: inline-block
@@ -2302,7 +2429,7 @@ $base-font-size: 13px
 		margin-bottom: 20px
 	.searchToVin3-searchfield
 		text-align: center
-		button
+		a
 			float: none
 			font-size: em(9px)
 			line-height: em(22px)
@@ -2332,18 +2459,43 @@ $base-font-size: 13px
 	.table_search_goods_result .quantity_ .content .bottom_cell, .table_search_goods_result .quantity_ .content .top_cell
 		padding: 0 !important
 		padding-top: 20px !important
-
 	.priceSellWithNds-recomendidPrice
 		margin-top: 0 !important
 	.table_search_goods_result .quantity_ .content .bottom_cell, .table_search_goods_result .quantity_ .content .top_cell
 		padding-left: 5px
 @media only screen and (width : 768px)
-	.import-repeatRow
+	.table_search_goods_result .cell_wrap
 		height: auto !important
 	.table_search_goods_result .cell_wrap .content .light_top
 		padding: 0
-
 @media only screen and (max-width : 768px)
+	.table_search_goods_result .cell_wrap
+		height: 90px
+	.table_search_goods_result
+		.brand
+			p
+				margin-bottom: 5px
+				margin-top: 7px
+			.import_brandArticle
+				font-size: em(14px) !important
+	.searchResult .table_search_goods_result .descr .content h4
+		padding-left: 5px
+		margin-bottom: 5px
+	.table_search_goods_result .descr .content p
+		padding-left: 5px
+	.table_search_goods_result .brand .content
+		padding-left: 5px
+	.searchResult .table_search_goods_result .descr .content h4
+		margin-top: 7px
+	.slideDownNav--fixed
+		.alert
+			top: 0px !important
+			position: relative
+			margin-right: -15px !important
+			margin-left: -15px !important
+			width: 106%
+	.managmentAllFilter
+		padding-top: 15px !important
 	.searchResult-h2 h2
 		margin-bottom: 20px !important
 		font-size: em(18px)
@@ -2362,8 +2514,16 @@ $base-font-size: 13px
 		.content
 			height: auto !important
 	.search-tableContent_priceLeft .wrap, .search-tableContent_priceRight .wrap
-		height: 75px
-
+		height: 65px
+@media only screen and (max-width : 445px)
+	.searchResult-cartInformer
+		right: 0
+	.table_search_goods_result .quantity_ .content .top_cell
+		padding-top: 10px !important
+@media only screen and (min-width : 1200px)
+	.slideDownNav--fixed
+		.alert
+			top: 40px !important
 //конец результаты поиска//
 
 //акции//
@@ -2386,6 +2546,7 @@ $base-font-size: 13px
 	.fullAction-wrapper_content
 		p
 			font-size: em(50px)
+
 @media only screen and (max-width : 992px)
 	.fullAction-wrapper
 		.pl0,
@@ -2428,7 +2589,7 @@ $base-font-size: 13px
 			margin-right: 5px
 			top: 0
 @media only screen and (max-height : 768px)
-	.report, .generalUserSettings, .pools
+	.report, .pools
 		min-height: 150vh
 //конец обратная связь//
 @media only screen and (max-width : 768px)
